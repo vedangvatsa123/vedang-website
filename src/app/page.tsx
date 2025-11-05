@@ -50,7 +50,7 @@ export default function Home() {
       <Header />
 
       <main className="flex-grow">
-        <section className="py-8 md:py-12 text-center">
+        <section className="py-8 text-center">
           <div className="container mx-auto px-4 md:px-6">
             {profileImage && (
               <Image
@@ -77,9 +77,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="papers" className="py-8 md:py-12 bg-secondary/50">
+        <section id="papers" className="py-8 bg-secondary/50">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight">Recent Papers</h2>
+            <h2 className="mb-6 text-center text-2xl font-semibold tracking-tight">Recent Papers</h2>
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
               {recentPapers.map((paper, index) => (
                 <Link href={paper.url || '#'} key={index} className="group" target={paper.url ? '_blank' : undefined} rel={paper.url ? 'noopener noreferrer' : undefined}>
@@ -90,7 +90,7 @@ export default function Home() {
                 </Link>
               ))}
             </div>
-             <div className="mt-8 text-center">
+             <div className="mt-6 text-center">
                <Button variant="outline" asChild className="rounded-full" size="sm">
                  <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Read More on Google Scholar <MoveUpRight className="ml-2 h-4 w-4" /></Link>
                </Button>
@@ -98,9 +98,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="essays" className="py-8 md:py-12">
+        <section id="essays" className="py-8">
            <div className="container mx-auto px-4 md:px-6">
-             <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight">Essays</h2>
+             <h2 className="mb-6 text-center text-2xl font-semibold tracking-tight">Essays</h2>
               <EssaysList />
            </div>
         </section>

@@ -7,7 +7,7 @@ export function MoreArticles({ currentArticleUrl }: { currentArticleUrl: string 
   const otherEssays = essays.filter((essay) => essay.url !== currentArticleUrl).slice(0, 3);
 
   return (
-    <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {otherEssays.map((essay, index) => (
              <Link href={essay.url || '#'} key={index} className="group" target={essay.url === '#' ? '_self' : undefined}>
                  <Card className="relative overflow-hidden flex h-full flex-col justify-between rounded-lg p-5 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">

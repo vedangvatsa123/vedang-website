@@ -16,9 +16,9 @@ export default function WritingsPage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
 
-      <main className="flex-grow py-12 md:py-16">
+      <main className="flex-grow py-8">
         <div className="container mx-auto px-4 md:px-6">
-          <h1 className="mb-8 text-3xl font-semibold tracking-tight">Writings</h1>
+          <h1 className="mb-6 text-3xl font-semibold tracking-tight">Writings</h1>
           <EssaysList />
         </div>
       </main>
