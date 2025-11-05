@@ -89,9 +89,9 @@ export default function Home() {
                   target={paper.url ? '_blank' : undefined}
                   rel={paper.url ? 'noopener noreferrer' : undefined}
                 >
-                  <div className="relative flex flex-col justify-between overflow-hidden rounded-lg border bg-card p-3 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 h-full">
+                  <div className="relative flex flex-col justify-between overflow-hidden rounded-lg border bg-card p-2 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 h-full">
                     <p className="font-medium relative z-10 text-sm">{paper.title}</p>
-                    <MoveUpRight className="relative z-10 mt-2 h-4 w-4 self-end text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    <MoveUpRight className="relative z-10 h-4 w-4 self-end text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </div>
                 </Link>
               ))}
