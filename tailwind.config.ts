@@ -51,9 +51,6 @@ export default {
             '--tw-prose-invert-pre-bg': theme('colors.muted.DEFAULT'),
             '--tw-prose-invert-th-borders': theme('colors.border'),
             '--tw-prose-invert-td-borders': theme('colors.border'),
-            h1: {
-              fontFamily: theme('fontFamily.headline').join(','),
-            },
           },
         },
       }),
@@ -72,17 +69,11 @@ export default {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
-        headline: [
-          'Georgia',
-          'Times',
-          '"Times New Roman"',
-          'serif'
-        ],
         code: ['monospace'],
       },
       fontSize: {
-        '5xl': ['3.052rem', { lineHeight: '1.1' }],
-        '6xl': ['3.815rem', { lineHeight: '1.1' }],
+        '5xl': ['3rem', { lineHeight: '1.1' }],
+        '6xl': ['3.75rem', { lineHeight: '1.1' }],
       },
       colors: {
         background: 'hsl(var(--background))',

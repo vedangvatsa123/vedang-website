@@ -5,6 +5,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { EssaysList } from '@/components/essays-list';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
+import { MoveUpRight } from 'lucide-react';
 
 const recentPapers = [
   {
@@ -49,7 +50,7 @@ export default function Home() {
       <Header />
 
       <main className="flex-grow">
-        <section className="py-16 text-center">
+        <section className="py-24 text-center">
           <div className="container mx-auto px-4 md:px-6">
             {profileImage && (
               <Image
@@ -62,13 +63,13 @@ export default function Home() {
                 priority
               />
             )}
-            <h1 className="mt-4 text-5xl lg:text-6xl font-headline tracking-tight">Vedang Vatsa</h1>
-            <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground">
+            <h1 className="mt-6 text-5xl font-semibold tracking-tight">Vedang Vatsa</h1>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
               Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)
               <br />
               BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
             </p>
-            <Button asChild className="mt-8" size="sm">
+            <Button asChild className="mt-8">
               <Link href="/profile">
                 View Full Profile
               </Link>
@@ -76,10 +77,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="papers" className="py-16 bg-secondary/50">
+        <section id="papers" className="py-24 bg-secondary/50">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="mb-8 text-center text-4xl font-semibold tracking-tight">Recent Papers</h2>
-            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <h2 className="mb-12 text-center text-4xl font-semibold tracking-tight">Recent Papers</h2>
+            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
               {recentPapers.map((paper, index) => (
                 <Link
                   href={paper.url || '#'}
@@ -89,22 +90,23 @@ export default function Home() {
                   rel={paper.url ? 'noopener noreferrer' : undefined}
                 >
                   <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-4 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
-                    <p className="font-medium relative z-10 text-sm">{paper.title}</p>
+                    <p className="font-medium relative z-10">{paper.title}</p>
+                    <MoveUpRight className="h-5 w-5 self-end text-muted-foreground transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
                   </div>
                 </Link>
               ))}
             </div>
-             <div className="mt-8 text-center">
-               <Button variant="outline" asChild size="sm">
+             <div className="mt-12 text-center">
+               <Button variant="outline" asChild>
                  <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Read More on Google Scholar</Link>
                </Button>
             </div>
           </div>
         </section>
 
-        <section id="essays" className="py-16">
+        <section id="essays" className="py-24">
            <div className="container mx-auto px-4 md:px-6">
-             <h2 className="mb-8 text-center text-4xl font-semibold tracking-tight">Essays</h2>
+             <h2 className="mb-12 text-center text-4xl font-semibold tracking-tight">Essays</h2>
               <EssaysList />
            </div>
         </section>

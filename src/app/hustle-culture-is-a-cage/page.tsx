@@ -72,9 +72,9 @@ export default function HustleCultureArticle() {
       />
       <Header />
 
-      <main className="flex-grow py-12">
+      <main className="flex-grow py-16">
         <article className="container mx-auto px-4 md:px-6 prose dark:prose-invert lg:prose-xl">
-          <h1 className="text-5xl lg:text-6xl font-headline tracking-tight">Hustle culture is a cage dressed up as ambition</h1>
+          <h1 className="text-5xl font-semibold tracking-tight">Hustle culture is a cage dressed up as ambition</h1>
           <p>
             We worship busy.
           </p>

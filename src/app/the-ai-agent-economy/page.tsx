@@ -73,9 +73,9 @@ export default function AiAgentEconomyArticle() {
       />
       <Header />
 
-      <main className="flex-grow py-12">
+      <main className="flex-grow py-16">
         <article className="container mx-auto px-4 md:px-6 prose dark:prose-invert lg:prose-xl">
-          <h1 className="text-5xl lg:text-6xl font-headline tracking-tight">The AI Agent Economy</h1>
+          <h1 className="text-5xl font-semibold tracking-tight">The AI Agent Economy</h1>
           <p>
             AI agents can now buy and sell things without human help, creating new market patterns that old economic
             theories can’t explain. Major technology companies have built new systems for automated payments, with
