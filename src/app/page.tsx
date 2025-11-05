@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight, MoveUpRight } from 'lucide-react';
 import { EssaysList } from '@/components/essays-list';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const recentPapers = [
   { title: 'Device-to-Device Economics and AI Agent Transactions' },
@@ -26,17 +27,20 @@ export default function Home() {
           <Link href="/" className="font-semibold tracking-tight text-lg">
             veda.ng
           </Link>
-          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-            <Link href="#" className="text-foreground transition-colors hover:text-primary">
-              Writings
-            </Link>
-            <Link href="#" className="text-foreground transition-colors hover:text-primary">
-              Profile
-            </Link>
-            <Link href="#" className="text-foreground transition-colors hover:text-primary">
-              Media
-            </Link>
-          </nav>
+          <div className="flex items-center gap-4">
+            <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+              <Link href="#" className="text-foreground transition-colors hover:text-primary">
+                Writings
+              </Link>
+              <Link href="#" className="text-foreground transition-colors hover:text-primary">
+                Profile
+              </Link>
+              <Link href="#" className="text-foreground transition-colors hover:text-primary">
+                Media
+              </Link>
+            </nav>
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
