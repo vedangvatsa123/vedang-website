@@ -1,5 +1,11 @@
 export const essays = [
   {
+    title: 'Hustle culture is a cage dressed up as ambition',
+    summary:
+      "We worship busy. The person who sleeps four hours is more dedicated than the one who sleeps eight. The entrepreneur working weekends is winning while you're wasting time. Rest is weakness. Stillness is stagnation. This is the gospel of hustle culture. And it's destroying us.",
+    url: '/writings/hustle-culture-is-a-cage',
+  },
+  {
     title: 'The AI Agent Economy',
     summary:
       "AI agents can now buy and sell things without human help, creating new market patterns that old economic theories can't explain. This article looks at how major platform developments are changing device-to-device economics and what new patterns suggest for market fairness and economic stability.",
