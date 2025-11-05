@@ -45,7 +45,7 @@ export default function Home() {
       </header>
 
       <main className="flex-grow">
-        <section className="py-12 md:py-16 text-center">
+        <section className="py-8 md:py-12 text-center">
           <div className="container mx-auto px-4 md:px-6">
             {profileImage && (
               <Image
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="papers" className="py-12 md:py-16 bg-secondary/50">
+        <section id="papers" className="py-8 md:py-12 bg-secondary/50">
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight">Recent Papers</h2>
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -93,7 +93,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="essays" className="py-12 md:py-16">
+        <section id="essays" className="py-8 md:py-12">
            <div className="container mx-auto px-4 md:px-6">
              <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight">Essays</h2>
               <EssaysList />
