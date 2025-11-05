@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
-      <header className="sticky top-0 z-50 bg-background/30 backdrop-blur-lg border-b border-border/50">
+      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="/" className="font-semibold tracking-tight text-lg">
             veda.ng
@@ -68,14 +68,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="papers" className="py-12 md:py-16">
+        <section id="papers" className="py-12 md:py-16 bg-secondary/50">
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight">Recent Papers</h2>
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
               {recentPapers.map((paper, index) => (
                 <Link href="#" key={index} className="group">
-                  <div className="relative overflow-hidden flex h-full flex-col justify-between rounded-lg bg-black/30 border border-white/10 p-5 transition-all duration-300 hover:border-white/30 hover:shadow-[0_0_20px_5px_rgba(139,92,246,0.2)]">
-                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative overflow-hidden flex h-full flex-col justify-between rounded-lg bg-card border p-5 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
                     <p className="font-medium relative z-10">{paper.title}</p>
                     <MoveUpRight className="mt-4 h-5 w-5 self-end text-muted-foreground transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 relative z-10" />
                   </div>
