@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Separator } from './ui/separator';
 
 const essays = [
   {
@@ -42,14 +43,17 @@ const essays = [
 export function EssaysList() {
   return (
     <div className="mx-auto max-w-6xl">
-      <div className="grid grid-cols-1 gap-x-12 gap-y-16 md:grid-cols-2">
+      <div className="flex flex-col gap-8">
         {essays.map((essay, index) => (
-          <Link href={essay.url} key={index} className="group">
-            <h3 className="text-xl font-semibold text-primary transition-colors group-hover:text-primary/80">
-              {essay.title}
-            </h3>
-            <p className="mt-3 text-muted-foreground">{essay.summary}</p>
-          </Link>
+          <div key={index}>
+            <Link href={essay.url} className="group grid grid-cols-1 md:grid-cols-2 md:gap-12">
+              <h3 className="text-xl font-medium text-primary transition-colors group-hover:text-primary/80">
+                {essay.title}
+              </h3>
+              <p className="mt-3 text-muted-foreground md:mt-0">{essay.summary}</p>
+            </Link>
+            {index < essays.length - 1 && <Separator className="mt-8" />}
+          </div>
         ))}
       </div>
     </div>
