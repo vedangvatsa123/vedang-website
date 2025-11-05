@@ -29,7 +29,7 @@ export default function Home() {
           </Link>
           <div className="flex items-center gap-4">
             <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-              <Link href="#" className="text-foreground transition-colors hover:text-primary">
+              <Link href="/writings" className="text-foreground transition-colors hover:text-primary">
                 Writings
               </Link>
               <Link href="#" className="text-foreground transition-colors hover:text-primary">
