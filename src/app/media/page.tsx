@@ -85,7 +85,7 @@ const mediaMentions = [
   { title: 'Exchange perde US$ 4,4 milhões em hack e oferece prêmio para quem recuperar fundos', source: 'Portal do Bitcoin', url: 'https://portaldobitcoin.uol.com.br/exchange-perde-de-us-44-milhoes-em-hack-e-oferece-premio-para-quem-recuperar-fundos/' },
   { title: "Study explores Digital Rupee's transformative potential in financial inclusion", source: 'ET Government', url: 'https://government.economictimes.indiatimes.com/news/economy/study-explores-digital-rupees-transformative-potential-in-financial-inclusion/115208696' },
   { title: 'Découvrez le créateur de Deepseek qui se cache derrière l’IA qui fait trembler OpenAI', source: 'Le Big Data', url: 'https://www.lebigdata.fr/decouvrez-le-createur-de-deepseek-qui-se-cache-derriere-lia-qui-fait-trembler-openai' },
-  { title: 'Indian Web3 delegation submits recommendations to the chairman of the Parliamentary Standing Committee on Finance', source: 'Odaily', url: 'https://www.odaily.news/post/5206196' },
+  { title: 'What will the ultimate form of the stablecoin chain be?', source: 'Odaily', url: 'https://www.odaily.news/en/post/5206196' },
   { title: 'Will The Indian Parliament Discuss The Issue Of Moonlighting?', source: 'Inventiva', url: 'https://www.inventiva.co.in/stories/parliament-discuss-issue-moonlighting/' },
   { title: 'Indian Web3 delegation submits proposal to Chairman of Parliamentary Standing Committee on Finance', source: 'Bitpush News', url: 'https://www.bitpush.news/articles/7572507' },
   { title: "#Web3 Releases a Collaborative Report on India's Digital Currency", source: 'ThePrint', url: 'https://theprint.in/ani-press-releases/hashtag-web3-releases-a-collaborative-report-on-indias-digital-currency/2352522' },
