@@ -5,6 +5,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight, MoveUpRight } from 'lucide-react';
 import { EssaysList } from '@/components/essays-list';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { Footer } from '@/components/footer';
 
 const recentPapers = [
   { title: 'Device-to-Device Economics and AI Agent Transactions' },
@@ -101,11 +102,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="py-6">
-        <div className="container mx-auto px-4 text-center text-xs text-muted-foreground md:px-6">
-          &copy; {new Date().getFullYear()} veda.ng
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

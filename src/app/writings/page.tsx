@@ -1,4 +1,5 @@
 import { EssaysList } from '@/components/essays-list';
+import { Footer } from '@/components/footer';
 import { ThemeToggle } from '@/components/theme-toggle';
 import Link from 'next/link';
 
@@ -34,11 +35,7 @@ export default function WritingsPage() {
         </div>
       </main>
 
-      <footer className="py-6">
-        <div className="container mx-auto px-4 text-center text-xs text-muted-foreground md:px-6">
-          &copy; {new Date().getFullYear()} veda.ng
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
