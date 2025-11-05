@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowRight, MoveUpRight } from 'lucide-react';
+import { MoveUpRight } from 'lucide-react';
 import { EssaysList } from '@/components/essays-list';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
@@ -69,9 +69,9 @@ export default function Home() {
               <br />
               BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
             </p>
-            <Button asChild className="mt-6 rounded-full" size="sm">
+            <Button asChild className="mt-6" size="sm">
               <Link href="/profile">
-                View Full Profile <ArrowRight className="ml-2 h-4 w-4" />
+                View Full Profile
               </Link>
             </Button>
           </div>
@@ -97,7 +97,7 @@ export default function Home() {
               ))}
             </div>
              <div className="mt-6 text-center">
-               <Button variant="outline" asChild className="rounded-full" size="sm">
+               <Button variant="outline" asChild size="sm">
                  <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Read More on Google Scholar</Link>
                </Button>
             </div>
