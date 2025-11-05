@@ -32,7 +32,7 @@ export default function ProfilePage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
 
-      <main className="flex-grow py-8">
+      <main className="flex-grow py-6">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <section className="text-center">
             <Image
@@ -97,16 +97,16 @@ export default function ProfilePage() {
             </div>
           </section>
 
-          <Separator className="my-8" />
+          <Separator className="my-6" />
 
-          <div className="space-y-10">
+          <div className="space-y-8">
             <section id="experience">
-              <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                 <Briefcase className="w-6 h-6" /> Professional Experience
               </h2>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <Card>
-                  <CardHeader>
+                  <CardHeader className="p-4">
                     <div className="flex justify-between items-start">
                       <div>
                         <CardTitle>Growth Advisory</CardTitle>
@@ -115,7 +115,7 @@ export default function ProfilePage() {
                       <p className="text-sm text-muted-foreground flex-shrink-0">October 2022 - Present</p>
                     </div>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                       <li>Served as Head of Marketing and Growth Lead for several Web3 companies.</li>
                       <li>
@@ -150,7 +150,7 @@ export default function ProfilePage() {
                   </CardContent>
                 </Card>
                 <Card>
-                  <CardHeader>
+                  <CardHeader className="p-4">
                     <div className="flex justify-between items-start">
                       <div>
                         <CardTitle>Country Head</CardTitle>
@@ -159,7 +159,7 @@ export default function ProfilePage() {
                       <p className="text-sm text-muted-foreground flex-shrink-0">September 2021 - October 2022</p>
                     </div>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                       <li>
                         Led user growth from 5,000 to 200,000 through content and social media, generating over 1.5
@@ -170,7 +170,7 @@ export default function ProfilePage() {
                   </CardContent>
                 </Card>
                 <Card>
-                  <CardHeader>
+                  <CardHeader className="p-4">
                     <div className="flex justify-between items-start">
                       <div>
                         <CardTitle>Consultant</CardTitle>
@@ -179,7 +179,7 @@ export default function ProfilePage() {
                       <p className="text-sm text-muted-foreground flex-shrink-0">September 2019 - September 2021</p>
                     </div>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent className="space-y-4 p-4 pt-0">
                     <div>
                       <h4 className="font-semibold">Program Management (Minister's Office, Ministry of Electronics and IT, India):</h4>
                       <ul className="list-disc list-inside space-y-2 text-muted-foreground mt-2">
@@ -209,7 +209,7 @@ export default function ProfilePage() {
                   </CardContent>
                 </Card>
                 <Card>
-                  <CardHeader>
+                  <CardHeader className="p-4">
                     <div className="flex justify-between items-start">
                       <div>
                         <CardTitle>Project Manager (Co-Founder)</CardTitle>
@@ -218,7 +218,7 @@ export default function ProfilePage() {
                       <p className="text-sm text-muted-foreground flex-shrink-0">April 2013 - June 2017</p>
                     </div>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                       <li>Led a 30-member team to deliver 27 web and mobile products across the full development lifecycle.</li>
                       <li>Expanded business development globally, serving clients on five continents.</li>
@@ -229,16 +229,16 @@ export default function ProfilePage() {
               </div>
             </section>
 
-             <div className="grid md:grid-cols-2 gap-8">
+             <div className="grid md:grid-cols-2 gap-6">
                 <section id="education">
-                  <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                  <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <GraduationCap className="w-6 h-6" /> Education
                   </h2>
                   <Card>
-                    <CardHeader>
+                    <CardHeader className="p-4">
                       <CardTitle className="text-lg">BE - Computer Engineering (2009-13) & MBA (2017-19)</CardTitle>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="p-4 pt-0">
                       <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                         <li>Nominated for the President's Gold Medal at the Indian Institute of Technology Kanpur.</li>
                         <li>Represented over 100 students as the department student representative.</li>
@@ -251,11 +251,11 @@ export default function ProfilePage() {
                 </section>
 
                 <section id="achievements">
-                  <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                  <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <Award className="w-6 h-6" /> Key Achievements
                   </h2>
                   <Card>
-                    <CardContent className="pt-6">
+                    <CardContent className="pt-4 p-4">
                       <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                         <li>Awarded as a Fellow of the Royal Society for the Encouragement of Arts, Manufactures and Commerce. Past Fellows include Stephen Hawking and Charles Dickens.</li>
                         <li>Issued Japan’s special visa for Intellectual Figures.</li>
@@ -270,11 +270,11 @@ export default function ProfilePage() {
             </div>
 
             <section id="publications">
-                <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <BookOpen className="w-6 h-6" /> Selected Publications
                 </h2>
                  <Card>
-                    <CardContent className="pt-6">
+                    <CardContent className="pt-4 p-4">
                         <ul className="list-disc list-inside space-y-2 text-muted-foreground columns-2">
                             <li>A literature review on internet of things (iot)</li>
                             <li>Estonia’s e-governance and digital public service delivery solutions</li>
@@ -312,11 +312,11 @@ export default function ProfilePage() {
             </section>
             
             <section id="projects">
-                <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <Lightbulb className="w-6 h-6" /> Other Projects
                 </h2>
                  <Card>
-                    <CardContent className="pt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <CardContent className="pt-4 p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
                             <h4 className="font-semibold">ERNST & YOUNG</h4>
                             <p className="text-muted-foreground mt-1">Analyzed the sectoral impact of OECD's action plans on Base Erosion & Profit Shifting.</p>
@@ -342,11 +342,11 @@ export default function ProfilePage() {
             </section>
 
              <section id="interests">
-                <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <Heart className="w-6 h-6" /> Interests
                 </h2>
                  <Card>
-                    <CardContent className="pt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <CardContent className="pt-4 p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
                             <h4 className="font-semibold">Photography</h4>
                             <p className="text-muted-foreground mt-1">Selected among a few global photographers to cover the world's largest festival by gathering.</p>
@@ -364,13 +364,13 @@ export default function ProfilePage() {
             </section>
 
             <section id="testimonials">
-                <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <MessageSquare className="w-6 h-6" /> Testimonials
                 </h2>
                  <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
                     <Card>
-                        <CardContent className="pt-6">
-                            <blockquote className="border-l-2 pl-6 italic text-muted-foreground">
+                        <CardContent className="pt-4 p-4">
+                            <blockquote className="border-l-2 pl-4 italic text-muted-foreground">
                             "I always find his work to be of just the absolute high quality. He is always timely, so easy to work with, responsive to notes and always able to explain things to me when it's hard for me to get things. He has my highest endorsement."
                             </blockquote>
                             <p className="mt-4 font-semibold text-right">Jack Alison</p>
@@ -378,8 +378,8 @@ export default function ProfilePage() {
                         </CardContent>
                     </Card>
                      <Card>
-                        <CardContent className="pt-6">
-                            <blockquote className="border-l-2 pl-6 italic text-muted-foreground">
+                        <CardContent className="pt-4 p-4">
+                            <blockquote className="border-l-2 pl-4 italic text-muted-foreground">
                             "I am very comfortable to recommend him for any job that requires strict deadlines, taking on new challenges at short notice and dealing with altering priorities, efficient client communication and good analytical capabilities."
                             </blockquote>
                             <p className="mt-4 font-semibold text-right">Bharath Visweswariah</p>
@@ -387,8 +387,8 @@ export default function ProfilePage() {
                         </CardContent>
                     </Card>
                      <Card>
-                        <CardContent className="pt-6">
-                            <blockquote className="border-l-2 pl-6 italic text-muted-foreground">
+                        <CardContent className="pt-4 p-4">
+                            <blockquote className="border-l-2 pl-4 italic text-muted-foreground">
                             "He helped me a lot in working closely with me and understand my requirements even though we had some language barriers between us but Vedang has never let these barriers be the reason of any delay in the work."
                             </blockquote>
                             <p className="mt-4 font-semibold text-right">Eran Malovani</p>
