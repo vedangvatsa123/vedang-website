@@ -32,7 +32,7 @@ export default function ProfilePage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
 
-      <main className="flex-grow py-6">
+      <main className="flex-grow py-12">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <section className="text-center">
             <Image
@@ -43,14 +43,14 @@ export default function ProfilePage() {
               className="mx-auto h-24 w-24 rounded-full object-cover"
               priority
             />
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
-            <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+            <h1 className="mt-4 text-5xl font-headline font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground">
               Founder of a 100,000+ member Web3 community, Vedang Vatsa is featured in Favikon’s Top 50 Fintech &
               Crypto Creators and Thinkers360’s Top 50 Metaverse Thought Leaders. With over 80 million LinkedIn post
               views, he is an experienced researcher in AI and Web3. He has published extensively and partnered with
               global tech conferences and academic institutions.
             </p>
-            <div className="mt-6 flex justify-center items-center space-x-4">
+            <div className="mt-8 flex justify-center items-center space-x-4">
               <Link
                 href="mailto:vedangvats@gmail.com"
                 className="text-muted-foreground hover:text-primary flex items-center gap-2"
@@ -97,19 +97,19 @@ export default function ProfilePage() {
             </div>
           </section>
 
-          <Separator className="my-6" />
+          <Separator className="my-10" />
 
-          <div className="space-y-8">
+          <div className="space-y-10">
             <section id="experience">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                <Briefcase className="w-6 h-6" /> Professional Experience
+              <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                <Briefcase className="w-7 h-7" /> Professional Experience
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <Card>
                   <CardHeader className="p-4">
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle>Growth Advisory</CardTitle>
+                        <CardTitle className="text-xl">Growth Advisory</CardTitle>
                         <p className="text-muted-foreground">Hashtag Web3</p>
                       </div>
                       <p className="text-sm text-muted-foreground flex-shrink-0">October 2022 - Present</p>
@@ -153,7 +153,7 @@ export default function ProfilePage() {
                   <CardHeader className="p-4">
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle>Country Head</CardTitle>
+                        <CardTitle className="text-xl">Country Head</CardTitle>
                         <p className="text-muted-foreground">Prosple (Oceania based career-tech company)</p>
                       </div>
                       <p className="text-sm text-muted-foreground flex-shrink-0">September 2021 - October 2022</p>
@@ -173,7 +173,7 @@ export default function ProfilePage() {
                   <CardHeader className="p-4">
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle>Consultant</CardTitle>
+                        <CardTitle className="text-xl">Consultant</CardTitle>
                         <p className="text-muted-foreground">KPMG</p>
                       </div>
                       <p className="text-sm text-muted-foreground flex-shrink-0">September 2019 - September 2021</p>
@@ -212,7 +212,7 @@ export default function ProfilePage() {
                   <CardHeader className="p-4">
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle>Project Manager (Co-Founder)</CardTitle>
+                        <CardTitle className="text-xl">Project Manager (Co-Founder)</CardTitle>
                         <p className="text-muted-foreground">Studio Tesseract</p>
                       </div>
                       <p className="text-sm text-muted-foreground flex-shrink-0">April 2013 - June 2017</p>
@@ -229,14 +229,14 @@ export default function ProfilePage() {
               </div>
             </section>
 
-             <div className="grid md:grid-cols-2 gap-6">
+             <div className="grid md:grid-cols-2 gap-8">
                 <section id="education">
-                  <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                    <GraduationCap className="w-6 h-6" /> Education
+                  <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                    <GraduationCap className="w-7 h-7" /> Education
                   </h2>
                   <Card>
                     <CardHeader className="p-4">
-                      <CardTitle className="text-lg">BE - Computer Engineering (2009-13) & MBA (2017-19)</CardTitle>
+                      <CardTitle className="text-xl">BE - Computer Engineering (2009-13) & MBA (2017-19)</CardTitle>
                     </CardHeader>
                     <CardContent className="p-4 pt-0">
                       <ul className="list-disc list-inside space-y-2 text-muted-foreground">
@@ -251,8 +251,8 @@ export default function ProfilePage() {
                 </section>
 
                 <section id="achievements">
-                  <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                    <Award className="w-6 h-6" /> Key Achievements
+                  <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                    <Award className="w-7 h-7" /> Key Achievements
                   </h2>
                   <Card>
                     <CardContent className="pt-4 p-4">
@@ -270,8 +270,8 @@ export default function ProfilePage() {
             </div>
 
             <section id="publications">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                    <BookOpen className="w-6 h-6" /> Selected Publications
+                <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                    <BookOpen className="w-7 h-7" /> Selected Publications
                 </h2>
                  <Card>
                     <CardContent className="pt-4 p-4">
@@ -312,8 +312,8 @@ export default function ProfilePage() {
             </section>
             
             <section id="projects">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                    <Lightbulb className="w-6 h-6" /> Other Projects
+                <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                    <Lightbulb className="w-7 h-7" /> Other Projects
                 </h2>
                  <Card>
                     <CardContent className="pt-4 p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -342,8 +342,8 @@ export default function ProfilePage() {
             </section>
 
              <section id="interests">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                    <Heart className="w-6 h-6" /> Interests
+                <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                    <Heart className="w-7 h-7" /> Interests
                 </h2>
                  <Card>
                     <CardContent className="pt-4 p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -364,8 +364,8 @@ export default function ProfilePage() {
             </section>
 
             <section id="testimonials">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                    <MessageSquare className="w-6 h-6" /> Testimonials
+                <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                    <MessageSquare className="w-7 h-7" /> Testimonials
                 </h2>
                  <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
                     <Card>

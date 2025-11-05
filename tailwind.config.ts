@@ -19,31 +19,40 @@ export default {
       typography: (theme: (path: string) => any) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.foreground'),
-            a: {
-              color: theme('colors.primary.DEFAULT'),
-              '&:hover': {
-                color: theme('colors.primary.DEFAULT'),
-              },
-            },
+            '--tw-prose-body': theme('colors.foreground'),
+            '--tw-prose-headings': theme('colors.foreground'),
+            '--tw-prose-lead': theme('colors.foreground'),
+            '--tw-prose-links': theme('colors.primary.DEFAULT'),
+            '--tw-prose-bold': theme('colors.foreground'),
+            '--tw-prose-counters': theme('colors.muted.foreground'),
+            '--tw-prose-bullets': theme('colors.border'),
+            '--tw-prose-hr': theme('colors.border'),
+            '--tw-prose-quotes': theme('colors.muted.foreground'),
+            '--tw-prose-quote-borders': theme('colors.border'),
+            '--tw-prose-captions': theme('colors.muted.foreground'),
+            '--tw-prose-code': theme('colors.foreground'),
+            '--tw-prose-pre-code': theme('colors.foreground'),
+            '--tw-prose-pre-bg': theme('colors.muted.DEFAULT'),
+            '--tw-prose-th-borders': theme('colors.border'),
+            '--tw-prose-td-borders': theme('colors.border'),
+            '--tw-prose-invert-body': theme('colors.foreground'),
+            '--tw-prose-invert-headings': theme('colors.foreground'),
+            '--tw-prose-invert-lead': theme('colors.foreground'),
+            '--tw-prose-invert-links': theme('colors.primary.DEFAULT'),
+            '--tw-prose-invert-bold': theme('colors.foreground'),
+            '--tw-prose-invert-counters': theme('colors.muted.foreground'),
+            '--tw-prose-invert-bullets': theme('colors.border'),
+            '--tw-prose-invert-hr': theme('colors.border'),
+            '--tw-prose-invert-quotes': theme('colors.muted.foreground'),
+            '--tw-prose-invert-quote-borders': theme('colors.border'),
+            '--tw-prose-invert-captions': theme('colors.muted.foreground'),
+            '--tw-prose-invert-code': theme('colors.foreground'),
+            '--tw-prose-invert-pre-code': theme('colors.foreground'),
+            '--tw-prose-invert-pre-bg': theme('colors.muted.DEFAULT'),
+            '--tw-prose-invert-th-borders': theme('colors.border'),
+            '--tw-prose-invert-td-borders': theme('colors.border'),
             h1: {
-              color: theme('colors.foreground'),
-            },
-            h2: {
-              color: theme('colors.foreground'),
-            },
-            h3: {
-              color: theme('colors.foreground'),
-            },
-            h4: {
-              color: theme('colors.foreground'),
-            },
-            strong: {
-              color: theme('colors.foreground'),
-            },
-            blockquote: {
-              color: theme('colors.muted.foreground'),
-              borderLeftColor: theme('colors.border'),
+              fontFamily: theme('fontFamily.headline').join(','),
             },
           },
         },
@@ -64,20 +73,16 @@ export default {
           '"Noto Color Emoji"',
         ],
         headline: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'Roboto',
-          '"Helvetica Neue"',
-          'Arial',
-          '"Noto Sans"',
-          'sans-serif',
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
+          'Georgia',
+          'Times',
+          '"Times New Roman"',
+          'serif'
         ],
         code: ['monospace'],
+      },
+      fontSize: {
+        '5xl': ['3.052rem', { lineHeight: '1.1' }],
+        '6xl': ['3.815rem', { lineHeight: '1.1' }],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -133,8 +138,8 @@ export default {
       },
       borderRadius: {
         lg: 'var(--radius)',
-        md: 'var(--radius)',
-        sm: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
         'accordion-down': {

@@ -99,11 +99,11 @@ export default function MediaPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
-      <main className="flex-grow py-8">
+      <main className="flex-grow py-12">
         <div className="container mx-auto px-4 md:px-6">
           <section className="text-center max-w-4xl mx-auto">
-            <h1 className="text-3xl font-semibold tracking-tight">Speaking on Emerging Technologies</h1>
-            <p className="mt-2 text-muted-foreground">
+            <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight">Speaking on Emerging Technologies</h1>
+            <p className="mt-4 text-muted-foreground">
               As a recognized voice in AI, Web3, and the future of technology, Vedang is a frequent speaker at
               international conferences, academic institutions, and corporate events. His talks demystify complex
               topics, including decentralized economies and agentic AI, providing audiences with actionable insights
@@ -111,7 +111,7 @@ export default function MediaPage() {
             </p>
           </section>
 
-          <section className="max-w-4xl mx-auto py-6">
+          <section className="max-w-4xl mx-auto py-10">
             <ul className="space-y-1.5 text-sm text-muted-foreground text-left md:columns-2">
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)</span></li>
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Featured in Favikon’s Top 50 Fintech & Crypto Creators and Thinkers360’s Top 50 Metaverse Thought Leaders</span></li>
@@ -126,8 +126,8 @@ export default function MediaPage() {
             </ul>
           </section>
 
-          <section className="py-6">
-            <h2 className="text-2xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
+          <section className="py-10">
+            <h2 className="text-3xl font-semibold tracking-tight text-center mb-8">As Seen In</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
               {asSeenInLogos.map((media, index) => (
                 <div key={index} className="flex justify-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
@@ -143,8 +143,8 @@ export default function MediaPage() {
             </div>
           </section>
 
-          <section className="py-6">
-            <h2 className="text-2xl font-semibold tracking-tight text-center mb-6">Speaking Engagements</h2>
+          <section className="py-10">
+            <h2 className="text-3xl font-semibold tracking-tight text-center mb-8">Speaking Engagements</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
               {Array.from({ length: 28 }).map((_, index) => (
                 <div key={index} className="aspect-w-1 aspect-h-1">
@@ -161,8 +161,8 @@ export default function MediaPage() {
             </div>
           </section>
 
-          <section className="py-6">
-            <h2 className="text-2xl font-semibold tracking-tight text-center mb-6">Media Mentions</h2>
+          <section className="py-10">
+            <h2 className="text-3xl font-semibold tracking-tight text-center mb-8">Media Mentions</h2>
             <div className="grid md:grid-cols-2 gap-4">
                 {mediaMentions.map((mention, index) => (
                   <Link

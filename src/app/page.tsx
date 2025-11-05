@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { MoveUpRight } from 'lucide-react';
 import { EssaysList } from '@/components/essays-list';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
@@ -50,7 +49,7 @@ export default function Home() {
       <Header />
 
       <main className="flex-grow">
-        <section className="py-8 text-center">
+        <section className="py-16 text-center">
           <div className="container mx-auto px-4 md:px-6">
             {profileImage && (
               <Image
@@ -63,13 +62,13 @@ export default function Home() {
                 priority
               />
             )}
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight">Vedang Vatsa</h1>
-            <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
+            <h1 className="mt-4 text-5xl lg:text-6xl font-headline tracking-tight">Vedang Vatsa</h1>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground">
               Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)
               <br />
               BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
             </p>
-            <Button asChild className="mt-6" size="sm">
+            <Button asChild className="mt-8" size="sm">
               <Link href="/profile">
                 View Full Profile
               </Link>
@@ -77,9 +76,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="papers" className="py-8 bg-secondary/50">
+        <section id="papers" className="py-16 bg-secondary/50">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="mb-6 text-center text-2xl font-semibold tracking-tight">Recent Papers</h2>
+            <h2 className="mb-8 text-center text-4xl font-semibold tracking-tight">Recent Papers</h2>
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
               {recentPapers.map((paper, index) => (
                 <Link
@@ -89,14 +88,13 @@ export default function Home() {
                   target={paper.url ? '_blank' : undefined}
                   rel={paper.url ? 'noopener noreferrer' : undefined}
                 >
-                  <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-2 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
+                  <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-4 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
                     <p className="font-medium relative z-10 text-sm">{paper.title}</p>
-                    <MoveUpRight className="relative z-10 h-4 w-4 self-end text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </div>
                 </Link>
               ))}
             </div>
-             <div className="mt-6 text-center">
+             <div className="mt-8 text-center">
                <Button variant="outline" asChild size="sm">
                  <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Read More on Google Scholar</Link>
                </Button>
@@ -104,9 +102,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="essays" className="py-8">
+        <section id="essays" className="py-16">
            <div className="container mx-auto px-4 md:px-6">
-             <h2 className="mb-6 text-center text-2xl font-semibold tracking-tight">Essays</h2>
+             <h2 className="mb-8 text-center text-4xl font-semibold tracking-tight">Essays</h2>
               <EssaysList />
            </div>
         </section>
