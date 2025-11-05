@@ -1,6 +1,12 @@
 import { EssaysList } from '@/components/essays-list';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Writings',
+    description: 'A collection of essays by Vedang Vatsa on AI, Web3, and the future of technology.',
+};
 
 export default function WritingsPage() {
   return (

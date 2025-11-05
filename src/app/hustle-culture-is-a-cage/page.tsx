@@ -2,6 +2,26 @@ import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { MoreArticles } from '@/components/more-articles';
 import { Separator } from '@/components/ui/separator';
+import { essays } from '@/lib/essays';
+import { Metadata } from 'next';
+
+const article = essays.find(e => e.url === '/hustle-culture-is-a-cage');
+
+export const metadata: Metadata = {
+  title: article?.title,
+  description: article?.summary,
+  openGraph: {
+    title: article?.title,
+    description: article?.summary,
+    url: `https://veda.ng${article?.url}`,
+    type: 'article',
+  },
+   twitter: {
+    card: 'summary_large_image',
+    title: article?.title,
+    description: article?.summary,
+  },
+};
 
 export default function HustleCultureArticle() {
   return (

@@ -4,9 +4,35 @@ import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: 'Vedang Vatsa',
+  title: {
+    default: 'Vedang Vatsa',
+    template: '%s | Vedang Vatsa',
+  },
   description:
     'Personal website of Vedang Vatsa, Founder of Hashtag Web3, a 100,000+ member community of AI & Web3 professionals.',
+  openGraph: {
+    title: 'Vedang Vatsa',
+    description: 'Personal website of Vedang Vatsa, Founder of Hashtag Web3, a 100,000+ member community of AI & Web3 professionals.',
+    url: 'https://veda.ng',
+    siteName: 'Vedang Vatsa',
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  twitter: {
+    title: 'Vedang Vatsa',
+    card: 'summary_large_image',
+  },
 };
 
 export default function RootLayout({
