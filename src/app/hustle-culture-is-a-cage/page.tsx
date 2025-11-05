@@ -6,6 +6,7 @@ import { essays } from '@/lib/essays';
 import { Metadata } from 'next';
 
 const article = essays.find(e => e.url === '/hustle-culture-is-a-cage');
+const VEDANG_VATSA_URL = 'https://veda.ng';
 
 export const metadata: Metadata = {
   title: article?.title,
@@ -13,25 +14,70 @@ export const metadata: Metadata = {
   openGraph: {
     title: article?.title,
     description: article?.summary,
-    url: `https://veda.ng${article?.url}`,
+    url: `${VEDANG_VATSA_URL}${article?.url}`,
     type: 'article',
+    images: [
+      {
+        url: `${VEDANG_VATSA_URL}/og-images/hustle-culture.png`,
+        width: 1200,
+        height: 630,
+        alt: article?.title,
+      },
+    ]
   },
    twitter: {
     card: 'summary_large_image',
     title: article?.title,
     description: article?.summary,
+    images: [`${VEDANG_VATSA_URL}/og-images/hustle-culture.png`],
+  },
+  alternates: {
+    canonical: article?.url,
   },
 };
 
 export default function HustleCultureArticle() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${VEDANG_VATSA_URL}${article?.url}`,
+    },
+    headline: article?.title,
+    description: article?.summary,
+    image: `${VEDANG_VATSA_URL}/og-images/hustle-culture.png`,
+    author: {
+      '@type': 'Person',
+      name: 'Vedang Vatsa',
+      url: VEDANG_VATSA_URL,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Vedang Vatsa',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${VEDANG_VATSA_URL}/profile-photo.png`,
+      },
+    },
+    datePublished: '2024-08-01T08:00:00+00:00', // Note: You might want to make this dynamic
+    dateModified: '2024-08-01T08:00:00+00:00', // Note: You might want to make this dynamic
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
+       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main className="flex-grow py-12 md:py-16">
         <article className="container mx-auto px-4 md:px-6 prose dark:prose-invert lg:prose-xl">
           <h1>Hustle culture is a cage dressed up as ambition</h1>
-          <p>We worship busy.</p>
+          <p>
+            We worship busy.
+          </p>
 
           <p>
             The person who sleeps four hours is more dedicated than the one who sleeps eight. The entrepreneur working

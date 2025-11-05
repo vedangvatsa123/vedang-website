@@ -6,6 +6,9 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'Writings',
     description: 'A collection of essays by Vedang Vatsa on AI, Web3, and the future of technology.',
+    alternates: {
+      canonical: '/writings',
+    },
 };
 
 export default function WritingsPage() {

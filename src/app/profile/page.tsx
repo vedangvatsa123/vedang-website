@@ -22,6 +22,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
     title: 'Profile',
     description: 'Founder of a 100,000+ member Web3 community, Vedang Vatsa is featured in Favikon’s Top 50 Fintech & Crypto Creators and Thinkers360’s Top 50 Metaverse Thought Leaders.',
+    alternates: {
+      canonical: '/profile',
+    },
 };
 
 export default function ProfilePage() {
