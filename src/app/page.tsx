@@ -82,10 +82,16 @@ export default function Home() {
             <h2 className="mb-6 text-center text-2xl font-semibold tracking-tight">Recent Papers</h2>
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
               {recentPapers.map((paper, index) => (
-                <Link href={paper.url || '#'} key={index} className="group" target={paper.url ? '_blank' : undefined} rel={paper.url ? 'noopener noreferrer' : undefined}>
-                  <div className="relative overflow-hidden flex h-full flex-col justify-between rounded-lg bg-card border p-5 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
+                <Link
+                  href={paper.url || '#'}
+                  key={index}
+                  className="group flex flex-col"
+                  target={paper.url ? '_blank' : undefined}
+                  rel={paper.url ? 'noopener noreferrer' : undefined}
+                >
+                  <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-5 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
                     <p className="font-medium relative z-10">{paper.title}</p>
-                    <MoveUpRight className="mt-4 h-5 w-5 self-end text-muted-foreground transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 relative z-10" />
+                    <MoveUpRight className="relative z-10 mt-4 h-5 w-5 self-end text-muted-foreground transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
                   </div>
                 </Link>
               ))}
