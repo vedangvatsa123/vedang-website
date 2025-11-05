@@ -1,5 +1,7 @@
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
+import { MoreArticles } from '@/components/more-articles';
+import { Separator } from '@/components/ui/separator';
 
 export default function AiAgentEconomyArticle() {
   return (
@@ -404,6 +406,16 @@ export default function AiAgentEconomyArticle() {
           </p>
         </article>
       </main>
+
+      <section className="py-16">
+          <div className="container mx-auto px-4 md:px-6">
+            <Separator />
+            <div className="mt-16">
+              <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight">Read More</h2>
+              <MoreArticles currentArticleUrl="/the-ai-agent-economy" />
+            </div>
+          </div>
+       </section>
 
       <Footer />
     </div>
