@@ -12,7 +12,7 @@ export const essays = [
     url: '/the-ai-agent-economy',
   },
   {
-    title: 'From Attention to Intention, The Next Evolution of the Web',
+    title: 'From Attention to Intention',
     summary:
       'For two decades, the internet has run on capturing attention. Now, a new model is emerging where autonomous agents act on our intentions, creating a more efficient and purpose-driven web. This piece explores that profound shift.',
     url: '#',
