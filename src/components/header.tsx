@@ -3,7 +3,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-background/60 backdrop-blur-lg border-b border-border/50">
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="font-semibold tracking-tight text-lg">
           veda.ng
@@ -16,7 +16,7 @@ export function Header() {
             <Link href="/profile" className="text-foreground transition-colors hover:text-primary">
               Profile
             </Link>
-            <Link href="#" className="text-foreground transition-colors hover:text-primary">
+            <Link href="/media" className="text-foreground transition-colors hover:text-primary">
               Media
             </Link>
           </nav>

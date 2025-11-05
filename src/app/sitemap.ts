@@ -17,12 +17,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/writings`,
       lastModified: new Date(),
     },
+     {
+      url: `${BASE_URL}/media`,
+      lastModified: new Date(),
+    },
   ];
 
   const articlePages = essays
     .filter((essay) => essay.url !== '#')
     .map((essay) => ({
-      url: `${BASE_URL}${essay.url}`,
+      url: `${BASE_AURL}${essay.url}`,
       lastModified: new Date(),
     }));
 

@@ -1,0 +1,183 @@
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
+import { Card, CardContent } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Media',
+  description:
+    'Media features and speaking engagements of Vedang Vatsa, a recognized voice in AI, Web3, and the future of technology.',
+  alternates: {
+    canonical: '/media',
+  },
+};
+
+const asSeenInLogos = [
+  { name: 'Business Insider', logo: 'https://veda.ng/media-logos/business-insider.png' },
+  { name: 'Yahoo Finance', logo: 'https://veda.ng/media-logos/yahoo-finance.png' },
+  { name: 'YourStory', logo: 'https://veda.ng/media-logos/yourstory.png' },
+  { name: 'The Tribune', logo: 'https://veda.ng/media-logos/the-tribune.png' },
+  { name: 'ET', logo: 'https://veda.ng/media-logos/et.png' },
+  { name: 'Business Standard', logo: 'https://veda.ng/media-logos/business-standard.png' },
+  { name: 'Inc42', logo: 'https://veda.ng/media-logos/inc42.png' },
+  { name: 'ThePrint', logo: 'https://veda.ng/media-logos/the-print.png' },
+  { name: 'Decrypt', logo: 'https://veda.ng/media-logos/decrypt.png' },
+  { name: 'ANI', logo: 'https://veda.ng/media-logos/ani.png' },
+  { name: 'Dainik Bhaskar', logo: 'https://veda.ng/media-logos/dainik-bhaskar.png' },
+  { name: 'IEEE Computer', logo: 'https://veda.ng/media-logos/ieee-computer.png' },
+  { name: 'KPMG', logo: 'https://veda.ng/media-logos/kpmg.png' },
+  { name: 'Business Today', logo: 'https://veda.ng/media-logos/business-today.png' },
+];
+
+const mediaMentions = [
+  { title: "India's CBI Raids 60 Locations in Crackdown on GainBitcoin Scam", source: 'Decrypt' },
+  { title: 'Indian Web3 Delegation Submits Recommendations to Chairperson of Parliamentary Standing Committee on Finance', source: 'ANI News' },
+  { title: "#Web3 Releases a Collaborative Report on India's Digital Currency", source: 'Business Standard' },
+  { title: 'Web3 Developers Secure Top-Tier Salaries in 2024: Report', source: 'Cryptorank' },
+  { title: "India’s Top Web3 Leaders Collaborate To Shape The Future Of The Digital Rupee", source: 'Digital South' },
+  { title: 'Crypto In India: Path To Financial Freedom Or A Burden?', source: 'Outlook Money' },
+  { title: 'Vedang Vatsa, a star Web3 community builder', source: 'Irish Tech News' },
+  { title: 'Indian Web3 delegation submits recommendations to Chairperson of Parliamentary Standing Committee on Finance', source: 'The Tribune' },
+  { title: 'Tech as an enabler in the new normal', source: 'YourStory' },
+  { title: 'Digital service delivery will bolster an Atmanirbhar Bharat', source: 'OpIndia' },
+  { title: 'India is hosting the India Blockchain Month festival', source: 'Incrypted' },
+  { title: 'Delhi to Lead the World in Web3, AI, Real-World Asset Innovation', source: 'MEXC' },
+  { title: 'India sets sights on becoming a Web3 powerhouse with VDA focus', source: 'Devdiscourse' },
+  { title: 'Stablecoins Surge 72% in 14 Months, Disrupting $27 Trillion Payment Flows', source: 'AInvest' },
+  { title: 'India Blockchain Month 2025: Delhi Takes Center Stage in Web3, AI, Real-World Asset Innovation', source: 'Toktimes' },
+  { title: 'IIT Professor’s Witty Response To Student Asking For Attendance Goes Viral', source: 'Storypick' },
+  { title: 'Bias-free algorithm is essential for trustworthy Artificial Intelligence', source: 'YourStory' },
+  { title: 'From DeFi To NFT: A New Era Of Innovation In Crypto Landscape', source: 'Outlook Money' },
+  { title: 'India Blockchain Month 2024 Kicked Off Yesterday', source: 'BeInCrypto' },
+  { title: "Crypto Appears in Indian Minister's Asset Declaration For First Time", source: 'Yahoo Finance' },
+  { title: 'What Are Stablecoins And Why Investors Must Know About Them', source: 'Outlook Money' },
+  { title: "Dell Technologies Forum 2025 Spotlights AI for India's Economic Boom", source: 'WebProNews' },
+  { title: 'Bitcoin Hits New All-Time High Above $100,000, Crypto Market Gains', source: 'Outlook Money' },
+  { title: "US House Passes 'GENIUS Act,' Marking Major Step for Crypto Innovation", source: 'Outlook Money' },
+  { title: "El Salvador's Bitcoin Bet Swells to $644M as Rally Boosts Sovereign Holdings", source: 'Decrypt' },
+  { title: 'Bitcoin Volatility Soars as Crypto Market Braces for US Presidential Election Result', source: 'Outlook Money' },
+  { title: 'Bitcoin Soars Past $88K, Sparking Optimism in the Crypto Market', source: 'Outlook Money' },
+  { title: 'Bitcoin at $106K? Ether Dips as Post-Election Crypto Market Tumbles', source: 'Decrypt' },
+  { title: "From 2008 To 2024: Bitcoin's Evolution From Idea To Record-Breaking Height", source: 'Outlook Money' },
+  { title: 'What Happens If You’ve Accidentally Sent Cryptocurrency To The Wrong Address?', source: 'Outlook Money' },
+  { title: 'DeepSeek AI Unveils Janus for Enhanced AI Reasoning', source: 'InfoQ' },
+  { title: 'Cryptocurrency: A New Cyber Threat in BFSI Sector - Report', source: 'Outlook Money' },
+  { title: "IIT Professor's Harsh Response To Student's Attendance Request Sparks Outrage", source: 'News18' },
+  { title: 'Robert Kiyosaki On Bitcoin: How Fear Of Making Mistakes Keeps Investors From Building Wealth', source: 'Outlook Money' },
+  { title: 'Bitcoin Celebrates Pizza Day By Crossing $111,000 Mark', source: 'Outlook Money' },
+  { title: 'Bitcoin Hits $122K: What Lies Ahead For The Market?', source: 'Outlook Money' },
+  { title: 'Economist Peter Schiff Predicts Bitcoin’s End in 2025 Financial Crisis', source: 'Outlook Money' },
+  { title: "Binance Co-Founder CZ: 'I Haven't Bought a Single Meme Coin or NFT'", source: 'Decrypt' },
+  { title: 'Bitcoin To Reach $1M by 2030? Robert Kiyosaki’s Projection And What It Means For You', source: 'Outlook Money' },
+  { title: 'CFTC’s Kristin Johnson Exits With Warning on Crypto’s Systemic Risk', source: 'Yahoo Finance' },
+  { title: 'Recruiters Say Web3 Execs Lose Remote Edge to Developers', source: 'TheStreet' },
+  { title: 'Web3 Tarjoaa Osaajille Huippuluokan Palkan', source: 'CryptoNews' },
+  { title: 'Key Reasons Why Ethereum Is Lagging Despite Underlying Potential', source: 'Outlook Money' },
+  { title: 'A Beginner\'s Guide To NFTs: From Understanding To Investing In Digital Assets', source: 'Outlook Money' },
+  { title: 'Income Tax Tribunal Ruling: Cryptocurrencies Treated As Capital Assets For Taxation', source: 'Outlook Money' },
+  { title: 'JioCoin: What It Is And How Users Can Earn Digital Tokens', source: 'Outlook Money' },
+  { title: 'CFTC’s Kristin Johnson Exits With Warning on Prediction Markets', source: 'Decrypt' },
+  { title: 'Aposta de El Salvador no Bitcoin chega a R$ 3,6 bilhões com alta do mercado', source: 'Portal do Bitcoin' },
+  { title: 'Krypto-News: CFTC-Vorsitzende Johnson kritisiert Prognosemärkte', source: 'Business Insider' },
+  { title: 'Exchange perde US$ 4,4 milhões em hack e oferece prêmio para quem recuperar fundos', source: 'Portal do Bitcoin' },
+  { title: "Study explores Digital Rupee's transformative potential in financial inclusion", source: 'ET Government' },
+  { title: 'Découvrez le créateur de Deepseek qui se cache derrière l’IA qui fait trembler OpenAI', source: 'Le Big Data' },
+  { title: 'Indian Web3 delegation submits recommendations to the chairman of the Parliamentary Standing Committee on Finance', source: 'Odaily' },
+  { title: 'Will The Indian Parliament Discuss The Issue Of Moonlighting?', source: 'Inventiva' },
+  { title: 'Indian Web3 delegation submits proposal to Chairman of Parliamentary Standing Committee on Finance', source: 'Bitpush News' },
+  { title: "#Web3 Releases a Collaborative Report on India's Digital Currency", source: 'ThePrint' },
+  { title: 'Parliamentary Committee on Finance selects Virtual Digital Assets for 2024-25 examination', source: 'The Tribune' },
+  { title: 'Loyalty has gone for a toss: Millennials, moonlighting & start-ups', source: 'Business Today' },
+  { title: '5 Common Mistakes Every Beginner Should Avoid In Crypto', source: 'Outlook Money' },
+];
+
+
+export default function MediaPage() {
+  return (
+    <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <Header />
+      <main className="flex-grow py-8">
+        <div className="container mx-auto px-4 md:px-6">
+          <section className="text-center max-w-4xl mx-auto">
+            <h1 className="text-3xl font-semibold tracking-tight">Speaking on Emerging Technologies</h1>
+            <p className="mt-4 text-muted-foreground">
+              As a recognized voice in AI, Web3, and the future of technology, Vedang is a frequent speaker at
+              international conferences, academic institutions, and corporate events. His talks demystify complex
+              topics, including decentralized economies and agentic AI, providing audiences with actionable insights
+              into the forces shaping our world. Below is a glimpse into his media features and speaking engagements.
+            </p>
+          </section>
+
+          <section className="max-w-4xl mx-auto py-8">
+            <ul className="space-y-2 text-sm text-muted-foreground text-left md:columns-2">
+              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)</span></li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Featured in Favikon’s Top 50 Fintech & Crypto Creators and Thinkers360’s Top 50 Metaverse Thought Leaders</span></li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts</span></li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Speaker at IIT Delhi, IIT Kanpur, OP Jindal University, Bharati Vidyapeeth, TUM Munich, ISB Hyderabad, ETH Enugu, etc.</span></li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Young Researcher 2020 (with 25 publications) and Young Achiever 2020-21 awardee</span></li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Ex-EY & KPMG Consultant, Former Country Head for one of the largest career-tech companies</span></li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Recommendation by Jack Allison (Screenwriter for Oscars 2017), medal by the former director of Indian Prime Minister’s office</span></li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>80 million Linkedin post views & 55 million views on Telegram channel</span></li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Issued Japan’s special visa for Intellectual people</span></li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Traveled 18 countries & jumped the world’s highest canyon swing</span></li>
+            </ul>
+          </section>
+
+          <section className="py-8">
+            <h2 className="text-2xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
+              {asSeenInLogos.map((media, index) => (
+                <div key={index} className="flex justify-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                   <Image
+                      src={media.logo}
+                      alt={media.name}
+                      width={120}
+                      height={40}
+                      className="object-contain"
+                    />
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="py-8">
+            <h2 className="text-2xl font-semibold tracking-tight text-center mb-6">Speaking Engagements</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
+              {Array.from({ length: 28 }).map((_, index) => (
+                <div key={index} className="aspect-w-1 aspect-h-1">
+                  <Image
+                    src={`https://picsum.photos/seed/${100 + index}/300/300`}
+                    alt={`Vedang speaking engagement ${index + 1}`}
+                    width={300}
+                    height={300}
+                    className="rounded-lg object-cover w-full h-full"
+                    data-ai-hint="person speaking"
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="py-8">
+            <h2 className="text-2xl font-semibold tracking-tight text-center mb-6">Media Mentions</h2>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                {mediaMentions.map((mention, index) => (
+                  <div key={index}>
+                    <p className="font-medium text-foreground">{mention.title}</p>
+                    <p className="text-sm text-muted-foreground">{mention.source}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}
