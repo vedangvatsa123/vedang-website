@@ -30,7 +30,7 @@ export default function HustleCultureArticle() {
       <main className="flex-grow py-12 md:py-16">
         <article className="container mx-auto px-4 md:px-6 prose dark:prose-invert lg:prose-xl">
           <h1>Hustle culture is a cage dressed up as ambition</h1>
-          <p className="lead">We worship busy.</p>
+          <p>We worship busy.</p>
 
           <p>
             The person who sleeps four hours is more dedicated than the one who sleeps eight. The entrepreneur working
