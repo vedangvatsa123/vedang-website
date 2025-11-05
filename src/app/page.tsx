@@ -98,7 +98,7 @@ export default function Home() {
             </div>
              <div className="mt-6 text-center">
                <Button variant="outline" asChild className="rounded-full" size="sm">
-                 <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Read More on Google Scholar <MoveUpRight className="ml-2 h-4 w-4" /></Link>
+                 <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Read More on Google Scholar</Link>
                </Button>
             </div>
           </div>
