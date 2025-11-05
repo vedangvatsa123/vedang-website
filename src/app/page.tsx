@@ -8,11 +8,26 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { Footer } from '@/components/footer';
 
 const recentPapers = [
-  { title: 'Device-to-Device Economics and AI Agent Transactions' },
-  { title: 'Stablecoin Growth and Market Dynamics' },
-  { title: 'Stablecoins in the Modern Financial System' },
-  { title: 'Global Stablecoin Regulations and Policies' },
-  { title: 'Blockchain Ecosystem Evolution' },
+  { 
+    title: 'Device-to-Device Economics and AI Agent Transactions',
+    url: 'https://dx.doi.org/10.2139/ssrn.5660270'
+  },
+  { 
+    title: 'Stablecoin Growth and Market Dynamics',
+    url: 'https://dx.doi.org/10.2139/ssrn.5325570'
+  },
+  { 
+    title: 'Stablecoins in the Modern Financial System',
+    url: 'https://dx.doi.org/10.2139/ssrn.5329957'
+  },
+  { 
+    title: 'Global Stablecoin Regulations and Policies',
+    url: 'https://dx.doi.org/10.2139/ssrn.5386707'
+  },
+  { 
+    title: 'Blockchain Ecosystem Evolution',
+    url: 'https://dx.doi.org/10.2139/ssrn.5357534'
+  },
   { title: "Estonia's e-gov and digital public service delivery solutions" },
   { title: 'Analysis of Global Research Proceedings in AI' },
   { title: 'Identification and Mitigation of Algorithmic Bias Through Policy Instruments' },
@@ -78,7 +93,7 @@ export default function Home() {
             <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight">Recent Papers</h2>
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
               {recentPapers.map((paper, index) => (
-                <Link href="#" key={index} className="group">
+                <Link href={paper.url || '#'} key={index} className="group" target={paper.url ? "_blank" : undefined} rel={paper.url ? "noopener noreferrer" : undefined}>
                   <div className="relative overflow-hidden flex h-full flex-col justify-between rounded-lg bg-card border p-5 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
                     <p className="font-medium relative z-10">{paper.title}</p>
                     <MoveUpRight className="mt-4 h-5 w-5 self-end text-muted-foreground transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 relative z-10" />
