@@ -15,7 +15,7 @@ export default function HustleCultureArticle() {
               <Link href="/writings" className="text-foreground transition-colors hover:text-primary">
                 Writings
               </Link>
-              <Link href="#" className="text-foreground transition-colors hover:text-primary">
+              <Link href="/profile" className="text-foreground transition-colors hover:text-primary">
                 Profile
               </Link>
               <Link href="#" className="text-foreground transition-colors hover:text-primary">
@@ -255,7 +255,6 @@ export default function HustleCultureArticle() {
             into wealth. The person who inherited nothing and worked three jobs and still struggles feels shame because
             they've been told effort equals outcome.
           </p>
-
           <p>
             Hustle culture is a just-world fallacy. It lets the lucky feel deserving and the unlucky feel responsible.
           </p>

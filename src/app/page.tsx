@@ -57,7 +57,7 @@ export default function Home() {
               <Link href="/writings" className="text-foreground transition-colors hover:text-primary">
                 Writings
               </Link>
-              <Link href="#" className="text-foreground transition-colors hover:text-primary">
+              <Link href="/profile" className="text-foreground transition-colors hover:text-primary">
                 Profile
               </Link>
               <Link href="#" className="text-foreground transition-colors hover:text-primary">
@@ -90,7 +90,7 @@ export default function Home() {
               BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
             </p>
             <Button asChild className="mt-6 rounded-full" size="sm">
-              <Link href="#">
+              <Link href="/profile">
                 View Full Profile <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

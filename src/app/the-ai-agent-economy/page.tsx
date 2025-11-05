@@ -15,7 +15,7 @@ export default function AiAgentEconomyArticle() {
               <Link href="/writings" className="text-foreground transition-colors hover:text-primary">
                 Writings
               </Link>
-              <Link href="#" className="text-foreground transition-colors hover:text-primary">
+              <Link href="/profile" className="text-foreground transition-colors hover:text-primary">
                 Profile
               </Link>
               <Link href="#" className="text-foreground transition-colors hover:text-primary">
