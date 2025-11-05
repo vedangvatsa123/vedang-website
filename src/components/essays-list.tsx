@@ -1,60 +1,57 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 
 const essays = [
   {
-    title: 'The Algorithmic Mind: Where AI and Cognition Converge',
-    summary: 'An exploration of how modern AI architectures mirror human cognitive processes, and what this means for the future of intelligent systems.',
+    title: 'The AI Agent Economy',
+    summary:
+      "AI agents can now buy and sell things without human help, creating new market patterns that old economic theories can't explain. This article looks at how major platform developments are changing device-to-device economics and what new patterns suggest for market fairness and economic stability.",
     url: '#',
   },
   {
-    title: 'Beyond the Turing Test: A New Framework for Machine Understanding',
-    summary: 'Proposing a novel set of benchmarks to evaluate true language comprehension in machines, moving past simple conversational mimicry.',
+    title: 'From Attention to Intention, The Next Evolution of the Web',
+    summary:
+      'For two decades, the internet has run on capturing attention. Now, a new model is emerging where autonomous agents act on our intentions, creating a more efficient and purpose-driven web. This piece explores that profound shift.',
     url: '#',
   },
   {
-    title: 'The Ethics of Emotionally-Aware AI',
-    summary: 'A critical look at the development of AI that can perceive and react to human emotions, and the ethical guardrails we must establish.',
+    title: 'An Internet of Lies and How We Can Fix It',
+    summary:
+      "AI tools like Sora can create video that looks perfectly real. This blurs the line between fact and fiction, creating a huge trust problem. The solution isn't just better hardware, it's a new system of verification, and blockchain could be the answer.",
     url: '#',
   },
-   {
-    title: 'Semantic Spaces: Navigating the Nuances of Meaning',
-    summary: 'Diving deep into vector embeddings and how they represent meaning, from single words to complex, multi-modal concepts.',
+  {
+    title: "Tracing Blockchain's Decade Long Journey from Hype to Maturity",
+    summary:
+      'Blockchain has traveled from a niche concept to a globally recognized technology. This piece traces its evolution, examining the dramatic hype cycles of public interest and the steadier, more telling growth of the developer community that builds it.',
+    url: '#',
+  },
+  {
+    title: 'A Deep Dive Into the Heartbeat of the Blockchain Developer Ecosystem',
+    summary:
+      "The true measure of a technology's health isn't just its market cap, but the vibrancy of its developer community. This piece dives into the data on blockchain developers, analyzing their growth, productivity, and what the recent contraction means for the ecosystem.",
+    url: '#',
+  },
+  {
+    title: 'Decoding the Blockchain Ecosystem and What Data Tells Us About Its Future',
+    summary:
+      'Public hype and professional development in blockchain often move at different speeds. This piece decodes the data, exploring the lag between these trends, the influence of cross-project developers, and what it all means for investors and practitioners.',
     url: '#',
   },
 ];
 
 export function EssaysList() {
   return (
-    <section id="essays">
-      <h2 className="font-headline mb-8 text-4xl font-bold tracking-tight text-primary">
-        Essays
-      </h2>
-      <div className="grid gap-8 sm:grid-cols-2">
+    <div className="mx-auto max-w-6xl">
+      <div className="grid grid-cols-1 gap-x-12 gap-y-16 md:grid-cols-2">
         {essays.map((essay, index) => (
-          <Card key={index} className="flex flex-col justify-between shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-            <div>
-              <CardHeader>
-                <CardTitle className="font-headline text-2xl leading-tight">
-                  {essay.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>{essay.summary}</CardDescription>
-              </CardContent>
-            </div>
-            <CardFooter>
-              <Button asChild variant="link" className="p-0 h-auto font-semibold">
-                <Link href={essay.url}>
-                  Read More <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
+          <Link href={essay.url} key={index} className="group">
+            <h3 className="text-xl font-semibold text-primary transition-colors group-hover:text-primary/80">
+              {essay.title}
+            </h3>
+            <p className="mt-3 text-muted-foreground">{essay.summary}</p>
+          </Link>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
