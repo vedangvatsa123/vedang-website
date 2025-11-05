@@ -32,7 +32,7 @@ export default function ProfilePage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
 
-      <main className="flex-grow py-16">
+      <main className="flex-grow py-12">
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <section className="text-center">
             <Image
@@ -97,14 +97,14 @@ export default function ProfilePage() {
             </div>
           </section>
 
-          <Separator className="my-16" />
+          <Separator className="my-12" />
 
-          <div className="space-y-16">
+          <div className="space-y-12">
             <section id="experience">
-              <h2 className="text-3xl font-semibold tracking-tight mb-8 flex items-center gap-3">
+              <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
                 <Briefcase className="w-7 h-7" /> Professional Experience
               </h2>
-              <div className="space-y-8">
+              <div className="space-y-6">
                 <Card>
                   <CardHeader>
                     <div className="flex justify-between items-start">
@@ -229,9 +229,9 @@ export default function ProfilePage() {
               </div>
             </section>
 
-             <div className="grid md:grid-cols-2 gap-8">
+             <div className="grid md:grid-cols-2 gap-6">
                 <section id="education">
-                  <h2 className="text-3xl font-semibold tracking-tight mb-8 flex items-center gap-3">
+                  <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
                     <GraduationCap className="w-7 h-7" /> Education
                   </h2>
                   <Card>
@@ -251,7 +251,7 @@ export default function ProfilePage() {
                 </section>
 
                 <section id="achievements">
-                  <h2 className="text-3xl font-semibold tracking-tight mb-8 flex items-center gap-3">
+                  <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
                     <Award className="w-7 h-7" /> Key Achievements
                   </h2>
                   <Card>
@@ -270,7 +270,7 @@ export default function ProfilePage() {
             </div>
 
             <section id="publications">
-                <h2 className="text-3xl font-semibold tracking-tight mb-8 flex items-center gap-3">
+                <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
                     <BookOpen className="w-7 h-7" /> Selected Publications
                 </h2>
                  <Card>
@@ -312,7 +312,7 @@ export default function ProfilePage() {
             </section>
             
             <section id="projects">
-                <h2 className="text-3xl font-semibold tracking-tight mb-8 flex items-center gap-3">
+                <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
                     <Lightbulb className="w-7 h-7" /> Other Projects
                 </h2>
                  <Card>
@@ -342,7 +342,7 @@ export default function ProfilePage() {
             </section>
 
              <section id="interests">
-                <h2 className="text-3xl font-semibold tracking-tight mb-8 flex items-center gap-3">
+                <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
                     <Heart className="w-7 h-7" /> Interests
                 </h2>
                  <Card>
@@ -364,7 +364,7 @@ export default function ProfilePage() {
             </section>
 
             <section id="testimonials">
-                <h2 className="text-3xl font-semibold tracking-tight mb-8 flex items-center gap-3">
+                <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
                     <MessageSquare className="w-7 h-7" /> Testimonials
                 </h2>
                  <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">

@@ -50,7 +50,7 @@ export default function Home() {
       <Header />
 
       <main className="flex-grow">
-        <section className="py-24 text-center">
+        <section className="py-16 text-center">
           <div className="container mx-auto px-4 md:px-6">
             {profileImage && (
               <Image
@@ -63,7 +63,7 @@ export default function Home() {
                 priority
               />
             )}
-            <h1 className="mt-6 text-5xl font-semibold tracking-tight">Vedang Vatsa</h1>
+            <h1 className="mt-6 text-6xl font-semibold tracking-tight">Vedang Vatsa</h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
               Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)
               <br />
@@ -77,10 +77,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="papers" className="py-24 bg-secondary/50">
+        <section id="papers" className="py-16 bg-secondary/50">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="mb-12 text-center text-4xl font-semibold tracking-tight">Recent Papers</h2>
-            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <h2 className="mb-8 text-center text-4xl font-semibold tracking-tight">Recent Papers</h2>
+            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
               {recentPapers.map((paper, index) => (
                 <Link
                   href={paper.url || '#'}
@@ -104,9 +104,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="essays" className="py-24">
+        <section id="essays" className="py-16">
            <div className="container mx-auto px-4 md:px-6">
-             <h2 className="mb-12 text-center text-4xl font-semibold tracking-tight">Essays</h2>
+             <h2 className="mb-8 text-center text-4xl font-semibold tracking-tight">Essays</h2>
               <EssaysList />
            </div>
         </section>

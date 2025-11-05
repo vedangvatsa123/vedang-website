@@ -72,8 +72,8 @@ export default {
         code: ['monospace'],
       },
       fontSize: {
-        '5xl': ['3rem', { lineHeight: '1.1' }],
-        '6xl': ['3.75rem', { lineHeight: '1.1' }],
+        '5xl': ['3rem', { lineHeight: '1.2' }],
+        '6xl': ['3.75rem', { lineHeight: '1.2' }],
       },
       colors: {
         background: 'hsl(var(--background))',

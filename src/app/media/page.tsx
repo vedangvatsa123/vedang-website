@@ -111,8 +111,8 @@ export default function MediaPage() {
             </p>
           </section>
 
-          <section className="max-w-4xl mx-auto py-10">
-            <ul className="space-y-1.5 text-sm text-muted-foreground text-left md:columns-2">
+          <section className="max-w-4xl mx-auto py-8">
+            <ul className="space-y-1 text-sm text-muted-foreground text-left md:columns-2">
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)</span></li>
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Featured in Favikon’s Top 50 Fintech & Crypto Creators and Thinkers360’s Top 50 Metaverse Thought Leaders</span></li>
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts</span></li>
@@ -126,7 +126,7 @@ export default function MediaPage() {
             </ul>
           </section>
 
-          <section className="py-10">
+          <section className="py-8">
             <h2 className="text-3xl font-semibold tracking-tight text-center mb-8">As Seen In</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
               {asSeenInLogos.map((media, index) => (
@@ -143,7 +143,7 @@ export default function MediaPage() {
             </div>
           </section>
 
-          <section className="py-10">
+          <section className="py-8">
             <h2 className="text-3xl font-semibold tracking-tight text-center mb-8">Speaking Engagements</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
               {Array.from({ length: 28 }).map((_, index) => (
@@ -161,7 +161,7 @@ export default function MediaPage() {
             </div>
           </section>
 
-          <section className="py-10">
+          <section className="py-8">
             <h2 className="text-3xl font-semibold tracking-tight text-center mb-8">Media Mentions</h2>
             <div className="grid md:grid-cols-2 gap-4">
                 {mediaMentions.map((mention, index) => (

@@ -73,7 +73,7 @@ export default function AiAgentEconomyArticle() {
       />
       <Header />
 
-      <main className="flex-grow py-16">
+      <main className="flex-grow py-12">
         <article className="container mx-auto px-4 md:px-6 prose dark:prose-invert lg:prose-xl">
           <h1 className="text-5xl font-semibold tracking-tight">The AI Agent Economy</h1>
           <p>
@@ -472,10 +472,10 @@ export default function AiAgentEconomyArticle() {
         </article>
       </main>
 
-      <section className="py-16">
+      <section className="py-12">
           <div className="container mx-auto px-4 md:px-6">
             <Separator />
-            <div className="mt-16">
+            <div className="mt-12">
               <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Read More</h2>
               <MoreArticles currentArticleUrl="/the-ai-agent-economy" />
             </div>
