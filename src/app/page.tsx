@@ -54,7 +54,7 @@ export default function Home() {
           <div className="container mx-auto px-4 md:px-6">
             
             <Image
-              src="/images/icon.png"
+              src="/icon.png"
               alt="A professional headshot of Vedang Vatsa."
               width={96}
               height={96}

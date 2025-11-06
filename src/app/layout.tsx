@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://veda.ng'),
   title: {
     default: 'Vedang Vatsa',
     template: '%s | Vedang Vatsa',
