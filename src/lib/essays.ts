@@ -7,30 +7,6 @@ export type Essay = {
 
 export const essays: Essay[] = [
   {
-    title: 'Towards The Agentic Web',
-    summary:
-      'The evolution of the internet from static pages to an autonomous, intelligent ecosystem driven by AI agents that understand and act on user intent.',
-    url: '/towards-the-agentic-web',
-  },
-  {
-    title: 'The Silent Weight of High Intelligence',
-    summary:
-      'High intelligence is often treated as the ultimate advantage, but beyond a certain point, it can distort perception, emotion, and connection. This essay explores the hidden burdens and complexities of living with a powerful intellect.',
-    url: '/the-silent-weight-of-high-intelligence',
-  },
-  {
-    title: 'Hustle culture is a cage dressed up as ambition',
-    summary:
-      "We worship busy. The person who sleeps four hours is more dedicated than the one who sleeps eight. The entrepreneur working weekends is winning while you're wasting time. Rest is weakness. Stillness is stagnation. This is the gospel of hustle culture. And it's destroying us.",
-    url: '/hustle-culture-is-a-cage',
-  },
-  {
-    title: 'The AI Agent Economy',
-    summary:
-      "AI agents can now buy and sell things without human help, creating new market patterns that old economic theories can't explain. This article looks at how major platform developments are changing device-to-device economics and what new patterns suggest for market fairness and economic stability.",
-    url: '/the-ai-agent-economy',
-  },
-  {
     title: 'From Attention to Intention',
     summary:
       'For two decades, the internet has run on capturing attention. Now, a new model is emerging where autonomous agents act on our intentions, creating a more efficient and purpose-driven web. This piece explores that profound shift.',

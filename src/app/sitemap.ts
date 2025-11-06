@@ -1,4 +1,3 @@
-import { essays } from '@/lib/essays';
 import { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://veda.ng';
@@ -27,12 +26,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const articlePages = essays
-    .filter((essay) => essay.url.startsWith('/'))
-    .map((essay) => ({
-      url: `${BASE_URL}${essay.url}`,
-      lastModified: new Date(),
-    }));
-
-  return [...staticPages, ...articlePages];
+  return [...staticPages];
 }
