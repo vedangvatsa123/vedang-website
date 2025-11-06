@@ -120,7 +120,7 @@ const speakingEngagementImages = [
   '/images/speaker/Vedang%20-%20speaker22.jpg',
   '/images/speaker/Vedang%20-%20speaker23.jpg',
   '/images/speaker/Vedang%20-%20speaker24.jpeg',
-  '/images/speaker/Vedang%20-%20speaker25.jpeg',
+  '/images/speaker/Vedang%2-0-%20speaker25.jpeg',
   '/images/speaker/Vedang%20-%20speaker26.jpg',
   '/images/speaker/Vedang%20-%20speaker27.jpeg',
   '/images/speaker/Vedang%20-%20speaker28.jpeg',
@@ -162,7 +162,7 @@ export default function MediaPage() {
             <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
               {asSeenInLogos.map((media, index) => (
-                <div key={index} className="flex justify-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                <div key={index} className="flex justify-center">
                    <Image
                       src={media.logo}
                       alt={media.name}

@@ -148,7 +148,7 @@ export default function SeoProfilePage() {
                   </ul>
                   <ul className="space-y-2 list-disc list-inside">
                     <li><span className="font-semibold text-foreground">Creative & Design:</span> Figma, Canva, Adobe Photoshop, Adobe Express</li>
-                    <li><span className="font-semibold text-foreground">Web & CMS:</span> WordPress, Webflow, HTML/CSS, React, Wix, Shopify, Replit, Lovable, Firebase Studio</li>
+                    <li><span className="font-semibold text-foreground">Web & CMS:</span> WordPress, Webflow, HTML/CSS, React, Wix, Shopify, Replit, Firebase Studio</li>
                     <li><span className="font-semibold text-foreground">AI Tools:</span> Advanced use of GPT-4, Claude, Midjourney for content and creative workflows</li>
                   </ul>
               </div>
@@ -332,5 +332,3 @@ export default function SeoProfilePage() {
     </div>
   );
 }
-
-    
