@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/icon.png',
+        url: '/images/icon.png',
         width: 1200,
         height: 630,
         alt: 'Vedang Vatsa',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Vedang Vatsa',
     card: 'summary_large_image',
-    images: ['/icon.png'],
+    images: ['/images/icon.png'],
   },
   alternates: {
     canonical: '/',

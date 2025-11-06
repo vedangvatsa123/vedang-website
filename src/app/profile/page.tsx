@@ -39,7 +39,7 @@ export default function ProfilePage() {
           <section className="text-center">
             
               <Image
-                src="/icon.png"
+                src="/images/icon.png"
                 alt="Vedang Vatsa"
                 width={96}
                 height={96}

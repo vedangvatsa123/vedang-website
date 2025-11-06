@@ -1,4 +1,5 @@
 
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -54,7 +55,7 @@ export default function Home() {
           <div className="container mx-auto px-4 md:px-6">
             
             <Image
-              src="/icon.png"
+              src="/images/icon.png"
               alt="A professional headshot of Vedang Vatsa."
               width={96}
               height={96}

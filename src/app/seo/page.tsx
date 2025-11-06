@@ -33,20 +33,20 @@ export const metadata: Metadata = {
 };
 
 const asSeenInLogos = [
-    { name: 'Business Insider', logo: '/images/speaker/press/Business_Insider_2023_logo.svg.png' },
-    { name: 'Yahoo Finance', logo: '/images/speaker/press/image-3.webp' },
-    { name: 'YourStory', logo: '/images/speaker/press/image-23.webp' },
-    { name: 'The Tribune', logo: '/images/speaker/press/image-4.webp' },
-    { name: 'ET', logo: '/images/speaker/press/et-logo4px.png' },
-    { name: 'Business Standard', logo: '/images/speaker/press/business-standard-logo-2.png' },
-    { name: 'Inc42', logo: '/images/speaker/press/68296-business-media-company-inc42-startup-marketing.png' },
-    { name: 'The Print', logo: '/images/speaker/press/image-24.webp' },
-    { name: 'Decrypt', logo: '/images/speaker/press/Decrypt_logo.svg' },
-    { name: 'ANI', logo: '/images/speaker/press/Ani-logo-black.png' },
-    { name: 'Dainik Bhaskar', logo: '/images/speaker/press/Dainik_Bhaskar_Logo.png' },
-    { name: 'IEEE Computer', logo: '/images/speaker/press/IEEE_Computer.png' },
-    { name: 'KPMG', logo: '/images/speaker/press/1718209067639.jpeg' },
-    { name: 'Business Today', logo: '/images/speaker/press/bt_business_today_vedang%20vatsa-min%20(1).png' },
+    { name: 'Business Insider', logo: '/images/press/Business_Insider_2023_logo.svg.png' },
+    { name: 'Yahoo Finance', logo: '/images/press/Yahoo!_Finance_logo_2021 (1).png' },
+    { name: 'YourStory', logo: '/images/press/image-23.webp' },
+    { name: 'The Tribune', logo: '/images/press/The_Tribune_India_IPRD_Indian_PR_Distribution.png' },
+    { name: 'ET', logo: '/images/press/et-logo4px.png' },
+    { name: 'Business Standard', logo: '/images/press/business-standard-logo-2.png' },
+    { name: 'Inc42', logo: '/images/press/68296-business-media-company-inc42-startup-marketing.png' },
+    { name: 'The Print', logo: '/images/press/ThePrint_logo.png' },
+    { name: 'Decrypt', logo: '/images/press/Decrypt_logo.svg' },
+    { name: 'ANI', logo: '/images/press/Ani-logo-black.png' },
+    { name: 'Dainik Bhaskar', logo: '/images/press/Dainik_Bhaskar_Logo.png' },
+    { name: 'IEEE Computer', logo: '/images/press/IEEE_Computer.png' },
+    { name: 'KPMG', logo: '/images/press/1718209067639.jpeg' },
+    { name: 'Business Today', logo: '/images/press/bt_business_today_vedang%20vatsa-min%20(1).png' },
 ];
 
 export default function SeoProfilePage() {
@@ -58,7 +58,7 @@ export default function SeoProfilePage() {
         <div className="container mx-auto max-w-6xl px-4 md:px-6">
           <section className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
               <Image
-                src="/icon.png"
+                src="/images/icon.png"
                 alt="Vedang Vatsa"
                 width={128}
                 height={128}
@@ -248,7 +248,7 @@ export default function SeoProfilePage() {
                 <h2 className="text-2xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
                 <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 items-center justify-center">
                 {asSeenInLogos.map((media, index) => (
-                    <div key={index} className="flex justify-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                    <div key={index} className="flex justify-center grayscale-0 opacity-100 transition-all">
                     <Image
                         src={media.logo}
                         alt={media.name}
