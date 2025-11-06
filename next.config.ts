@@ -5,7 +5,7 @@ import type { NextConfig } from 'next'
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
   // Configure `pageExtensions` to include MDX files
-  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  pageExtensions: ['js', 'jsx', 'md', 'ts', 'tsx'],
   typescript: {
     ignoreBuildErrors: true,
   },

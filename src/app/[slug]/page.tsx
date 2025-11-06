@@ -59,8 +59,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     notFound();
   }
 
-  // Dynamically require the MDX content file based on the slug
-  const PageContent = require(`../writings/${params.slug}/content.mdx`).default;
+  // Dynamically require the MD content file based on the slug
+  const PageContent = require(`../writings/${params.slug}/content.md`).default;
 
   return (
     <ArticleLayout article={article}>
