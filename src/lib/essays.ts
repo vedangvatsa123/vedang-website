@@ -1,5 +1,11 @@
 export const essays = [
   {
+    title: 'The Silent Weight of High Intelligence',
+    summary:
+      'High intelligence is often treated as the ultimate advantage, but beyond a certain point, it can distort perception, emotion, and connection. This essay explores the hidden burdens and complexities of living with a powerful intellect.',
+    url: '/the-silent-weight-of-high-intelligence',
+  },
+  {
     title: 'Hustle culture is a cage dressed up as ambition',
     summary:
       "We worship busy. The person who sleeps four hours is more dedicated than the one who sleeps eight. The entrepreneur working weekends is winning while you're wasting time. Rest is weakness. Stillness is stagnation. This is the gospel of hustle culture. And it's destroying us.",
