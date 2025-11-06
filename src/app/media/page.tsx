@@ -17,26 +17,26 @@ export const metadata: Metadata = {
 };
 
 const asSeenInLogos = [
-  { name: 'Business Insider', logo: 'https://veda.ng/media-logos/business-insider.png' },
-  { name: 'Yahoo Finance', logo: 'https://veda.ng/media-logos/yahoo-finance.png' },
-  { name: 'YourStory', logo: 'https://veda.ng/media-logos/yourstory.png' },
-  { name: 'The Tribune', logo: 'https://veda.ng/media-logos/the-tribune.png' },
-  { name: 'ET', logo: 'https://veda.ng/media-logos/et.png' },
-  { name: 'Business Standard', logo: 'https://veda.ng/media-logos/business-standard.png' },
-  { name: 'Inc42', logo: 'https://veda.ng/media-logos/inc42.png' },
-  { name: 'ThePrint', logo: 'https://veda.ng/media-logos/the-print.png' },
-  { name: 'Decrypt', logo: 'https://veda.ng/media-logos/decrypt.png' },
-  { name: 'ANI', logo: 'https://veda.ng/media-logos/ani.png' },
-  { name: 'Dainik Bhaskar', logo: 'https://veda.ng/media-logos/dainik-bhaskar.png' },
-  { name: 'IEEE Computer', logo: 'https://veda.ng/media-logos/ieee-computer.png' },
-  { name: 'KPMG', logo: 'https://veda.ng/media-logos/kpmg.png' },
-  { name: 'Business Today', logo: 'https://veda.ng/media-logos/business-today.png' },
+  { name: 'Inc42', logo: 'https://veda.ng/images/speaker/press/68296-business-media-company-inc42-startup-marketing.png' },
+  { name: 'KPMG', logo: 'https://veda.ng/images/speaker/press/1718209067639.jpeg' },
+  { name: 'ANI', logo: 'https://veda.ng/images/speaker/press/Ani-logo-black.png' },
+  { name: 'Business Today', logo: 'https://veda.ng/images/speaker/press/bt_business_today_vedang%20vatsa-min%20(1).png' },
+  { name: 'Business Insider', logo: 'https://veda.ng/images/speaker/press/Business_Insider_2023_logo.svg.png' },
+  { name: 'Business Standard', logo: 'https://veda.ng/images/speaker/press/business-standard-logo-2.png' },
+  { name: 'Dainik Bhaskar', logo: 'https://veda.ng/images/speaker/press/Dainik_Bhaskar_Logo.png' },
+  { name: 'Decrypt', logo: 'https://veda.ng/images/speaker/press/Decrypt_logo.svg' },
+  { name: 'ET', logo: 'https://veda.ng/images/speaker/press/et-logo4px.png' },
+  { name: 'IEEE Computer', logo: 'https://veda.ng/images/speaker/press/IEEE_Computer.png' },
+  { name: 'Yahoo Finance', logo: 'https://veda.ng/images/speaker/press/image-3.webp' },
+  { name: 'The Tribune', logo: 'https://veda.ng/images/speaker/press/image-4.webp' },
+  { name: 'YourStory', logo: 'https://veda.ng/images/speaker/press/image-23.webp' },
+  { name: 'The Print', logo: 'https://veda.ng/images/speaker/press/image-24.webp' },
 ];
 
 const mediaMentions = [
   { title: "India's CBI Raids 60 Locations in Crackdown on GainBitcoin Scam", source: 'Decrypt', url: 'https://decrypt.co/307790/indias-cbi-raids-60-locations-in-crackdown-on-gainbitcoin-scam' },
   { title: 'Indian Web3 Delegation Submits Recommendations to Chairperson of Parliamentary Standing Committee on Finance', source: 'ANI News', url: 'https://aninews.in/news/business/indian-web3-delegation-submits-recommendations-to-chairperson-of-parliamentary-standing-committee-on-finance20250731143537/' },
-  { title: "#Web3 Releases a Collaborative Report on India's Digital Currency", source: 'Business Standard', url: 'https://www.business-standard.com/content/press-releases-ani/hashtag-web3-releases-a-collaborative-report-on-india-s-digital-currency-124111200684_1.html' },
+  { title: "#Web3 Releases a Collaborative Report on India's Digital Currency", source: 'Business Standard', url: 'https://www.business-standard.com/content/press-releases-ani/hashtag-web3-releases-a-collaborative-report-on-indias-digital-currency-124111200684_1.html' },
   { title: 'Web3 Developers Secure Top-Tier Salaries in 2024: Report', source: 'Cryptorank', url: 'https://cryptorank.io/news/feed/cd6b0-web3-developers-secure-top-tier-salaries-in-2024-report' },
   { title: "India’s Top Web3 Leaders Collaborate To Shape The Future Of The Digital Rupee", source: 'Digital South', url: 'https://digitalsouth.co.in/press-release' },
   { title: 'Crypto In India: Path To Financial Freedom Or A Burden?', source: 'Outlook Money', url: 'https://www.outlookmoney.com/cryptocurrency/crypto-in-india-path-to-financial-freedom-or-a-burden' },
@@ -221,5 +221,3 @@ export default function MediaPage() {
     </div>
   );
 }
-
-    
