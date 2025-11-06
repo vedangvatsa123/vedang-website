@@ -33,7 +33,7 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
       name: 'Vedang Vatsa',
       logo: {
         '@type': 'ImageObject',
-        url: `${VEDANG_VATSA_URL}/profile-photo.png`,
+        url: `${VEDANG_VATSA_URL}/icon.png`,
       },
     },
     datePublished: new Date().toISOString(),

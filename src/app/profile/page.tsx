@@ -1,3 +1,4 @@
+
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -36,7 +37,7 @@ export default function ProfilePage() {
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <section className="text-center">
             <Image
-              src={'https://veda.ng/profile-photo.png'}
+              src={'/icon.png'}
               alt="Vedang Vatsa"
               width={96}
               height={96}

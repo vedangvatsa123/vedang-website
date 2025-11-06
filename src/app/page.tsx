@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -52,17 +53,17 @@ export default function Home() {
       <main className="flex-grow">
         <section className="py-16 text-center">
           <div className="container mx-auto px-4 md:px-6">
-            {profileImage && (
+            
               <Image
-                src={'https://veda.ng/profile-photo.png'}
-                alt={profileImage.description}
+                src={'/icon.png'}
+                alt={'Vedang Vatsa'}
                 width={96}
                 height={96}
                 className="mx-auto h-24 w-24 rounded-full object-cover"
-                data-ai-hint={profileImage.imageHint}
+                data-ai-hint={'portrait man'}
                 priority
               />
-            )}
+            
             <h1 className="mt-6 text-6xl font-semibold tracking-tight">Vedang Vatsa</h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
               Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)

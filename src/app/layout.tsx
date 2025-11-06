@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${VEDANG_VATSA_URL}/profile-photo.png`,
+        url: `${VEDANG_VATSA_URL}/icon.png`,
         width: 1200,
         height: 630,
         alt: 'Vedang Vatsa',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Vedang Vatsa',
     card: 'summary_large_image',
-    images: [`${VEDANG_VATSA_URL}/profile-photo.png`],
+    images: [`${VEDANG_VATSA_URL}/icon.png`],
   },
   alternates: {
     canonical: VEDANG_VATSA_URL,
