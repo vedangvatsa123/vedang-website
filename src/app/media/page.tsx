@@ -95,34 +95,34 @@ const mediaMentions = [
 ];
 
 const speakingEngagementImages = [
-  '/images/speaker/Vedang - speaker1.webp',
-  '/images/speaker/Vedang - speaker2.webp',
-  '/images/speaker/Vedang - speaker3.webp',
-  '/images/speaker/Vedang - speaker4.webp',
-  '/images/speaker/Vedang - speaker5.webp',
-  '/images/speaker/Vedang - speaker6.webp',
-  '/images/speaker/Vedang - speaker7.webp',
-  '/images/speaker/Vedang - speaker8.webp',
-  '/images/speaker/Vedang - speaker9.webp',
-  '/images/speaker/Vedang - speaker10.webp',
-  '/images/speaker/Vedang - speaker11.webp',
-  '/images/speaker/Vedang - speaker12.webp',
-  '/images/speaker/Vedang - speaker13.webp',
-  '/images/speaker/Vedang - speaker14.webp',
-  '/images/speaker/Vedang - speaker15.webp',
-  '/images/speaker/Vedang - speaker16.webp',
-  '/images/speaker/Vedang - speaker17.webp',
-  '/images/speaker/Vedang - speaker18.webp',
-  '/images/speaker/Vedang - speaker19.webp',
-  '/images/speaker/Vedang - speaker20.webp',
-  '/images/speaker/Vedang - speaker21.webp',
-  '/images/speaker/Vedang - speaker22.jpg',
-  '/images/speaker/Vedang - speaker23.jpg',
-  '/images/speaker/Vedang - speaker24.jpeg',
-  '/images/speaker/Vedang - speaker25.jpeg',
-  '/images/speaker/Vedang - speaker26.jpg',
-  '/images/speaker/Vedang - speaker27.jpeg',
-  '/images/speaker/vedang panel of web3 ai.jpg',
+  '/images/speaker/Vedang%20-%20speaker1.webp',
+  '/images/speaker/Vedang%20-%20speaker2.webp',
+  '/images/speaker/Vedang%20-%20speaker3.webp',
+  '/images/speaker/Vedang%20-%20speaker4.webp',
+  '/images/speaker/Vedang%20-%20speaker5.webp',
+  '/images/speaker/Vedang%20-%20speaker6.webp',
+  '/images/speaker/Vedang%20-%20speaker7.webp',
+  '/images/speaker/Vedang%20-%20speaker8.webp',
+  '/images/speaker/Vedang%20-%20speaker9.webp',
+  '/images/speaker/Vedang%20-%20speaker10.webp',
+  '/images/speaker/Vedang%20-%20speaker11.webp',
+  '/images/speaker/Vedang%20-%20speaker12.webp',
+  '/images/speaker/Vedang%20-%20speaker13.webp',
+  '/images/speaker/Vedang%20-%20speaker14.webp',
+  '/images/speaker/Vedang%20-%20speaker15.webp',
+  '/images/speaker/Vedang%20-%20speaker16.webp',
+  '/images/speaker/Vedang%20-%20speaker17.webp',
+  '/images/speaker/Vedang%20-%20speaker18.webp',
+  '/images/speaker/Vedang%20-%20speaker19.webp',
+  '/images/speaker/Vedang%20-%20speaker20.webp',
+  '/images/speaker/Vedang%20-%20speaker21.webp',
+  '/images/speaker/Vedang%20-%20speaker22.jpg',
+  '/images/speaker/Vedang%20-%20speaker23.jpg',
+  '/images/speaker/Vedang%20-%20speaker24.jpeg',
+  '/images/speaker/Vedang%20-%20speaker25.jpeg',
+  '/images/speaker/Vedang%20-%20speaker26.jpg',
+  '/images/speaker/Vedang%20-%20speaker27.jpeg',
+  '/images/speaker/vedang%20panel%20of%20web3%20ai.jpg',
 ];
 
 
@@ -133,8 +133,8 @@ export default function MediaPage() {
       <main className="flex-grow py-8">
         <div className="container mx-auto px-4 md:px-6">
           <section className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl font-semibold tracking-tight">Speaking on Emerging Technologies</h1>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">Speaking on Emerging Technologies</h1>
+            <p className="mt-3 text-lg text-muted-foreground">
               As a recognized voice in AI, Web3, and the future of technology, Vedang is a frequent speaker at
               international conferences, academic institutions, and corporate events. His talks demystify complex
               topics, including decentralized economies and agentic AI, providing audiences with actionable insights
