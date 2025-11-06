@@ -3,7 +3,7 @@
     {
       "id": "profile-photo",
       "description": "A professional headshot of Vedang Vatsa.",
-      "imageUrl": "https://veda.ng/icon.png",
+      "imageUrl": "/icon.png",
       "imageHint": "portrait man"
     }
   ]

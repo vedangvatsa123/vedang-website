@@ -5,10 +5,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 
-const VEDANG_VATSA_URL = 'https://veda.ng';
-
 export const metadata: Metadata = {
-  metadataBase: new URL(VEDANG_VATSA_URL),
   title: {
     default: 'Vedang Vatsa',
     template: '%s | Vedang Vatsa',
