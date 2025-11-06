@@ -5,8 +5,6 @@ import { Separator } from '@/components/ui/separator';
 import { MoreArticles } from '@/components/more-articles';
 import type { Essay } from '@/lib/essays';
 
-const VEDANG_VATSA_URL = 'https://veda.ng';
-
 type ArticleLayoutProps = {
   article: Essay;
   children: React.ReactNode;
@@ -18,22 +16,22 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
     '@type': 'Article',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${VEDANG_VATSA_URL}${article.url}`,
+      '@id': article.url,
     },
     headline: article.title,
     description: article.summary,
-    image: `${VEDANG_VATSA_URL}/og-images/${article.url.split('/').pop()}.png`,
+    image: `/og-images/${article.url.split('/').pop()}.png`,
     author: {
       '@type': 'Person',
       name: 'Vedang Vatsa',
-      url: VEDANG_VATSA_URL,
+      url: '/',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Vedang Vatsa',
       logo: {
         '@type': 'ImageObject',
-        url: `${VEDANG_VATSA_URL}/icon.png`,
+        url: '/icon.png',
       },
     },
     datePublished: new Date().toISOString(),
@@ -69,5 +67,3 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
     </div>
   );
 }
-
-    

@@ -4,8 +4,6 @@ import { Metadata } from 'next';
 import { essays } from '@/lib/essays';
 import { ArticleLayout } from '@/components/article-layout';
 
-const VEDANG_VATSA_URL = 'https://veda.ng';
-
 // Generate static pages for each essay at build time
 export async function generateStaticParams() {
   return essays
@@ -23,7 +21,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     return {};
   }
 
-  const ogImageUrl = `${VEDANG_VATSA_URL}/og-images/${params.slug}.png`;
+  const ogImageUrl = `/og-images/${params.slug}.png`;
 
   return {
     title: article.title,
@@ -31,7 +29,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     openGraph: {
       title: article.title,
       description: article.summary,
-      url: `${VEDANG_VATSA_URL}${article.url}`,
+      url: `/writings/${params.slug}`,
       type: 'article',
       images: [
         {
@@ -70,5 +68,3 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     </ArticleLayout>
   );
 }
-
-    
