@@ -54,15 +54,17 @@ export default function Home() {
         <section className="py-16 text-center">
           <div className="container mx-auto px-4 md:px-6">
             
+            {profileImage && (
               <Image
-                src={'/icon.png'}
-                alt={'Vedang Vatsa'}
+                src={profileImage.imageUrl}
+                alt={profileImage.description}
                 width={96}
                 height={96}
                 className="mx-auto h-24 w-24 rounded-full object-cover"
-                data-ai-hint={'portrait man'}
+                data-ai-hint={profileImage.imageHint}
                 priority
               />
+            )}
             
             <h1 className="mt-6 text-6xl font-semibold tracking-tight">Vedang Vatsa</h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
