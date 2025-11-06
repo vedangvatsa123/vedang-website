@@ -94,12 +94,43 @@ const mediaMentions = [
   { title: '5 Common Mistakes Every Beginner Should Avoid In Crypto', source: 'Outlook Money', url: 'https://www.outlookmoney.com/cryptocurrency/5-common-mistakes-every-beginner-should-avoid-in-crypto' },
 ];
 
+const speakingEngagementImages = [
+  '/images/speaker/Vedang - speaker1.webp',
+  '/images/speaker/Vedang - speaker2.webp',
+  '/images/speaker/Vedang - speaker3.webp',
+  '/images/speaker/Vedang - speaker4.webp',
+  '/images/speaker/Vedang - speaker5.webp',
+  '/images/speaker/Vedang - speaker6.webp',
+  '/images/speaker/Vedang - speaker7.webp',
+  '/images/speaker/Vedang - speaker8.webp',
+  '/images/speaker/Vedang - speaker9.webp',
+  '/images/speaker/Vedang - speaker10.webp',
+  '/images/speaker/Vedang - speaker11.webp',
+  '/images/speaker/Vedang - speaker12.webp',
+  '/images/speaker/Vedang - speaker13.webp',
+  '/images/speaker/Vedang - speaker14.webp',
+  '/images/speaker/Vedang - speaker15.webp',
+  '/images/speaker/Vedang - speaker16.webp',
+  '/images/speaker/Vedang - speaker17.webp',
+  '/images/speaker/Vedang - speaker18.webp',
+  '/images/speaker/Vedang - speaker19.webp',
+  '/images/speaker/Vedang - speaker20.webp',
+  '/images/speaker/Vedang - speaker21.webp',
+  '/images/speaker/Vedang - speaker22.jpg',
+  '/images/speaker/Vedang - speaker23.jpg',
+  '/images/speaker/Vedang - speaker24.jpeg',
+  '/images/speaker/Vedang - speaker25.jpeg',
+  '/images/speaker/Vedang - speaker26.jpg',
+  '/images/speaker/Vedang - speaker27.jpeg',
+  '/images/speaker/vedang panel of web3 ai.jpg',
+];
+
 
 export default function MediaPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
-      <main className="flex-grow py-12">
+      <main className="flex-grow py-4">
         <div className="container mx-auto px-4 md:px-6">
           <section className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight">Speaking on Emerging Technologies</h1>
@@ -111,7 +142,7 @@ export default function MediaPage() {
             </p>
           </section>
 
-          <section className="max-w-4xl mx-auto py-8">
+          <section className="max-w-4xl mx-auto py-4">
             <ul className="space-y-1 text-sm text-muted-foreground text-left md:columns-2">
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)</span></li>
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Featured in Favikon’s Top 50 Fintech & Crypto Creators and Thinkers360’s Top 50 Metaverse Thought Leaders</span></li>
@@ -126,8 +157,8 @@ export default function MediaPage() {
             </ul>
           </section>
 
-          <section className="py-8">
-            <h2 className="text-3xl font-semibold tracking-tight text-center mb-8">As Seen In</h2>
+          <section className="py-4">
+            <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
               {asSeenInLogos.map((media, index) => (
                 <div key={index} className="flex justify-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
@@ -143,17 +174,17 @@ export default function MediaPage() {
             </div>
           </section>
 
-          <section className="py-8">
-            <h2 className="text-3xl font-semibold tracking-tight text-center mb-8">Speaking Engagements</h2>
+          <section className="py-4">
+            <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Speaking Engagements</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
-              {Array.from({ length: 28 }).map((_, index) => (
+              {speakingEngagementImages.map((src, index) => (
                 <div key={index} className="aspect-w-1 aspect-h-1">
                   <Image
-                    src={`https://picsum.photos/seed/${100 + index}/300/300`}
+                    src={src}
                     alt={`Vedang speaking engagement ${index + 1}`}
                     width={300}
                     height={300}
-                    className="rounded-lg object-cover w-full h-full"
+                    className="rounded-md object-cover w-full h-full"
                     data-ai-hint="person speaking"
                   />
                 </div>
@@ -161,8 +192,8 @@ export default function MediaPage() {
             </div>
           </section>
 
-          <section className="py-8">
-            <h2 className="text-3xl font-semibold tracking-tight text-center mb-8">Media Mentions</h2>
+          <section className="py-4">
+            <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Media Mentions</h2>
             <div className="grid md:grid-cols-2 gap-4">
                 {mediaMentions.map((mention, index) => (
                   <Link
@@ -170,7 +201,7 @@ export default function MediaPage() {
                     href={mention.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group rounded-lg border bg-card text-card-foreground transition-shadow duration-300 block hover:bg-muted/50 p-6"
+                    className="group rounded-md border bg-card text-card-foreground transition-shadow duration-300 block hover:bg-muted/50 p-4"
                   >
                     <div className="flex items-start justify-between">
                         <div>
