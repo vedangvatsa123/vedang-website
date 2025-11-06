@@ -17,20 +17,20 @@ export const metadata: Metadata = {
 };
 
 const asSeenInLogos = [
-  { name: 'Inc42', logo: '/images/speaker/press/68296-business-media-company-inc42-startup-marketing.png' },
-  { name: 'KPMG', logo: '/images/speaker/press/1718209067639.jpeg' },
-  { name: 'ANI', logo: '/images/speaker/press/Ani-logo-black.png' },
-  { name: 'Business Today', logo: '/images/speaker/press/bt_business_today_vedang%20vatsa-min%20(1).png' },
-  { name: 'Business Insider', logo: '/images/speaker/press/Business_Insider_2023_logo.svg.png' },
-  { name: 'Business Standard', logo: '/images/speaker/press/business-standard-logo-2.png' },
-  { name: 'Dainik Bhaskar', logo: '/images/speaker/press/Dainik_Bhaskar_Logo.png' },
-  { name: 'Decrypt', logo: '/images/speaker/press/Decrypt_logo.svg' },
-  { name: 'ET', logo: '/images/speaker/press/et-logo4px.png' },
-  { name: 'IEEE Computer', logo: '/images/speaker/press/IEEE_Computer.png' },
-  { name: 'Yahoo Finance', logo: '/images/speaker/press/image-3.webp' },
-  { name: 'The Tribune', logo: '/images/speaker/press/image-4.webp' },
-  { name: 'YourStory', logo: '/images/speaker/press/image-23.webp' },
-  { name: 'The Print', logo: '/images/speaker/press/image-24.webp' },
+    { name: 'Inc42', logo: '/images/speaker/press/68296-business-media-company-inc42-startup-marketing.png' },
+    { name: 'KPMG', logo: '/images/speaker/press/1718209067639.jpeg' },
+    { name: 'ANI', logo: '/images/speaker/press/Ani-logo-black.png' },
+    { name: 'Business Today', logo: '/images/speaker/press/bt_business_today_vedang%20vatsa-min%20(1).png' },
+    { name: 'Business Insider', logo: '/images/speaker/press/Business_Insider_2023_logo.svg.png' },
+    { name: 'Business Standard', logo: '/images/speaker/press/business-standard-logo-2.png' },
+    { name: 'Dainik Bhaskar', logo: '/images/speaker/press/Dainik_Bhaskar_Logo.png' },
+    { name: 'Decrypt', logo: '/images/speaker/press/Decrypt_logo.svg' },
+    { name: 'ET', logo: '/images/speaker/press/et-logo4px.png' },
+    { name: 'IEEE Computer', logo: '/images/speaker/press/IEEE_Computer.png' },
+    { name: 'Yahoo Finance', logo: '/images/speaker/press/image-3.webp' },
+    { name: 'The Tribune', logo: '/images/speaker/press/image-4.webp' },
+    { name: 'YourStory', logo: '/images/speaker/press/image-23.webp' },
+    { name: 'The Print', logo: '/images/speaker/press/image-24.webp' },
 ];
 
 const mediaMentions = [
@@ -109,7 +109,7 @@ const speakingEngagementImages = [
   'https://veda.ng/images/speaker/Vedang%20-%20speaker11.webp',
   'https://veda.ng/images/speaker/Vedang%20-%20speaker12.webp',
   'https://veda.ng/images/speaker/Vedang%20-%20speaker13.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%2speaker14.webp',
+  'https://veda.ng/images/speaker/Vedang%20-%20speaker14.webp',
   'https://veda.ng/images/speaker/Vedang%20-%20speaker15.webp',
   'https://veda.ng/images/speaker/Vedang%20-%20speaker16.webp',
   'https://veda.ng/images/speaker/Vedang%20-%20speaker17.webp',
