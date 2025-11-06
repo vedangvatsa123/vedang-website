@@ -21,6 +21,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/media`,
       lastModified: new Date(),
     },
+    {
+      url: `${BASE_URL}/seo`,
+      lastModified: new Date(),
+    },
   ];
 
   const articlePages = essays
