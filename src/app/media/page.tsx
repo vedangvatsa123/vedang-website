@@ -96,34 +96,34 @@ const mediaMentions = [
 ];
 
 const speakingEngagementImages = [
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker1.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker2.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker3.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker4.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker5.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker6.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker7.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker8.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker9.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker10.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker11.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker12.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker13.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker14.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker15.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker16.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker17.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker18.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker19.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker20.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker21.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker22.jpg',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker23.jpg',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker24.jpeg',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker25.jpeg',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker26.jpg',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker27.jpeg',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker28.jpeg',
+  '/images/speaker/Vedang%20-%20speaker1.webp',
+  '/images/speaker/Vedang%20-%20speaker2.webp',
+  '/images/speaker/Vedang%20-%20speaker3.webp',
+  '/images/speaker/Vedang%20-%20speaker4.webp',
+  '/images/speaker/Vedang%20-%20speaker5.webp',
+  '/images/speaker/Vedang%20-%20speaker6.webp',
+  '/images/speaker/Vedang%20-%20speaker7.webp',
+  '/images/speaker/Vedang%20-%20speaker8.webp',
+  '/images/speaker/Vedang%20-%20speaker9.webp',
+  '/images/speaker/Vedang%20-%20speaker10.webp',
+  '/images/speaker/Vedang%20-%20speaker11.webp',
+  '/images/speaker/Vedang%20-%20speaker12.webp',
+  '/images/speaker/Vedang%20-%20speaker13.webp',
+  '/images/speaker/Vedang%20-%20speaker14.webp',
+  '/images/speaker/Vedang%20-%20speaker15.webp',
+  '/images/speaker/Vedang%20-%20speaker16.webp',
+  '/images/speaker/Vedang%20-%20speaker17.webp',
+  '/images/speaker/Vedang%20-%20speaker18.webp',
+  '/images/speaker/Vedang%20-%20speaker19.webp',
+  '/images/speaker/Vedang%20-%20speaker20.webp',
+  '/images/speaker/Vedang%20-%20speaker21.webp',
+  '/images/speaker/Vedang%20-%20speaker22.jpg',
+  '/images/speaker/Vedang%20-%20speaker23.jpg',
+  '/images/speaker/Vedang%20-%20speaker24.jpeg',
+  '/images/speaker/Vedang%20-%20speaker25.jpeg',
+  '/images/speaker/Vedang%20-%20speaker26.jpg',
+  '/images/speaker/Vedang%20-%20speaker27.jpeg',
+  '/images/speaker/Vedang%20-%20speaker28.jpeg',
 ];
 
 
@@ -221,5 +221,3 @@ export default function MediaPage() {
     </div>
   );
 }
-
-    
