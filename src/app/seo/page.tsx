@@ -23,7 +23,6 @@ import {
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
     title: 'Vedang Vatsa | SEO & Growth Marketing',
@@ -51,8 +50,6 @@ const asSeenInLogos = [
 ];
 
 export default function SeoProfilePage() {
-  const profileImage = PlaceHolderImages.find((img) => img.id === 'profile-photo');
-  
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
@@ -60,16 +57,14 @@ export default function SeoProfilePage() {
       <main className="flex-grow py-10">
         <div className="container mx-auto max-w-6xl px-4 md:px-6">
           <section className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
-            {profileImage && (
               <Image
-                src={profileImage.imageUrl}
+                src="/icon.png"
                 alt="Vedang Vatsa"
                 width={128}
                 height={128}
                 className="h-32 w-32 rounded-full object-cover border-4 border-card"
                 priority
               />
-            )}
             <div className="text-center md:text-left">
               <h1 className="text-4xl font-semibold tracking-tight">Vedang Vatsa</h1>
               <p className="mt-1 text-lg font-medium text-muted-foreground">Growth Marketing Specialist | Web3 & FinTech</p>
@@ -337,3 +332,5 @@ export default function SeoProfilePage() {
     </div>
   );
 }
+
+    
