@@ -7,6 +7,12 @@ export type Essay = {
 
 export const essays: Essay[] = [
   {
+    title: 'Towards The Agentic Web',
+    summary:
+      'The evolution of the internet from static pages to an autonomous, intelligent ecosystem driven by AI agents that understand and act on user intent.',
+    url: '/writings/towards-the-agentic-web',
+  },
+  {
     title: 'The Silent Weight of High Intelligence',
     summary:
       'High intelligence is often treated as the ultimate advantage, but beyond a certain point, it can distort perception, emotion, and connection. This essay explores the hidden burdens and complexities of living with a powerful intellect.',
