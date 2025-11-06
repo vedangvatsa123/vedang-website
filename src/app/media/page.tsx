@@ -17,20 +17,20 @@ export const metadata: Metadata = {
 };
 
 const asSeenInLogos = [
-    { name: 'Inc42', logo: '/images/speaker/press/68296-business-media-company-inc42-startup-marketing.png' },
-    { name: 'KPMG', logo: '/images/speaker/press/1718209067639.jpeg' },
-    { name: 'ANI', logo: '/images/speaker/press/Ani-logo-black.png' },
-    { name: 'Business Today', logo: '/images/speaker/press/bt_business_today_vedang%20vatsa-min%20(1).png' },
-    { name: 'Business Insider', logo: '/images/speaker/press/Business_Insider_2023_logo.svg.png' },
-    { name: 'Business Standard', logo: '/images/speaker/press/business-standard-logo-2.png' },
-    { name: 'Dainik Bhaskar', logo: '/images/speaker/press/Dainik_Bhaskar_Logo.png' },
-    { name: 'Decrypt', logo: '/images/speaker/press/Decrypt_logo.svg' },
-    { name: 'ET', logo: '/images/speaker/press/et-logo4px.png' },
-    { name: 'IEEE Computer', logo: '/images/speaker/press/IEEE_Computer.png' },
-    { name: 'Yahoo Finance', logo: '/images/speaker/press/image-3.webp' },
-    { name: 'The Tribune', logo: '/images/speaker/press/image-4.webp' },
-    { name: 'YourStory', logo: '/images/speaker/press/image-23.webp' },
-    { name: 'The Print', logo: '/images/speaker/press/image-24.webp' },
+    { name: 'Inc42', logo: '/images/press/68296-business-media-company-inc42-startup-marketing.png' },
+    { name: 'KPMG', logo: '/images/press/1718209067639.jpeg' },
+    { name: 'ANI', logo: '/images/press/Ani-logo-black.png' },
+    { name: 'Business Today', logo: '/images/press/bt_business_today_vedang%20vatsa-min%20(1).png' },
+    { name: 'Business Insider', logo: '/images/press/Business_Insider_2023_logo.svg.png' },
+    { name: 'Business Standard', logo: '/images/press/business-standard-logo-2.png' },
+    { name: 'Dainik Bhaskar', logo: '/images/press/Dainik_Bhaskar_Logo.png' },
+    { name: 'Decrypt', logo: '/images/press/Decrypt_logo.svg' },
+    { name: 'ET', logo: '/images/press/et-logo4px.png' },
+    { name: 'IEEE Computer', logo: '/images/press/IEEE_Computer.png' },
+    { name: 'Yahoo Finance', logo: '/images/press/image-3.webp' },
+    { name: 'The Tribune', logo: '/images/press/image-4.webp' },
+    { name: 'YourStory', logo: '/images/press/image-23.webp' },
+    { name: 'The Print', logo: '/images/press/image-24.webp' },
 ];
 
 const mediaMentions = [
@@ -123,7 +123,7 @@ const speakingEngagementImages = [
   'https://veda.ng/images/speaker/Vedang%20-%20speaker25.jpeg',
   'https://veda.ng/images/speaker/Vedang%20-%20speaker26.jpg',
   'https://veda.ng/images/speaker/Vedang%20-%20speaker27.jpeg',
-  'https://veda.ng/images/speaker/vedang%20panel%20of%20web3%20ai.jpg',
+  'https://veda.ng/images/speaker/Vedang%20-%20speaker28.jpeg',
 ];
 
 
@@ -221,3 +221,5 @@ export default function MediaPage() {
     </div>
   );
 }
+
+    
