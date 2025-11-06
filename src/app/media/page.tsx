@@ -130,7 +130,7 @@ export default function MediaPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
-      <main className="flex-grow py-4">
+      <main className="flex-grow py-8">
         <div className="container mx-auto px-4 md:px-6">
           <section className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-semibold tracking-tight">Speaking on Emerging Technologies</h1>
@@ -142,7 +142,7 @@ export default function MediaPage() {
             </p>
           </section>
 
-          <section className="max-w-4xl mx-auto py-4">
+          <section className="max-w-4xl mx-auto py-8">
             <ul className="space-y-1 text-sm text-muted-foreground text-left md:columns-2">
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)</span></li>
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Featured in Favikon’s Top 50 Fintech & Crypto Creators and Thinkers360’s Top 50 Metaverse Thought Leaders</span></li>
@@ -157,7 +157,7 @@ export default function MediaPage() {
             </ul>
           </section>
 
-          <section className="py-4">
+          <section className="py-8">
             <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
               {asSeenInLogos.map((media, index) => (
@@ -174,7 +174,7 @@ export default function MediaPage() {
             </div>
           </section>
 
-          <section className="py-4">
+          <section className="py-8">
             <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Speaking Engagements</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
               {speakingEngagementImages.map((src, index) => (
@@ -192,7 +192,7 @@ export default function MediaPage() {
             </div>
           </section>
 
-          <section className="py-4">
+          <section className="py-8">
             <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Media Mentions</h2>
             <div className="grid md:grid-cols-2 gap-4">
                 {mediaMentions.map((mention, index) => (
