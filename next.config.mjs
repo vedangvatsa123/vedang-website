@@ -1,7 +1,8 @@
 
-import type {NextConfig} from 'next';
+import createMDX from '@next/mdx';
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   /* config options here */
   typescript: {
     ignoreBuildErrors: true,
@@ -34,5 +35,8 @@ const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 };
 
-const withMDX = require('@next/mdx')();
+const withMDX = createMDX({
+  // Add MDX options if needed
+});
+
 export default withMDX(nextConfig);

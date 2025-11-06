@@ -1,7 +1,9 @@
 
-import type { Config } from 'tailwindcss';
+import tailwindcssAnimate from 'tailwindcss-animate';
+import tailwindcssTypography from '@tailwindcss/typography';
 
-export default {
+/** @type {import('tailwindcss').Config} */
+const config = {
   darkMode: ['class'],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -17,7 +19,7 @@ export default {
       },
     },
     extend: {
-      typography: (theme: (path: string) => any) => ({
+      typography: (theme) => ({
         DEFAULT: {
           css: {
             '--tw-prose-body': theme('colors.foreground'),
@@ -158,5 +160,7 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
-} satisfies Config;
+  plugins: [tailwindcssAnimate, tailwindcssTypography],
+};
+
+export default config;
