@@ -20,7 +20,7 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
     },
     headline: article.title,
     description: article.summary,
-    image: `https://veda.ng/og-images/${article.url.split('/').pop()}.png`,
+    image: `https://veda.ng/og-images/${article.url.substring(1)}.png`,
     author: {
       '@type': 'Person',
       name: 'Vedang Vatsa',

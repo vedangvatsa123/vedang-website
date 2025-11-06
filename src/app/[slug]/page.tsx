@@ -7,15 +7,15 @@ import { ArticleLayout } from '@/components/article-layout';
 // Generate static pages for each essay at build time
 export async function generateStaticParams() {
   return essays
-    .filter((essay) => essay.url.startsWith('/writings/'))
+    .filter((essay) => essay.url.startsWith('/'))
     .map((essay) => ({
-      slug: essay.url.split('/').pop(),
+      slug: essay.url.substring(1),
     }));
 }
 
 // Generate metadata for each article page
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const article = essays.find((e) => e.url === `/writings/${params.slug}`);
+  const article = essays.find((e) => e.url === `/${params.slug}`);
 
   if (!article) {
     return {};
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     openGraph: {
       title: article.title,
       description: article.summary,
-      url: `/writings/${params.slug}`,
+      url: `/${params.slug}`,
       type: 'article',
       images: [
         {
@@ -53,14 +53,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const article = essays.find((e) => e.url === `/writings/${params.slug}`);
+  const article = essays.find((e) => e.url === `/${params.slug}`);
 
   if (!article) {
     notFound();
   }
 
   // Dynamically require the MDX content file based on the slug
-  const PageContent = require(`../${params.slug}/content.mdx`).default;
+  const PageContent = require(`../writings/${params.slug}/content.mdx`).default;
 
   return (
     <ArticleLayout article={article}>
