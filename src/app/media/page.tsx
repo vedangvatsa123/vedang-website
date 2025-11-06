@@ -176,15 +176,15 @@ export default function MediaPage() {
 
           <section className="py-8">
             <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Speaking Engagements</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
+            <div className="columns-2 sm:columns-3 md:columns-4 gap-4">
               {speakingEngagementImages.map((src, index) => (
-                <div key={index} className="aspect-w-1 aspect-h-1">
+                <div key={index} className="mb-4 break-inside-avoid">
                   <Image
                     src={src}
                     alt={`Vedang speaking engagement ${index + 1}`}
-                    width={300}
-                    height={300}
-                    className="rounded-md object-cover w-full h-full"
+                    width={500}
+                    height={500}
+                    className="rounded-md object-cover w-full h-auto"
                     data-ai-hint="person speaking"
                   />
                 </div>
@@ -220,5 +220,3 @@ export default function MediaPage() {
     </div>
   );
 }
-
-    
