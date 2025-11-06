@@ -9,7 +9,7 @@ const VEDANG_VATSA_URL = 'https://veda.ng';
 // Generate static pages for each essay at build time
 export async function generateStaticParams() {
   return essays
-    .filter((essay) => essay.url.startsWith('/'))
+    .filter((essay) => essay.url.startsWith('/writings/'))
     .map((essay) => ({
       slug: essay.url.split('/').pop(),
     }));
@@ -54,14 +54,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function ArticlePage({ children, params }: { children: React.ReactNode, params: { slug: string } }) {
+export default function ArticlePage({ params }: { params: { slug: string } }) {
   const article = essays.find((e) => e.url === `/writings/${params.slug}`);
 
   if (!article) {
     notFound();
   }
 
-  const PageContent = require(`@/app${article.url}/content.mdx`).default;
+  // Dynamically require the MDX content file based on the slug
+  const PageContent = require(`../${params.slug}/content.mdx`).default;
 
   return (
     <ArticleLayout article={article}>
