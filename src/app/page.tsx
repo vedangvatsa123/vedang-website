@@ -44,7 +44,6 @@ const recentPapers = [
 ];
 
 export default function Home() {
-  const profileImage = PlaceHolderImages.find((img) => img.id === 'profile-photo');
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
@@ -54,17 +53,15 @@ export default function Home() {
         <section className="py-12 text-center">
           <div className="container mx-auto px-4 md:px-6">
             
-            {profileImage && (
-              <Image
-                src={profileImage.imageUrl}
-                alt={profileImage.description}
-                width={96}
-                height={96}
-                className="mx-auto h-24 w-24 rounded-full object-cover"
-                data-ai-hint={profileImage.imageHint}
-                priority
-              />
-            )}
+            <Image
+              src="/icon.png"
+              alt="A professional headshot of Vedang Vatsa."
+              width={96}
+              height={96}
+              className="mx-auto h-24 w-24 rounded-full object-cover"
+              data-ai-hint="portrait man"
+              priority
+            />
             
             <h1 className="mt-4 text-5xl font-semibold tracking-tight">Vedang Vatsa</h1>
             <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">
