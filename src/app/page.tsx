@@ -72,7 +72,7 @@ export default function Home() {
               <br />
               BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
             </p>
-            <Button asChild className="mt-6 w-60">
+            <Button asChild className="mt-6">
               <Link href="/profile">
                 View Full Profile
               </Link>
@@ -100,7 +100,7 @@ export default function Home() {
               ))}
             </div>
              <div className="mt-8 text-center">
-               <Button variant="outline" asChild className="w-60">
+               <Button variant="outline" asChild>
                  <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Read More on Google Scholar</Link>
                </Button>
             </div>

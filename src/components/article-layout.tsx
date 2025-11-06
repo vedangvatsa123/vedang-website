@@ -16,22 +16,22 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
     '@type': 'Article',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': article.url,
+      '@id': `https://veda.ng${article.url}`,
     },
     headline: article.title,
     description: article.summary,
-    image: `/og-images/${article.url.split('/').pop()}.png`,
+    image: `https://veda.ng/og-images/${article.url.split('/').pop()}.png`,
     author: {
       '@type': 'Person',
       name: 'Vedang Vatsa',
-      url: '/',
+      url: 'https://veda.ng',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Vedang Vatsa',
       logo: {
         '@type': 'ImageObject',
-        url: '/icon.png',
+        url: 'https://veda.ng/icon.png',
       },
     },
     datePublished: new Date().toISOString(),

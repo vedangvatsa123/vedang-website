@@ -19,6 +19,7 @@ import {
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
     title: 'Profile',
@@ -29,6 +30,8 @@ export const metadata: Metadata = {
 };
 
 export default function ProfilePage() {
+  const profileImage = PlaceHolderImages.find((img) => img.id === 'profile-photo');
+  
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
@@ -36,14 +39,16 @@ export default function ProfilePage() {
       <main className="flex-grow py-10">
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <section className="text-center">
-            <Image
-              src={'/icon.png'}
-              alt="Vedang Vatsa"
-              width={96}
-              height={96}
-              className="mx-auto h-24 w-24 rounded-full object-cover"
-              priority
-            />
+            {profileImage && (
+              <Image
+                src={profileImage.imageUrl}
+                alt="Vedang Vatsa"
+                width={96}
+                height={96}
+                className="mx-auto h-24 w-24 rounded-full object-cover"
+                priority
+              />
+            )}
             <h1 className="mt-4 text-4xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
             <p className="mx-auto mt-3 max-w-3xl text-base text-muted-foreground">
               Founder of a 100,000+ member Web3 community, Vedang Vatsa is featured in Favikon’s Top 50 Fintech &
