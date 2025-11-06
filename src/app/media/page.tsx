@@ -1,3 +1,4 @@
+
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Card, CardContent } from '@/components/ui/card';
@@ -108,7 +109,7 @@ const speakingEngagementImages = [
   'https://veda.ng/images/speaker/Vedang%20-%20speaker11.webp',
   'https://veda.ng/images/speaker/Vedang%20-%20speaker12.webp',
   'https://veda.ng/images/speaker/Vedang%20-%20speaker13.webp',
-  'https://veda.ng/images/speaker/Vedang%20-%20speaker14.webp',
+  'https://veda.ng/images/speaker/Vedang%20-%2speaker14.webp',
   'https://veda.ng/images/speaker/Vedang%20-%20speaker15.webp',
   'https://veda.ng/images/speaker/Vedang%20-%20speaker16.webp',
   'https://veda.ng/images/speaker/Vedang%20-%20speaker17.webp',
@@ -133,8 +134,8 @@ export default function MediaPage() {
       <main className="flex-grow py-8">
         <div className="container mx-auto px-4 md:px-6">
           <section className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl font-semibold tracking-tight">Speaking on Emerging Technologies</h1>
-            <p className="mt-3 text-lg text-muted-foreground">
+            <h1 className="text-4xl font-semibold tracking-tight">Speaking on Emerging Technologies</h1>
+            <p className="mt-3 text-base text-muted-foreground">
               As a recognized voice in AI, Web3, and the future of technology, Vedang is a frequent speaker at
               international conferences, academic institutions, and corporate events. His talks demystify complex
               topics, including decentralized economies and agentic AI, providing audiences with actionable insights
@@ -143,7 +144,7 @@ export default function MediaPage() {
           </section>
 
           <section className="max-w-4xl mx-auto py-8">
-            <ul className="space-y-1 text-sm text-muted-foreground text-left md:columns-2">
+            <ul className="space-y-1 text-sm text-muted-foreground text-left md:columns-2 md:gap-4">
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)</span></li>
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Featured in Favikon’s Top 50 Fintech & Crypto Creators and Thinkers360’s Top 50 Metaverse Thought Leaders</span></li>
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts</span></li>
@@ -220,3 +221,5 @@ export default function MediaPage() {
     </div>
   );
 }
+
+    

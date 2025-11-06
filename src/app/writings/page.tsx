@@ -1,3 +1,4 @@
+
 import { EssaysList } from '@/components/essays-list';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
@@ -27,3 +28,5 @@ export default function WritingsPage() {
     </div>
   );
 }
+
+    

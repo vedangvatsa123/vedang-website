@@ -51,7 +51,7 @@ export default function Home() {
       <Header />
 
       <main className="flex-grow">
-        <section className="py-16 text-center">
+        <section className="py-12 text-center">
           <div className="container mx-auto px-4 md:px-6">
             
             {profileImage && (
@@ -66,13 +66,13 @@ export default function Home() {
               />
             )}
             
-            <h1 className="mt-6 text-6xl font-semibold tracking-tight">Vedang Vatsa</h1>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            <h1 className="mt-4 text-5xl font-semibold tracking-tight">Vedang Vatsa</h1>
+            <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">
               Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)
               <br />
               BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
             </p>
-            <Button asChild className="mt-8">
+            <Button asChild className="mt-6 w-60">
               <Link href="/profile">
                 View Full Profile
               </Link>
@@ -80,9 +80,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="papers" className="py-16 bg-secondary/50">
+        <section id="papers" className="py-12 bg-secondary/50">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="mb-8 text-center text-4xl font-semibold tracking-tight">Recent Papers</h2>
+            <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Recent Papers</h2>
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
               {recentPapers.map((paper, index) => (
                 <Link
@@ -99,17 +99,17 @@ export default function Home() {
                 </Link>
               ))}
             </div>
-             <div className="mt-12 text-center">
-               <Button variant="outline" asChild>
+             <div className="mt-8 text-center">
+               <Button variant="outline" asChild className="w-60">
                  <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Read More on Google Scholar</Link>
                </Button>
             </div>
           </div>
         </section>
 
-        <section id="essays" className="py-16">
+        <section id="essays" className="py-12">
            <div className="container mx-auto px-4 md:px-6">
-             <h2 className="mb-8 text-center text-4xl font-semibold tracking-tight">Essays</h2>
+             <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Essays</h2>
               <EssaysList />
            </div>
         </section>
@@ -119,3 +119,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

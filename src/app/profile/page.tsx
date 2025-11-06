@@ -33,7 +33,7 @@ export default function ProfilePage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
 
-      <main className="flex-grow py-12">
+      <main className="flex-grow py-10">
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <section className="text-center">
             <Image
@@ -44,14 +44,14 @@ export default function ProfilePage() {
               className="mx-auto h-24 w-24 rounded-full object-cover"
               priority
             />
-            <h1 className="mt-6 text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
-            <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
+            <p className="mx-auto mt-3 max-w-3xl text-base text-muted-foreground">
               Founder of a 100,000+ member Web3 community, Vedang Vatsa is featured in Favikon’s Top 50 Fintech &
               Crypto Creators and Thinkers360’s Top 50 Metaverse Thought Leaders. With over 80 million LinkedIn post
               views, he is an experienced researcher in AI and Web3. He has published extensively and partnered with
               global tech conferences and academic institutions.
             </p>
-            <div className="mt-8 flex justify-center items-center space-x-4">
+            <div className="mt-6 flex justify-center items-center space-x-4">
               <Link
                 href="mailto:vedangvats@gmail.com"
                 className="text-muted-foreground hover:text-primary flex items-center gap-2"
@@ -98,14 +98,14 @@ export default function ProfilePage() {
             </div>
           </section>
 
-          <Separator className="my-12" />
+          <Separator className="my-10" />
 
-          <div className="space-y-12">
+          <div className="space-y-10">
             <section id="experience">
               <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
                 <Briefcase className="w-7 h-7" /> Professional Experience
               </h2>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <Card>
                   <CardHeader>
                     <div className="flex justify-between items-start">
@@ -230,7 +230,7 @@ export default function ProfilePage() {
               </div>
             </section>
 
-             <div className="grid md:grid-cols-2 gap-6">
+             <div className="grid md:grid-cols-2 gap-4">
                 <section id="education">
                   <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
                     <GraduationCap className="w-7 h-7" /> Education
@@ -276,7 +276,7 @@ export default function ProfilePage() {
                 </h2>
                  <Card>
                     <CardContent className="pt-6">
-                        <ul className="list-disc list-inside space-y-2 text-muted-foreground columns-2">
+                        <ul className="list-disc list-inside space-y-2 text-muted-foreground columns-2 md:gap-6">
                             <li>A literature review on internet of things (iot)</li>
                             <li>Estonia’s e-governance and digital public service delivery solutions</li>
                             <li>Raspberry Pi based Implementation of Internet of Things using mobile messaging application-‘Telegram’</li>
@@ -317,7 +317,7 @@ export default function ProfilePage() {
                     <Lightbulb className="w-7 h-7" /> Other Projects
                 </h2>
                  <Card>
-                    <CardContent className="pt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <CardContent className="pt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
                             <h4 className="font-semibold">ERNST & YOUNG</h4>
                             <p className="text-muted-foreground mt-1 text-sm">Analyzed the sectoral impact of OECD's action plans on Base Erosion & Profit Shifting.</p>
@@ -347,7 +347,7 @@ export default function ProfilePage() {
                     <Heart className="w-7 h-7" /> Interests
                 </h2>
                  <Card>
-                    <CardContent className="pt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <CardContent className="pt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
                             <h4 className="font-semibold">Photography</h4>
                             <p className="text-muted-foreground mt-1 text-sm">Selected among a few global photographers to cover the world's largest festival by gathering.</p>
@@ -368,7 +368,7 @@ export default function ProfilePage() {
                 <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
                     <MessageSquare className="w-7 h-7" /> Testimonials
                 </h2>
-                 <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
+                 <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">
                     <Card>
                         <CardContent className="pt-6">
                             <blockquote className="border-l-2 pl-6 italic text-muted-foreground">
@@ -406,3 +406,5 @@ export default function ProfilePage() {
     </div>
   );
 }
+
+    
