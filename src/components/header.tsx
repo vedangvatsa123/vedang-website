@@ -23,6 +23,9 @@ export function Header() {
             <Link href="/media" className="text-foreground transition-colors hover:text-primary px-2 py-1">
               Media
             </Link>
+            <Link href="/seo" className="text-foreground transition-colors hover:text-primary px-2 py-1">
+              SEO
+            </Link>
           </nav>
           <ThemeToggle />
         </div>
@@ -30,3 +33,5 @@ export function Header() {
     </header>
   );
 }
+
+    

@@ -1,3 +1,4 @@
+
 import { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://veda.ng';
@@ -21,10 +22,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
-      url: `${BASE_URL}/seo`,
+      url: `${BASE_AURL}/seo`,
       lastModified: new Date(),
     },
   ];
 
+  // Here you could fetch dynamic routes e.g., from a CMS
+  // and add them to the sitemap.
+  // Example:
+  // const essays = await fetchEssaysFromCMS();
+  // const essayRoutes = essays.map(essay => ({
+  //   url: `${BASE_URL}/writings/${essay.slug}`,
+  //   lastModified: new Date(essay.lastModified),
+  // }));
+
   return [...staticPages];
 }
+
+    
