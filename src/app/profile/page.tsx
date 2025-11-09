@@ -35,7 +35,7 @@ export default function ProfilePage() {
       <Header />
 
       <main className="flex-grow py-10">
-        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <section className="text-center">
             
               <Image
