@@ -131,7 +131,7 @@ export default function ProfilePage() {
                         Featured among the top 3 Web3 products of the week by Smoothie (a ProductHunt for Web3) and
                         supported by Microsoft for Startups.
                       </li>
-<li>Published articles for Government Blockchain Association, KPMG, IEEE, EY, and major news outlets.</li>
+                      <li>Published articles for Government Blockchain Association, KPMG, IEEE, EY, and major news outlets.</li>
                       <li>Hosted weekly Twitter Spaces sessions with high-profile guests, attracting 20-30k live attendees.</li>
                       <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, and Token 2049.</li>
                       <li>
@@ -233,7 +233,7 @@ export default function ProfilePage() {
               </div>
             </section>
 
-             <div className="grid md:grid-cols-2 gap-4">
+             <div className="grid md:grid-cols-2 gap-8">
                 <section id="education">
                   <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
                     <GraduationCap className="w-7 h-7" /> Education
@@ -279,7 +279,7 @@ export default function ProfilePage() {
                 </h2>
                  <Card>
                     <CardContent className="pt-6">
-                        <ul className="list-disc list-inside space-y-2 text-muted-foreground columns-2 md:gap-6">
+                        <ul className="list-disc list-inside space-y-2 text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-6">
                             <li>A literature review on internet of things (iot)</li>
                             <li>Estonia’s e-governance and digital public service delivery solutions</li>
                             <li>Raspberry Pi based Implementation of Internet of Things using mobile messaging application-‘Telegram’</li>
@@ -320,7 +320,7 @@ export default function ProfilePage() {
                     <Lightbulb className="w-7 h-7" /> Other Projects
                 </h2>
                  <Card>
-                    <CardContent className="pt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <CardContent className="pt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div>
                             <h4 className="font-semibold">ERNST & YOUNG</h4>
                             <p className="text-muted-foreground mt-1 text-sm">Analyzed the sectoral impact of OECD's action plans on Base Erosion & Profit Shifting.</p>
@@ -350,7 +350,7 @@ export default function ProfilePage() {
                     <Heart className="w-7 h-7" /> Interests
                 </h2>
                  <Card>
-                    <CardContent className="pt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <CardContent className="pt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div>
                             <h4 className="font-semibold">Photography</h4>
                             <p className="text-muted-foreground mt-1 text-sm">Selected among a few global photographers to cover the world's largest festival by gathering.</p>
