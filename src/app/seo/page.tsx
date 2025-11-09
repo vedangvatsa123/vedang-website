@@ -51,7 +51,7 @@ export default function SeoProfilePage() {
       <Header />
 
       <main className="flex-grow py-10">
-        <div className="container mx-auto max-w-6xl px-4 md:px-6">
+        <div className="container mx-auto max-w-7xl px-4 md:px-6">
           <section className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
               <Image
                 src="/images/icon.png"
@@ -328,5 +328,3 @@ export default function SeoProfilePage() {
     </div>
   );
 }
-
-    
