@@ -108,7 +108,7 @@ export default function Home() {
         <section id="essays" className="py-12">
            <div className="container mx-auto px-4 md:px-6">
              <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Recent Essays</h2>
-              <EssaysList limit={3} />
+              <EssaysList limit={10} />
               <div className="mt-8 text-center">
                 <Button variant="outline" asChild>
                   <Link href="/writings">View all essays</Link>
