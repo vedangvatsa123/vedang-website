@@ -8,6 +8,7 @@ import { EssaysList } from '@/components/essays-list';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { MoveUpRight } from 'lucide-react';
+import { AsSeenIn } from '@/components/as-seen-in';
 
 const recentPapers = [
   {
@@ -116,6 +117,9 @@ export default function Home() {
               </div>
            </div>
         </section>
+        
+        <AsSeenIn />
+
       </main>
 
       <Footer />
