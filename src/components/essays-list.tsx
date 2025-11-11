@@ -15,7 +15,7 @@ export function EssaysList({ limit }: { limit?: number }) {
               <h3 className="text-lg font-medium text-foreground transition-colors group-hover:text-primary md:col-span-1">
                 {essay.title}
               </h3>
-              <p className="mt-1 text-sm text-muted-foreground md:mt-0 md:col-span-2">{essay.summary}</p>
+              <p className="mt-1 text-sm text-muted-foreground md:mt-0 md:col-span-2 line-clamp-2">{essay.summary}</p>
             </Link>
             {index < essaysToShow.length - 1 && <Separator className="mt-4" />}
           </div>
