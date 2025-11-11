@@ -18,7 +18,7 @@ function getEssays(): Essay[] {
     return [];
   }
   
-  const fileNames = fs.readdirSync(essaysDirectory);
+  const fileNames = fs.readdirSync(essaysDirectory).filter(file => file.endsWith('.mdx'));
   const allEssaysData = fileNames.map(fileName => {
     const slug = fileName.replace(/\.mdx$/, '');
     const fullPath = path.join(essaysDirectory, fileName);
