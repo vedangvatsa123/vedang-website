@@ -8,6 +8,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { Metadata } from 'next';
+import { RelatedEssays } from '@/components/related-essays';
+import { Separator } from '@/components/ui/separator';
 
 type Props = {
   params: { slug: string };
@@ -69,6 +71,12 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
           <h1>{essay.frontmatter.title}</h1>
           <MDXRemote source={essay.content} />
         </article>
+
+        <div className="mx-auto max-w-4xl px-4 md:px-6 mt-12">
+            <Separator />
+            <RelatedEssays currentSlug={params.slug} />
+        </div>
+
       </main>
       <Footer />
     </div>
