@@ -13,6 +13,7 @@ export type Essay = {
 
 const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
 
+// This function reads the file system to get all essays.
 function getEssays(): Essay[] {
   if (!fs.existsSync(essaysDirectory)) {
     return [];
