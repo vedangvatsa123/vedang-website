@@ -1,4 +1,5 @@
 
+
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -19,6 +20,8 @@ import {
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { essays } from '@/lib/essays';
+
 
 export const metadata: Metadata = {
     title: 'Vedang Vatsa | SEO & Growth Marketing',
@@ -56,6 +59,9 @@ const asSeenInLogos = [
 ];
 
 export default function SeoProfilePage() {
+
+  const recentEssays = essays.slice(0, 4);
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
@@ -320,10 +326,9 @@ export default function SeoProfilePage() {
                      <div>
                         <h3 className="font-semibold text-lg mb-3">Essays</h3>
                          <div className="space-y-3">
-                           <Link href="/writings/the-ai-agent-economy" className="block text-muted-foreground hover:text-primary">The AI Agent Economy</Link>
-                           <Link href="/writings/from-attention-to-intention" className="block text-muted-foreground hover:text-primary">From Attention to Intention, The Next Evolution of the Web</Link>
-                           <Link href="/writings/an-internet-of-lies" className="block text-muted-foreground hover:text-primary">An Internet of Lies and How We Can Fix It</Link>
-                           <Link href="/writings/tracing-blockchains-journey" className="block text-muted-foreground hover:text-primary">Tracing Blockchain’s Decade Long Journey from Hype to Maturity</Link>
+                           {recentEssays.map((essay) => (
+                              <Link key={essay.slug} href={essay.url} className="block text-muted-foreground hover:text-primary">{essay.title}</Link>
+                           ))}
                            <Link href="/writings" className="text-primary hover:underline mt-2 inline-block">Read More Essays</Link>
                         </div>
                     </div>
