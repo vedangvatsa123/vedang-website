@@ -33,7 +33,7 @@ export function AsSeenIn() {
     <section className="py-12 bg-background">
         <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 items-center">
               {asSeenInLogos.map((media, index) => (
                 <div key={index} className="flex justify-center">
                    <Image
