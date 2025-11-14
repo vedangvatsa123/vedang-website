@@ -1,0 +1,101 @@
+
+{
+  "@context": "https://deeprank.io/schema/v1.0/deeprank.jsonld",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Vedang Vatsa",
+    "url": "https://veda.ng",
+    "description": "Founder of Hashtag Web3, a 100,000+ member community of AI & Web3 professionals. Experienced researcher in AI and Web3 with numerous publications.",
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Indian Institute of Technology Kanpur (IIT Kanpur)"
+      }
+    ],
+    "award": [
+      "Fellow of the Royal Society for the Encouragement of Arts, Manufactures and Commerce (FRSA)",
+      "Young Researcher Award 2020",
+      "Young Achiever Award 2020-21"
+    ],
+    "jobTitle": "Founder",
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "Hashtag Web3"
+      }
+    ],
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Web3",
+      "Blockchain",
+      "Growth Marketing",
+      "SEO",
+      "FinTech",
+      "Decentralized Economies",
+      "Agentic AI"
+    ],
+    "sameAs": [
+      "https://linkedin.com/in/vedangvatsa",
+      "https://www.instagram.com/vedangvatsa",
+      "https://www.youtube.com/@vedangvatsa",
+      "https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en",
+      "https://x.com/vedangvatsa"
+    ]
+  },
+  "siteStructure": {
+    "hasPart": [
+      {
+        "@type": "WebPage",
+        "name": "Homepage",
+        "url": "https://veda.ng/",
+        "description": "Main landing page introducing Vedang Vatsa, his work, and recent activities."
+      },
+      {
+        "@type": "WebPage",
+        "name": "Profile",
+        "url": "https://veda.ng/profile",
+        "description": "Detailed professional profile of Vedang Vatsa, including experience, education, and achievements."
+      },
+      {
+        "@type": "CollectionPage",
+        "name": "Writings",
+        "url": "https://veda.ng/writings",
+        "description": "A collection of essays on AI, Web3, and the future of technology.",
+        "hasPart": [
+          {
+            "@type": "ScholarlyArticle",
+            "name": "An Internet of Lies and How We Can Fix It",
+            "url": "https://veda.ng/an-internet-of-lies"
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "name": "Why AI Agents Will Reshape the Internet",
+            "url": "https://veda.ng/why-ai-agents-will-reshape-the-internet"
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "name": "The Great Online Game",
+            "url": "https://veda.ng/the-great-online-game"
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "name": "Why do people resist new technologies?",
+            "url": "https://veda.ng/why-do-people-resist-new-technologies"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "name": "Media",
+        "url": "https://veda.ng/media",
+        "description": "Media features, speaking engagements, and press mentions."
+      },
+      {
+        "@type": "WebPage",
+        "name": "SEO & Growth Marketing",
+        "url": "https://veda.ng/seo",
+        "description": "A showcase of Vedang Vatsa's expertise in SEO and growth marketing."
+      }
+    ]
+  }
+}
