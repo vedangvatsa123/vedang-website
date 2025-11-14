@@ -50,6 +50,21 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Vedang Vatsa',
+  url: 'https://veda.ng',
+  logo: 'https://veda.ng/images/icon.png',
+  sameAs: [
+    'https://linkedin.com/in/vedangvatsa',
+    'https://www.instagram.com/vedangvatsa',
+    'https://www.youtube.com/@vedangvatsa',
+    'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
+    'https://x.com/vedangvatsa',
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,7 +72,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased" suppressHydrationWarning>
-      <head />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}

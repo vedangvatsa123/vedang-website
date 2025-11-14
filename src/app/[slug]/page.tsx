@@ -1,4 +1,5 @@
 
+
 import { essays } from '@/lib/essays';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
@@ -63,8 +64,38 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
     notFound();
   }
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: essay.frontmatter.title,
+    author: {
+      '@type': 'Person',
+      name: 'Vedang Vatsa',
+      url: 'https://veda.ng',
+    },
+    datePublished: essay.frontmatter.date,
+    description: essay.frontmatter.summary,
+    image: 'https://veda.ng/images/icon.png',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Vedang Vatsa',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://veda.ng/images/icon.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://veda.ng/${params.slug}`,
+    },
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
+       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Header />
       <main className="flex-grow py-8">
         <article className="prose dark:prose-invert mx-auto px-4 md:px-6">
