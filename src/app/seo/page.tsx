@@ -1,5 +1,4 @@
 
-
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -66,9 +65,9 @@ export default function SeoProfilePage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
 
-      <main className="flex-grow py-10">
+      <main className="flex-grow py-8">
         <div className="container mx-auto max-w-7xl px-4 md:px-6">
-          <section className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+          <section className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
               <Image
                 src="/images/icon.png"
                 alt="Vedang Vatsa"
@@ -80,7 +79,7 @@ export default function SeoProfilePage() {
             <div className="text-center md:text-left">
               <h1 className="text-4xl font-semibold tracking-tight">Vedang Vatsa</h1>
               <p className="mt-1 text-lg font-medium text-muted-foreground">Growth Marketing Specialist | Web3 & FinTech</p>
-              <p className="mx-auto mt-3 max-w-xl text-base text-muted-foreground">
+              <p className="mx-auto mt-2 max-w-xl text-base text-muted-foreground">
                 Data-driven growth leader with 8+ years of experience scaling organic and paid acquisition channels for high-growth mobile and Web3 products. Proven track record in SEO, ASO, community building, and cross-functional leadership.
               </p>
               <div className="mt-4 flex justify-center md:justify-start items-center space-x-4">
@@ -97,7 +96,7 @@ export default function SeoProfilePage() {
             </div>
           </section>
 
-          <section className="my-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <section className="my-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Card className="text-center p-4 bg-secondary/30">
               <TrendingUp className="h-8 w-8 mx-auto text-primary"/>
               <p className="text-3xl font-bold mt-2">40x</p>
@@ -115,50 +114,50 @@ export default function SeoProfilePage() {
             </Card>
           </section>
 
-          <div className="space-y-12">
+          <div className="space-y-8">
             <section id="competencies">
-                <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <Star className="w-6 h-6 text-primary" /> Core Competencies & Experience
                 </h2>
-                <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <div className="grid md:grid-cols-2 gap-x-6 gap-y-4">
                     <div>
                         <h3 className="font-semibold text-lg">SEO & Website Management</h3>
-                        <p className="text-muted-foreground mt-1">Achieved top 3 Google SERP rankings for target keywords within 4 months through advanced SEO roadmap execution. Managed web properties achieving 2.3M+ views and a Google PageSpeed score of 98.</p>
+                        <p className="text-muted-foreground mt-1 text-sm">Achieved top 3 Google SERP rankings for target keywords within 4 months through advanced SEO roadmap execution. Managed web properties achieving 2.3M+ views and a Google PageSpeed score of 98.</p>
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">ASO & Mobile Growth</h3>
-                        <p className="text-muted-foreground mt-1">Optimized app visibility and conversion using App Store Connect and Sensor Tower, driving user acquisition and retention for iOS and Android platforms.</p>
+                        <p className="text-muted-foreground mt-1 text-sm">Optimized app visibility and conversion using App Store Connect and Sensor Tower, driving user acquisition and retention for iOS and Android platforms.</p>
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Data-driven Experimentation</h3>
-                        <p className="text-muted-foreground mt-1">Executed high-velocity A/B testing, funnel optimization, and lifecycle initiatives using GA4, Adjust, and Firebase to drive continuous performance improvements.</p>
+                        <p className="text-muted-foreground mt-1 text-sm">Executed high-velocity A/B testing, funnel optimization, and lifecycle initiatives using GA4, Adjust, and Firebase to drive continuous performance improvements.</p>
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Paid Acquisition & Performance Media</h3>
-                        <p className="text-muted-foreground mt-1">Planned and executed paid campaigns across Meta, Google, and YouTube, focusing on cost-effective user acquisition and measurable ROI.</p>
+                        <p className="text-muted-foreground mt-1 text-sm">Planned and executed paid campaigns across Meta, Google, and YouTube, focusing on cost-effective user acquisition and measurable ROI.</p>
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Community & Content Marketing</h3>
-                        <p className="text-muted-foreground mt-1">Founded and scaled a 100,000+ member Web3 professional community, leveraging a content strategy that generates ~90 million annual impressions to drive organic user acquisition.</p>
+                        <p className="text-muted-foreground mt-1 text-sm">Founded and scaled a 100,000+ member Web3 professional community, leveraging a content strategy that generates ~90 million annual impressions to drive organic user acquisition.</p>
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Cross-Functional Leadership</h3>
-                        <p className="text-muted-foreground mt-1">8 years of professional experience, including growing a team from 3 to 28. Ex-KPMG & EY consultant with extensive experience working with product, engineering, and brand teams in fast-paced remote environments.</p>
+                        <p className="text-muted-foreground mt-1 text-sm">8 years of professional experience, including growing a team from 3 to 28. Ex-KPMG & EY consultant with extensive experience working with product, engineering, and brand teams in fast-paced remote environments.</p>
                     </div>
                 </div>
             </section>
             
             <section id="toolkit">
-              <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                 <Wrench className="w-6 h-6 text-primary" /> Technical & Creative Toolkit
               </h2>
-              <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 text-muted-foreground">
-                  <ul className="space-y-2 list-disc list-inside">
+              <div className="grid md:grid-cols-2 gap-x-6 gap-y-3 text-muted-foreground text-sm">
+                  <ul className="space-y-1 list-disc list-inside">
                     <li><span className="font-semibold text-foreground">Analytics & ASO:</span> GA4, Firebase, Adjust, Sensor Tower, GSC, App Store Connect, Plausible, Ahrefs</li>
                     <li><span className="font-semibold text-foreground">Technical SEO:</span> Full-stack audits, schema markup, log analysis, site speed optimization, Screaming Frog</li>
                     <li><span className="font-semibold text-foreground">Paid Media & Ad Platforms:</span> Google Ads, Meta Ads (Facebook/Instagram), X (Twitter) Ads, YouTube Ads</li>
                   </ul>
-                  <ul className="space-y-2 list-disc list-inside">
+                  <ul className="space-y-1 list-disc list-inside">
                     <li><span className="font-semibold text-foreground">Creative & Design:</span> Figma, Canva, Adobe Photoshop, Adobe Express</li>
                     <li><span className="font-semibold text-foreground">Web & CMS:</span> WordPress, Webflow, HTML/CSS, React, Wix, Shopify, Replit, Firebase Studio</li>
                     <li><span className="font-semibold text-foreground">AI Tools:</span> Advanced use of GPT-4, Claude, Midjourney for content and creative workflows</li>
@@ -167,16 +166,16 @@ export default function SeoProfilePage() {
             </section>
 
             <section id="experience">
-              <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                 <Briefcase className="w-6 h-6 text-primary" /> Professional Experience
               </h2>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <Card>
-                  <CardHeader>
+                  <CardHeader className="p-4">
                     <CardTitle className="text-xl">Growth Advisory | Hashtag Web3</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <CardContent className="p-4 pt-0">
+                    <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
                       <li>Established one of the largest global communities for Web3 professionals, growing it to 100,000+ members and creating a powerful organic acquisition channel.</li>
                       <li>Published crash courses and newsletters with 40,000 subscribers, growing a Medium publication to 150,000 subscribers.</li>
                       <li>Revamped and SEO-optimized website (Firebase Studio), publishing 700 keyword-targeted pages and acquiring 1,500+ backlinks in 4 months, achieving full Google indexation within 30 days.</li>
@@ -187,11 +186,11 @@ export default function SeoProfilePage() {
                   </CardContent>
                 </Card>
                 <Card>
-                  <CardHeader>
+                  <CardHeader className="p-4">
                     <CardTitle className="text-xl">Marketing Lead | Routespring</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <CardContent className="p-4 pt-0">
+                    <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
                         <li>Led end-to-end growth marketing for a B2B SaaS travel platform, achieving significant organic growth.</li>
                         <li>Built a 100% SEO-compliant website from scratch using AI tools, achieving 150k+ monthly impressions.</li>
                         <li>Increased Domain Rating from 9 to 43 and grew backlinks from 109 to over 2,300.</li>
@@ -201,22 +200,22 @@ export default function SeoProfilePage() {
                   </CardContent>
                 </Card>
                 <Card>
-                  <CardHeader>
+                  <CardHeader className="p-4">
                     <CardTitle className="text-xl">Country Head (Growth) | Prosple</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <CardContent className="p-4 pt-0">
+                    <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
                       <li>Led user growth to 200K through content, social media & social messaging initiatives - generating over 1.5M geo-targeted web hits.</li>
                       <li>Hosted events with executives from top companies like Microsoft and Bain & Company.</li>
                     </ul>
                   </CardContent>
                 </Card>
                 <Card>
-                  <CardHeader>
+                  <CardHeader className="p-4">
                     <CardTitle className="text-xl">Consultant | KPMG & EY</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <CardContent className="p-4 pt-0">
+                    <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
                       <li>Served in the Minister’s Office, Ministry of Electronics & IT, India, working on national digital initiatives, social media strategy, a personal website for the IT Minister of India, and growth dashboards.</li>
                       <li>Conducted Commercial, Technical, and Policy research for high-value e-commerce, fintech, blockchain, and social media firms.</li>
                       <li>Received multiple "Kudos" and a Top Scorer award in KPMG's Digital Premier League on Emerging Technologies.</li>
@@ -224,11 +223,11 @@ export default function SeoProfilePage() {
                   </CardContent>
                 </Card>
                  <Card>
-                  <CardHeader>
+                  <CardHeader className="p-4">
                       <CardTitle className="text-xl">Project Manager | Studio Tesseract</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <CardContent className="p-4 pt-0">
+                    <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
                         <li>Co-founded and managed a web and mobile app development company.</li>
                         <li>Led a 30-member team to deliver 27 web and mobile products for clients across 5 continents.</li>
                     </ul>
@@ -238,12 +237,12 @@ export default function SeoProfilePage() {
             </section>
             
             <section id="qualifications">
-                <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <Award className="w-6 h-6 text-primary" /> Qualifications & Recognition
                 </h2>
                 <Card>
-                    <CardContent className="pt-6">
-                        <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                    <CardContent className="p-4">
+                        <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
                             <li><span className="font-semibold text-foreground">Education:</span> Computer Engineer + MBA from IIT Kanpur.</li>
                             <li><span className="font-semibold text-foreground">Fellow of the Royal Society for Arts (FRSA):</span> Recognized for contributions to social progress and development.</li>
                             <li><span className="font-semibold text-foreground">Top 50 Global Metaverse Influencer (2022 & 2023):</span> Ranked by Thinkers360 & featured in Favikon's Top 50 Fintech & Crypto Creators.</li>
@@ -273,62 +272,62 @@ export default function SeoProfilePage() {
             </section>
 
             <section id="testimonials">
-                <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <MessageSquare className="w-6 h-6 text-primary" /> Testimonials
                 </h2>
                  <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">
                     <Card>
-                        <CardContent className="pt-6">
-                            <blockquote className="border-l-2 pl-6 italic text-muted-foreground">
+                        <CardContent className="p-4">
+                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
                             "I always find his work to be of just the absolute high quality. He is always timely, so easy to work with, responsive to notes and always able to explain things to me when it's hard for me to get things. He has my highest endorsement."
                             </blockquote>
-                            <p className="mt-4 font-semibold text-right">- Jack Alison</p>
-                            <p className="text-sm text-muted-foreground text-right">Screenwriter for Academy Awards (Oscars)</p>
+                            <p className="mt-3 font-semibold text-right text-sm">- Jack Alison</p>
+                            <p className="text-xs text-muted-foreground text-right">Screenwriter for Academy Awards (Oscars)</p>
                         </CardContent>
                     </Card>
                      <Card>
-                        <CardContent className="pt-6">
-                            <blockquote className="border-l-2 pl-6 italic text-muted-foreground">
+                        <CardContent className="p-4">
+                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
                             "I am very comfortable to recommend him for any job that requires strict deadlines, taking on new challenges at short notice and dealing with altering priorities, efficient client communication and good analytical capabilities."
                             </blockquote>
-                            <p className="mt-4 font-semibold text-right">- Bharath Visweswariah</p>
-                            <p className="text-sm text-muted-foreground text-right">Director Investments, Omidyar Network</p>
+                            <p className="mt-3 font-semibold text-right text-sm">- Bharath Visweswariah</p>
+                            <p className="text-xs text-muted-foreground text-right">Director Investments, Omidyar Network</p>
                         </CardContent>
                     </Card>
                      <Card>
-                        <CardContent className="pt-6">
-                            <blockquote className="border-l-2 pl-6 italic text-muted-foreground">
+                        <CardContent className="p-4">
+                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
                             "He helped me a lot in working closely with me and understand my requirements even though we had some language barriers between us but Vedang has never let these barriers be the reason of any delay in the work."
                             </blockquote>
-                            <p className="mt-4 font-semibold text-right">- Eran Malovani</p>
-                            <p className="text-sm text-muted-foreground text-right">Founder of CPA+</p>
+                            <p className="mt-3 font-semibold text-right text-sm">- Eran Malovani</p>
+                            <p className="text-xs text-muted-foreground text-right">Founder of CPA+</p>
                         </CardContent>
                     </Card>
                  </div>
             </section>
 
              <section id="papers-essays">
-                <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
+                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <BookOpen className="w-6 h-6 text-primary" /> Recent Papers & Essays
                 </h2>
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                        <h3 className="font-semibold text-lg mb-3">Papers</h3>
-                        <div className="space-y-3">
-                           <Link href="https://dx.doi.org/10.2139/ssrn.5660270" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-primary">Device-to-Device Economics and AI Agent Transactions</Link>
-                           <Link href="https://dx.doi.org/10.2139/ssrn.5325570" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-primary">Stablecoin Growth and Market Dynamics</Link>
-                           <Link href="https://dx.doi.org/10.2139/ssrn.5329957" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-primary">Stablecoins in the Modern Financial System</Link>
-                           <Link href="https://dx.doi.org/10.2139/ssrn.5386707" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-primary">Global Stablecoin Regulations and Policies</Link>
-                           <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline mt-2 inline-block">Read More on Google Scholar</Link>
+                        <h3 className="font-semibold text-lg mb-2">Papers</h3>
+                        <div className="space-y-2">
+                           <Link href="https://dx.doi.org/10.2139/ssrn.5660270" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">Device-to-Device Economics and AI Agent Transactions</Link>
+                           <Link href="https://dx.doi.org/10.2139/ssrn.5325570" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">Stablecoin Growth and Market Dynamics</Link>
+                           <Link href="https://dx.doi.org/10.2139/ssrn.5329957" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">Stablecoins in the Modern Financial System</Link>
+                           <Link href="https://dx.doi.org/10.2139/ssrn.5386707" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">Global Stablecoin Regulations and Policies</Link>
+                           <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline mt-1 inline-block">Read More on Google Scholar</Link>
                         </div>
                     </div>
                      <div>
-                        <h3 className="font-semibold text-lg mb-3">Essays</h3>
-                         <div className="space-y-3">
+                        <h3 className="font-semibold text-lg mb-2">Essays</h3>
+                         <div className="space-y-2">
                            {recentEssays.map((essay) => (
-                              <Link key={essay.slug} href={essay.url} className="block text-muted-foreground hover:text-primary">{essay.title}</Link>
+                              <Link key={essay.slug} href={essay.url} className="block text-sm text-muted-foreground hover:text-primary">{essay.title}</Link>
                            ))}
-                           <Link href="/writings" className="text-primary hover:underline mt-2 inline-block">Read More Essays</Link>
+                           <Link href="/writings" className="text-sm text-primary hover:underline mt-1 inline-block">Read More Essays</Link>
                         </div>
                     </div>
                 </div>
