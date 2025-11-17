@@ -153,7 +153,7 @@ export default function CommunityProfilePage() {
                       <li>Achieved 55 million post views in the first year on Telegram and 80 million annual post views on LinkedIn.</li>
                       <li>Hosted weekly Twitter Spaces with 20-30k live attendees, featuring guests like a Pink Floyd band member, Big4 partners, and the CSO of Microsoft.</li>
                       <li>Published influential crash courses on Web3 topics (NFT, Metaverse, DAO) with 50,000+ accesses in the first month.</li>
-                      <li>Grew a newsletter to 11,000 subscribers in just 11 editions.</li>
+                      <li>Grew a newsletter to 11,000 subscribers in just 11 editions and a Medium publication to 150,000 subscribers.</li>
                       <li>Formed partnerships with Harvard Blockchain Club, ETH Oxford, Token 2049, and other leading global entities.</li>
                       <li>Created an exclusive community for Indian Web3 executives from companies like Gemini, Circle, Coinbase, and KPMG.</li>
                     </ul>

@@ -177,8 +177,8 @@ export default function SeoProfilePage() {
                   </CardHeader>
                   <CardContent>
                     <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                      <li>Established one of the largest global communities for Web3 professionals.</li>
-                      <li>Grew community to 100,000+ members, creating a powerful organic acquisition channel.</li>
+                      <li>Established one of the largest global communities for Web3 professionals, growing it to 100,000+ members and creating a powerful organic acquisition channel.</li>
+                      <li>Published crash courses and newsletters, growing a Medium publication to 150,000 subscribers.</li>
                       <li>Revamped and SEO-optimized website (Firebase Studio), publishing 700 keyword-targeted pages and acquiring 1,500+ backlinks in 4 months, achieving full Google indexation within 30 days.</li>
                       <li>Served as a growth advisor for clients including Zeeve, Talent Protocol, Bobble AI, Bless Network, Cypher (YC), Super Protocol, and Changelly, assisting The Hashgraph Association with social media strategy and organic marketing for portfolio companies, including exchange listings, website setup, and social media management on LinkedIn and X.</li>
                       <li>Hosted Twitter Spaces with up to 32,000 live listeners and partnered with top-tier organizations like Harvard Blockchain Club, ETH Oxford, London Business School, Token 2049, etc.</li>
