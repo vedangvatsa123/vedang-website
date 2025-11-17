@@ -171,7 +171,7 @@ export default function JsonToToonPage() {
             <div className="my-12 pt-8 border-t">
                 <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">What is TOON?</h2>
                 <div className="max-w-4xl mx-auto text-muted-foreground space-y-4 prose prose-neutral dark:prose-invert">
-                <p>TOON (Token-Oriented Object Notation) is a modern data serialization format designed specifically for efficiency in AI and Large Language Model (LLM) systems. While JSON is excellent for human readability and universal data exchange, its verbose syntax with quotes, braces, and repeated keys consumes valuable tokens—the currency of LLMs.</p>
+                <p>TOON (Token-Oriented Object Notation) is a modern data serialization format designed specifically for efficiency in AI and Large Language Model (LLM) systems. While JSON is excellent for human readability and universal data exchange, its verbose syntax with quotes, braces, and repeated keys consumes valuable tokens, the currency of LLMs.</p>
                 <p>TOON solves this by using a compact, tabular-style notation that significantly reduces token count without sacrificing structure. It's built for machines, not humans, making it an ideal choice for high-volume, performance-critical AI workflows where cost and latency are key factors.</p>
                 </div>
             </div>
