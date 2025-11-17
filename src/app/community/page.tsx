@@ -240,7 +240,7 @@ export default function CommunityProfilePage() {
                  </div>
             </section>
 
-             <section id="papers-essays">
+             <section id="writings">
                 <h2 className="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-3">
                     <PenSquare className="w-6 h-6 text-primary" /> Writings
                 </h2>
