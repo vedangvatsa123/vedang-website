@@ -178,7 +178,7 @@ export default function SeoProfilePage() {
                   <CardContent>
                     <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                       <li>Established one of the largest global communities for Web3 professionals, growing it to 100,000+ members and creating a powerful organic acquisition channel.</li>
-                      <li>Published crash courses and newsletters, growing a Medium publication to 150,000 subscribers.</li>
+                      <li>Published crash courses and newsletters with 40,000 subscribers, growing a Medium publication to 150,000 subscribers.</li>
                       <li>Revamped and SEO-optimized website (Firebase Studio), publishing 700 keyword-targeted pages and acquiring 1,500+ backlinks in 4 months, achieving full Google indexation within 30 days.</li>
                       <li>Served as a growth advisor for clients including Zeeve, Talent Protocol, Bobble AI, Bless Network, Cypher (YC), Super Protocol, and Changelly, assisting The Hashgraph Association with social media strategy and organic marketing for portfolio companies, including exchange listings, website setup, and social media management on LinkedIn and X.</li>
                       <li>Hosted Twitter Spaces with up to 32,000 live listeners and partnered with top-tier organizations like Harvard Blockchain Club, ETH Oxford, London Business School, Token 2049, etc.</li>
@@ -206,9 +206,8 @@ export default function SeoProfilePage() {
                   </CardHeader>
                   <CardContent>
                     <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                      <li>Led growth strategy for an Australian career-tech company in the South Asia and SEA market.</li>
-                      <li>Scaled user base from 5,000 to ~200,000 within one year, a 40x increase, generating over 1.5M geo-targeted web hits.</li>
-                      <li>Hosted events with executives from top companies like Microsoft, Google, KPMG, and Bain & Company, and formed partnerships with numerous educational institutions.</li>
+                      <li>Led user growth to 200K through content, social media & social messaging initiatives - generating over 1.5M geo-targeted web hits.</li>
+                      <li>Hosted events with executives from top companies like Microsoft and Bain & Company.</li>
                     </ul>
                   </CardContent>
                 </Card>
@@ -343,3 +342,5 @@ export default function SeoProfilePage() {
     </div>
   );
 }
+
+    

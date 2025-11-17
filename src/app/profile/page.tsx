@@ -51,7 +51,7 @@ export default function ProfilePage() {
             
             <h1 className="mt-4 text-4xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
             <p className="mx-auto mt-2 max-w-3xl text-sm text-muted-foreground">
-              Computer Engineer, MBA | Young Researcher 2020 Awardee (22 publications)
+             Computer Engineer, MBA, Chartered Engineer | Young Researcher 2020 Awardee (22 publications) & Young Achiever 2020-21 Awardee
             </p>
             <div className="mt-4 flex justify-center items-center space-x-4 flex-wrap gap-y-2">
               <Link
@@ -115,12 +115,11 @@ export default function ProfilePage() {
                   <CardContent className="p-4">
                     <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
                         <li>Served as Head of Marketing and Growth Lead for several Web3 companies.</li>
-                        <li>Built a 100k+ member networking community for Web3, a social-messaging-first forum, and one of the largest Telegram channels for Web3 jobs, achieving 55 million post views in the first year.</li>
+                        <li>Built a 100k+ member networking community for Web3, a social-messaging-first forum, and one of the largest channels for Web3 jobs - 55 million post views in the first year.</li>
                         <li>Featured among the top 3 Web3 products of the week by Smoothie and supported by Microsoft for Startups.</li>
                         <li>Hosted weekly Twitter Spaces with high-profile guests (including a band member of Pink Floyd, partners of Big4 firms, the father of digital twin technology, and the CSO of Microsoft), attracting 20-30k live attendees.</li>
-                        <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, Token 2049, ETH Vietnam, Taipei Blockchain Week, Oxford Blockchain Conference, Malaysia Blockchain Week, ETH Brussels, EDCON Tokyo, and many others.</li>
-                        <li>Published popular crash courses on NFT, Metaverse, Tokenomics, DAO, Blockchain, and DeFi, with 50,000 accesses in the first month, gaining 11,000 newsletter subscribers in 11 editions, and growing a Medium publication to 150,000 subscribers.</li>
-                        <li>Created a closed community for Indian Web3 executives from Gemini, Circle, Hedera, Chainalysis, KPMG, Coinbase, Polygon, Aptos, Avalanche, EY, Algorand, PwC, etc.</li>
+                        <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, Token 2049, ETH Vietnam, Taipei Blockchain Week, Oxford Blockchain Conference, Malaysia Blockchain Week, ETH Brussels, EDCON Tokyo, etc.</li>
+                        <li>Published crash courses on NFT, Metaverse, Tokenomics, DAO, Blockchain, and DeFi, with 50,000 accesses in the first month and 40,000 newsletter subscribers.</li>
                         <li>Among top 100 thought leaders & influencers in Metaverse and Smart Cities by Thinkers360.</li>
                         <li>Research reporting on AI and Web3 resulted in 80 million yearly LinkedIn post views & features by LinkedIn News UK & Europe.</li>
                     </ul>
@@ -137,10 +136,9 @@ export default function ProfilePage() {
                     </div>
                   </CardHeader>
                   <CardContent className="p-4">
-                    <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                      <li>Led user growth from 5,000 to 200,000 through content and social media, generating over 1.5 million geo-targeted web hits.</li>
-                      <li>Hosted events with executives from top companies like Microsoft and Bain & Company.</li>
-                    </ul>
+                    <p className="text-sm text-muted-foreground">
+                      Led user growth to 200K through content, social media & social messaging initiatives - generating over 1.5M geo-targeted web hits. I hosted events with top company executives (Microsoft, Bain & Company, etc.) and partnered with startups and educational institutions.
+                    </p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -157,24 +155,25 @@ export default function ProfilePage() {
                     <div>
                       <h4 className="font-semibold text-base">Program Management (Minister's Office, Ministry of Electronics and IT, India):</h4>
                       <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground mt-1">
-                        <li>Served as Program Manager for Digital India projects under the Ministry.</li>
-                        <li>Worked on the Minister's social media strategy, created a personal website, and liaised with scientists, state officials, startup founders, CXOs, and bureaucrats.</li>
-                        <li>Served as an evaluation committee member for a national government innovation challenge.</li>
+                        <li>Served as Program Manager for Digital-India products and projects under the Ministry.</li>
+                        <li>Worked on the Minister's social media strategy, created a personal website, and liaised with scientists, state officials, startup founders, CXOs, and bureaucrats. I gathered data, built dashboards, led growth initiatives, and facilitated high-level reviews.</li>
+                        <li>Served as an evaluation committee member for a government innovation challenge.</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold text-base">Research and Due Diligence:</h4>
                       <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground mt-1">
-                         <li>Conducted Commercial Due Diligence (e-commerce with $2B valuation, Digital Payments with 2500Mn transaction volume) and Technical Due Diligence (HealthTech app with 220 million downloads, social media with $100 million valuation).</li>
-                         <li>Researched key policy areas like Responsible AI, Data Protection Bill, and proceedings on BigTechs.</li>
+                         <li>Commercial Due Diligence (Ecommerce with $2B valuation, Digital Payments - 2500Mn transaction volume).</li>
+                         <li>Technical Due Diligence (HealthTech app with 220 million downloads, Social Media with $100 million valuation).</li>
+                         <li>Policy Research (National Policy on Software Products, Responsible AI, Data Protection Bill, Fake news, Proceedings on BigTechs, etc.).</li>
                       </ul>
                     </div>
                      <div>
                       <h4 className="font-semibold text-base">Business Strategy &amp; Analysis:</h4>
                       <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground mt-1">
-                         <li>Designed strategies for KPMG's Analytics Centre of Excellence.</li>
-                         <li>Prepared process architecture for contactless tracking in India Post, the world's largest postal network.</li>
-                         <li>Received multiple Kudos and a Top Scorer award in KPMG's Digital Premier League on Emerging Technologies.</li>
+                         <li>Designed strategies for KPMG's Analytics Centre of Excellence, a crowdfunding platform, and data centers.</li>
+                         <li>Monitored projects in Language Translation, Digital Villages, & AI. Prepared process architecture and delivery model for contactless tracking in India-Posts (world's largest postal network).</li>
+                         <li>Multiple Kudos + Top Scorer award in KPMG's Digital Premier League on Emerging Technologies: Received special appreciation by the Partner.</li>
                       </ul>
                     </div>
                   </CardContent>
@@ -190,11 +189,9 @@ export default function ProfilePage() {
                     </div>
                   </CardHeader>
                   <CardContent className="p-4">
-                    <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                      <li>Led a 30-member team to deliver 27 web and mobile products across the full development lifecycle.</li>
-                      <li>Expanded business development globally, serving clients on five continents.</li>
-                      <li>Secured recommendations from an Oscars screenwriter and a CPA+ founder.</li>
-                    </ul>
+                    <p className="text-sm text-muted-foreground">
+                      Led a 30-member team, delivering 27 web and mobile products across the full development lifecycle. Expanded business development and UI design globally, serving clients on 5 continents. Secured recommendations from the screenwriter for Oscars and CPA+ Israel.
+                    </p>
                   </CardContent>
                 </Card>
               </div>
@@ -211,10 +208,10 @@ export default function ProfilePage() {
                     </CardHeader>
                     <CardContent className="p-4">
                       <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                        <li>Nominated for the President's Gold Medal at the Indian Institute of Technology Kanpur.</li>
-                        <li>Represented over 100 students as the department student representative.</li>
-                        <li>Headed a 40-member Entrepreneurship Cell team and grew internship offers by 73%.</li>
-                        <li>Finished a Management Development Program on leadership from the Indian Institute of Management Indore.</li>
+                        <li>President's Gold Medal nominee at the Indian Institute of Technology Kanpur.</li>
+                        <li>Represented 100+ students as the department student representative, led a 40-member Entrepreneurship Cell team, and grew internship offers by 73%.</li>
+                        <li>Won "Freshman of the Year," served as Training and Placement Cell Executive Head.</li>
+                        <li>Finished Management Development Program on leadership from Indian Institute of Management Indore.</li>
                       </ul>
                     </CardContent>
                   </Card>
@@ -227,12 +224,12 @@ export default function ProfilePage() {
                   <Card>
                     <CardContent className="p-4">
                       <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                        <li>Awarded as a Fellow of the Royal Society for the Encouragement of Arts, Manufactures and Commerce.</li>
+                        <li>Awarded as a Fellow of the Royal Society for the Encouragement of Arts, Manufactures and Commerce (Previous Fellows have included Stephen Hawking, Charles Dickens, Karl Marx and Benjamin Franklin).</li>
                         <li>Issued Japan’s special visa for Intellectual Figures.</li>
-                        <li>Presented a low-cost laptop prototype at IIT Delhi, earning praise from the Head of MIT Media Labs and a Nobel Laureate.</li>
-                        <li>Received the Young Researcher Award 2020 and Young Achiever Award 2020-21.</li>
-                        <li>Honored with a medal by the Former Director of India’s Prime Minister's Office.</li>
-                        <li>Represented the Indian delegation in numerous international dialogues, including the Harvard Project for Asian &amp; International Relations.</li>
+                        <li>Presented my prototype for a low-cost laptop among the top entries at IIT Delhi; appreciated by the Head of MIT Media Labs and Alberto Minetti (Nobel Laureate).</li>
+                        <li>Young Researcher Awardee 2020 and Young Achiever Awardee 2020-21.</li>
+                        <li>Felicitated with a medal by the Former Director of India’s Prime Minister's Office for winning the Beat Plastic Hackathon.</li>
+                        <li>Represented Indian delegation in the India-Venezuela Youth Dialogue, Harvard Project for Asian & International Relations, India-China Roundtable, India-Norway Youth Conference, India-Azerbaijan Roundtable Dialogue, India-Botswana Dialogue 2018, World Business Dialogue, etc.</li>
                       </ul>
                     </CardContent>
                   </Card>
@@ -241,27 +238,29 @@ export default function ProfilePage() {
 
             <section id="publications">
                 <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                    <BookOpen className="w-6 h-6" /> Selected Publications &amp; Articles
+                    <BookOpen className="w-6 h-6" /> Publications
                 </h2>
                  <Card>
                     <CardContent className="p-4">
-                         <p className="text-xs text-muted-foreground mb-3">Published articles for Gov Blockchain Association, KPMG, IEEE, EY, Economic Times, Financial Express, Business Insider, Yourstory, Inc42, IndiaAI, etc.</p>
                         <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-4">
-                            <li>Analysis of Global Research Proceedings in AI</li>
-                            <li>Estonia’s e-governance and digital public service delivery solutions</li>
-                            <li>Digital Nomadism &amp; The Future of Work</li>
-                            <li>Perspectives on Rationality for AI</li>
-                            <li>Computational Social Science</li>
-                            <li>Bias in Algorithms</li>
-                            <li>Data-fluent Ecosystems</li>
-                            <li>Landscape of AI Regulations</li>
-                            <li>Digital Rupee &amp; CBDCs</li>
-                            <li>The Network State</li>
-                            <li>Web3 Gaming Market</li>
-                            <li>Identities in the Metaverse</li>
-                            <li>Careers in Web3</li>
-                            <li>Trust in a Pseudonymous World</li>
-                            <li>Citizens of the Metaverse</li>
+                            <li>Estonia's e-governance and public service delivery solution; IEEE</li>
+                            <li>Decoding identity in the Metaverse; Yourstory</li>
+                            <li>China's approach to AI: A review of policy, ethics, and research advancements; The Responsible AI Forum 2021 in Munich</li>
+                            <li>Ethical implications in Artificial Intelligence and Brain Computer Interfaces (under review)</li>
+                            <li>Analysis of Global Research Proceedings in Artificial Intelligence; IEEE</li>
+                            <li>The emerging Internet of Value; Inc42</li>
+                            <li>Framework to evaluate the impact of Algorithmic bias; International Journal of Advanced Research</li>
+                            <li>Emergence of TechFin in the emerging economies; International Organization of Scientific Research</li>
+                            <li>Base erosion and profit shifting in multinational corporations; Theoretical & Applied Economics</li>
+                            <li>Growth of Digital Payments and the emergence of FinTech ecosystem in India; Indian Journal of Research</li>
+                            <li>Coronavirus Outbreak: Trillion-Dollar Crisis and Evolution of New Global Order; Diplomacy and Beyond</li>
+                            <li>A literature review on Internet of Things (IoT); International Journal of Computer Systems</li>
+                            <li>Current Trends and Approaches of Network Intrusion Detection System, IJCSMC</li>
+                            <li>Case Study on Mobile Applications Industry; Imperial Journal of Interdisciplinary Research</li>
+                            <li>Security in Ubiquitous Computing: Location-Based Applications, Study and Analysis of security threats and attacks in MANET; National Conference on Recent Trends and Developments in Statistics (UGC SAP Sponsored)</li>
+                            <li>A Review on the Multi-Modal Biometric Systems; International Journal of Comp. Tech. & Applications</li>
+                            <li>Comparative Analysis of Coverage Schemes in Wireless Sensor Network; Communications on Applied Electronics</li>
+                            <li>Raspberry Pi based Implementation of Internet of Things using mobile messaging application - Telegram</li>
                         </ul>
                     </CardContent>
                 </Card>
@@ -274,24 +273,24 @@ export default function ProfilePage() {
                  <Card>
                     <CardContent className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
-                            <h4 className="font-semibold text-base">ERNST &amp; YOUNG</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Analyzed the sectoral impact of OECD's action plans on Base Erosion &amp; Profit Shifting.</p>
+                            <h4 className="font-semibold text-base">ERNST & YOUNG</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Sectoral impact of OECD's action plans on Base Erosion & Profit Shifting.</p>
                         </div>
                          <div>
                             <h4 className="font-semibold text-base">OMIDYAR NETWORK</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Led creative strategy for startups in a CivicTech event, where three received funding.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Led creative strategy for startups in CivicTech event - 3 got funded.</p>
                         </div>
                          <div>
                             <h4 className="font-semibold text-base">HINDUSTAN PETROLEUM</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Developed an analytics tool to monitor sales data for over 50 petrol pumps.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Analytics tool to monitor sales data of 50+ petrol pumps across the National Capital Region in India.</p>
                         </div>
                          <div>
                             <h4 className="font-semibold text-base">JOURNALISM WEEK by University of Chicago</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Led media and content for the 7-day multi-city event.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Led the media & content for the 7-day multi-city event.</p>
                         </div>
                          <div>
                             <h4 className="font-semibold text-base">DELL</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Created an intranet portal for micro-project management via manual update submissions.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Intranet portal for micro project management via team update submission.</p>
                         </div>
                     </CardContent>
                 </Card>
@@ -304,16 +303,16 @@ export default function ProfilePage() {
                  <Card>
                     <CardContent className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
-                            <h4 className="font-semibold text-base">Photography</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Selected among a few global photographers to cover the world's largest festival by gathering.</p>
+                            <h4 className="font-semibold text-base">Traveling & Photography</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Selected among a few photographers to cover the world's largest festival by gathering. Solo-traveled to 17 countries.</p>
                         </div>
                          <div>
                             <h4 className="font-semibold text-base">Adventure Sports</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Completed the world's highest canyon swing and a National Mountain Biking Expedition.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">World's highest canyon swing, National Mountain Biking Expedition.</p>
                         </div>
                          <div>
                             <h4 className="font-semibold text-base">Public Speaking</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Conducted workshops on topics like Computational Social Science, China’s Approach to AI, and Responsible AI. Speaker at IIT Delhi, IIT Kanpur, OP Jindal University, TUM Munich, ISB Hyderabad, ETH Enugu, etc.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Workshops on Computational Social Science, China’s Approach to AI, Citizens of the Metaverse, Digital Payments in India, Data Privacy, Blockchain use-cases, e-Governance in Estonia, Network States, Responsible AI, etc.</p>
                         </div>
                     </CardContent>
                 </Card>
