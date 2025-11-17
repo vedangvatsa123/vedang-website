@@ -171,7 +171,7 @@ export default function ProfilePage() {
                       </ul>
                     </div>
                      <div>
-                      <h4 className="font-semibold text-base">Business Strategy & Analysis:</h4>
+                      <h4 className="font-semibold text-base">Business Strategy &amp; Analysis:</h4>
                       <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground mt-1">
                          <li>Designed strategies for KPMG's Analytics Centre of Excellence.</li>
                          <li>Prepared process architecture for contactless tracking in India Post, the world's largest postal network.</li>
@@ -208,7 +208,7 @@ export default function ProfilePage() {
                   </h2>
                   <Card>
                     <CardHeader className="p-4 pb-0">
-                      <CardTitle className="text-lg">BE - Computer Engineering & MBA</CardTitle>
+                      <CardTitle className="text-lg">BE - Computer Engineering &amp; MBA</CardTitle>
                     </CardHeader>
                     <CardContent className="p-4">
                       <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
@@ -233,7 +233,7 @@ export default function ProfilePage() {
                         <li>Presented a low-cost laptop prototype at IIT Delhi, earning praise from the Head of MIT Media Labs and a Nobel Laureate.</li>
                         <li>Received the Young Researcher Award 2020 and Young Achiever Award 2020-21.</li>
                         <li>Honored with a medal by the Former Director of India’s Prime Minister's Office.</li>
-                        <li>Represented the Indian delegation in numerous international dialogues, including the Harvard Project for Asian & International Relations.</li>
+                        <li>Represented the Indian delegation in numerous international dialogues, including the Harvard Project for Asian &amp; International Relations.</li>
                       </ul>
                     </CardContent>
                   </Card>
@@ -242,7 +242,7 @@ export default function ProfilePage() {
 
             <section id="publications">
                 <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                    <BookOpen className="w-6 h-6" /> Selected Publications & Articles
+                    <BookOpen className="w-6 h-6" /> Selected Publications &amp; Articles
                 </h2>
                  <Card>
                     <CardContent className="p-4">
@@ -250,13 +250,13 @@ export default function ProfilePage() {
                         <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-4">
                             <li>Analysis of Global Research Proceedings in AI</li>
                             <li>Estonia’s e-governance and digital public service delivery solutions</li>
-                            <li>Digital Nomadism & The Future of Work</li>
+                            <li>Digital Nomadism &amp; The Future of Work</li>
                             <li>Perspectives on Rationality for AI</li>
                             <li>Computational Social Science</li>
                             <li>Bias in Algorithms</li>
                             <li>Data-fluent Ecosystems</li>
                             <li>Landscape of AI Regulations</li>
-                            <li>Digital Rupee & CBDCs</li>
+                            <li>Digital Rupee &amp; CBDCs</li>
                             <li>The Network State</li>
                             <li>Web3 Gaming Market</li>
                             <li>Identities in the Metaverse</li>
@@ -275,8 +275,8 @@ export default function ProfilePage() {
                  <Card>
                     <CardContent className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
-                            <h4 className="font-semibold text-base">ERNST & YOUNG</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Analyzed the sectoral impact of OECD's action plans on Base Erosion & Profit Shifting.</p>
+                            <h4 className="font-semibold text-base">ERNST &amp; YOUNG</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Analyzed the sectoral impact of OECD's action plans on Base Erosion &amp; Profit Shifting.</p>
                         </div>
                          <div>
                             <h4 className="font-semibold text-base">OMIDYAR NETWORK</h4>
@@ -357,19 +357,10 @@ export default function ProfilePage() {
 
             <AsSeenIn />
 
-            <section id="media-link">
-                <Card className="p-6 text-center">
-                    <CardHeader className="p-0 mb-4">
-                        <Newspaper className="mx-auto h-8 w-8 text-primary" />
-                        <CardTitle className="text-xl mt-2">Speaking Engagements & Media Mentions</CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-0">
-                        <p className="text-muted-foreground mb-4">For a comprehensive list of media features and speaking history, please visit the Media page.</p>
-                        <Button asChild>
-                            <Link href="/media">View Media Page</Link>
-                        </Button>
-                    </CardContent>
-                </Card>
+            <section id="media-link" className="text-center">
+              <Button asChild size="lg">
+                  <Link href="/media">Speaking Engagements &amp; Media Mentions</Link>
+              </Button>
             </section>
 
           </div>
