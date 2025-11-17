@@ -1,45 +1,68 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
-import { JsonToon } from '@/components/json-toon';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Terminal } from 'lucide-react';
+import { encode, decode } from '@toon-format/toon';
+import { Label } from '@/components/ui/label';
 
-const placeholderJson = `{
-  "character": {
-    "name": "Super Coder",
-    "powers": [
-      "Instant Debugging",
-      "Infinite Coffee",
-      "Sleep-resistant"
-    ],
-    "attributes": {
-      "strength": 10,
-      "intelligence": 100,
-      "speed": 50
-    },
-    "isHero": true
-  }
-}`;
+const placeholderJson = {
+  users: [
+    { id: 1, name: 'Alice', role: 'admin' },
+    { id: 2, name: 'Bob', role: 'user' },
+  ],
+};
 
 export default function JsonToToonPage() {
-  const [jsonInput, setJsonInput] = useState(placeholderJson);
-  const [toonData, setToonData] = useState<object | null>(JSON.parse(placeholderJson));
+  const [jsonString, setJsonString] = useState(JSON.stringify(placeholderJson, null, 2));
+  const [toonString, setToonString] = useState('');
   const [error, setError] = useState<string | null>(null);
 
-  const handleConvert = () => {
+  useEffect(() => {
     try {
-      const parsedJson = JSON.parse(jsonInput);
-      setToonData(parsedJson);
+      const parsedJson = JSON.parse(jsonString);
+      setToonString(encode(parsedJson));
       setError(null);
-    } catch (e: any) {
-      setError('Invalid JSON. Please check your syntax.');
-      setToonData(null);
+    } catch (e) {
+      // Errors will be caught on change, so we can ignore initial parse errors
+    }
+  }, [jsonString]);
+
+  const handleJsonChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const newJsonString = e.target.value;
+    setJsonString(newJsonString);
+    try {
+      const parsedJson = JSON.parse(newJsonString);
+      setToonString(encode(parsedJson));
+      setError(null);
+    } catch (err: any) {
+      if (newJsonString.trim() !== '') {
+        setError('Invalid JSON format.');
+      } else {
+        setError(null);
+        setToonString('');
+      }
+    }
+  };
+
+  const handleToonChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const newToonString = e.target.value;
+    setToonString(newToonString);
+    try {
+      const decodedJson = decode(newToonString);
+      setJsonString(JSON.stringify(decodedJson, null, 2));
+      setError(null);
+    } catch (err: any) {
+       if (newToonString.trim() !== '') {
+        setError('Invalid TOON format.');
+      } else {
+        setError(null);
+        setJsonString('');
+      }
     }
   };
 
@@ -48,37 +71,46 @@ export default function JsonToToonPage() {
       <Header />
       <main className="flex-grow py-8">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
               <h1 className="text-4xl font-semibold tracking-tight">JSON to TOON Converter</h1>
               <p className="mt-3 text-base text-muted-foreground">
-                Paste your JSON into the box below and click "Convert" to see it visualized in a "TOON" style.
+                A converter for JSON and Token-Oriented Object Notation (TOON). Edit either side to see the live conversion.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="flex flex-col gap-4">
+            {error && (
+              <Alert variant="destructive" className="mb-4">
+                <Terminal className="h-4 w-4" />
+                <AlertTitle>Error</AlertTitle>
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
+
+            <div className="grid md:grid-cols-2 gap-4 items-start">
+              <div className="flex flex-col gap-2">
+                <Label htmlFor="json-input">JSON</Label>
                 <Textarea
-                  value={jsonInput}
-                  onChange={(e) => setJsonInput(e.target.value)}
-                  rows={15}
+                  id="json-input"
+                  value={jsonString}
+                  onChange={handleJsonChange}
+                  rows={18}
                   placeholder="Paste your JSON here"
-                  className="font-mono text-sm"
+                  className="font-mono text-sm h-full"
+                  aria-label="JSON Input"
                 />
-                <Button onClick={handleConvert}>Convert to TOON</Button>
-                {error && (
-                  <Alert variant="destructive">
-                    <Terminal className="h-4 w-4" />
-                    <AlertTitle>Error</AlertTitle>
-                    <AlertDescription>{error}</AlertDescription>
-                  </Alert>
-                )}
               </div>
-              <div className="rounded-lg border bg-card p-6 shadow-sm">
-                <h2 className="text-xl font-semibold mb-4">TOON Output</h2>
-                <div className="h-[400px] overflow-auto">
-                  {toonData && <JsonToon data={toonData} />}
-                </div>
+              <div className="flex flex-col gap-2">
+                <Label htmlFor="toon-input">TOON (Token-Oriented Object Notation)</Label>
+                <Textarea
+                  id="toon-input"
+                  value={toonString}
+                  onChange={handleToonChange}
+                  rows={18}
+                  placeholder="Paste your TOON here"
+                  className="font-mono text-sm h-full"
+                  aria-label="TOON Input"
+                />
               </div>
             </div>
           </div>
