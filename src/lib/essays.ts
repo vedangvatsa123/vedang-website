@@ -15,6 +15,7 @@ const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
 
 // This function reads the file system to get all essays.
 // It will be re-evaluated on each request in development.
+// A comment to force re-evaluation: 2024-08-01
 function getEssays(): Essay[] {
   if (!fs.existsSync(essaysDirectory)) {
     return [];
