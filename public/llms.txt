@@ -1,0 +1,35 @@
+# Vedang Vatsa
+
+> Founder of Hashtag Web3, a community of over 100,000 AI & Web3 professionals. This website serves as a central hub for my research, essays, and professional profile.
+
+This file provides a structured overview of the site's content for Large Language Models. The essays linked below explore the frontiers of technology, AI, and society.
+
+## Essays
+
+- [Computational Constitutions](/computational-constitutions): Encoding rights, freedoms, and governance principles into verifiable, executable code that AI systems must respect.
+- [API States](/api-states): How nation-states become platforms: programmable governance, composable public services, and citizenship as a set of cryptographic credentials.
+- [Pseudonymous Agency](/pseudonymous-agency): How AI agents enable true privacy: conducting business, building reputation, and participating in society without revealing human identity.
+- [Computational Social Science at Scale](/computational-social-science-at-scale): Using AI agents to run massive social simulations, predict collective behavior, and test policy interventions in virtual societies.
+- [The Simulation Layer](/the-simulation-layer): Using AI agents to create perfect digital twins of systems, people, and societies for testing and prediction.
+- [The God Protocol](/the-god-protocol): What happens when AGI achieves something indistinguishable from omniscience? Exploring the theological implications of artificial superintelligence.
+- [The Plurality Trap](/the-plurality-trap): As brain-computer interfaces advance, exploring whether the unified self is an illusion we'll be forced to abandon when our minds directly merge with multiple information streams.
+- [Digital Monasticism](/digital-monasticism): The emerging movement of radical disconnection as a spiritual practice in an age of total technological immersion.
+- [The Twilight Economy](/the-twilight-economy): Exploring the gray zones where human and AI labor blend indistinguishably, and no one can tell who did what anymore.
+- [The In-Between State](/the-in-between-state): Exploring transhumanism's awkward adolescence: the decades where we're enhanced but not transformed, stuck between human and post-human.
+- [Sacred Algorithms](/sacred-algorithms): When AI systems make life-or-death decisions, are we creating new deities? The religiosity of technological trust.
+- [The Attention Refinery](/the-attention-refinery): How modern platforms have industrialized human attention extraction, and what post-attention economies might look like.
+- [The Dark Forest Internet](/the-dark-forest-internet): As bots outnumber humans online, exploring the shift toward private, cryptographically verified communication channels and the death of the open web.
+- [Programmable Trust](/programmable-trust): Beyond blockchain: exploring zero-knowledge proofs, trusted execution environments, and cryptographic systems that make truth verifiable without revealing everything.
+- [The Substrate Shift](/the-substrate-shift): We're moving from silicon to biological computing, photonic chips, and DNA storage.
+- [Ambient Intelligence](/ambient-intelligence): Exploring the shift from devices to environments as computational substrates dissolve into the fabric of physical space.
+- [Synthetic Empathy](/synthetic-empathy): Can machines truly understand human emotion, or are we headed toward a future of perfectly convincing but hollow emotional intelligence?
+- [The Cognitive Load Crisis](/the-cognitive-load-crisis): How information abundance is fundamentally rewiring human attention, and what tools we need to navigate the flood without drowning.
+- [The Sensory Internet](/the-sensory-internet): The evolution from visual interfaces to multi-sensory digital experiences through haptics, spatial audio, and eventually direct neural interfaces.
+- [The Mesh Economy](/the-mesh-economy): How peer-to-peer networks are replacing centralized platforms, creating a new topology of value exchange that's resilient, distributed, and radically efficient.
+
+## Profile Pages
+
+- [Full Profile](/profile): A comprehensive overview of my professional experience, education, and achievements.
+- [SEO & Growth Profile](/seo): A profile focused on my expertise in growth marketing, SEO, and user acquisition.
+- [Content & Community Profile](/community): A profile detailing my work in building and scaling online communities and content strategies.
+- [Media & Speaking](/media): A collection of media features, speaking engagements, and public appearances.

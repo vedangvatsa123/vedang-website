@@ -1,46 +1,38 @@
 
 import { MetadataRoute } from 'next';
-import { essays } from '@/lib/essays';
+import fs from 'fs';
+import path from 'path';
 
 const BASE_URL = 'https://veda.ng';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
-    {
-      url: BASE_URL,
-      lastModified: new Date(),
-    },
-    {
-      url: `${BASE_URL}/profile`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${BASE_URL}/writings`,
-      lastModified: new
-Date(),
-    },
-     {
-      url: `${BASE_URL}/media`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${BASE_URL}/seo`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${BASE_URL}/community`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${BASE_URL}/json-to-toon`,
-      lastModified: new Date(),
-    }
-  ];
-
-  const essayRoutes = essays.map(essay => ({
-    url: `${BASE_URL}${essay.url}`,
-    lastModified: new Date(essay.date),
+    '/',
+    '/profile',
+    '/writings',
+    '/media',
+    '/seo',
+    '/community',
+    '/json-to-toon',
+  ].map((route) => ({
+    url: `${BASE_URL}${route}`,
+    lastModified: new Date(),
   }));
+
+  const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
+  let essayRoutes: MetadataRoute.Sitemap = [];
+  try {
+    if (fs.existsSync(essaysDirectory)) {
+      const essayFiles = fs.readdirSync(essaysDirectory);
+      essayRoutes = essayFiles.map(file => ({
+        url: `${BASE_URL}/${file.replace(/\.mdx$/, '')}`,
+        lastModified: new Date(),
+      }));
+    }
+  } catch (error) {
+    console.error("Could not read essays directory for sitemap:", error);
+  }
+  
 
   return [...staticPages, ...essayRoutes];
 }
