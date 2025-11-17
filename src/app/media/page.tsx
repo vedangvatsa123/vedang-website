@@ -8,9 +8,9 @@ import Link from 'next/link';
 import { MoveUpRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Media',
+  title: 'Media Features & Speaking Engagements | Vedang Vatsa',
   description:
-    'Media features and speaking engagements of Vedang Vatsa, a recognized voice in AI, Web3, and the future of technology.',
+    'Explore media features and speaking engagements by Vedang Vatsa, a recognized voice on AI, Web3, and the future of decentralized economies and technology.',
   alternates: {
     canonical: '/media',
   },

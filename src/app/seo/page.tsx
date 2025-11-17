@@ -1,4 +1,3 @@
-
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -23,8 +22,8 @@ import { essays } from '@/lib/essays';
 
 
 export const metadata: Metadata = {
-    title: 'Vedang Vatsa | SEO & Growth Marketing',
-    description: 'Data-driven growth leader with 8+ years of experience scaling organic and paid acquisition channels for high-growth mobile and Web3 products. Proven track record in SEO, ASO, community building, and cross-functional leadership.',
+    title: 'SEO & Growth Marketing Specialist | Vedang Vatsa',
+    description: 'Data-driven growth leader with 8+ years of experience scaling organic acquisition for Web3, FinTech, and mobile products. Expert in SEO, ASO, and community-led growth.',
     alternates: {
       canonical: '/seo',
     },
@@ -341,5 +340,3 @@ export default function SeoProfilePage() {
     </div>
   );
 }
-
-    

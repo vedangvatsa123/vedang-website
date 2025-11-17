@@ -25,8 +25,8 @@ import { essays } from '@/lib/essays';
 
 
 export const metadata: Metadata = {
-    title: 'Vedang Vatsa | Content & Community',
-    description: 'Expert in building and scaling online communities and creating high-impact content strategies for Web3 and tech audiences. Founder of a 100k+ member professional network.',
+    title: 'Content & Community Building | Vedang Vatsa',
+    description: 'Expert in building and scaling online communities. I create high-impact content strategies for Web3 and tech audiences, having founded a 100k+ member professional network.',
     alternates: {
       canonical: '/community',
     },
@@ -270,9 +270,3 @@ export default function CommunityProfilePage() {
         </div>
       </main>
 
-      <Footer />
-    </div>
-  );
-}
-
-    

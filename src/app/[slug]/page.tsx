@@ -1,5 +1,3 @@
-
-
 import { essays } from '@/lib/essays';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
@@ -73,7 +71,6 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
       name: 'Vedang Vatsa',
       url: 'https://veda.ng',
     },
-    datePublished: essay.frontmatter.date,
     description: essay.frontmatter.summary,
     image: 'https://veda.ng/images/icon.png',
     publisher: {

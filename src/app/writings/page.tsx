@@ -1,4 +1,3 @@
-
 import { EssaysList } from '@/components/essays-list';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
@@ -8,8 +7,8 @@ import { Button } from '@/components/ui/button';
 import { MoveUpRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Writings',
-    description: 'A collection of essays by Vedang Vatsa on AI, Web3, and the future of technology.',
+    title: 'Writings on AI & The Future of Technology | Vedang Vatsa',
+    description: 'A collection of essays and research papers by Vedang Vatsa on AI, Web3, decentralized economies, and the future of technology.',
     alternates: {
       canonical: '/writings',
     },

@@ -1,4 +1,3 @@
-
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -23,8 +22,8 @@ import { AsSeenIn } from '@/components/as-seen-in';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
-    title: 'Profile',
-    description: 'Founder of a 100,000+ member Web3 community, Vedang Vatsa is featured in Favikon’s Top 50 Fintech & Crypto Creators and Thinkers360’s Top 50 Metaverse Thought Leaders.',
+    title: 'Full Profile of Vedang Vatsa (FRSA) | AI & Web3 Innovator',
+    description: 'Explore the detailed profile of Vedang Vatsa, a community founder (100k+ members), thought leader in AI & Web3, and Fellow of the Royal Society of Arts.',
     alternates: {
       canonical: '/profile',
     },
@@ -369,5 +368,3 @@ export default function ProfilePage() {
     </div>
   );
 }
-
-    
