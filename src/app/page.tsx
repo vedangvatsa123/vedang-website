@@ -72,7 +72,7 @@ export default function Home() {
               BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
             </p>
             <div className="mt-6 flex justify-center">
-              <Button asChild className="w-64">
+              <Button asChild className="min-w-64 px-8">
                 <Link href="/profile">
                   View Full Profile
                 </Link>
@@ -101,7 +101,7 @@ export default function Home() {
               ))}
             </div>
              <div className="mt-8 flex justify-center">
-               <Button variant="outline" asChild className="w-64">
+               <Button variant="outline" asChild className="min-w-64 px-8">
                  <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Read More on Google Scholar</Link>
                </Button>
             </div>
@@ -113,7 +113,7 @@ export default function Home() {
              <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Recent Essays</h2>
               <EssaysList limit={10} />
               <div className="mt-8 flex justify-center">
-                <Button variant="outline" asChild className="w-64">
+                <Button variant="outline" asChild className="min-w-64 px-8">
                   <Link href="/writings">View all essays</Link>
                 </Button>
               </div>
@@ -123,9 +123,11 @@ export default function Home() {
         <AsSeenIn />
 
         <section className="pb-12 text-center">
-            <Button asChild size="lg" className="w-64">
-                <Link href="/media">Speaking Engagements &amp; Media Mentions</Link>
-            </Button>
+            <div className="flex justify-center">
+                <Button asChild size="lg" className="min-w-64 px-8">
+                    <Link href="/media">Speaking Engagements &amp; Media Mentions</Link>
+                </Button>
+            </div>
         </section>
 
       </main>
