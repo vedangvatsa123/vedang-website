@@ -14,6 +14,7 @@ import {
   Linkedin,
   Mail,
   MessageSquare,
+  Send,
   Twitter,
   Youtube,
 } from 'lucide-react';
@@ -50,9 +51,9 @@ export default function ProfilePage() {
             
             <h1 className="mt-4 text-4xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
             <p className="mx-auto mt-3 max-w-3xl text-base text-muted-foreground">
-              Computer Engineer, MBA | Young Researcher 2020 Awardee (25 publications)
+              Computer Engineer, MBA | Young Researcher 2020 Awardee (22 publications)
             </p>
-            <div className="mt-6 flex justify-center items-center space-x-4">
+            <div className="mt-6 flex justify-center items-center space-x-4 flex-wrap gap-y-2">
               <Link
                 href="mailto:vedangvatsa.2019@iitkalumni.org"
                 className="text-muted-foreground hover:text-primary flex items-center gap-2"
@@ -73,22 +74,13 @@ export default function ProfilePage() {
                 <Twitter className="h-5 w-5" />
               </Link>
               <Link
-                href="https://www.instagram.com/vedangvatsa"
+                href="https://t.me/vedangvatsa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary flex items-center gap-2"
               >
-                <Instagram className="h-5 w-5" />
-                 <span className="text-sm">Instagram</span>
-              </Link>
-              <Link
-                href="https://www.youtube.com/@vedangvatsa"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary flex items-center gap-2"
-              >
-                <Youtube className="h-5 w-5" />
-                 <span className="text-sm">YouTube</span>
+                <Send className="h-5 w-5" />
+                 <span className="text-sm">Telegram</span>
               </Link>
               <Link
                 href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en"
@@ -112,7 +104,7 @@ export default function ProfilePage() {
               <div className="space-y-4">
                 <Card>
                   <CardHeader>
-                    <div className="flex justify-between items-start">
+                    <div className="flex justify-between items-start flex-wrap">
                       <div>
                         <CardTitle className="text-xl">Growth Advisory (Founder)</CardTitle>
                         <p className="text-muted-foreground">Hashtag Web3</p>
@@ -126,16 +118,17 @@ export default function ProfilePage() {
                         <li>Built a 100k+ member networking community for Web3, a social-messaging-first forum, and one of the largest Telegram channels for Web3 jobs, achieving 55 million post views in the first year.</li>
                         <li>Featured among the top 3 Web3 products of the week by Smoothie and supported by Microsoft for Startups.</li>
                         <li>Hosted weekly Twitter Spaces with high-profile guests (including a band member of Pink Floyd, partners of Big4 firms, the father of digital twin technology, and the CSO of Microsoft), attracting 20-30k live attendees.</li>
-                        <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, Token 2049, and many others.</li>
+                        <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, Token 2049, ETH Vietnam, Taipei Blockchain Week, Oxford Blockchain Conference, Malaysia Blockchain Week, ETH Brussels, EDCON Tokyo, Global Blockchain Show, and many others.</li>
                         <li>Published popular crash courses on NFT, Metaverse, Tokenomics, DAO, Blockchain, and DeFi, with 50,000 accesses in the first month and gaining 11,000 newsletter subscribers in 11 editions.</li>
-                        <li>Ranked among top 100 thought leaders in Metaverse and Smart Cities by Thinkers360.</li>
+                        <li>Created a closed community for Indian Web3 executives from Gemini, Circle, Hedera, Chainalysis, KPMG, Coinbase, Polygon, Aptos, Avalanche, EY, Algorand, PwC, etc.</li>
+                        <li>Among top 100 thought leaders & influencers in Metaverse and Smart Cities by Thinkers360.</li>
                         <li>Research reporting on AI and Web3 resulted in 80 million yearly LinkedIn post views and features by LinkedIn News UK & Europe.</li>
                     </ul>
                   </CardContent>
                 </Card>
                  <Card>
                   <CardHeader>
-                    <div className="flex justify-between items-start">
+                    <div className="flex justify-between items-start flex-wrap">
                       <div>
                         <CardTitle className="text-xl">Country Head</CardTitle>
                         <p className="text-muted-foreground">Prosple</p>
@@ -152,7 +145,7 @@ export default function ProfilePage() {
                 </Card>
                 <Card>
                   <CardHeader>
-                    <div className="flex justify-between items-start">
+                    <div className="flex justify-between items-start flex-wrap">
                       <div>
                         <CardTitle className="text-xl">Consultant</CardTitle>
                         <p className="text-muted-foreground">KPMG</p>
@@ -165,15 +158,15 @@ export default function ProfilePage() {
                       <h4 className="font-semibold">Program Management (Minister's Office, Ministry of Electronics and IT, India):</h4>
                       <ul className="list-disc list-inside space-y-2 text-muted-foreground mt-2">
                         <li>Served as Program Manager for Digital India projects under the Ministry.</li>
-                        <li>Worked on the Minister's social media strategy, liaised with state officials, startup founders, and CXOs.</li>
+                        <li>Worked on the Minister's social media strategy, created a personal website, and liaised with scientists, state officials, startup founders, CXOs, and bureaucrats.</li>
                         <li>Served as an evaluation committee member for a national government innovation challenge.</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold">Research and Due Diligence:</h4>
                       <ul className="list-disc list-inside space-y-2 text-muted-foreground mt-2">
-                         <li>Conducted Commercial Due Diligence (e-commerce, digital payments) and Technical Due Diligence (HealthTech, social media).</li>
-                         <li>Researched key policy areas like Responsible AI and the Data Protection Bill.</li>
+                         <li>Conducted Commercial Due Diligence (e-commerce with $2B valuation, Digital Payments with 2500Mn transaction volume) and Technical Due Diligence (HealthTech app with 220 million downloads, social media with $100 million valuation).</li>
+                         <li>Researched key policy areas like Responsible AI, Data Protection Bill, and proceedings on BigTechs.</li>
                       </ul>
                     </div>
                      <div>
@@ -188,7 +181,7 @@ export default function ProfilePage() {
                 </Card>
                 <Card>
                   <CardHeader>
-                    <div className="flex justify-between items-start">
+                    <div className="flex justify-between items-start flex-wrap">
                       <div>
                         <CardTitle className="text-xl">Project Manager (Co-Founder)</CardTitle>
                         <p className="text-muted-foreground">Studio Tesseract</p>
@@ -202,7 +195,7 @@ export default function ProfilePage() {
                       <li>Expanded business development globally, serving clients on five continents.</li>
                       <li>Secured recommendations from an Oscars screenwriter and a CPA+ founder.</li>
                     </ul>
-                  </CardContent>
+  </CardContent>
                 </Card>
               </div>
             </section>
@@ -248,26 +241,27 @@ export default function ProfilePage() {
 
             <section id="publications">
                 <h2 className="text-3xl font-semibold tracking-tight mb-6 flex items-center gap-3">
-                    <BookOpen className="w-7 h-7" /> Selected Publications
+                    <BookOpen className="w-7 h-7" /> Selected Publications & Articles
                 </h2>
                  <Card>
                     <CardContent className="pt-6">
+                         <p className="text-sm text-muted-foreground mb-4">Published research for Gov Blockchain Association, KPMG, IEEE, EY, Economic Times, Financial Express, Business Insider, Yourstory, Inc42, IndiaAI, etc.</p>
                         <ul className="list-disc list-inside space-y-2 text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-6">
                             <li>Analysis of Global Research Proceedings in AI</li>
                             <li>Estonia’s e-governance and digital public service delivery solutions</li>
-                            <li>Stablecoin Growth and Market Dynamics</li>
-                            <li>The Emerging Internet Of Value</li>
-                            <li>Computational Social Science in the Age of Big Data</li>
-                            <li>Decoding identity in the Metaverse</li>
-                            <li>Navigating through a data-fluent ecosystem</li>
-                            <li>Bias-free algorithm is essential for trustworthy Artificial Intelligence</li>
-                            <li>Digital service delivery will bolster an Atmanirbhar Bharat</li>
-                            <li>Catalysing the National Infrastructure Pipeline: Project India</li>
-                            <li>Identification and Mitigation of Algorithmic Bias Through Policy Instruments</li>
-                            <li>Emergence of TechFin in the emerging economies</li>
-                            <li>Digital Lending: A $1 Trillion opportunity for India</li>
-                            <li>Coronavirus Outbreak: Trillion-Dollar Crisis and Evolution of New Global Order</li>
-                            <li>Global Stablecoin Regulations and Policies</li>
+                            <li>Digital Nomadism & The Future of Work</li>
+                            <li>Perspectives on Rationality for AI</li>
+                            <li>Computational Social Science</li>
+                            <li>Bias in Algorithms</li>
+                            <li>Data-fluent Ecosystems</li>
+                            <li>Landscape of AI Regulations</li>
+                            <li>Digital Rupee & CBDCs</li>
+                            <li>The Network State</li>
+                            <li>Web3 Gaming Market</li>
+                            <li>Identities in the Metaverse</li>
+                            <li>Careers in Web3</li>
+                            <li>Trust in a Pseudonymous World</li>
+                            <li>Citizens of the Metaverse</li>
                         </ul>
                     </CardContent>
                 </Card>
@@ -319,7 +313,7 @@ export default function ProfilePage() {
                         </div>
                          <div>
                             <h4 className="font-semibold">Public Speaking</h4>
-                            <p className="text-muted-foreground mt-1 text-sm">Conducted workshops on topics like Computational Social Science, China’s Approach to AI, and Responsible AI.</p>
+                            <p className="text-muted-foreground mt-1 text-sm">Conducted workshops on topics like Computational Social Science, China’s Approach to AI, and Responsible AI. Speaker at IIT Delhi, IIT Kanpur, OP Jindal University, TUM Munich, ISB Hyderabad, ETH Enugu, etc.</p>
                         </div>
                     </CardContent>
                 </Card>
