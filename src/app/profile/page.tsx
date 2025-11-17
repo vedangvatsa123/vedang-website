@@ -15,7 +15,6 @@ import {
   MessageSquare,
   Send,
   Twitter,
-  Newspaper
 } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -95,9 +94,9 @@ export default function ProfilePage() {
             </div>
           </section>
 
-          <Separator className="my-8" />
+          <Separator className="my-6" />
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             <section id="experience">
               <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                 <Briefcase className="w-6 h-6" /> Professional Experience
@@ -120,7 +119,7 @@ export default function ProfilePage() {
                         <li>Featured among the top 3 Web3 products of the week by Smoothie and supported by Microsoft for Startups.</li>
                         <li>Hosted weekly Twitter Spaces with high-profile guests (including a band member of Pink Floyd, partners of Big4 firms, the father of digital twin technology, and the CSO of Microsoft), attracting 20-30k live attendees.</li>
                         <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, Token 2049, ETH Vietnam, Taipei Blockchain Week, Oxford Blockchain Conference, Malaysia Blockchain Week, ETH Brussels, EDCON Tokyo, and many others.</li>
-                        <li>Published popular crash courses on NFT, Metaverse, Tokenomics, DAO, Blockchain, and DeFi, with 50,000 accesses in the first month and gaining 11,000 newsletter subscribers in 11 editions.</li>
+                        <li>Published popular crash courses on NFT, Metaverse, Tokenomics, DAO, Blockchain, and DeFi, with 50,000 accesses in the first month, gaining 11,000 newsletter subscribers in 11 editions, and growing a Medium publication to 150,000 subscribers.</li>
                         <li>Created a closed community for Indian Web3 executives from Gemini, Circle, Hedera, Chainalysis, KPMG, Coinbase, Polygon, Aptos, Avalanche, EY, Algorand, PwC, etc.</li>
                         <li>Among top 100 thought leaders & influencers in Metaverse and Smart Cities by Thinkers360.</li>
                         <li>Research reporting on AI and Web3 resulted in 80 million yearly LinkedIn post views & features by LinkedIn News UK & Europe.</li>
@@ -246,7 +245,7 @@ export default function ProfilePage() {
                 </h2>
                  <Card>
                     <CardContent className="p-4">
-                         <p className="text-xs text-muted-foreground mb-3">Published research for Gov Blockchain Association, KPMG, IEEE, EY, Economic Times, Financial Express, Business Insider, Yourstory, Inc42, IndiaAI, etc.</p>
+                         <p className="text-xs text-muted-foreground mb-3">Published articles for Gov Blockchain Association, KPMG, IEEE, EY, Economic Times, Financial Express, Business Insider, Yourstory, Inc42, IndiaAI, etc.</p>
                         <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-4">
                             <li>Analysis of Global Research Proceedings in AI</li>
                             <li>Estonia’s e-governance and digital public service delivery solutions</li>
@@ -358,9 +357,9 @@ export default function ProfilePage() {
             <AsSeenIn />
 
             <section id="media-link" className="text-center">
-              <Button asChild size="lg">
-                  <Link href="/media">Speaking Engagements &amp; Media Mentions</Link>
-              </Button>
+                <Button asChild size="lg">
+                    <Link href="/media">Speaking Engagements &amp; Media Mentions</Link>
+                </Button>
             </section>
 
           </div>
@@ -371,3 +370,5 @@ export default function ProfilePage() {
     </div>
   );
 }
+
+    
