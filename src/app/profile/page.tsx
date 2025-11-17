@@ -50,7 +50,7 @@ export default function ProfilePage() {
             
             <h1 className="mt-4 text-4xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
             <p className="mx-auto mt-3 max-w-3xl text-base text-muted-foreground">
-              Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals), Computer Engineer, and MBA. Recipient of Japan’s Special Visa for Intellectual Figures, Young Achiever 2020-21, and Young Researcher 2020 awards. Fellow of the Royal Society of Arts.
+              Computer Engineer, MBA | Young Researcher 2020 Awardee (25 publications)
             </p>
             <div className="mt-6 flex justify-center items-center space-x-4">
               <Link
@@ -123,13 +123,13 @@ export default function ProfilePage() {
                   <CardContent>
                     <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                         <li>Served as Head of Marketing and Growth Lead for several Web3 companies.</li>
-                        <li>Built a 100k+ member networking community for Web3, a social-messaging-first forum and one of the largest Telegram channels for Web3 jobs, achieving 55 million post views in the first year.</li>
+                        <li>Built a 100k+ member networking community for Web3, a social-messaging-first forum, and one of the largest Telegram channels for Web3 jobs, achieving 55 million post views in the first year.</li>
                         <li>Featured among the top 3 Web3 products of the week by Smoothie and supported by Microsoft for Startups.</li>
-                        <li>Hosted weekly Twitter Spaces sessions with high-profile guests, attracting 20-30k live attendees.</li>
-                        <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, and Token 2049.</li>
-                        <li>Published popular crash courses on Web3 topics, gaining 50,000 accesses in the first month and 11,000 newsletter subscribers in 11 editions.</li>
-                        <li>Ranked among the top 100 thought leaders in Metaverse and Smart Cities by Thinkers360.</li>
-                        <li>Research reporting on AI and Web3 resulted in 80 million yearly LinkedIn post views.</li>
+                        <li>Hosted weekly Twitter Spaces with high-profile guests (including a band member of Pink Floyd, partners of Big4 firms, the father of digital twin technology, and the CSO of Microsoft), attracting 20-30k live attendees.</li>
+                        <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, Token 2049, and many others.</li>
+                        <li>Published popular crash courses on NFT, Metaverse, Tokenomics, DAO, Blockchain, and DeFi, with 50,000 accesses in the first month and gaining 11,000 newsletter subscribers in 11 editions.</li>
+                        <li>Ranked among top 100 thought leaders in Metaverse and Smart Cities by Thinkers360.</li>
+                        <li>Research reporting on AI and Web3 resulted in 80 million yearly LinkedIn post views and features by LinkedIn News UK & Europe.</li>
                     </ul>
                   </CardContent>
                 </Card>
