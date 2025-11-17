@@ -15,10 +15,13 @@ import {
   MessageSquare,
   Send,
   Twitter,
+  Newspaper
 } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { AsSeenIn } from '@/components/as-seen-in';
+import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
     title: 'Profile',
@@ -101,7 +104,7 @@ export default function ProfilePage() {
               </h2>
               <div className="space-y-4">
                 <Card>
-                  <CardHeader className="p-4">
+                  <CardHeader className="p-4 pb-0">
                     <div className="flex justify-between items-start flex-wrap gap-2">
                       <div>
                         <CardTitle className="text-lg">Growth Advisory (Founder)</CardTitle>
@@ -110,22 +113,22 @@ export default function ProfilePage() {
                       <p className="text-xs text-muted-foreground flex-shrink-0">October 2022 - Present</p>
                     </div>
                   </CardHeader>
-                  <CardContent className="p-4 pt-0">
-                    <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground">
+                  <CardContent className="p-4">
+                    <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
                         <li>Served as Head of Marketing and Growth Lead for several Web3 companies.</li>
                         <li>Built a 100k+ member networking community for Web3, a social-messaging-first forum, and one of the largest Telegram channels for Web3 jobs, achieving 55 million post views in the first year.</li>
                         <li>Featured among the top 3 Web3 products of the week by Smoothie and supported by Microsoft for Startups.</li>
                         <li>Hosted weekly Twitter Spaces with high-profile guests (including a band member of Pink Floyd, partners of Big4 firms, the father of digital twin technology, and the CSO of Microsoft), attracting 20-30k live attendees.</li>
-                        <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, Token 2049, ETH Vietnam, Taipei Blockchain Week, Oxford Blockchain Conference, Malaysia Blockchain Week, ETH Brussels, EDCON Tokyo, Global Blockchain Show, and many others.</li>
+                        <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, Token 2049, ETH Vietnam, Taipei Blockchain Week, Oxford Blockchain Conference, Malaysia Blockchain Week, ETH Brussels, EDCON Tokyo, and many others.</li>
                         <li>Published popular crash courses on NFT, Metaverse, Tokenomics, DAO, Blockchain, and DeFi, with 50,000 accesses in the first month and gaining 11,000 newsletter subscribers in 11 editions.</li>
                         <li>Created a closed community for Indian Web3 executives from Gemini, Circle, Hedera, Chainalysis, KPMG, Coinbase, Polygon, Aptos, Avalanche, EY, Algorand, PwC, etc.</li>
                         <li>Among top 100 thought leaders & influencers in Metaverse and Smart Cities by Thinkers360.</li>
-                        <li>Research reporting on AI and Web3 resulted in 80 million yearly LinkedIn post views and features by LinkedIn News UK & Europe.</li>
+                        <li>Research reporting on AI and Web3 resulted in 80 million yearly LinkedIn post views & features by LinkedIn News UK & Europe.</li>
                     </ul>
                   </CardContent>
                 </Card>
                  <Card>
-                  <CardHeader className="p-4">
+                  <CardHeader className="p-4 pb-0">
                     <div className="flex justify-between items-start flex-wrap gap-2">
                       <div>
                         <CardTitle className="text-lg">Country Head</CardTitle>
@@ -134,15 +137,15 @@ export default function ProfilePage() {
                       <p className="text-xs text-muted-foreground flex-shrink-0">September 2021 - October 2022</p>
                     </div>
                   </CardHeader>
-                  <CardContent className="p-4 pt-0">
-                    <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground">
+                  <CardContent className="p-4">
+                    <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
                       <li>Led user growth from 5,000 to 200,000 through content and social media, generating over 1.5 million geo-targeted web hits.</li>
                       <li>Hosted events with executives from top companies like Microsoft and Bain & Company.</li>
                     </ul>
                   </CardContent>
                 </Card>
                 <Card>
-                  <CardHeader className="p-4">
+                  <CardHeader className="p-4 pb-0">
                     <div className="flex justify-between items-start flex-wrap gap-2">
                       <div>
                         <CardTitle className="text-lg">Consultant</CardTitle>
@@ -151,10 +154,10 @@ export default function ProfilePage() {
                       <p className="text-xs text-muted-foreground flex-shrink-0">September 2019 - September 2021</p>
                     </div>
                   </CardHeader>
-                  <CardContent className="p-4 pt-0 space-y-3">
+                  <CardContent className="p-4 space-y-2">
                     <div>
                       <h4 className="font-semibold text-base">Program Management (Minister's Office, Ministry of Electronics and IT, India):</h4>
-                      <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground mt-1">
+                      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground mt-1">
                         <li>Served as Program Manager for Digital India projects under the Ministry.</li>
                         <li>Worked on the Minister's social media strategy, created a personal website, and liaised with scientists, state officials, startup founders, CXOs, and bureaucrats.</li>
                         <li>Served as an evaluation committee member for a national government innovation challenge.</li>
@@ -162,14 +165,14 @@ export default function ProfilePage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-base">Research and Due Diligence:</h4>
-                      <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground mt-1">
+                      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground mt-1">
                          <li>Conducted Commercial Due Diligence (e-commerce with $2B valuation, Digital Payments with 2500Mn transaction volume) and Technical Due Diligence (HealthTech app with 220 million downloads, social media with $100 million valuation).</li>
                          <li>Researched key policy areas like Responsible AI, Data Protection Bill, and proceedings on BigTechs.</li>
                       </ul>
                     </div>
                      <div>
                       <h4 className="font-semibold text-base">Business Strategy & Analysis:</h4>
-                      <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground mt-1">
+                      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground mt-1">
                          <li>Designed strategies for KPMG's Analytics Centre of Excellence.</li>
                          <li>Prepared process architecture for contactless tracking in India Post, the world's largest postal network.</li>
                          <li>Received multiple Kudos and a Top Scorer award in KPMG's Digital Premier League on Emerging Technologies.</li>
@@ -178,7 +181,7 @@ export default function ProfilePage() {
                   </CardContent>
                 </Card>
                 <Card>
-                  <CardHeader className="p-4">
+                  <CardHeader className="p-4 pb-0">
                     <div className="flex justify-between items-start flex-wrap gap-2">
                       <div>
                         <CardTitle className="text-lg">Project Manager (Co-Founder)</CardTitle>
@@ -187,8 +190,8 @@ export default function ProfilePage() {
                       <p className="text-xs text-muted-foreground flex-shrink-0">April 2013 - June 2017</p>
                     </div>
                   </CardHeader>
-                  <CardContent className="p-4 pt-0">
-                    <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground">
+                  <CardContent className="p-4">
+                    <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
                       <li>Led a 30-member team to deliver 27 web and mobile products across the full development lifecycle.</li>
                       <li>Expanded business development globally, serving clients on five continents.</li>
                       <li>Secured recommendations from an Oscars screenwriter and a CPA+ founder.</li>
@@ -204,11 +207,11 @@ export default function ProfilePage() {
                     <GraduationCap className="w-6 h-6" /> Education
                   </h2>
                   <Card>
-                    <CardHeader className="p-4">
+                    <CardHeader className="p-4 pb-0">
                       <CardTitle className="text-lg">BE - Computer Engineering & MBA</CardTitle>
                     </CardHeader>
-                    <CardContent className="p-4 pt-0">
-                      <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground">
+                    <CardContent className="p-4">
+                      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
                         <li>Nominated for the President's Gold Medal at the Indian Institute of Technology Kanpur.</li>
                         <li>Represented over 100 students as the department student representative.</li>
                         <li>Headed a 40-member Entrepreneurship Cell team and grew internship offers by 73%.</li>
@@ -224,7 +227,7 @@ export default function ProfilePage() {
                   </h2>
                   <Card>
                     <CardContent className="p-4">
-                      <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground">
+                      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
                         <li>Awarded as a Fellow of the Royal Society for the Encouragement of Arts, Manufactures and Commerce.</li>
                         <li>Issued Japan’s special visa for Intellectual Figures.</li>
                         <li>Presented a low-cost laptop prototype at IIT Delhi, earning praise from the Head of MIT Media Labs and a Nobel Laureate.</li>
@@ -244,7 +247,7 @@ export default function ProfilePage() {
                  <Card>
                     <CardContent className="p-4">
                          <p className="text-xs text-muted-foreground mb-3">Published research for Gov Blockchain Association, KPMG, IEEE, EY, Economic Times, Financial Express, Business Insider, Yourstory, Inc42, IndiaAI, etc.</p>
-                        <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-4">
+                        <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-4">
                             <li>Analysis of Global Research Proceedings in AI</li>
                             <li>Estonia’s e-governance and digital public service delivery solutions</li>
                             <li>Digital Nomadism & The Future of Work</li>
@@ -351,6 +354,24 @@ export default function ProfilePage() {
                     </Card>
                  </div>
             </section>
+
+            <AsSeenIn />
+
+            <section id="media-link">
+                <Card className="p-6 text-center">
+                    <CardHeader className="p-0 mb-4">
+                        <Newspaper className="mx-auto h-8 w-8 text-primary" />
+                        <CardTitle className="text-xl mt-2">Speaking Engagements & Media Mentions</CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-0">
+                        <p className="text-muted-foreground mb-4">For a comprehensive list of media features and speaking history, please visit the Media page.</p>
+                        <Button asChild>
+                            <Link href="/media">View Media Page</Link>
+                        </Button>
+                    </CardContent>
+                </Card>
+            </section>
+
           </div>
         </div>
       </main>
@@ -359,5 +380,3 @@ export default function ProfilePage() {
     </div>
   );
 }
-
-  
