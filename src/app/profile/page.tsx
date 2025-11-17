@@ -14,6 +14,7 @@ import {
   Linkedin,
   Mail,
   MessageSquare,
+  Twitter,
   Youtube,
 } from 'lucide-react';
 import { Metadata } from 'next';
@@ -49,14 +50,11 @@ export default function ProfilePage() {
             
             <h1 className="mt-4 text-4xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
             <p className="mx-auto mt-3 max-w-3xl text-base text-muted-foreground">
-              Founder of a 100,000+ member Web3 community, Vedang Vatsa is featured in Favikon’s Top 50 Fintech &
-              Crypto Creators and Thinkers360’s Top 50 Metaverse Thought Leaders. With over 80 million LinkedIn post
-              views, he is an experienced researcher in AI and Web3. He has published extensively and partnered with
-              global tech conferences and academic institutions.
+              Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals), Computer Engineer, and MBA. Recipient of Japan’s Special Visa for Intellectual Figures, Young Achiever 2020-21, and Young Researcher 2020 awards. Fellow of the Royal Society of Arts.
             </p>
             <div className="mt-6 flex justify-center items-center space-x-4">
               <Link
-                href="mailto:vedangvats@gmail.com"
+                href="mailto:vedangvatsa.2019@iitkalumni.org"
                 className="text-muted-foreground hover:text-primary flex items-center gap-2"
               >
                 <Mail className="h-5 w-5" />
@@ -70,6 +68,9 @@ export default function ProfilePage() {
               >
                 <Linkedin className="h-5 w-5" />
                  <span className="text-sm">LinkedIn</span>
+              </Link>
+               <Link href="https://x.com/vedangvatsa" className="text-muted-foreground hover:text-primary" target="_blank" rel="noopener noreferrer">
+                <Twitter className="h-5 w-5" />
               </Link>
               <Link
                 href="https://www.instagram.com/vedangvatsa"
@@ -113,7 +114,7 @@ export default function ProfilePage() {
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle className="text-xl">Growth Advisory</CardTitle>
+                        <CardTitle className="text-xl">Growth Advisory (Founder)</CardTitle>
                         <p className="text-muted-foreground">Hashtag Web3</p>
                       </div>
                       <p className="text-sm text-muted-foreground flex-shrink-0">October 2022 - Present</p>
@@ -121,54 +122,30 @@ export default function ProfilePage() {
                   </CardHeader>
                   <CardContent>
                     <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                      <li>Served as Head of Marketing and Growth Lead for several Web3 companies.</li>
-                      <li>
-                        Built a 100k+ member networking community for Web3 professionals. It is a social-messaging-first
-                        forum and one of the largest Telegram channels for Web3 jobs, achieving 55 million post views in
-                        its first year.
-                      </li>
-                      <li>
-                        Featured among the top 3 Web3 products of the week by Smoothie (a ProductHunt for Web3) and
-                        supported by Microsoft for Startups.
-                      </li>
-                      <li>Published articles for Government Blockchain Association, KPMG, IEEE, EY, and major news outlets.</li>
-                      <li>Hosted weekly Twitter Spaces sessions with high-profile guests, attracting 20-30k live attendees.</li>
-                      <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, and Token 2049.</li>
-                      <li>
-                        Published popular crash courses on Web3 topics, gaining 50,000 accesses in the first month and 11,000
-                        newsletter subscribers in 11 editions.
-                      </li>
-                      <li>
-                        Created a closed community for Indian Web3 executives from top companies like Gemini, Circle, and
-                        KPMG.
-                      </li>
-                      <li>
-                        Delivered guest lectures at IIT Delhi, IIT Kanpur, and The Responsible AI Forum, among others.
-                      </li>
-                      <li>Ranked among the top 100 thought leaders in Metaverse and Smart Cities by Thinkers360.</li>
-                      <li>
-                        Conducted research on AI and Web3, leading to over 80 million yearly LinkedIn post views and
-                        publications on topics like Digital Rupee, Web3 Gaming, and AI regulations.
-                      </li>
+                        <li>Served as Head of Marketing and Growth Lead for several Web3 companies.</li>
+                        <li>Built a 100k+ member networking community for Web3, a social-messaging-first forum and one of the largest Telegram channels for Web3 jobs, achieving 55 million post views in the first year.</li>
+                        <li>Featured among the top 3 Web3 products of the week by Smoothie and supported by Microsoft for Startups.</li>
+                        <li>Hosted weekly Twitter Spaces sessions with high-profile guests, attracting 20-30k live attendees.</li>
+                        <li>Partnered with leading organizations like Harvard Blockchain Club, ETH Oxford, and Token 2049.</li>
+                        <li>Published popular crash courses on Web3 topics, gaining 50,000 accesses in the first month and 11,000 newsletter subscribers in 11 editions.</li>
+                        <li>Ranked among the top 100 thought leaders in Metaverse and Smart Cities by Thinkers360.</li>
+                        <li>Research reporting on AI and Web3 resulted in 80 million yearly LinkedIn post views.</li>
                     </ul>
                   </CardContent>
                 </Card>
-                <Card>
+                 <Card>
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
                         <CardTitle className="text-xl">Country Head</CardTitle>
-                        <p className="text-muted-foreground">Prosple (Oceania based career-tech company)</p>
+                        <p className="text-muted-foreground">Prosple</p>
                       </div>
                       <p className="text-sm text-muted-foreground flex-shrink-0">September 2021 - October 2022</p>
                     </div>
                   </CardHeader>
                   <CardContent>
                     <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                      <li>
-                        Led user growth from 5,000 to 200,000 through content and social media, generating over 1.5
-                        million geo-targeted web hits.
-                      </li>
+                      <li>Led user growth from 5,000 to 200,000 through content and social media, generating over 1.5 million geo-targeted web hits.</li>
                       <li>Hosted events with executives from top companies like Microsoft and Bain & Company.</li>
                     </ul>
                   </CardContent>
@@ -188,16 +165,14 @@ export default function ProfilePage() {
                       <h4 className="font-semibold">Program Management (Minister's Office, Ministry of Electronics and IT, India):</h4>
                       <ul className="list-disc list-inside space-y-2 text-muted-foreground mt-2">
                         <li>Served as Program Manager for Digital India projects under the Ministry.</li>
-                        <li>Worked on the Minister's social media strategy and liaised with state officials, startup founders, and CXOs.</li>
-                        <li>Gathered data, built dashboards, and led growth initiatives for high-level reviews.</li>
+                        <li>Worked on the Minister's social media strategy, liaised with state officials, startup founders, and CXOs.</li>
                         <li>Served as an evaluation committee member for a national government innovation challenge.</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold">Research and Due Diligence:</h4>
                       <ul className="list-disc list-inside space-y-2 text-muted-foreground mt-2">
-                         <li>Conducted Commercial Due Diligence for major e-commerce and digital payment firms.</li>
-                         <li>Performed Technical Due Diligence for high-valuation HealthTech and social media apps.</li>
+                         <li>Conducted Commercial Due Diligence (e-commerce, digital payments) and Technical Due Diligence (HealthTech, social media).</li>
                          <li>Researched key policy areas like Responsible AI and the Data Protection Bill.</li>
                       </ul>
                     </div>
@@ -205,7 +180,6 @@ export default function ProfilePage() {
                       <h4 className="font-semibold">Business Strategy & Analysis:</h4>
                       <ul className="list-disc list-inside space-y-2 text-muted-foreground mt-2">
                          <li>Designed strategies for KPMG's Analytics Centre of Excellence.</li>
-                         <li>Monitored projects in Language Translation, Digital Villages, and AI.</li>
                          <li>Prepared process architecture for contactless tracking in India Post, the world's largest postal network.</li>
                          <li>Received multiple Kudos and a Top Scorer award in KPMG's Digital Premier League on Emerging Technologies.</li>
                       </ul>
@@ -240,14 +214,13 @@ export default function ProfilePage() {
                   </h2>
                   <Card>
                     <CardHeader>
-                      <CardTitle className="text-xl">BE - Computer Engineering (2009-13) & MBA (2017-19)</CardTitle>
+                      <CardTitle className="text-xl">BE - Computer Engineering & MBA</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                         <li>Nominated for the President's Gold Medal at the Indian Institute of Technology Kanpur.</li>
                         <li>Represented over 100 students as the department student representative.</li>
                         <li>Headed a 40-member Entrepreneurship Cell team and grew internship offers by 73%.</li>
-                        <li>Won 'Freshman of the Year' and served as Training and Placement Cell Executive Head.</li>
                         <li>Finished a Management Development Program on leadership from the Indian Institute of Management Indore.</li>
                       </ul>
                     </CardContent>
@@ -261,11 +234,11 @@ export default function ProfilePage() {
                   <Card>
                     <CardContent className="pt-6">
                       <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                        <li>Awarded as a Fellow of the Royal Society for the Encouragement of Arts, Manufactures and Commerce. Past Fellows include Stephen Hawking and Charles Dickens.</li>
+                        <li>Awarded as a Fellow of the Royal Society for the Encouragement of Arts, Manufactures and Commerce.</li>
                         <li>Issued Japan’s special visa for Intellectual Figures.</li>
                         <li>Presented a low-cost laptop prototype at IIT Delhi, earning praise from the Head of MIT Media Labs and a Nobel Laureate.</li>
                         <li>Received the Young Researcher Award 2020 and Young Achiever Award 2020-21.</li>
-                        <li>Honored with a medal by the Former Director of India’s Prime Minister's Office for winning the Beat Plastic Hackathon.</li>
+                        <li>Honored with a medal by the Former Director of India’s Prime Minister's Office.</li>
                         <li>Represented the Indian delegation in numerous international dialogues, including the Harvard Project for Asian & International Relations.</li>
                       </ul>
                     </CardContent>
@@ -280,20 +253,12 @@ export default function ProfilePage() {
                  <Card>
                     <CardContent className="pt-6">
                         <ul className="list-disc list-inside space-y-2 text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-6">
-                            <li>A literature review on internet of things (iot)</li>
+                            <li>Analysis of Global Research Proceedings in AI</li>
                             <li>Estonia’s e-governance and digital public service delivery solutions</li>
-                            <li>Raspberry Pi based Implementation of Internet of Things using mobile messaging application-‘Telegram’</li>
-                            <li>Growth of Digital Payments and the emergence of FinTech in India</li>
-                            <li>Current Trends and Approaches of Network Intrusion Detection System</li>
-                            <li>Base erosion and profit shifting in multinational corporations.</li>
-                            <li>Blockchain Ecosystem Evolution</li>
-                            <li>Stablecoins in the Modern Financial System</li>
                             <li>Stablecoin Growth and Market Dynamics</li>
                             <li>The Emerging Internet Of Value</li>
-                            <li>Analysis of Global Research Proceedings in Artificial Intelligence</li>
                             <li>Computational Social Science in the Age of Big Data</li>
                             <li>Decoding identity in the Metaverse</li>
-                            <li>A simulated reality with silicon consciousness</li>
                             <li>Navigating through a data-fluent ecosystem</li>
                             <li>Bias-free algorithm is essential for trustworthy Artificial Intelligence</li>
                             <li>Digital service delivery will bolster an Atmanirbhar Bharat</li>
@@ -302,13 +267,6 @@ export default function ProfilePage() {
                             <li>Emergence of TechFin in the emerging economies</li>
                             <li>Digital Lending: A $1 Trillion opportunity for India</li>
                             <li>Coronavirus Outbreak: Trillion-Dollar Crisis and Evolution of New Global Order</li>
-                            <li>Leadership Effectiveness, Spiritual Values and the Paths to Happiness</li>
-                            <li>A Case Study on ‘The Mobile Applications Industry’</li>
-                            <li>A Review on the Multi Modal Biometric Systems</li>
-                            <li>Comparative Analysis of Coverage Schemes in WSN (Wireless Sensor Network)</li>
-                            <li>Emerging of New Service Oriented Approach Based on Internet of Things</li>
-                            <li>Study and Analysis of security threats and attacks in MANET</li>
-                            <li>Security in Ubiquitous Computing - Location Based Applications</li>
                             <li>Global Stablecoin Regulations and Policies</li>
                         </ul>
                     </CardContent>
@@ -330,7 +288,7 @@ export default function ProfilePage() {
                             <p className="text-muted-foreground mt-1 text-sm">Led creative strategy for startups in a CivicTech event, where three received funding.</p>
                         </div>
                          <div>
-                            <h4 className="font-semibold">HINDUSTAN PETROLEUM (a Fortune 500 company)</h4>
+                            <h4 className="font-semibold">HINDUSTAN PETROLEUM</h4>
                             <p className="text-muted-foreground mt-1 text-sm">Developed an analytics tool to monitor sales data for over 50 petrol pumps.</p>
                         </div>
                          <div>
@@ -409,3 +367,5 @@ export default function ProfilePage() {
     </div>
   );
 }
+
+    
