@@ -6,10 +6,11 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Textarea } from '@/components/ui/textarea';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Terminal, Minus, Equal, Percent } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 import { encode, decode } from '@toon-format/toon';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const placeholderJson = {
   users: [
@@ -44,7 +45,7 @@ export default function JsonToToonPage() {
     setJsonTokens(jsonLen);
     setToonTokens(toonLen);
 
-    if (jsonLen > 0) {
+    if (jsonLen > 0 && toonLen > 0) {
       const saved = ((jsonLen - toonLen) / jsonLen) * 100;
       setPercentSaved(Math.round(saved * 100) / 100); // Round to two decimal places
     } else {
@@ -165,6 +166,43 @@ export default function JsonToToonPage() {
               </CardContent>
             </Card>
 
+            <div className="my-12">
+                <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">What is TOON?</h2>
+                <div className="max-w-4xl mx-auto text-muted-foreground space-y-4">
+                <p>TOON (Token-Oriented Object Notation) is a modern data serialization format designed specifically for efficiency in AI and Large Language Model (LLM) systems. While JSON is excellent for human readability and universal data exchange, its verbose syntax with quotes, braces, and repeated keys consumes valuable tokens—the currency of LLMs.</p>
+                <p>TOON solves this by using a compact, tabular-style notation that significantly reduces token count without sacrificing structure. It's built for machines, not humans, making it an ideal choice for high-volume, performance-critical AI workflows where cost and latency are key factors.</p>
+                </div>
+            </div>
+
+            <div className="my-12">
+                <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Frequently Asked Questions</h2>
+                <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto">
+                <AccordionItem value="item-1">
+                    <AccordionTrigger>What is TOON and how does it differ from JSON?</AccordionTrigger>
+                    <AccordionContent>
+                    TOON is a data format optimized for token efficiency. Unlike JSON, which uses braces, quotes, and verbose keys, TOON employs a compact syntax that reduces character count. For example, an array of objects in TOON defines the schema once and then lists the data in rows, minimizing repetition. This makes it ideal for interacting with token-based AI models.
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                    <AccordionTrigger>Why is TOON more efficient for Large Language Models (LLMs)?</AccordionTrigger>
+                    <AccordionContent>
+                    LLMs process information in "tokens," and every character (including spaces, quotes, and brackets) contributes to the token count. By eliminating redundant syntax, TOON can reduce the number of tokens required to represent structured data by 30-50%. This leads to lower API costs, faster response times, and reduced computational load.
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                    <AccordionTrigger>Is TOON meant to replace JSON?</AccordionTrigger>
+                    <AccordionContent>
+                    No, TOON is not a universal replacement for JSON. JSON's human readability makes it superior for debugging, configuration files, and standard web APIs. TOON is designed for a specific purpose: optimizing structured data exchange with AI systems. A common approach is to use JSON within your application and convert to TOON only when sending data to an LLM.
+                    </AccordionContent>
+                </AccordionItem>
+                 <AccordionItem value="item-4">
+                    <AccordionTrigger>What are the best use cases for TOON?</AccordionTrigger>
+                    <AccordionContent>
+                    TOON is most effective in scenarios involving frequent, structured data exchange with AI models. This includes fine-tuning LLMs with large datasets, building AI agentic workflows that pass data between steps, and developing high-throughput serverless AI APIs where both cost and speed are critical.
+                    </AccordionContent>
+                </AccordionItem>
+                </Accordion>
+            </div>
           </div>
         </div>
       </main>
@@ -172,3 +210,5 @@ export default function JsonToToonPage() {
     </div>
   );
 }
+
+    
