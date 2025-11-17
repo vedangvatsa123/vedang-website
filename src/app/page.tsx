@@ -117,6 +117,12 @@ export default function Home() {
               </div>
            </div>
         </section>
+
+        <section className="pb-12 text-center">
+            <Button asChild size="lg">
+                <Link href="/media">Speaking Engagements &amp; Media Mentions</Link>
+            </Button>
+        </section>
         
         <AsSeenIn />
 
