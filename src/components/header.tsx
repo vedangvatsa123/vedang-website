@@ -35,6 +35,9 @@ export function Header() {
                 <DropdownMenuItem asChild>
                   <Link href="/seo">SEO & Growth</Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/community">Content & Community</Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <Link href="/media" className="text-foreground transition-colors hover:text-primary px-2 py-1">

@@ -28,6 +28,10 @@ Date(),
       lastModified: new Date(),
     },
     {
+      url: `${BASE_URL}/community`,
+      lastModified: new Date(),
+    },
+    {
       url: `${BASE_URL}/json-to-toon`,
       lastModified: new Date(),
     }
