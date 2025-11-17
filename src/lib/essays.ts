@@ -7,13 +7,14 @@ export type Essay = {
   title: string;
   summary: string;
   date: string;
-  url: string;
+  url:string;
   slug: string;
 };
 
 const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
 
 // This function reads the file system to get all essays.
+// It will be re-evaluated on each request in development.
 function getEssays(): Essay[] {
   if (!fs.existsSync(essaysDirectory)) {
     return [];
