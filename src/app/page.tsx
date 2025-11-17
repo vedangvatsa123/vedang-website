@@ -71,11 +71,13 @@ export default function Home() {
               <br />
               BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
             </p>
-            <Button asChild className="mt-6">
-              <Link href="/profile">
-                View Full Profile
-              </Link>
-            </Button>
+            <div className="mt-6 flex justify-center">
+              <Button asChild className="w-64">
+                <Link href="/profile">
+                  View Full Profile
+                </Link>
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -98,8 +100,8 @@ export default function Home() {
                 </Link>
               ))}
             </div>
-             <div className="mt-8 text-center">
-               <Button variant="outline" asChild>
+             <div className="mt-8 flex justify-center">
+               <Button variant="outline" asChild className="w-64">
                  <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Read More on Google Scholar</Link>
                </Button>
             </div>
@@ -110,8 +112,8 @@ export default function Home() {
            <div className="container mx-auto px-4 md:px-6">
              <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Recent Essays</h2>
               <EssaysList limit={10} />
-              <div className="mt-8 text-center">
-                <Button variant="outline" asChild>
+              <div className="mt-8 flex justify-center">
+                <Button variant="outline" asChild className="w-64">
                   <Link href="/writings">View all essays</Link>
                 </Button>
               </div>
@@ -121,7 +123,7 @@ export default function Home() {
         <AsSeenIn />
 
         <section className="pb-12 text-center">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="w-64">
                 <Link href="/media">Speaking Engagements &amp; Media Mentions</Link>
             </Button>
         </section>
