@@ -4,6 +4,13 @@
 import Link from 'next/link';
 import { ThemeToggle } from '@/components/theme-toggle';
 import * as React from 'react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { ChevronDown } from 'lucide-react';
 
 export function Header() {
   return (
@@ -26,6 +33,16 @@ export function Header() {
             <Link href="/seo" className="text-foreground transition-colors hover:text-primary px-2 py-1">
               SEO
             </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground transition-colors hover:text-primary px-2 py-1 text-sm font-medium outline-none">
+                Resources <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem asChild>
+                  <Link href="/resources/json-to-toon">JSON to TOON</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
           <ThemeToggle />
         </div>
@@ -33,5 +50,3 @@ export function Header() {
     </header>
   );
 }
-
-    

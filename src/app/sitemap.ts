@@ -27,6 +27,10 @@ Date(),
       url: `${BASE_URL}/seo`,
       lastModified: new Date(),
     },
+    {
+      url: `${BASE_URL}/resources/json-to-toon`,
+      lastModified: new Date(),
+    }
   ];
 
   const essayRoutes = essays.map(essay => ({
