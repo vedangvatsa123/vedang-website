@@ -98,8 +98,8 @@ export default function JsonToToonPage() {
       <Header />
       <main className="flex-grow py-8">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
               <h1 className="text-4xl font-semibold tracking-tight">JSON to TOON Converter</h1>
               <p className="mt-3 text-base text-muted-foreground max-w-3xl mx-auto">
                 Transform dense JSON into the lightweight TOON format. Reduce token consumption for LLMs, cut costs, and improve AI performance.
@@ -110,65 +110,67 @@ export default function JsonToToonPage() {
             </div>
 
             {error && (
-              <Alert variant="destructive" className="mb-4">
+              <Alert variant="destructive" className="mb-6">
                 <Terminal className="h-4 w-4" />
                 <AlertTitle>Error</AlertTitle>
                 <AlertDescription>{error}</AlertDescription>
               </Alert>
             )}
 
-            <div className="grid md:grid-cols-2 gap-4 items-start">
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="json-input">JSON</Label>
-                <Textarea
-                  id="json-input"
-                  value={jsonString}
-                  onChange={handleJsonChange}
-                  rows={18}
-                  placeholder="Paste your JSON here"
-                  className="font-mono text-sm h-full"
-                  aria-label="JSON Input"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="toon-input">TOON (Token-Oriented Object Notation)</Label>
-                <Textarea
-                  id="toon-input"
-                  value={toonString}
-                  onChange={handleToonChange}
-                  rows={18}
-                  placeholder="Paste your TOON here"
-                  className="font-mono text-sm h-full"
-                  aria-label="TOON Input"
-                />
-              </div>
+            <div className="space-y-8">
+                <div className="grid md:grid-cols-2 gap-6 items-start">
+                    <div className="flex flex-col gap-2">
+                        <Label htmlFor="json-input">JSON</Label>
+                        <Textarea
+                        id="json-input"
+                        value={jsonString}
+                        onChange={handleJsonChange}
+                        rows={18}
+                        placeholder="Paste your JSON here"
+                        className="font-mono text-sm h-full"
+                        aria-label="JSON Input"
+                        />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        <Label htmlFor="toon-input">TOON (Token-Oriented Object Notation)</Label>
+                        <Textarea
+                        id="toon-input"
+                        value={toonString}
+                        onChange={handleToonChange}
+                        rows={18}
+                        placeholder="Paste your TOON here"
+                        className="font-mono text-sm h-full"
+                        aria-label="TOON Input"
+                        />
+                    </div>
+                </div>
+
+                <Card>
+                <CardHeader>
+                    <CardTitle className="text-lg">Conversion Analytics</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                    <div>
+                        <p className="text-sm text-muted-foreground">JSON Characters</p>
+                        <p className="text-2xl font-bold">{jsonTokens}</p>
+                    </div>
+                    <div>
+                        <p className="text-sm text-muted-foreground">TOON Characters</p>
+                        <p className="text-2xl font-bold">{toonTokens}</p>
+                    </div>
+                    <div>
+                        <p className="text-sm text-muted-foreground">Characters Saved</p>
+                        <p className="text-2xl font-bold text-primary">{percentSaved}%</p>
+                    </div>
+                    </div>
+                </CardContent>
+                </Card>
             </div>
 
-            <Card className="mt-6">
-              <CardHeader>
-                <CardTitle className="text-lg">Conversion Analytics</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-                  <div>
-                    <p className="text-sm text-muted-foreground">JSON Characters</p>
-                    <p className="text-2xl font-bold">{jsonTokens}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">TOON Characters</p>
-                    <p className="text-2xl font-bold">{toonTokens}</p>
-                  </div>
-                   <div>
-                    <p className="text-sm text-muted-foreground">Characters Saved</p>
-                    <p className="text-2xl font-bold text-primary">{percentSaved}%</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <div className="my-12">
+            <div className="my-12 pt-8 border-t">
                 <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">What is TOON?</h2>
-                <div className="max-w-4xl mx-auto text-muted-foreground space-y-4">
+                <div className="max-w-4xl mx-auto text-muted-foreground space-y-4 prose prose-neutral dark:prose-invert">
                 <p>TOON (Token-Oriented Object Notation) is a modern data serialization format designed specifically for efficiency in AI and Large Language Model (LLM) systems. While JSON is excellent for human readability and universal data exchange, its verbose syntax with quotes, braces, and repeated keys consumes valuable tokens—the currency of LLMs.</p>
                 <p>TOON solves this by using a compact, tabular-style notation that significantly reduces token count without sacrificing structure. It's built for machines, not humans, making it an ideal choice for high-volume, performance-critical AI workflows where cost and latency are key factors.</p>
                 </div>
@@ -210,5 +212,3 @@ export default function JsonToToonPage() {
     </div>
   );
 }
-
-    

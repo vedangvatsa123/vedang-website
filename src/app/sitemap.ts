@@ -28,7 +28,7 @@ Date(),
       lastModified: new Date(),
     },
     {
-      url: `${BASE_URL}/resources/json-to-toon`,
+      url: `${BASE_URL}/json-to-toon`,
       lastModified: new Date(),
     }
   ];
