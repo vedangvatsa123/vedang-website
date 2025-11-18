@@ -11,7 +11,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Loader, Terminal } from 'lucide-react';
 import { generateBrainrotVideo } from '@/ai/flows/brainrot-video-flow';
-import { Metadata } from 'next';
 
 export default function BrainrotVideoPage() {
   const [script, setScript] = useState('');

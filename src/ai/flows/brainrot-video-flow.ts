@@ -13,19 +13,18 @@ import ffmpeg from 'fluent-ffmpeg';
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
+import { 
+  BrainrotInputSchema, 
+  BrainrotOutputSchema, 
+  type BrainrotInput, 
+  type BrainrotOutput 
+} from './brainrot-video.types';
+
 
 // Set the path for ffmpeg if it's not in the default PATH
 // You might need to adjust this depending on your environment.
 // ffmpeg.setFfmpegPath('/usr/bin/ffmpeg');
 
-
-export const BrainrotInputSchema = z.string().describe('The script for the video.');
-export type BrainrotInput = z.infer<typeof BrainrotInputSchema>;
-
-export const BrainrotOutputSchema = z.object({
-  video: z.string().describe('The generated video as a data URI.'),
-});
-export type BrainrotOutput = z.infer<typeof BrainrotOutputSchema>;
 
 export async function generateBrainrotVideo(input: BrainrotInput): Promise<BrainrotOutput> {
   return brainrotVideoFlow(input);
