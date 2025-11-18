@@ -14,6 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/seo',
     '/community',
     '/json-to-toon',
+    '/utm-qr-generator',
+    '/content-remix-generator',
+    '/seo-meta-generator',
+    '/seo-checklist',
+    '/brainrot-video',
   ].map((route) => ({
     url: `${BASE_URL}${route}`,
     lastModified: new Date(),

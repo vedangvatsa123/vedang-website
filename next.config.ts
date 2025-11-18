@@ -33,6 +33,13 @@ const nextConfig = {
       }
     ],
   },
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '200mb', // To allow for larger video uploads if needed
+    },
+  },
+  // Increase timeout for slow AI operations like video generation
+  serverActionsTimeout: 240000, // 4 minutes
   // Optionally, add any other Next.js config below
 }
 

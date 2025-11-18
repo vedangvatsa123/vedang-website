@@ -51,6 +51,21 @@ export function Header() {
                 <DropdownMenuItem asChild>
                   <Link href="/json-to-toon">JSON to TOON Converter</Link>
                 </DropdownMenuItem>
+                 <DropdownMenuItem asChild>
+                  <Link href="/utm-qr-generator">UTM & QR Generator</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/content-remix-generator">Content Remix Generator</Link>
+                </DropdownMenuItem>
+                 <DropdownMenuItem asChild>
+                  <Link href="/seo-meta-generator">SEO Meta Tag Generator</Link>
+                </DropdownMenuItem>
+                 <DropdownMenuItem asChild>
+                  <Link href="/seo-checklist">SEO Checklist</Link>
+                </DropdownMenuItem>
+                 <DropdownMenuItem asChild>
+                  <Link href="/brainrot-video">Brainrot Video Generator</Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </nav>
