@@ -10,12 +10,12 @@ import {
   Linkedin,
   MessageSquare,
   Mic,
+  PenSquare,
   Send,
   Star,
   Twitter,
   Users,
-  PenSquare,
-  Wrench
+  Wrench,
 } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -269,4 +269,9 @@ export default function CommunityProfilePage() {
           </div>
         </div>
       </main>
+      <Footer />
+    </div>
+  );
+}
 
+    
