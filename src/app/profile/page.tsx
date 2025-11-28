@@ -29,10 +29,47 @@ export const metadata: Metadata = {
     },
 };
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Vedang Vatsa',
+  url: 'https://veda.ng/profile',
+  image: 'https://veda.ng/images/icon.png',
+  jobTitle: 'Founder',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Hashtag Web3',
+  },
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Indian Institute of Technology, Kanpur',
+    },
+     {
+      '@type': 'CollegeOrUniversity',
+      name: 'Indian Institute of Management Indore',
+    }
+  ],
+  sameAs: [
+    'https://linkedin.com/in/vedangvatsa',
+    'https://www.instagram.com/vedangvatsa',
+    'https://www.youtube.com/@vedangvatsa',
+    'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
+    'https://x.com/vedangvatsa',
+    'https://www.t.me/vedangvatsa',
+  ],
+  knowsAbout: ['Artificial Intelligence', 'Web3', 'Community Building', 'Growth Marketing', 'Decentralized Finance'],
+   award: 'Fellow of the Royal Society of Arts'
+};
+
 export default function ProfilePage() {
   
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
       <Header />
 
       <main className="flex-grow py-8">
