@@ -1,3 +1,4 @@
+
 import { essays } from '@/lib/essays';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
@@ -46,11 +47,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
+  const siteUrl = 'https://veda.ng';
+  const essayUrl = `${siteUrl}/${params.slug}`;
+  const imageUrl = `${siteUrl}/images/icon.png`;
+
   return {
     title: essay.frontmatter.title,
     description: essay.frontmatter.summary,
-     alternates: {
+    alternates: {
       canonical: `/${params.slug}`,
+    },
+    openGraph: {
+      title: essay.frontmatter.title,
+      description: essay.frontmatter.summary,
+      url: essayUrl,
+      type: 'article',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: essay.frontmatter.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: essay.frontmatter.title,
+      description: essay.frontmatter.summary,
+      images: [imageUrl],
     },
   };
 }
