@@ -1,0 +1,26 @@
+{
+    "provider_name": "Vedang Vatsa",
+    "provider_url": "https://veda.ng",
+    "endpoints": [
+        {
+            "url": "https://veda.ng/profile",
+            "description": "Full professional profile of Vedang Vatsa, covering experience, education, and achievements in AI and Web3."
+        },
+        {
+            "url": "https://veda.ng/writings",
+            "description": "A collection of essays and research papers by Vedang Vatsa on technology and digital economies."
+        },
+        {
+            "url": "https://veda.ng/media",
+            "description": "Media features and speaking engagements of Vedang Vatsa."
+        },
+        {
+            "url": "https://veda.ng/seo",
+            "description": "Profile of Vedang Vatsa as an SEO and Growth Marketing Specialist."
+        },
+        {
+            "url": "https://veda.ng/community",
+            "description": "Profile of Vedang Vatsa focusing on Content and Community building."
+        }
+    ]
+}
