@@ -93,6 +93,7 @@ export default function ProfilePage() {
               <Link
                 href="mailto:vedangvatsa.2019@iitkalumni.org"
                 className="text-muted-foreground hover:text-primary flex items-center gap-2"
+                aria-label="Email"
               >
                 <Mail className="h-4 w-4" />
                 <span className="text-sm">Email</span>
@@ -102,11 +103,12 @@ export default function ProfilePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary flex items-center gap-2"
+                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-4 w-4" />
                  <span className="text-sm">LinkedIn</span>
               </Link>
-               <Link href="https://x.com/vedangvatsa" className="text-muted-foreground hover:text-primary" target="_blank" rel="noopener noreferrer">
+               <Link href="https://x.com/vedangvatsa" aria-label="Twitter" className="text-muted-foreground hover:text-primary" target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-4 w-4" />
               </Link>
               <Link
@@ -114,6 +116,7 @@ export default function ProfilePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary flex items-center gap-2"
+                 aria-label="Telegram"
               >
                 <Send className="h-4 w-4" />
                  <span className="text-sm">Telegram</span>
@@ -123,6 +126,7 @@ export default function ProfilePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary flex items-center gap-2"
+                 aria-label="Google Scholar"
               >
                 <BookOpen className="h-4 w-4" />
                  <span className="text-sm">Google Scholar</span>
