@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | Vedang Vatsa',
   },
   description:
-    'Personal website of Vedang Vatsa, Founder of Hashtag Web3, a 100,000+ member community of AI & Web3 professionals.',
+    "Official website of Vedang Vatsa, a thought leader in AI and Web3, and the founder of Hashtag Web3, a global community of over 100,000 professionals.",
   openGraph: {
     title: 'Vedang Vatsa',
     description: 'Personal website of Vedang Vatsa, Founder of Hashtag Web3, a 100,000+ member community of AI & Web3 professionals.',
