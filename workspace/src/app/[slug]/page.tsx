@@ -51,6 +51,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const essayUrl = `${siteUrl}/${params.slug}`;
   const imageUrl = `${siteUrl}/images/icon.png`;
 
+  const publishedTime = essay.frontmatter.date ? new Date(essay.frontmatter.date).toISOString() : new Date().toISOString();
+
   return {
     title: essay.frontmatter.title,
     description: essay.frontmatter.summary,
@@ -62,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: essay.frontmatter.summary,
       url: essayUrl,
       type: 'article',
-      publishedTime: new Date(essay.frontmatter.date).toISOString(),
+      publishedTime: publishedTime,
       images: [
         {
           url: imageUrl,
@@ -88,15 +90,19 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
     notFound();
   }
 
+  const datePublished = essay.frontmatter.date ? new Date(essay.frontmatter.date).toISOString() : new Date().toISOString();
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: essay.frontmatter.title,
     author: {
       '@type': 'Person',
-      name: 'Vedang Vatsa',
+      name: essay.frontmatter.author || 'Vedang Vatsa',
       url: 'https://veda.ng',
     },
+    description: essay.frontmatter.summary,
+    image: 'https://veda.ng/images/icon.png',
     publisher: {
       '@type': 'Organization',
       name: 'Vedang Vatsa',
@@ -105,14 +111,12 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
         url: 'https://veda.ng/images/icon.png',
       },
     },
-    image: 'https://veda.ng/images/icon.png',
-    description: essay.frontmatter.summary,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://veda.ng/${params.slug}`,
     },
-    datePublished: new Date(essay.frontmatter.date).toISOString(),
-    dateModified: new Date(essay.frontmatter.date).toISOString(),
+    datePublished: datePublished,
+    dateModified: datePublished,
   };
 
   return (
