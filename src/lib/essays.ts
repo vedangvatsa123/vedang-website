@@ -6,7 +6,6 @@ import matter from 'gray-matter';
 export type Essay = {
   title: string;
   summary: string;
-  date: string;
   url:string;
   slug: string;
 };
@@ -31,20 +30,13 @@ function getEssays(): Essay[] {
     return {
       title: data.title,
       summary: data.summary,
-      date: data.date,
       url: `/${slug}`,
       slug,
     };
   });
 
-  // Sort essays by date in descending order
-  return allEssaysData.sort((a, b) => {
-    if (new Date(a.date) < new Date(b.date)) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+  // Sort essays by title in alphabetical order
+  return allEssaysData.sort((a, b) => a.title.localeCompare(b.title));
 }
 
 export const essays = getEssays();

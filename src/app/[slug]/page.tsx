@@ -51,8 +51,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const essayUrl = `${siteUrl}/${params.slug}`;
   const imageUrl = `${siteUrl}/images/icon.png`;
 
-  const publishedTime = essay.frontmatter.date ? new Date(essay.frontmatter.date).toISOString() : new Date().toISOString();
-
   return {
     title: essay.frontmatter.title,
     description: essay.frontmatter.summary,
@@ -64,7 +62,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: essay.frontmatter.summary,
       url: essayUrl,
       type: 'article',
-      publishedTime: publishedTime,
       images: [
         {
           url: imageUrl,
@@ -90,8 +87,6 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
     notFound();
   }
 
-  const datePublished = essay.frontmatter.date ? new Date(essay.frontmatter.date).toISOString() : new Date().toISOString();
-
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -115,8 +110,6 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
       '@type': 'WebPage',
       '@id': `https://veda.ng/${params.slug}`,
     },
-    datePublished: datePublished,
-    dateModified: datePublished,
   };
 
   return (
