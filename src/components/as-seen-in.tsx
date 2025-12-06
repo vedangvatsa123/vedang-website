@@ -41,7 +41,7 @@ export function AsSeenIn() {
                       alt={media.name}
                       width={120}
                       height={40}
-                      className="object-contain"
+                      className="object-contain dark:brightness-0 dark:invert"
                     />
                 </div>
               ))}

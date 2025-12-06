@@ -1,3 +1,4 @@
+
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -263,7 +264,7 @@ export default function SeoProfilePage() {
                         alt={media.name}
                         width={120}
                         height={40}
-                        className="object-contain"
+                        className="object-contain dark:brightness-0 dark:invert"
                         />
                     </div>
                 ))}
