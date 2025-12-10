@@ -589,68 +589,70 @@ export default function VibeCodingCoursePage() {
                         Still have questions? Here are some of the most common things people ask about Vibe Coding.
                     </p>
                 </div>
-                <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto mt-12">
-                    <AccordionItem value="faq-1">
-                        <AccordionTrigger>Do I need to know how to code at all?</AccordionTrigger>
-                        <AccordionContent>
-                            Not to get started. The tools are designed to work with plain English. However, understanding basic HTML and CSS concepts will help you communicate more effectively with the AI. You'll naturally pick up these concepts as you build.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="faq-2">
-                        <AccordionTrigger>Is this "real" programming?</AccordionTrigger>
-                        <AccordionContent>
-                            Yes. You are creating real, production-quality code. The only thing that's changed is the interface. Instead of typing code, you are describing it. The end result is the same: a functional software application. Your role shifts from a "coder" to a "technical director."
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="faq-3">
-                        <AccordionTrigger>Can I build complex applications with this method?</AccordionTrigger>
-                        <AccordionContent>
-                            Absolutely. While it's perfect for prototypes and simple tools, you can build incredibly complex applications. The key is to break down the complexity into smaller, manageable parts and guide the AI step-by-step, just as a project manager would guide a team of developers.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="faq-4">
-                        <AccordionTrigger>What are the biggest mistakes beginners make?</AccordionTrigger>
-                        <AccordionContent>
-                            The biggest mistake is giving vague, one-shot prompts like "build me a social media app." Vibe coding is a conversation. The second biggest mistake is not using version control ("Checkpoints"). You must save your progress after every successful step, because the AI will occasionally make mistakes.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="faq-5">
-                        <AccordionTrigger>Which tool should I start with?</AccordionTrigger>
-                        <AccordionContent>
-                            If you're a visual person and want to build a web app, start with **Lovable.dev**. If you're more interested in logic, bots, or backend services, start with **Replit**. Both are excellent for beginners because they require zero setup. **Firebase Studio** is fantastic when you're ready to build something that can scale to a large audience.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="faq-6">
-                        <AccordionTrigger>How do I handle errors and bugs?</AccordionTrigger>
-                        <AccordionContent>
-                            Your new job isn't to fix the bug, but to report it correctly. When you get an error message, copy the entire message, paste it back to the AI, and say, "We have an error, please fix this." 9 times out of 10, the AI will understand and correct its own mistake.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="faq-7">
-                        <AccordionTrigger>Can I sell the apps I build?</AccordionTrigger>
-                        <AccordionContent>
-                            Yes! You own the code and the final product. People are already building successful SaaS businesses, freelance careers, and agencies using Vibe Coding. Your ability to build and iterate quickly is a massive competitive advantage.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="faq-8">
-                        <AccordionTrigger>Is my job as a developer at risk?</AccordionTrigger>
-                        <AccordionContent>
-                            No, but it is changing. Your value is shifting from writing boilerplate code to high-level architecture, system design, and product vision. Developers who embrace Vibe Coding become 10x more productive and valuable. It's a massive career accelerator.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="faq-9">
-                        <AccordionTrigger>What about security and privacy?</AccordionTrigger>
-                        <AccordionContent>
-                           This is critical. You are still responsible for the final code. You must instruct the AI on security best practices, such as never hard-coding API keys and always hashing user passwords. In Module 5, we cover how to create a "rules" file to enforce these policies automatically.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="faq-10">
-                        <AccordionTrigger>Where can I learn more?</AccordionTrigger>
-                        <AccordionContent>
-                            This course is your starting point. The best way to learn is by building. Think of a small, fun project and try to build it with one of the tools mentioned. Follow people like Andrej Karpathy and other Vibe Coders on social media to see what's possible. The field is moving incredibly fast, and the community is the best resource.
-                        </AccordionContent>
-                    </AccordionItem>
-                </Accordion>
+                <div className="max-w-5xl mx-auto mt-12">
+                    <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
+                        <AccordionItem value="faq-1">
+                            <AccordionTrigger>Do I need to know how to code at all?</AccordionTrigger>
+                            <AccordionContent>
+                                Not to get started. The tools are designed to work with plain English. However, understanding basic HTML and CSS concepts will help you communicate more effectively with the AI. You'll naturally pick up these concepts as you build.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-2">
+                            <AccordionTrigger>Is this "real" programming?</AccordionTrigger>
+                            <AccordionContent>
+                                Yes. You are creating real, production-quality code. The only thing that's changed is the interface. Instead of typing code, you are describing it. The end result is the same: a functional software application. Your role shifts from a "coder" to a "technical director."
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-3">
+                            <AccordionTrigger>Can I build complex applications with this method?</AccordionTrigger>
+                            <AccordionContent>
+                                Absolutely. While it's perfect for prototypes and simple tools, you can build incredibly complex applications. The key is to break down the complexity into smaller, manageable parts and guide the AI step-by-step, just as a project manager would guide a team of developers.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-4">
+                            <AccordionTrigger>What are the biggest mistakes beginners make?</AccordionTrigger>
+                            <AccordionContent>
+                                The biggest mistake is giving vague, one-shot prompts like "build me a social media app." Vibe coding is a conversation. The second biggest mistake is not using version control ("Checkpoints"). You must save your progress after every successful step, because the AI will occasionally make mistakes.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-5">
+                            <AccordionTrigger>Which tool should I start with?</AccordionTrigger>
+                            <AccordionContent>
+                                If you're a visual person and want to build a web app, start with **Lovable.dev**. If you're more interested in logic, bots, or backend services, start with **Replit**. Both are excellent for beginners because they require zero setup. **Firebase Studio** is fantastic when you're ready to build something that can scale to a large audience.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-6">
+                            <AccordionTrigger>How do I handle errors and bugs?</AccordionTrigger>
+                            <AccordionContent>
+                                Your new job isn't to fix the bug, but to report it correctly. When you get an error message, copy the entire message, paste it back to the AI, and say, "We have an error, please fix this." 9 times out of 10, the AI will understand and correct its own mistake.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-7">
+                            <AccordionTrigger>Can I sell the apps I build?</AccordionTrigger>
+                            <AccordionContent>
+                                Yes! You own the code and the final product. People are already building successful SaaS businesses, freelance careers, and agencies using Vibe Coding. Your ability to build and iterate quickly is a massive competitive advantage.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-8">
+                            <AccordionTrigger>Is my job as a developer at risk?</AccordionTrigger>
+                            <AccordionContent>
+                                No, but it is changing. Your value is shifting from writing boilerplate code to high-level architecture, system design, and product vision. Developers who embrace Vibe Coding become 10x more productive and valuable. It's a massive career accelerator.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-9">
+                            <AccordionTrigger>What about security and privacy?</AccordionTrigger>
+                            <AccordionContent>
+                               This is critical. You are still responsible for the final code. You must instruct the AI on security best practices, such as never hard-coding API keys and always hashing user passwords. In Module 5, we cover how to create a "rules" file to enforce these policies automatically.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-10">
+                            <AccordionTrigger>Where can I learn more?</AccordionTrigger>
+                            <AccordionContent>
+                                This course is your starting point. The best way to learn is by building. Think of a small, fun project and try to build it with one of the tools mentioned. Follow people like Andrej Karpathy and other Vibe Coders on social media to see what's possible. The field is moving incredibly fast, and the community is the best resource.
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
+                </div>
             </section>
         </div>
       </main>
