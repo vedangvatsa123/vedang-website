@@ -167,6 +167,12 @@ export default function VibeCodingCoursePage() {
                 Build real apps without writing code. Just describe what you want in plain English and work with AI to make it happen. Perfect for founders, designers, marketers, and curious builders. Turn ideas into working products fast. Let’s build.
                 </p>
 
+                <div className="mt-8 flex justify-center items-center gap-4">
+                    <Badge variant="outline">By: Vedang Vatsa</Badge>
+                    <Badge variant="outline">Prerequisite: None</Badge>
+                    <Badge variant="outline">Cost: Free</Badge>
+                </div>
+
                 <div className="mt-8 aspect-video rounded-lg overflow-hidden shadow-2xl border max-w-3xl mx-auto">
                   <iframe 
                     width="100%" 
@@ -177,12 +183,6 @@ export default function VibeCodingCoursePage() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowFullScreen>
                   </iframe>
-                </div>
-
-                <div className="mt-8 flex justify-center items-center gap-4">
-                    <Badge variant="outline">By: Vedang Vatsa</Badge>
-                    <Badge variant="outline">Prerequisite: None</Badge>
-                    <Badge variant="outline">Cost: Free</Badge>
                 </div>
             </div>
         </section>
