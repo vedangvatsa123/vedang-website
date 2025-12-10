@@ -689,7 +689,7 @@ export default function VibeCodingCoursePage() {
             <section id="references" className="py-16">
                 <div className="text-center">
                     <BookOpen className="mx-auto h-12 w-12 text-muted-foreground" />
-                    <h2 className="mt-4 text-3xl font-semibold tracking-tight">Learn More & References</h2>
+                    <h2 className="mt-4 text-3xl font-semibold tracking-tight">Learn More</h2>
                     <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
                         The tools and platforms for Vibe Coding are always evolving. Here are some of the official documentation and learning resources to help you go deeper.
                     </p>

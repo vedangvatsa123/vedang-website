@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/',
     '/writings',
     '/vibe-coding-101',
+    '/prompt-engineering-101',
     '/about/profile',
     '/about/media',
     '/about/seo',
