@@ -386,28 +386,39 @@ export default function VibeCodingCoursePage() {
                             <AccordionTrigger className="text-lg">The PRD (Product Requirements Document)</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
                                 <p>Never start a project with an empty chat box. You need a plan. In product management, this is called a PRD. For us, it is a simple text file that tells the AI exactly what to build. It is your architectural blueprint. A vague idea leads to a vague app.</p>
+                                <h5>What a Good PRD Contains:</h5>
                                 <ul>
-                                  <li><strong>Why it's critical:</strong> The saying is "Garbage in, garbage out." A PRD forces you to clarify your own thinking before you start "coding." The act of writing down your plan is half the work.</li>
-                                  <li><strong>How to Generate One (The Meta Skill):</strong> You can use an AI to help you create the plan for your other AI. Prompt a powerful model like <Link href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude 3.5 Sonnet</Link> or <Link href="https://chat.openai.com" target="_blank" rel="noopener noreferrer">ChatGPT-4o</Link>:
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">"You are an expert product manager. I want to build a [Recipe App for users with food allergies]. Interview me to create a detailed Product Requirements Document (PRD). Ask me clarifying questions about features, user roles, data models, and design."</blockquote>
-                                    The AI will then guide you, forcing you to think through all the details.
-                                  </li>
+                                    <li><strong>Problem Statement:</strong> What problem are you solving? Who are you solving it for? (e.g., "Busy professionals forget to drink water.")</li>
+                                    <li><strong>User Personas:</strong> A brief description of your ideal user. (e.g., "Sarah, a 30-year-old project manager who works from home.")</li>
+                                    <li><strong>Core Features:</strong> A bulleted list of the absolute must-have features. (e.g., "User signup/login," "Set daily water goal," "Log water intake," "Send push notifications.")</li>
+                                    <li><strong>Data Model:</strong> How will you store information? (e.g., "A `users` table with email and password. A `water_logs` table with user_id, amount, and timestamp.")</li>
+                                    <li><strong>Non-Goals:</strong> What are you explicitly NOT building in version 1? (e.g., "No social features," "No integrations with smart water bottles.")</li>
                                 </ul>
+                                <p><strong>The Meta Skill:</strong> You can use an AI to help you create the plan for your other AI. Prompt a powerful model like <Link href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude 3.5 Sonnet</Link> or <Link href="https://chat.openai.com" target="_blank" rel="noopener noreferrer">ChatGPT-4o</Link>:</p>
+                                <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">"You are an expert product manager. I want to build a [Recipe App for users with food allergies]. Interview me to create a detailed Product Requirements Document (PRD). Ask me clarifying questions about features, user roles, data models, and design."</blockquote>
+                                <p>The AI will then guide you, forcing you to think through all the details. The resulting document is the master prompt for your entire project.</p>
                             </AccordionContent>
                         </AccordionItem>
                          <AccordionItem value="item-2">
                              <AccordionTrigger className="text-lg">The Iterative Loop: Your Conversation with the AI</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>Vibe coding is not a one shot command; it is a conversation. Great products are built through iteration. It is like sculpting: you start with a block and slowly chip away. No one gets it perfect on the first try.</p>
+                                <p>Vibe coding is not a one-shot command; it is a conversation. Great products are built through iteration. It’s like sculpting: you start with a block and slowly chip away. No one gets it perfect on the first try.</p>
+                                <h5>Example: Refining a Login Button</h5>
                                 <ol className="my-6 space-y-4">
-                                  <li><strong>1. Prompt:</strong> Give your clear, structured instruction from your PRD.
+                                  <li>
+                                    <strong>Prompt:</strong> Give your clear, structured instruction from your PRD.
                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Build the login page with email and password fields, plus a 'Login' button. Use our brand's primary blue for the button."</blockquote>
                                   </li>
-                                  <li><strong>2. Review:</strong> The AI generates the page. It is functional. You look at it and think, "The button is too small and the color is too bright."</li>
-                                  <li><strong>3. Refine:</strong> You provide specific, actionable feedback. Do not say "it is wrong." Say what to change.
+                                  <li>
+                                    <strong>Review:</strong> The AI generates the page. It's functional, but you see issues. The button is too small, and the color is too bright for your brand.
+                                  </li>
+                                  <li>
+                                    <strong>Refine (The Wrong Way):</strong> "That's wrong, fix it." This is too vague. The AI has no context for what "fix it" means.
+                                  </li>
+                                  <li>
+                                    <strong>Refine (The Right Way):</strong> You provide specific, actionable feedback.
                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Make the login button 20% larger and use a darker shade of blue (#4A90E2). Add a 'Forgot Password?' link below it."</blockquote>
                                   </li>
-                                  <li><strong>4. Repeat:</strong> Continue this cycle. Each loop gets you closer to your perfect product. This is not failure; it is the creative process.</li>
                                 </ol>
                                 <p>Embracing this loop is the key to creating something truly great. It’s a dance between your vision and the AI’s execution, and your job is to lead.</p>
                             </AccordionContent>
@@ -556,14 +567,14 @@ export default function VibeCodingCoursePage() {
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg">Security: Your Responsibility as Director</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>Speed can introduce security gaps. The AI is a junior developer; it does not automatically know your security requirements. You must be the senior developer who sets the rules. This is a non negotiable part of professional vibe coding.</p>
+                                <p>Speed can introduce security gaps. The AI is a junior developer; it does not automatically know your security requirements. You must be the senior developer who sets the rules. This is a non-negotiable part of professional vibe coding.</p>
                                 <ul>
                                   <li><strong>The Risk:</strong> An AI might hardcode your private API keys into public code or create a login function with weak password requirements. It does not know what is sensitive unless you tell it.</li>
-                                  <li><strong>The Fix: The Rule File.</strong> You must create a rule file (e.g., `.cursorrules` or `CLAUDE.md`). This file is your permanent set of instructions that the AI cannot ignore.
+                                  <li><strong>The Fix: The Rule File.</strong> Most AI coding environments support a special file (e.g., `.cursorrules` or `CLAUDE.md`) that contains permanent instructions. You must create one.
                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
-                                    <strong>Rule #1 (Secrets):</strong> Always use environment variables for API keys. Never hardcode secrets. Refer to them using `process.env.VARIABLE_NAME`.<br/><br/>
-                                    <strong>Rule #2 (Passwords):</strong> All user passwords must be securely hashed using `bcrypt` before being stored. Never store passwords in plain text.<br/><br/>
-                                    <strong>Rule #3 (Database Access):</strong> Always use your platform's built-in security rules (like Firebase Security Rules or Supabase RLS) to protect data at the source. Do not rely on client-side checks.
+                                    <strong>Rule #1 (Secrets):</strong> Always use environment variables for API keys, database URLs, and other secrets. Never hardcode them in the source code. Refer to them using `process.env.VARIABLE_NAME`.<br/><br/>
+                                    <strong>Rule #2 (Passwords):</strong> All user passwords must be securely hashed using a strong, salted hashing algorithm like `bcrypt` before being stored in the database. Never store passwords in plain text.<br/><br/>
+                                    <strong>Rule #3 (Database Access):</strong> Always implement server-side validation and authorization. Use your platform's built-in security rules (like Firebase Security Rules or Supabase RLS) to protect data at the source. Do not rely only on client-side checks, which can be bypassed.
                                     </blockquote>
                                   </li>
                                 </ul>
@@ -575,9 +586,9 @@ export default function VibeCodingCoursePage() {
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
                                 <p>How do you turn your cool app into a business? Vibe coding makes this faster than ever by dramatically lowering the cost of experimentation. You can test ideas in a weekend that used to take months.</p>
                                 <ul>
-                                  <li><strong>SaaS (Software as a Service):</strong> This is the most common path. Build a niche tool that solves a specific problem and charge a monthly subscription. Do not try to build the next Facebook. Instead, build a "Weekly Meal Planner for Vegan Athletes" and charge $10/month. Tools like <Link href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</Link> can be integrated with a few prompts.</li>
-                                  <li><strong>Freelancing and Consulting:</strong> Your new superpower is speed. You can build full stack applications for clients in a fraction of the time. You can charge a premium for your speed and deliver a working prototype in days, not months. This is incredibly valuable to businesses.</li>
-                                   <li><strong>Marketplace Apps:</strong> Build an app or plugin for an existing ecosystem like the <Link href="https://marketplace.visualstudio.com/" target="_blank" rel="noopener noreferrer">VS Code Marketplace</Link> or <Link href="https://www.shopify.com/app-store" target="_blank" rel="noopener noreferrer">Shopify App Store</Link>. These have built-in distribution and billing.</li>
+                                  <li><strong>SaaS (Software as a Service):</strong> This is the most common path. Don't try to build the next Facebook. Instead, build a niche tool that solves a specific, painful problem. For example, build a "Weekly Meal Planner for Vegan Athletes" and charge $10/month. You can integrate payment processing tools like <Link href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</Link> with a few simple prompts.</li>
+                                  <li><strong>Freelancing and Consulting:</strong> Your new superpower is speed. You can build full-stack applications for clients in a fraction of the time of a traditional developer. Market yourself as a rapid prototyper. You can build a client's MVP in days, not months, which is incredibly valuable for startups.</li>
+                                   <li><strong>Marketplace Apps & Plugins:</strong> Build an app for an existing ecosystem like the <Link href="https://marketplace.visualstudio.com/" target="_blank" rel="noopener noreferrer">VS Code Marketplace</Link>, <Link href="https://www.shopify.com/app-store" target="_blank" rel="noopener noreferrer">Shopify App Store</Link>, or <Link href="https://workspace.google.com/marketplace" target="_blank" rel="noopener noreferrer">Google Workspace Marketplace</Link>. These platforms have built-in distribution and billing, solving two of the hardest problems for a new product.</li>
                                 </ul>
                                 <p>The barrier to entry for entrepreneurship has never been lower. With Vibe Coding, a single person with a great idea can build a profitable business from their bedroom.</p>
                             </AccordionContent>
@@ -585,7 +596,7 @@ export default function VibeCodingCoursePage() {
                          <AccordionItem value="item-3">
                             <AccordionTrigger className="text-lg">The "Product Engineer": Your New Career</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>By mastering Vibe Coding, you are becoming a <strong>"Product Engineer."</strong> This is a new, highly valuable hybrid role that sits at the intersection of product management, design, and engineering. It is one of the most sought after roles in modern tech companies.</p>
+                                <p>By mastering Vibe Coding, you are becoming a <strong>"Product Engineer."</strong> This is a new, highly valuable hybrid role that sits at the intersection of product management, design, and engineering. It is one of the most sought-after roles in modern tech companies.</p>
                                 <div className="my-6">
                                     <h4 className="font-semibold text-foreground">The Skill Stack Shift</h4>
                                     <div className="overflow-x-auto">
@@ -598,8 +609,8 @@ export default function VibeCodingCoursePage() {
                                             </thead>
                                             <tbody>
                                                 <tr className="border-b"><td className="p-2">Syntax Mastery</td><td className="p-2">Problem Decomposition</td></tr>
-                                                <tr className="border-b"><td className="p-2">Algorithm Knowledge</td><td className="p-2">Prompt Engineering</td></tr>
-                                                <tr className="border-b"><td className="p-2">Framework Expertise</td><td className="p-2">System Thinking</td></tr>
+                                                <tr className="border-b"><td className="p-2">Algorithm Knowledge</td><td className="p-2">Prompt Engineering & Communication</td></tr>
+                                                <tr className="border-b"><td className="p-2">Framework Expertise</td><td className="p-2">System Thinking & Architecture</td></tr>
                                                 <tr><td className="p-2">Database Design</td><td className="p-2">User Empathy & Quality Judgment</td></tr>
                                             </tbody>
                                         </table>
@@ -676,5 +687,3 @@ export default function VibeCodingCoursePage() {
     </div>
   );
 }
-
-    
