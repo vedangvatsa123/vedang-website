@@ -208,13 +208,6 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">The Philosophy: From Coder to Director</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground">Vibe coding is a fundamental shift in how we create. It is not just about writing code faster; it is about changing your role from a bricklayer to an architect. This module is about adopting the right mindset to effectively guide an AI, turning your vision into a real product without getting lost in the syntax. You will learn to think about the 'what' and 'why,' leaving the 'how' to your new AI partner.</p>
-                    <Image 
-                        src={VibeCodingModule1}
-                        alt="Infographic for Module 1 of Vibe Coding course"
-                        className="mt-4 rounded-lg shadow-md w-full"
-                        data-ai-hint="infographic technology"
-                    />
                 </CardHeader>
                 <CardContent className="p-6">
                     <Accordion type="single" collapsible className="w-full">
@@ -295,21 +288,21 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">The Modern Toolkit</CardTitle>
                         </div>
                     </div>
-                     <p className="text-muted-foreground pt-2">Your toolbox determines your speed and capabilities. There is no single 'best' tool, only the right tool for the job. We will explore the landscape from beginner friendly visual builders to professional grade code editors, so you can choose the one that best fits your project and your style.</p>
+                     <p className="text-muted-foreground">Your toolbox determines your speed and capabilities. There is no single 'best' tool, only the right tool for the job. Let's explore the landscape from beginner-friendly visual builders to professional-grade code editors, so you can choose the one that best fits your project and your style.</p>
                 </CardHeader>
                 <CardContent className="p-6">
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg">Choosing Your Environment: Cloud vs. Local</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>The first choice is where you will code. Think of it like a workshop: do you want to rent a fully equipped space, or build one in your garage? Both have advantages.</p>
+                                <p>The first choice is where to code. Think of it like a workshop: do you want to rent a fully equipped space, or build one in your garage? Both have advantages.</p>
                                 <div className="grid md:grid-cols-2 gap-6 my-6">
                                     <Card>
                                         <CardHeader>
                                             <CardTitle className="text-lg font-semibold">Cloud IDEs (The Rented Workshop)</CardTitle>
                                         </CardHeader>
                                         <CardContent>
-                                            <p className="text-sm text-muted-foreground">Examples: <strong><Link href="https://replit.com" target="_blank" rel="noopener noreferrer">Replit</Link>, <Link href="https://studio.firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase Studio</Link>, <Link href="https://lovable.dev" target="_blank" rel="noopener noreferrer">Lovable.dev</Link>.</strong><br/><br/>These all in one platforms run in your browser. They require zero setup, making them perfect for beginners. You sign up and start building immediately, letting you focus on creating instead of configuring.</p>
+                                            <p className="text-sm text-muted-foreground">Examples: <strong><Link href="https://replit.com" target="_blank" rel="noopener noreferrer">Replit</Link>, <Link href="https://studio.firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase Studio</Link>, <Link href="https://lovable.dev" target="_blank" rel="noopener noreferrer">Lovable.dev</Link>.</strong><br/><br/>These all-in-one platforms run in your browser. They require zero setup, making them perfect for beginners. You can sign up and start building immediately, letting you focus on creating instead of configuring.</p>
                                         </CardContent>
                                     </Card>
                                     <Card>
@@ -317,7 +310,7 @@ export default function VibeCodingCoursePage() {
                                             <CardTitle className="text-lg font-semibold">Local IDEs (Your Garage Workshop)</CardTitle>
                                         </CardHeader>
                                         <CardContent>
-                                             <p className="text-sm text-muted-foreground">Examples: <strong><Link href="https://cursor.com" target="_blank" rel="noopener noreferrer">Cursor</Link>, VS Code with Gemini.</strong><br/><br/>This is software you install on your computer. It gives you more control and is preferred by many professionals. It requires some initial setup but offers ultimate power and customization. This course recommends starting with a Cloud IDE.</p>
+                                             <p className="text-sm text-muted-foreground">Examples: <strong><Link href="https://cursor.com" target="_blank" rel="noopener noreferrer">Cursor</Link>, VS Code with Gemini.</strong><br/><br/>This is software you install on your computer. It gives you more control and is preferred by many professionals. It requires some initial setup but offers ultimate power and customization. For this course, the focus is on Cloud IDEs for their simplicity.</p>
                                         </CardContent>
                                     </Card>
                                 </div>
@@ -326,7 +319,7 @@ export default function VibeCodingCoursePage() {
                         <AccordionItem value="item-2">
                              <AccordionTrigger className="text-lg">A Tour of Your Options</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>Let us look at some of the best tools available. Each has a different 'vibe' and is suited for different kinds of projects.</p>
+                                <p>Let's look at some of the popular tools available. Each has a different 'vibe' and is suited for different kinds of projects.</p>
                                 
                                 <Card className="my-6">
                                     <CardHeader>
@@ -335,8 +328,8 @@ export default function VibeCodingCoursePage() {
                                      <CardContent className="flex flex-col sm:flex-row items-start gap-4">
                                          <Image src="https://picsum.photos/seed/firebase/200/120" alt="Firebase Studio interface" width={200} height={120} className="rounded-md m-0 flex-shrink-0" data-ai-hint="cloud dashboard" />
                                         <div>
-                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Building robust, production ready applications that need to handle millions of users.</h5>
-                                            <p className="text-sm text-muted-foreground"><strong>Workflow:</strong> Firebase Studio generates a "Blueprint" (a detailed plan of all file changes) that you review and approve. This gives you maximum control and prevents the AI from making unwanted changes. It deploys to Google Cloud, providing enterprise grade security and scalability automatically.</p>
+                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Building robust, production-ready applications that need to handle millions of users.</h5>
+                                            <p className="text-sm text-muted-foreground"><strong>Workflow:</strong> Firebase Studio generates a "Blueprint" (a detailed plan of all file changes) that you review and approve. This gives you maximum control and prevents the AI from making unwanted changes. It deploys to Google Cloud, providing enterprise-grade security and scalability automatically.</p>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -350,7 +343,7 @@ export default function VibeCodingCoursePage() {
                                         <div>
                                             <h5 className="mt-0 font-semibold text-foreground">Best For: Beautiful, visual web apps like dashboards and SaaS products.</h5>
                                             <p className="text-sm text-muted-foreground">
-                                              <strong>How it works:</strong> You chat with the AI, and it visually paints the user interface in real time. It feels like a no code tool, but it produces high quality React code you can own. It connects seamlessly with <strong><Link href="https://supabase.com/" target="_blank" rel="noopener noreferrer">Supabase</Link></strong> to handle user logins and data with simple prompts.
+                                              <strong>How it works:</strong> You chat with the AI, and it visually paints the user interface in real time. It feels like a no-code tool, but it produces high-quality React code you can own. It can connect seamlessly with <strong><Link href="https://supabase.com/" target="_blank" rel="noopener noreferrer">Supabase</Link></strong> to handle user logins and data with simple prompts.
                                             </p>
                                         </div>
                                     </CardContent>
@@ -363,8 +356,8 @@ export default function VibeCodingCoursePage() {
                                      <CardContent className="flex flex-col sm:flex-row items-start gap-4">
                                         <Image src="https://picsum.photos/seed/replit/200/120" alt="Replit interface" width={200} height={120} className="rounded-md m-0 flex-shrink-0" data-ai-hint="code editor" />
                                         <div>
-                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Logic heavy apps, bots, backend services, and learning any programming language.</h5>
-                                            <p className="text-sm text-muted-foreground"><strong>How it works:</strong> Replit gives you a full computer in the cloud with a code editor, terminal, and live preview. Its AI can generate entire projects from a single, detailed prompt and offers one click deployment to a live URL.</p>
+                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Logic-heavy apps, bots, backend services, and learning any programming language.</h5>
+                                            <p className="text-sm text-muted-foreground"><strong>How it works:</strong> Replit gives you a full computer in the cloud with a code editor, terminal, and live preview. Its AI can generate entire projects from a single, detailed prompt and offers one-click deployment to a live URL.</p>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -385,7 +378,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">The Art of the Prompt</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground">In Vibe Coding, the quality of your prompt determines the quality of your product. This is not about 'prompt hacks' it is about structured communication. This module will teach you how to write the 'documents' that guide the AI, turning you into a master communicator and an effective director of your AI partner.</p>
+                    <p className="text-muted-foreground">In Vibe Coding, the quality of your prompt determines the quality of your product. This is not about 'prompt hacks'; it is about structured communication. This module will teach you how to write the 'documents' that guide the AI, turning you into a master communicator and an effective director of your AI partner.</p>
                     <Image 
                         src={VibeCodingModule3Image}
                         alt="Infographic for Module 3 of Vibe Coding course"
@@ -484,7 +477,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">Lab: Building a "Startup Name Generator"</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground">It is time to apply your knowledge and build a real, functional web application. We will walk through building a "Startup Name Generator" from a single prompt, refining it, and deploying it. This is where theory meets practice, and you'll create something you can actually share.</p>
+                    <p className="text-muted-foreground">It is time to apply your knowledge and build a real, functional web application. In this lab, you can walk through building a "Startup Name Generator" from a single prompt, refining it, and deploying it. This is where theory meets practice, and you'll create something you can actually share.</p>
                     <Image 
                         src={VibeCodingModule3Image}
                         alt="Infographic for Module 4 of Vibe Coding course"
@@ -497,7 +490,7 @@ export default function VibeCodingCoursePage() {
                          <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg">Building with Firebase Studio</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>We will use <Link href="https://studio.firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase Studio</Link> for this project because it is one of the fastest ways to go from an idea to a live, scalable application. It handles the backend, frontend, and deployment in one place.</p>
+                                <p>For this project, an option is to use <Link href="https://studio.firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase Studio</Link>. It is one of the fastest ways to go from an idea to a live, scalable application, as it can handle the backend, frontend, and deployment in one place.</p>
                                 <Image 
                                     src={FirebaseStudioImage}
                                     alt="Screenshot of Firebase Studio interface"
@@ -505,7 +498,7 @@ export default function VibeCodingCoursePage() {
                                     data-ai-hint="dashboard interface"
                                 />
                                 <ol className="space-y-4">
-                                  <li>Go to <strong>Firebase Studio</strong> and start a new project.</li>
+                                  <li>To use this tool, go to <strong>Firebase Studio</strong> and start a new project.</li>
                                   <li><strong>Initial Prompt (The Big Idea):</strong> In the main prompt area, describe the entire application you want to build. This is where your PRD pays off.
                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Create a 'startup name generator' app. It needs a text box where I can enter an industry, and a 'Generate' button. When I click the button, it should show a list of 10 creative names. The design should be modern and professional, with a dark gray background and bright green text for a 'techy' feel. The app should be fully responsive."</blockquote>
                                   </li>
@@ -513,14 +506,14 @@ export default function VibeCodingCoursePage() {
                                   <li><strong>Generate and Refine:</strong> Once you approve the blueprint, the AI generates the full application. Now you can use the chat to refine it.
                                      <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"The generated names are too generic. Modify the backend prompt to the AI to be more creative and witty. Tell it to 'think like a Silicon Valley branding expert.' Also, make the loading spinner more subtle."</blockquote>
                                   </li>
-                                   <li><strong>Deploy to the World:</strong> In the Firebase Studio dashboard, click the <strong>Publish</strong> button. Your app is now live on the internet, running on Google's scalable infrastructure. Congratulations, you have just built and deployed a full stack AI application.</li>
+                                   <li><strong>Deploy to the World:</strong> In the Firebase Studio dashboard, clicking the <strong>Publish</strong> button will make your app live on the internet, running on Google's scalable infrastructure. Congratulations, you have just built and deployed a full-stack AI application.</li>
                                 </ol>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
                             <AccordionTrigger className="text-lg">Building with Lovable.dev</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>We'll use <Link href="https://lovable.dev" target="_blank" rel="noopener noreferrer">Lovable.dev</Link> for a visual, interactive building experience. It's great for front-end development and rapid prototyping.</p>
+                                <p>For a more visual, interactive building experience, you can use <Link href="https://lovable.dev" target="_blank" rel="noopener noreferrer">Lovable.dev</Link>. It's great for front-end development and rapid prototyping.</p>
                                 <Image 
                                     src={LovableImage}
                                     alt="Screenshot of Lovable.dev interface"
@@ -528,24 +521,24 @@ export default function VibeCodingCoursePage() {
                                     data-ai-hint="dashboard interface"
                                 />
                                 <ol className="space-y-4">
-                                  <li>Go to <strong>Lovable.dev</strong> and create a new project.</li>
-                                  <li><strong>Initial Prompt:</strong> Start by describing the UI.
+                                  <li>To start, go to <strong>Lovable.dev</strong> and create a new project.</li>
+                                  <li><strong>Initial Prompt:</strong> You can begin by describing the UI.
                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Create a page with a title that says 'Startup Name Generator'. Below it, add a text input with the placeholder 'Enter an industry...' and a button next to it that says 'Generate'. Below that, add a section to display a list of names."</blockquote>
                                   </li>
                                   <li><strong>Refine the UI:</strong> Use iterative prompts to style the components.
                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Style the page with a dark theme. Make the primary button have a gradient from purple to blue. The generated names should appear in a card with a slight shadow."</blockquote>
                                   </li>
-                                   <li><strong>Add Logic:</strong> Now, add the AI functionality.
+                                   <li><strong>Add Logic:</strong> Now, you can add the AI functionality.
                                      <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"When the 'Generate' button is clicked, call an AI to generate 10 startup names based on the input field's value. Display them in the list section."</blockquote>
                                   </li>
-                                   <li><strong>Deploy:</strong> Lovable has built-in deployment options. You can publish your app with a single click.</li>
+                                   <li><strong>Deploy:</strong> Lovable has built-in deployment options, allowing you to publish your app with a single click.</li>
                                 </ol>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3">
                             <AccordionTrigger className="text-lg">Building with Replit</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>For a full-stack experience with more control over the backend, we'll use <Link href="https://replit.com" target="_blank" rel="noopener noreferrer">Replit</Link>.</p>
+                                <p>If you prefer a full-stack experience with more control over the backend, an option is to use <Link href="https://replit.com" target="_blank" rel="noopener noreferrer">Replit</Link>.</p>
                                 <Image 
                                     src={ReplitImage}
                                     alt="Screenshot of Replit interface"
@@ -553,15 +546,15 @@ export default function VibeCodingCoursePage() {
                                     data-ai-hint="code editor"
                                 />
                                 <ol className="space-y-4">
-                                  <li>Go to <strong>Replit</strong> and start a new project from a template (e.g., "Next.js").</li>
+                                  <li>To get started, go to <strong>Replit</strong> and start a new project from a template (e.g., "Next.js").</li>
                                   <li><strong>Initial Prompt:</strong> You can prompt the Replit AI to generate files.
                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Create a Next.js page component for a startup name generator. It should have a state variable for the industry input and another for the list of names. Include a text input, a button, and a list to display the results. For the backend, create an API route that takes an 'industry' parameter and uses an AI model to generate 10 names."</blockquote>
                                   </li>
-                                  <li><strong>Review and Debug:</strong> The AI will generate the code. Review each file. If there's an error, copy it and paste it back into the chat. "I got this error when running the app, please fix it: [paste error message]".</li>
+                                  <li><strong>Review and Debug:</strong> The AI will generate the code. Review each file. If there's an error, you can copy it and paste it back into the chat. "I got this error when running the app, please fix it: [paste error message]".</li>
                                    <li><strong>Refine:</strong>
                                      <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"The styling is too plain. Add Tailwind CSS and use it to give the page a modern, dark theme. Center all the content on the page."</blockquote>
                                   </li>
-                                   <li><strong>Deploy:</strong> Click the "Deploy" button in the Replit interface to push your app to a live URL.</li>
+                                   <li><strong>Deploy:</strong> Clicking the "Deploy" button in the Replit interface will push your app to a live URL.</li>
                                 </ol>
                             </AccordionContent>
                         </AccordionItem>
@@ -576,15 +569,15 @@ export default function VibeCodingCoursePage() {
                                     data-ai-hint="code editor"
                                 />
                                 <ol className="space-y-4">
-                                  <li>Set up a new Next.js project on your local machine. Open the project folder in <strong>Cursor</strong>.</li>
+                                  <li>First, set up a new Next.js project on your local machine and open the project folder in <strong>Cursor</strong>.</li>
                                   <li><strong>Generate Code:</strong> Use the chat (Cmd/Ctrl + K) to generate code snippets or entire files.
                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Generate the code for a React component called 'NameGenerator'. It should have a form with an input for 'industry' and a button. On submit, it should fetch names from the '/api/generate' endpoint and display them."</blockquote>
                                   </li>
-                                  <li><strong>Edit with AI:</strong> Select a piece of code and ask the AI to edit it. Select your list of names and prompt:
+                                  <li><strong>Edit with AI:</strong> You can select a piece of code and ask the AI to edit it. For example, select your list of names and prompt:
                                      <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"For each name in this list, add a 'Copy' button next to it that copies the name to the clipboard."</blockquote>
                                   </li>
-                                   <li><strong>Debug with AI:</strong> If you have an error, use the "Debug" feature. The AI will analyze the problem and suggest a fix.</li>
-                                   <li><strong>Deploy:</strong> You are in a standard local environment, so you can deploy using your preferred method (e.g., pushing to GitHub and deploying with <Link href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</Link>).</li>
+                                   <li><strong>Debug with AI:</strong> If you have an error, you can use the "Debug" feature. The AI will analyze the problem and suggest a fix.</li>
+                                   <li><strong>Deploy:</strong> Since you are in a standard local environment, you can deploy using your preferred method (e.g., pushing to GitHub and deploying with <Link href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</Link>).</li>
                                 </ol>
                             </AccordionContent>
                         </AccordionItem>
@@ -603,7 +596,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">From Project to Professional Product</CardTitle>
                         </div>
                     </div>
-                     <p className="text-muted-foreground">Building is the first step; creating sustainable value is the goal. This module covers how to turn your vibe coded project into a secure, monetizable product and how this new skill reshapes your career path. This is about moving from prototype to professional.</p>
+                     <p className="text-muted-foreground">Building is the first step; creating sustainable value is the goal. This module covers how to turn your vibe-coded project into a secure, monetizable product and how this new skill reshapes your career path. This is about moving from prototype to professional.</p>
                     <Image 
                         src={VibeCodingModule5Image}
                         alt="Infographic for Module 5 of Vibe Coding course"
@@ -736,3 +729,5 @@ export default function VibeCodingCoursePage() {
     </div>
   );
 }
+
+    
