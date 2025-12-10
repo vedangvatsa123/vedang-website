@@ -18,6 +18,9 @@ import VibeCodingInfographic from './Vibe_coding_infographic_Vedang_Vatsa.webp';
 import VibeCodingModule1 from './Vibe_coding_module1_vedang_vatsa.webp';
 import VibeCodingModule3Image from './Vibe_coding_module3_vedang_vatsa.webp';
 import VibeCodingModule5Image from './Vibe_coding_module5_vedang_vatsa.webp';
+import FirebaseStudioImage from './Google_Firebase_Studio_Vedang_Vatsa.jpg';
+import LovableImage from './lovable_vedang_vatsa.webp';
+import ReplitImage from './replit_vedang_vatsa.jpeg';
 
 
 export const metadata: Metadata = {
@@ -204,7 +207,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">The Philosophy: From Coder to Director</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground pt-2">Vibe coding is a fundamental shift in how we create. It is not just about writing code faster; it is about changing your role from a bricklayer to an architect. This module is about adopting the right mindset to effectively guide an AI, turning your vision into a real product without getting lost in the syntax. You will learn to think about the 'what' and 'why,' leaving the 'how' to your new AI partner.</p>
+                    <p className="text-muted-foreground">Vibe coding is a fundamental shift in how we create. It is not just about writing code faster; it is about changing your role from a bricklayer to an architect. This module is about adopting the right mindset to effectively guide an AI, turning your vision into a real product without getting lost in the syntax. You will learn to think about the 'what' and 'why,' leaving the 'how' to your new AI partner.</p>
                     <Image 
                         src={VibeCodingModule1}
                         alt="Infographic for Module 1 of Vibe Coding course"
@@ -381,7 +384,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">The Art of the Prompt</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground pt-2">In Vibe Coding, the quality of your prompt determines the quality of your product. This is not about 'prompt hacks' it is about structured communication. This module will teach you how to write the 'documents' that guide the AI, turning you into a master communicator and an effective director of your AI partner.</p>
+                    <p className="text-muted-foreground">In Vibe Coding, the quality of your prompt determines the quality of your product. This is not about 'prompt hacks' it is about structured communication. This module will teach you how to write the 'documents' that guide the AI, turning you into a master communicator and an effective director of your AI partner.</p>
                     <Image 
                         src={VibeCodingModule3Image}
                         alt="Infographic for Module 3 of Vibe Coding course"
@@ -480,7 +483,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">Lab: Building a "Startup Name Generator"</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground pt-2">It is time to apply your knowledge and build a real, functional web application. We will walk through building a "Startup Name Generator" from a single prompt, refining it, and deploying it. This is where theory meets practice, and you'll create something you can actually share.</p>
+                    <p className="text-muted-foreground">It is time to apply your knowledge and build a real, functional web application. We will walk through building a "Startup Name Generator" from a single prompt, refining it, and deploying it. This is where theory meets practice, and you'll create something you can actually share.</p>
                     <Image 
                         src={VibeCodingModule3Image}
                         alt="Infographic for Module 4 of Vibe Coding course"
@@ -494,6 +497,12 @@ export default function VibeCodingCoursePage() {
                             <AccordionTrigger className="text-lg">Building with Firebase Studio</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
                                 <p>We will use <Link href="https://studio.firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase Studio</Link> for this project because it is one of the fastest ways to go from an idea to a live, scalable application. It handles the backend, frontend, and deployment in one place.</p>
+                                <Image 
+                                    src={FirebaseStudioImage}
+                                    alt="Screenshot of Firebase Studio interface"
+                                    className="my-4 rounded-lg shadow-md w-full"
+                                    data-ai-hint="dashboard interface"
+                                />
                                 <ol className="space-y-4">
                                   <li>Go to <strong>Firebase Studio</strong> and start a new project.</li>
                                   <li><strong>Initial Prompt (The Big Idea):</strong> In the main prompt area, describe the entire application you want to build. This is where your PRD pays off.
@@ -511,6 +520,12 @@ export default function VibeCodingCoursePage() {
                             <AccordionTrigger className="text-lg">Building with Lovable.dev</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
                                 <p>We'll use <Link href="https://lovable.dev" target="_blank" rel="noopener noreferrer">Lovable.dev</Link> for a visual, interactive building experience. It's great for front-end development and rapid prototyping.</p>
+                                <Image 
+                                    src={LovableImage}
+                                    alt="Screenshot of Lovable.dev interface"
+                                    className="my-4 rounded-lg shadow-md w-full"
+                                    data-ai-hint="dashboard interface"
+                                />
                                 <ol className="space-y-4">
                                   <li>Go to <strong>Lovable.dev</strong> and create a new project.</li>
                                   <li><strong>Initial Prompt:</strong> Start by describing the UI.
@@ -530,6 +545,12 @@ export default function VibeCodingCoursePage() {
                             <AccordionTrigger className="text-lg">Building with Replit</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
                                 <p>For a full-stack experience with more control over the backend, we'll use <Link href="https://replit.com" target="_blank" rel="noopener noreferrer">Replit</Link>.</p>
+                                <Image 
+                                    src={ReplitImage}
+                                    alt="Screenshot of Replit interface"
+                                    className="my-4 rounded-lg shadow-md w-full"
+                                    data-ai-hint="code editor"
+                                />
                                 <ol className="space-y-4">
                                   <li>Go to <strong>Replit</strong> and start a new project from a template (e.g., "Next.js").</li>
                                   <li><strong>Initial Prompt:</strong> You can prompt the Replit AI to generate files.
@@ -575,7 +596,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">From Project to Professional Product</CardTitle>
                         </div>
                     </div>
-                     <p className="text-muted-foreground pt-2">Building is the first step; creating sustainable value is the goal. This module covers how to turn your vibe coded project into a secure, monetizable product and how this new skill reshapes your career path. This is about moving from prototype to professional.</p>
+                     <p className="text-muted-foreground">Building is the first step; creating sustainable value is the goal. This module covers how to turn your vibe coded project into a secure, monetizable product and how this new skill reshapes your career path. This is about moving from prototype to professional.</p>
                     <Image 
                         src={VibeCodingModule5Image}
                         alt="Infographic for Module 5 of Vibe Coding course"
