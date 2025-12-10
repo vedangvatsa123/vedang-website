@@ -9,7 +9,7 @@ import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Bot, BrainCircuit, Code, DraftingCompass, GitBranch, Goal, Hand, Lightbulb, MonitorPlay, Palette, Rocket, ShieldCheck, Sigma, Star, BookOpen, ExternalLink, GitCommit, TestTube2, AlertTriangle, FileLock2, DollarSign, Briefcase } from 'lucide-react';
+import { Bot, BrainCircuit, Code, DraftingCompass, ExternalLink, GitBranch, Goal, Hand, Lightbulb, MonitorPlay, Palette, Rocket, ShieldCheck, Sigma, Star, BookOpen, GitCommit, TestTube2, AlertTriangle, FileLock2, DollarSign, Briefcase } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -164,7 +164,20 @@ export default function VibeCodingCoursePage() {
                 <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
                 Build real apps without writing code. Just describe what you want in plain English and work with AI to make it happen. Perfect for founders, designers, marketers, and curious builders. Turn ideas into working products fast. Let’s build.
                 </p>
-                <div className="mt-6 flex justify-center items-center gap-4">
+
+                <div className="mt-8 aspect-video rounded-lg overflow-hidden shadow-2xl border max-w-3xl mx-auto">
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen>
+                  </iframe>
+                </div>
+
+                <div className="mt-8 flex justify-center items-center gap-4">
                     <Badge variant="outline">Instructor: Vedang Vatsa</Badge>
                     <Badge variant="outline">Prerequisite: None</Badge>
                     <Badge variant="outline">Cost: Free Forever</Badge>
@@ -174,6 +187,16 @@ export default function VibeCodingCoursePage() {
 
         <div className="container mx-auto px-4 md:px-6 max-w-5xl py-16 space-y-12">
             
+            <div className="my-8">
+                <Image 
+                    src="/Vibe coding infographic Vedang Vatsa.png"
+                    alt="Vibe Coding Infographic by Vedang Vatsa"
+                    width={1200}
+                    height={675}
+                    className="rounded-lg shadow-lg mx-auto"
+                />
+            </div>
+
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
@@ -331,7 +354,7 @@ export default function VibeCodingCoursePage() {
                                     <CardHeader>
                                         <CardTitle>Replit: The All-in-One Workshop</CardTitle>
                                     </CardHeader>
-                                     <CardContent className="flex flex-col smm:flex-row items-start gap-4">
+                                     <CardContent className="flex flex-col sm:flex-row items-start gap-4">
                                         <Image src="https://picsum.photos/seed/replit/200/120" alt="Replit interface" width={200} height={120} className="rounded-md m-0 flex-shrink-0" data-ai-hint="code editor" />
                                         <div>
                                             <h5 className="mt-0 font-semibold text-foreground">Best For: Logic heavy apps, bots, backend services, and learning any programming language.</h5>
