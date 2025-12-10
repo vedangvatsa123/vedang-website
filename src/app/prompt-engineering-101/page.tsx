@@ -310,12 +310,12 @@ export default function PromptEngineeringCoursePage() {
                 <div className="text-center">
                     <h2 className="text-3xl font-semibold tracking-tight">Learn More</h2>
                     <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Here’s a curated list of reputable, high-quality sources to learn about prompt engineering. It covers everything from beginner guides to academic-level surveys and is useful for casual users, developers, and researchers.
+                        Here’s a curated list of sources to learn about prompt engineering. It covers everything from beginner guides to academic-level surveys and is useful for casual users, developers, and researchers.
                     </p>
                 </div>
                 <div className="max-w-5xl mx-auto mt-12 prose dark:prose-invert">
                     
-                    <h3 className="text-2xl font-semibold tracking-tight">Excellent Starting Guides & Tutorials</h3>
+                    <h3 className="text-2xl font-semibold tracking-tight">Starting Guides & Tutorials</h3>
                     <ul>
                         <li><Link href="https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DAIR.AI Prompt Engineering Guide</Link>: A community-driven, comprehensive guide-hub that collects many of the latest papers, tutorials, tools and best practices.</li>
                         <li><Link href="https://learnprompting.org/docs/introduction?srsltid=AfmBOoofk_9KZ9_AF0jWr8FFquJNivbNDE0Zhha-pATc_fHk6MHgZh3o&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">LearnPrompting.org</Link>: A free, well-structured online guide to generative AI and prompt engineering.</li>
@@ -344,11 +344,11 @@ export default function PromptEngineeringCoursePage() {
                         <li><Link href="https://generativeprogrammer.com/p/must-read-free-ai-resources?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">The Generative Programmer</Link>: Broader AI resource lists to stay updated with evolving tools and practices.</li>
                     </ul>
 
-                    <h3 className="text-2xl font-semibold tracking-tight mt-12">My Recommendations on What to Read / Do First</h3>
+                    <h3 className="text-2xl font-semibold tracking-tight mt-12">Recommendations on What to Read / Do First</h3>
                     <ul>
                         <li>If you’re new: start with <strong><Link href="https://learnprompting.org/docs/introduction?srsltid=AfmBOoofk_9KZ9_AF0jWr8FFquJNivbNDE0Zhha-pATc_fHk6MHgZh3o&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">LearnPrompting.org</Link></strong> or the <strong><Link href="https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DAIR.AI guide</Link></strong>.</li>
                         <li>If you prefer guided learning: take the <strong><Link href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DeepLearning.AI</Link></strong> or <strong><Link href="https://www.coursera.org/learn/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Vanderbilt University</Link></strong> course.</li>
-                        <li>Once you’re comfortable: skim one of the academic surveys to get a deeper understanding.</li>
+                        <li>Once you’re comfortable: skim one of the academic surveys to get a deeper, principled understanding.</li>
                         <li>For long-term skill: follow blogs and curated resource lists to stay updated as prompt engineering evolves rapidly.</li>
                     </ul>
                 </div>
@@ -359,3 +359,4 @@ export default function PromptEngineeringCoursePage() {
     </div>
   );
 }
+
