@@ -213,7 +213,7 @@ export default function VibeCodingCoursePage() {
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg">What is Vibe Coding?</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>Coined by AI researcher <Link href="https://twitter.com/karpathy" target="_blank" rel="noopener noreferrer">Andrej Karpathy</Link>, “vibe coding” describes a new partnership between human and machine. Instead of manually writing every line of code, you describe your goal in natural language and the AI generates the application. Your role evolves from a coder, focused on syntax and implementation, to a director, focused on vision, refinement, and user experience.</p>
                                 <div className="grid md:grid-cols-2 gap-6 my-6">
                                     <Card>
@@ -238,7 +238,7 @@ export default function VibeCodingCoursePage() {
                         </AccordionItem>
                         <AccordionItem value="item-2">
                             <AccordionTrigger className="text-lg">The GCES Framework for Prompting</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>The quality of your output depends entirely on the quality of your input. The GCES framework helps you write effective prompts that leave no room for AI guesswork. It ensures you provide the necessary detail for the AI to give you what you need on the first try.</p>
                                 <div className="space-y-4 my-6">
                                     <div className="flex items-start gap-4">
@@ -294,7 +294,7 @@ export default function VibeCodingCoursePage() {
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg">Choosing Your Environment: Cloud vs. Local</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>The first choice is where to code. Think of it like a workshop: do you want to rent a fully equipped space, or build one in your garage? Both have advantages.</p>
                                 <div className="grid md:grid-cols-2 gap-6 my-6">
                                     <Card>
@@ -318,15 +318,14 @@ export default function VibeCodingCoursePage() {
                         </AccordionItem>
                         <AccordionItem value="item-2">
                              <AccordionTrigger className="text-lg">A Tour of Your Options</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>Let's look at some of the popular tools available. Each has a different 'vibe' and is suited for different kinds of projects.</p>
                                 
                                 <Card className="my-6">
                                     <CardHeader>
                                         <CardTitle><Link href="https://studio.firebase.google.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Firebase Studio</Link>: The Production Scaler</CardTitle>
                                     </CardHeader>
-                                     <CardContent className="flex flex-col sm:flex-row items-start gap-4">
-                                         <Image src="https://picsum.photos/seed/firebase/200/120" alt="Firebase Studio interface" width={200} height={120} className="rounded-md m-0 flex-shrink-0" data-ai-hint="cloud dashboard" />
+                                     <CardContent>
                                         <div>
                                             <h5 className="mt-0 font-semibold text-foreground">Best For: Building robust, production-ready applications that need to handle millions of users.</h5>
                                             <p className="text-sm text-muted-foreground"><strong>Workflow:</strong> Firebase Studio generates a "Blueprint" (a detailed plan of all file changes) that you review and approve. This gives you maximum control and prevents the AI from making unwanted changes. It deploys to Google Cloud, providing enterprise-grade security and scalability automatically.</p>
@@ -338,8 +337,7 @@ export default function VibeCodingCoursePage() {
                                     <CardHeader>
                                         <CardTitle><Link href="https://lovable.dev" target="_blank" rel="noopener noreferrer" className="hover:underline">Lovable.dev</Link>: The Visual App Builder</CardTitle>
                                     </CardHeader>
-                                    <CardContent className="flex flex-col sm:flex-row items-start gap-4">
-                                        <Image src="https://picsum.photos/seed/lovable/200/120" alt="Lovable.dev interface" width={200} height={120} className="rounded-md m-0 flex-shrink-0" data-ai-hint="dashboard interface" />
+                                    <CardContent>
                                         <div>
                                             <h5 className="mt-0 font-semibold text-foreground">Best For: Beautiful, visual web apps like dashboards and SaaS products.</h5>
                                             <p className="text-sm text-muted-foreground">
@@ -353,8 +351,7 @@ export default function VibeCodingCoursePage() {
                                     <CardHeader>
                                         <CardTitle><Link href="https://replit.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Replit</Link>: The All-in-One Workshop</CardTitle>
                                     </CardHeader>
-                                     <CardContent className="flex flex-col sm:flex-row items-start gap-4">
-                                        <Image src="https://picsum.photos/seed/replit/200/120" alt="Replit interface" width={200} height={120} className="rounded-md m-0 flex-shrink-0" data-ai-hint="code editor" />
+                                     <CardContent>
                                         <div>
                                             <h5 className="mt-0 font-semibold text-foreground">Best For: Logic-heavy apps, bots, backend services, and learning any programming language.</h5>
                                             <p className="text-sm text-muted-foreground"><strong>How it works:</strong> Replit gives you a full computer in the cloud with a code editor, terminal, and live preview. Its AI can generate entire projects from a single, detailed prompt and offers one-click deployment to a live URL.</p>
@@ -390,7 +387,7 @@ export default function VibeCodingCoursePage() {
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg">The PRD (Product Requirements Document)</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>Never start a project with an empty chat box. You need a plan. In product management, this is called a PRD. For us, it is a simple text file that tells the AI exactly what to build. It is your architectural blueprint. A vague idea leads to a vague app.</p>
                                 <h5>What a Good PRD Contains:</h5>
                                 <ul>
@@ -407,7 +404,7 @@ export default function VibeCodingCoursePage() {
                         </AccordionItem>
                          <AccordionItem value="item-2">
                              <AccordionTrigger className="text-lg">The Iterative Loop: Your Conversation with the AI</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>Vibe coding is not a one-shot command; it is a conversation. Great products are built through iteration. It’s like sculpting: you start with a block and slowly chip away. No one gets it perfect on the first try.</p>
                                 <h5>Example: Refining a Login Button</h5>
                                 <ol className="my-6 space-y-4">
@@ -431,7 +428,7 @@ export default function VibeCodingCoursePage() {
                         </AccordionItem>
                         <AccordionItem value="item-3">
                             <AccordionTrigger className="text-lg">Advanced Prompting Techniques</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>Once you've mastered the basics, you can use more advanced techniques to get even better results from the AI. These methods give you more control and lead to higher-quality code.</p>
                                 <div className="space-y-4 my-6">
                                     <div className="flex items-start gap-4">
@@ -489,7 +486,7 @@ export default function VibeCodingCoursePage() {
                      <Accordion type="single" collapsible className="w-full">
                          <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg">Building with Firebase Studio</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>For this project, an option is to use <Link href="https://studio.firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase Studio</Link>. It is one of the fastest ways to go from an idea to a live, scalable application, as it can handle the backend, frontend, and deployment in one place.</p>
                                 <Image 
                                     src={FirebaseStudioImage}
@@ -512,7 +509,7 @@ export default function VibeCodingCoursePage() {
                         </AccordionItem>
                         <AccordionItem value="item-2">
                             <AccordionTrigger className="text-lg">Building with Lovable.dev</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>For a more visual, interactive building experience, you can use <Link href="https://lovable.dev" target="_blank" rel="noopener noreferrer">Lovable.dev</Link>. It's great for front-end development and rapid prototyping.</p>
                                 <Image 
                                     src={LovableImage}
@@ -537,7 +534,7 @@ export default function VibeCodingCoursePage() {
                         </AccordionItem>
                         <AccordionItem value="item-3">
                             <AccordionTrigger className="text-lg">Building with Replit</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>If you prefer a full-stack experience with more control over the backend, an option is to use <Link href="https://replit.com" target="_blank" rel="noopener noreferrer">Replit</Link>.</p>
                                 <Image 
                                     src={ReplitImage}
@@ -560,7 +557,7 @@ export default function VibeCodingCoursePage() {
                         </AccordionItem>
                         <AccordionItem value="item-4">
                             <AccordionTrigger className="text-lg">Building with Cursor</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>For professional developers who want to integrate AI into their local workflow, <Link href="https://cursor.com" target="_blank" rel="noopener noreferrer">Cursor</Link> is an excellent choice. It's an AI-first code editor.</p>
                                 <Image 
                                     src={CursorImage}
@@ -608,7 +605,7 @@ export default function VibeCodingCoursePage() {
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg">Security: Your Responsibility as Director</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>Speed can introduce security gaps. The AI is a junior developer; it does not automatically know your security requirements. You must be the senior developer who sets the rules. This is a non-negotiable part of professional vibe coding.</p>
                                 <ul>
                                   <li><strong>The Risk:</strong> An AI might hardcode your private API keys into public code or create a login function with weak password requirements. It does not know what is sensitive unless you tell it.</li>
@@ -625,7 +622,7 @@ export default function VibeCodingCoursePage() {
                         </AccordionItem>
                          <AccordionItem value="item-2">
                              <AccordionTrigger className="text-lg">Monetization: From Project to Profit</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>How do you turn your cool app into a business? Vibe coding makes this faster than ever by dramatically lowering the cost of experimentation. You can test ideas in a weekend that used to take months.</p>
                                 <ul>
                                   <li><strong>SaaS (Software as a Service):</strong> This is the most common path. Don't try to build the next Facebook. Instead, build a niche tool that solves a specific, painful problem. For example, build a "Weekly Meal Planner for Vegan Athletes" and charge $10/month. You can integrate payment processing tools like <Link href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</Link> with a few simple prompts.</li>
@@ -637,7 +634,7 @@ export default function VibeCodingCoursePage() {
                         </AccordionItem>
                          <AccordionItem value="item-3">
                             <AccordionTrigger className="text-lg">The "Product Engineer": Your New Career</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>By mastering Vibe Coding, you are becoming a <strong>"Product Engineer."</strong> This is a new, highly valuable hybrid role that sits at the intersection of product management, design, and engineering. It is one of the most sought-after roles in modern tech companies.</p>
                                 <div className="my-6">
                                     <h4 className="font-semibold text-foreground">The Skill Stack Shift</h4>
@@ -729,5 +726,7 @@ export default function VibeCodingCoursePage() {
     </div>
   );
 }
+
+    
 
     
