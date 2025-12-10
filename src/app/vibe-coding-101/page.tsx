@@ -171,7 +171,7 @@ export default function VibeCodingCoursePage() {
                   <iframe 
                     width="100%" 
                     height="100%" 
-                    src="https://www.youtube.com/embed/5k2ZBtXDM5I" 
+                    src="https://www.youtube.com/embed/m6rhnlaNjDY" 
                     title="YouTube video player" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -189,17 +189,6 @@ export default function VibeCodingCoursePage() {
 
         <div className="container mx-auto px-4 md:px-6 max-w-5xl py-16 space-y-12">
             
-            <div className="my-8">
-                <Image 
-                    src={VibeCodingInfographic}
-                    alt="Vibe Coding Infographic by Vedang Vatsa"
-                    width={1200}
-                    height={675}
-                    className="rounded-lg shadow-lg mx-auto"
-                    priority
-                />
-            </div>
-
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
@@ -527,6 +516,16 @@ export default function VibeCodingCoursePage() {
                      </Accordion>
                 </CardContent>
             </Card>
+
+            <div className="my-8">
+                <Image 
+                    src={VibeCodingInfographic}
+                    alt="Vibe Coding Infographic by Vedang Vatsa"
+                    width={1200}
+                    height={675}
+                    className="rounded-lg shadow-lg mx-auto"
+                />
+            </div>
 
             <section id="references" className="py-16">
                 <div className="text-center">
