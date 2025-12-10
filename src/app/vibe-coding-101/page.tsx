@@ -24,9 +24,12 @@ export const metadata: Metadata = {
 
 const referenceLinks = [
     { 
-        name: 'Google Cloud', 
+        name: 'Official Vibe Coding Resources', 
         links: [
-            { name: 'What is Vibe Coding?', url: 'https://cloud.google.com/discover/what-is-vibe-coding' },
+            { name: 'What is Vibe Coding? (Google Cloud)', url: 'https://cloud.google.com/discover/what-is-vibe-coding' },
+            { name: 'Introduction to Vibe Coding (Microsoft Learn)', url: 'https://learn.microsoft.com/en-us/training/modules/introduction-vibe-coding/' },
+            { name: 'Vibe Coding Fundamentals (Coursera)', url: 'https://www.coursera.org/learn/vibe-coding-fundamentals' },
+            { name: 'Vibe Coding 101 with Replit (DeepLearning.AI)', url: 'https://www.deeplearning.ai/short-courses/vibe-coding-101-with-replit/' },
         ]
     },
     { 
@@ -37,35 +40,31 @@ const referenceLinks = [
         ]
     },
     { 
-        name: 'Microsoft Learn', 
-        links: [
-            { name: 'Introduction to Vibe Coding', url: 'https://learn.microsoft.com/en-us/training/modules/introduction-vibe-coding/' },
-        ]
-    },
-    { 
-        name: 'Coursera', 
-        links: [
-            { name: 'Vibe Coding Fundamentals', url: 'https://www.coursera.org/learn/vibe-coding-fundamentals' },
-        ]
-    },
-     { 
-        name: 'DeepLearning.AI', 
-        links: [
-            { name: 'Vibe Coding 101 with Replit', url: 'https://www.deeplearning.ai/short-courses/vibe-coding-101-with-replit/' },
-        ]
-    },
-    { 
         name: 'Replit', 
         links: [
             { name: 'Replit Docs', url: 'https://docs.replit.com' },
-            { name: 'Learn', url: 'https://replit.com/learn' }
+            { name: 'Replit Learn', url: 'https://replit.com/learn' }
         ]
     },
-    { 
+     { 
         name: 'Lovable', 
         links: [
             { name: 'Lovable Docs', url: 'https://docs.lovable.dev' }
         ]
+    },
+    {
+        name: 'Vercel v0',
+        links: [
+            { name: 'v0 Docs', url: 'https://v0.dev' },
+            { name: 'Vercel Docs', url: 'https://vercel.com/docs' },
+        ],
+    },
+     {
+        name: 'Bolt.new (StackBlitz)',
+        links: [
+            { name: 'Bolt.new', url: 'https://bolt.new' },
+            { name: 'StackBlitz Docs', url: 'https://developer.stackblitz.com' },
+        ],
     },
     { 
         name: 'Claude Code', 
@@ -155,11 +154,11 @@ export default function VibeCodingCoursePage() {
 
         <section className="text-center pt-16 pb-12 bg-gradient-to-b from-background to-secondary/30">
              <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-                <Badge variant="secondary" className="mb-4 animate-pulse">
+                <Badge variant="secondary" className="animate-pulse">
                     <Star className="w-3 h-3 mr-1.5" />
                     A Free, Self-Paced Course
                 </Badge>
-                <h1 className="text-5xl font-semibold tracking-tight text-primary">
+                <h1 className="mt-4 text-5xl font-semibold tracking-tight text-primary">
                     Welcome to Vibe Coding 101
                 </h1>
                 <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -623,25 +622,21 @@ export default function VibeCodingCoursePage() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                 <div className="mt-12 columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
                     {referenceLinks.map((tool) => (
-                        <Card key={tool.name} className="flex flex-col">
-                            <CardHeader>
-                                <CardTitle className="text-lg">{tool.name}</CardTitle>
-                            </CardHeader>
-                            <CardContent className="flex-grow">
-                                <ul className="space-y-2">
-                                    {tool.links.map((link) => (
-                                        <li key={link.name}>
-                                            <Link href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground hover:text-primary group">
-                                                {link.name}
-                                                <ExternalLink className="ml-1.5 h-3 w-3 opacity-70 group-hover:opacity-100" />
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </CardContent>
-                        </Card>
+                        <div key={tool.name} className="break-inside-avoid">
+                            <h3 className="font-semibold text-lg mb-2">{tool.name}</h3>
+                            <ul className="space-y-2">
+                                {tool.links.map((link) => (
+                                    <li key={link.name}>
+                                        <Link href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground hover:text-primary group">
+                                            {link.name}
+                                            <ExternalLink className="ml-1.5 h-3 w-3 opacity-70 group-hover:opacity-100" />
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     ))}
                 </div>
             </section>
