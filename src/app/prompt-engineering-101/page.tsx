@@ -9,7 +9,7 @@ import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Bot, BrainCircuit, Code, DraftingCompass, ExternalLink, Hand, Lightbulb, Star, Zap } from 'lucide-react';
+import { Bot, BrainCircuit, Code, DraftingCompass, ExternalLink, Hand, Lightbulb, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 
@@ -161,7 +161,7 @@ export default function PromptEngineeringCoursePage() {
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div className="bg-primary/10 p-3 rounded-lg">
-                           <Zap className="w-8 h-8 text-primary"/>
+                           <Bot className="w-8 h-8 text-primary"/>
                         </div>
                         <div>
                             <CardDescription>Module 3</CardDescription>
@@ -310,46 +310,46 @@ export default function PromptEngineeringCoursePage() {
                 <div className="text-center">
                     <h2 className="text-3xl font-semibold tracking-tight">Learn More</h2>
                     <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Here’s a curated list of reputable, high-quality sources to learn about prompt engineering — covering everything from beginner guides to academic-level surveys. Useful whether you’re a casual user, developer, or researcher.
+                        Here’s a curated list of reputable, high-quality sources to learn about prompt engineering. It covers everything from beginner guides to academic-level surveys and is useful for casual users, developers, and researchers.
                     </p>
                 </div>
                 <div className="max-w-5xl mx-auto mt-12 prose dark:prose-invert">
                     
-                    <h3 className="text-2xl font-semibold tracking-tight">🎯 Excellent Starting Guides &amp; Tutorials</h3>
+                    <h3 className="text-2xl font-semibold tracking-tight">Excellent Starting Guides & Tutorials</h3>
                     <ul>
-                        <li><Link href="https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DAIR.AI – Prompt Engineering Guide</Link>: A community-driven, comprehensive "guide-hub" that collects many of the latest papers, tutorials, tools and best practices.</li>
+                        <li><Link href="https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DAIR.AI - Prompt Engineering Guide</Link>: A community-driven, comprehensive guide-hub that collects many of the latest papers, tutorials, tools and best practices.</li>
                         <li><Link href="https://learnprompting.org/docs/introduction?srsltid=AfmBOoofk_9KZ9_AF0jWr8FFquJNivbNDE0Zhha-pATc_fHk6MHgZh3o&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">LearnPrompting.org</Link>: A free, well-structured online guide to generative AI and prompt engineering.</li>
-                        <li><Link href="https://platform.openai.com/docs/guides/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">OpenAI Prompt Engineering Documentation / Guide</Link>: Official guide laying out core principles and best practices.</li>
-                        <li><Link href="https://developers.google.com/machine-learning/resources/prompt-eng?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Google Prompt Engineering Guide</Link>: A practical guide oriented toward developers using Google’s AI services.</li>
+                        <li><Link href="https://platform.openai.com/docs/guides/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">OpenAI Prompt Engineering Documentation / Guide</Link>: This official guide lays out core principles and best practices.</li>
+                        <li><Link href="https://developers.google.com/machine-learning/resources/prompt-eng?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Google Prompt Engineering Guide</Link>: A practical guide for developers using Google’s AI services.</li>
                     </ul>
 
-                    <h3 className="text-2xl font-semibold tracking-tight mt-12">📚 Courses &amp; Structured Learning Paths</h3>
+                    <h3 className="text-2xl font-semibold tracking-tight mt-12">Courses & Structured Learning Paths</h3>
                     <ul>
                         <li><Link href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DeepLearning.AI in partnership with OpenAI</Link>: “ChatGPT Prompt Engineering for Developers” - a short, practical course.</li>
                         <li><Link href="https://www.coursera.org/learn/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Vanderbilt University on Coursera</Link>: “Prompt Engineering for ChatGPT” - a beginner-friendly course with structured modules.</li>
                         <li>Other curated course lists like this one from <Link href="https://www.analyticsvidhya.com/blog/2024/03/free-chatgpt-prompt-engineering-courses-and-resources/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Analytics Vidhya</Link> can highlight a mix of free and paid offerings.</li>
                     </ul>
 
-                    <h3 className="text-2xl font-semibold tracking-tight mt-12">📄 Academic &amp; Deep-Dive Surveys / Papers</h3>
+                    <h3 className="text-2xl font-semibold tracking-tight mt-12">Academic & Deep-Dive Surveys / Papers</h3>
                     <ul>
-                        <li><Link href="https://arxiv.org/abs/2402.07927?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">A Systematic Survey of Prompt Engineering in Large Language Models (2024)</Link>: Peer-reviewed survey on methods, applications, and limitations.</li>
+                        <li><Link href="https://arxiv.org/abs/2402.07927?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">A Systematic Survey of Prompt Engineering in Large Language Models (2024)</Link>: A peer-reviewed survey on methods, applications, and limitations.</li>
                         <li><Link href="https://arxiv.org/abs/2412.05127?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">The Prompt Canvas: A Literature-Based Practitioner Guide (2024)</Link>: Synthesizes techniques into a unified practical framework.</li>
                         <li><Link href="https://arxiv.org/abs/2407.12994?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">A Survey of Prompt Engineering Methods for Different NLP Tasks (2024)</Link>: Examines methods across various NLP tasks.</li>
                     </ul>
 
-                    <h3 className="text-2xl font-semibold tracking-tight mt-12">🔧 Practical &amp; Opinion-Driven Guides / Blogs</h3>
+                    <h3 className="text-2xl font-semibold tracking-tight mt-12">Practical & Opinion-Driven Guides / Blogs</h3>
                     <ul>
                         <li><Link href="https://www.cognativ.com/blogs/post/ai-prompt-engineering-techniques-and-strategies-for-success/509?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">cognativ.com</Link>: An up-to-date article offering practical techniques geared for real-world AI tools.</li>
                         <li><Link href="https://medium.com/waits-on-prompt-engineering/prompt-engineering-1-top-10-best-prompting-practices-for-llms-4ffa0449c005?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Medium</Link>: A quick, digestible article on good practical habits for writing prompts.</li>
                         <li><Link href="https://generativeprogrammer.com/p/must-read-free-ai-resources?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">The Generative Programmer</Link>: Broader AI resource lists to stay updated with evolving tools and practices.</li>
                     </ul>
 
-                    <h3 className="text-2xl font-semibold tracking-tight mt-12">✅ My Recommendations on What to Read / Do First</h3>
+                    <h3 className="text-2xl font-semibold tracking-tight mt-12">My Recommendations on What to Read / Do First</h3>
                     <ul>
                         <li>If you’re new: start with <strong><Link href="https://learnprompting.org/docs/introduction?srsltid=AfmBOoofk_9KZ9_AF0jWr8FFquJNivbNDE0Zhha-pATc_fHk6MHgZh3o&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">LearnPrompting.org</Link></strong> or the <strong><Link href="https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DAIR.AI guide</Link></strong>.</li>
                         <li>If you prefer guided learning: take the <strong><Link href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DeepLearning.AI</Link></strong> or <strong><Link href="https://www.coursera.org/learn/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Vanderbilt University</Link></strong> course.</li>
                         <li>Once you’re comfortable: skim one of the academic surveys to get a deeper understanding.</li>
-                        <li>For long-term skill: follow blogs and curated resource lists to stay updated — prompt engineering evolves rapidly.</li>
+                        <li>For long-term skill: follow blogs and curated resource lists to stay updated as prompt engineering evolves rapidly.</li>
                     </ul>
                 </div>
             </section>
