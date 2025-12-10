@@ -13,9 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/media',
     '/seo',
     '/community',
-    '/courses',
-    '/courses/vibe-coding',
-    '/courses/vibe-coding-101',
+    '/vibe-coding-101',
   ].map((route) => ({
     url: `${BASE_URL}${route}`,
     lastModified: new Date(),
