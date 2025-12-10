@@ -21,6 +21,7 @@ import VibeCodingModule5Image from './Vibe_coding_module5_vedang_vatsa.webp';
 import FirebaseStudioImage from './Google_Firebase_Studio_Vedang_Vatsa.jpg';
 import LovableImage from './lovable_vedang_vatsa.webp';
 import ReplitImage from './replit_vedang_vatsa.jpeg';
+import CursorImage from './Cursor_vedang_vatsa.jpg';
 
 
 export const metadata: Metadata = {
@@ -568,6 +569,12 @@ export default function VibeCodingCoursePage() {
                             <AccordionTrigger className="text-lg">Building with Cursor</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
                                 <p>For professional developers who want to integrate AI into their local workflow, <Link href="https://cursor.com" target="_blank" rel="noopener noreferrer">Cursor</Link> is an excellent choice. It's an AI-first code editor.</p>
+                                <Image 
+                                    src={CursorImage}
+                                    alt="Screenshot of Cursor interface"
+                                    className="my-4 rounded-lg shadow-md w-full"
+                                    data-ai-hint="code editor"
+                                />
                                 <ol className="space-y-4">
                                   <li>Set up a new Next.js project on your local machine. Open the project folder in <strong>Cursor</strong>.</li>
                                   <li><strong>Generate Code:</strong> Use the chat (Cmd/Ctrl + K) to generate code snippets or entire files.
