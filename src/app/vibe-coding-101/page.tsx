@@ -178,7 +178,7 @@ export default function VibeCodingCoursePage() {
                 <div className="mt-8 flex justify-center items-center gap-4">
                     <Badge variant="outline">By: Vedang Vatsa</Badge>
                     <Badge variant="outline">Prerequisite: None</Badge>
-                    <Badge variant="outline">Cost: Free</Badge>
+                    
                 </div>
 
                 <div className="mt-8 aspect-video rounded-lg overflow-hidden shadow-2xl border max-w-3xl mx-auto">
@@ -208,6 +208,13 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">The Philosophy: From Coder to Director</CardTitle>
                         </div>
                     </div>
+                     <p className="text-muted-foreground mt-4">Vibe Coding isn't just about speed; it's a fundamental shift in how we create software. This module introduces the core philosophy, moving your mindset from a hands-on coder to a high-level creative director. You will learn to articulate your vision and guide the AI, focusing on the "what" and "why" instead of getting lost in the "how."</p>
+                    <Image 
+                        src={VibeCodingModule1}
+                        alt="Infographic for Module 1 of Vibe Coding course"
+                        className="mt-4 rounded-lg shadow-md w-full"
+                        data-ai-hint="infographic abstract"
+                    />
                 </CardHeader>
                 <CardContent className="p-6">
                     <Accordion type="single" collapsible className="w-full">
@@ -288,7 +295,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">The Modern Toolkit</CardTitle>
                         </div>
                     </div>
-                     <p className="text-muted-foreground">Your toolbox determines your speed and capabilities. There is no single 'best' tool, only the right tool for the job. Let's explore the landscape from beginner-friendly visual builders to professional-grade code editors, so you can choose the one that best fits your project and your style.</p>
+                     <p className="text-muted-foreground mt-4">Your toolbox determines your speed and capabilities. There is no single 'best' tool, only the right tool for the job. Let's explore the landscape from beginner-friendly visual builders to professional-grade code editors, so you can choose the one that best fits your project and your style.</p>
                 </CardHeader>
                 <CardContent className="p-6">
                      <Accordion type="single" collapsible className="w-full">
@@ -375,7 +382,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">The Art of the Prompt</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground">In Vibe Coding, the quality of your prompt determines the quality of your product. This is not about 'prompt hacks'; it is about structured communication. This module will teach you how to write the 'documents' that guide the AI, turning you into a master communicator and an effective director of your AI partner.</p>
+                    <p className="text-muted-foreground mt-4">In Vibe Coding, the quality of your prompt determines the quality of your product. This is not about 'prompt hacks'; it is about structured communication. This module will teach you how to write the 'documents' that guide the AI, turning you into a master communicator and an effective director of your AI partner.</p>
                     <Image 
                         src={VibeCodingModule3Image}
                         alt="Infographic for Module 3 of Vibe Coding course"
@@ -474,7 +481,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">Lab: Building a "Startup Name Generator"</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground">It is time to apply your knowledge and build a real, functional web application. In this lab, you can walk through building a "Startup Name Generator" from a single prompt, refining it, and deploying it. This is where theory meets practice, and you'll create something you can actually share.</p>
+                    <p className="text-muted-foreground mt-4">It is time to apply your knowledge and build a real, functional web application. In this lab, you can walk through building a "Startup Name Generator" from a single prompt, refining it, and deploying it. This is where theory meets practice, and you'll create something you can actually share.</p>
                     <Image 
                         src={VibeCodingModule3Image}
                         alt="Infographic for Module 4 of Vibe Coding course"
@@ -593,7 +600,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">From Project to Professional Product</CardTitle>
                         </div>
                     </div>
-                     <p className="text-muted-foreground">Building is the first step; creating sustainable value is the goal. This module covers how to turn your vibe-coded project into a secure, monetizable product and how this new skill reshapes your career path. This is about moving from prototype to professional.</p>
+                     <p className="text-muted-foreground mt-4">Building is the first step; creating sustainable value is the goal. This module covers how to turn your vibe-coded project into a secure, monetizable product and how this new skill reshapes your career path. This is about moving from prototype to professional.</p>
                     <Image 
                         src={VibeCodingModule5Image}
                         alt="Infographic for Module 5 of Vibe Coding course"
