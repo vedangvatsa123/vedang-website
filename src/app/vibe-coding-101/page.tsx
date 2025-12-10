@@ -13,7 +13,7 @@ import { Bot, BrainCircuit, Code, DraftingCompass, ExternalLink, Hand, Lightbulb
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import VibeCodingInfographic from './Vibe_coding_infographic_Vedang_Vatsa.png';
+import VibeCodingInfographic from './Vibe_coding_infographic_Vedang_Vatsa.webp';
 import VibeCodingModule1 from './Vibe_coding_module1_vedang_vatsa.webp';
 
 
@@ -410,6 +410,39 @@ export default function VibeCodingCoursePage() {
                                   <li><strong>4. Repeat:</strong> Continue this cycle. Each loop gets you closer to your perfect product. This is not failure; it is the creative process.</li>
                                 </ol>
                                 <p>Embracing this loop is the key to creating something truly great. It’s a dance between your vision and the AI’s execution, and your job is to lead.</p>
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-3">
+                            <AccordionTrigger className="text-lg">Advanced Prompting Techniques</AccordionTrigger>
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
+                                <p>Once you've mastered the basics, you can use more advanced techniques to get even better results from the AI. These methods give you more control and lead to higher-quality code.</p>
+                                <div className="space-y-4 my-6">
+                                    <div className="flex items-start gap-4">
+                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><Bot className="w-5 h-5 text-primary flex-shrink-0" /></div>
+                                        <div>
+                                            <h4 className="font-semibold text-foreground">Persona Prompting: Get Expert Advice</h4>
+                                            <p className="text-muted-foreground">Start your prompt by telling the AI who it is. This focuses its knowledge and improves the quality of its output. Instead of a generic response, you get an expert one.</p>
+                                            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2 text-sm">"You are an expert security engineer. Review this code for vulnerabilities and suggest improvements."</blockquote>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start gap-4">
+                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><BrainCircuit className="w-5 h-5 text-primary flex-shrink-0" /></div>
+                                        <div>
+                                            <h4 className="font-semibold text-foreground">Chain of Thought: See the AI's Reasoning</h4>
+                                            <p className="text-muted-foreground">If a task is complex, ask the AI to "think step-by-step." This forces it to break down the problem and show its work, often leading to better results and making it easier for you to debug its logic.</p>
+                                             <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2 text-sm">"I need to connect to a new API. First, think step-by-step about what you need to do. Then, write the code."</blockquote>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start gap-4">
+                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><Hand className="w-5 h-5 text-primary flex-shrink-0" /></div>
+                                        <div>
+                                            <h4 className="font-semibold text-foreground">Negative Prompts: State What to Avoid</h4>
+                                            <p className="text-muted-foreground">Sometimes, it's easier to say what you *don't* want. Explicitly telling the AI to avoid certain things can be a powerful way to guide it.</p>
+                                             <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2 text-sm">"Generate a list of startup names. Do not use generic words like 'synergy,' 'cloud,' or 'link'."</blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>By combining these techniques with the GCES framework, you can elevate your prompts from simple commands to sophisticated directives, resulting in a product that more closely matches your vision from the very first draft.</p>
                             </AccordionContent>
                         </AccordionItem>
                      </Accordion>
