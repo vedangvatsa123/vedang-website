@@ -9,6 +9,9 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuGroup,
+  DropdownMenuLabel,
+  DropdownMenuSeparator
 } from '@/components/ui/dropdown-menu';
 import { ChevronDown } from 'lucide-react';
 
@@ -24,6 +27,19 @@ export function Header() {
             <Link href="/writings" className="text-foreground transition-colors hover:text-primary px-2 py-1">
               Writings
             </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground transition-colors hover:text-primary px-2 py-1 text-sm font-medium outline-none">
+                Courses <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                 <DropdownMenuItem asChild>
+                  <Link href="/courses/vibe-coding-101">Vibe Coding 101</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/courses/vibe-coding">Vibe Coding</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1 text-foreground transition-colors hover:text-primary px-2 py-1 text-sm font-medium outline-none">
                 Profile <ChevronDown className="h-4 w-4" />
