@@ -8,12 +8,12 @@ const BASE_URL = 'https://veda.ng';
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     '/',
-    '/profile',
     '/writings',
-    '/media',
-    '/seo',
-    '/community',
     '/vibe-coding-101',
+    '/about/profile',
+    '/about/media',
+    '/about/seo',
+    '/about/community',
   ].map((route) => ({
     url: `${BASE_URL}${route}`,
     lastModified: new Date(),
@@ -33,5 +33,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     console.error("Could not read essays directory for sitemap:", error);
   }
   
-  return [...staticPages, ...essayRoutes];
+  const allRoutes = [...staticPages, ...essayRoutes];
+
+  // A simple way to remove duplicates and ensure canonical URLs are correct
+  const uniqueRoutes = allRoutes.reduce((acc, current) => {
+    if (!acc.find(item => item.url === current.url)) {
+      acc.push(current);
+    }
+    return acc;
+  }, [] as MetadataRoute.Sitemap);
+
+  return uniqueRoutes;
 }

@@ -29,11 +29,14 @@ export function Header() {
             </Link>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1 text-foreground transition-colors hover:text-primary px-2 py-1 text-sm font-medium outline-none">
-                Profile <ChevronDown className="h-4 w-4" />
+                About <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
                   <Link href="/profile">Full Profile</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/media">Media & Speaking</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/seo">SEO & Growth</Link>
@@ -43,9 +46,6 @@ export function Header() {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Link href="/media" className="text-foreground transition-colors hover:text-primary px-2 py-1">
-              Media
-            </Link>
           </nav>
           <ThemeToggle />
         </div>
