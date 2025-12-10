@@ -9,10 +9,12 @@ import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Bot, BrainCircuit, Code, DraftingCompass, ExternalLink, GitBranch, Goal, Hand, Lightbulb, MonitorPlay, Palette, Rocket, ShieldCheck, Sigma, Star, BookOpen, GitCommit, TestTube2, AlertTriangle, FileLock2, DollarSign, Briefcase } from 'lucide-react';
+import { Bot, BrainCircuit, Code, DraftingCompass, ExternalLink, Hand, Lightbulb, MonitorPlay, Palette, ShieldCheck, Star, BookOpen } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import VibeCodingInfographic from './Vibe_coding_infographic_Vedang_Vatsa.png';
+
 
 export const metadata: Metadata = {
     title: 'Vibe Coding 101 | A Free Course on Building with AI',
@@ -178,9 +180,9 @@ export default function VibeCodingCoursePage() {
                 </div>
 
                 <div className="mt-8 flex justify-center items-center gap-4">
-                    <Badge variant="outline">Instructor: Vedang Vatsa</Badge>
+                    <Badge variant="outline">By: Vedang Vatsa</Badge>
                     <Badge variant="outline">Prerequisite: None</Badge>
-                    <Badge variant="outline">Cost: Free Forever</Badge>
+                    <Badge variant="outline">Cost: Free</Badge>
                 </div>
             </div>
         </section>
@@ -189,11 +191,12 @@ export default function VibeCodingCoursePage() {
             
             <div className="my-8">
                 <Image 
-                    src="/Vibe coding infographic Vedang Vatsa.png"
+                    src={VibeCodingInfographic}
                     alt="Vibe Coding Infographic by Vedang Vatsa"
                     width={1200}
                     height={675}
                     className="rounded-lg shadow-lg mx-auto"
+                    priority
                 />
             </div>
 
@@ -243,28 +246,28 @@ export default function VibeCodingCoursePage() {
                                 <p>The quality of your output depends entirely on the quality of your input. The GCES framework helps you write effective prompts that leave no room for AI guesswork. It ensures you provide the necessary detail for the AI to give you what you need on the first try.</p>
                                 <div className="space-y-4 my-6">
                                     <div className="flex items-start gap-4">
-                                        <Goal className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><Star className="w-5 h-5 text-primary flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">1. Goal: What do you want the AI to do?</h4>
                                             <p className="text-muted-foreground">Be specific and action-oriented. Start with a verb. This tells the AI its primary objective. Example: "Create a contact form with name, email, and message fields."</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <BrainCircuit className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><BrainCircuit className="w-5 h-5 text-primary flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">2. Context: What does the AI need to know?</h4>
                                             <p className="text-muted-foreground">Who is the user? What is the purpose of this feature? This helps the AI make better decisions about tone and style. Example: "This is for a local bakery's website. The vibe should be warm and friendly."</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <DraftingCompass className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><DraftingCompass className="w-5 h-5 text-primary flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">3. Expectations: What should the final output look like?</h4>
                                             <p className="text-muted-foreground">Define the constraints. Be specific about design, components, and behavior. Example: "Use the 'Card' and 'Button' components. The primary color should be a pastel pink. The form must be mobile-responsive."</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <MonitorPlay className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><MonitorPlay className="w-5 h-5 text-primary flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">4. Source: Can you provide an example?</h4>
                                             <p className="text-muted-foreground">AIs are excellent pattern-matchers. Give a concrete example. Example: "For the layout, I'm inspired by Stripe.com's homepage. Use that as a visual reference for spacing and fonts."</p>
