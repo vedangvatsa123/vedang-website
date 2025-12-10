@@ -1,4 +1,5 @@
 
+
 import {
   Accordion,
   AccordionContent,
@@ -15,6 +16,7 @@ import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import VibeCodingInfographic from './Vibe_coding_infographic_Vedang_Vatsa.webp';
 import VibeCodingModule1 from './Vibe_coding_module1_vedang_vatsa.webp';
+import VibeCodingModule3Image from './Vibe_coding_module3_vedang_vatsa.webp';
 
 
 export const metadata: Metadata = {
@@ -379,6 +381,12 @@ export default function VibeCodingCoursePage() {
                         </div>
                     </div>
                     <p className="text-muted-foreground pt-2">In Vibe Coding, the quality of your prompt determines the quality of your product. This is not about 'prompt hacks' it is about structured communication. This module will teach you how to write the 'documents' that guide the AI, turning you into a master communicator and an effective director of your AI partner.</p>
+                    <Image 
+                        src={VibeCodingModule3Image}
+                        alt="Infographic for Module 3 of Vibe Coding course"
+                        className="mt-4 rounded-lg shadow-md w-full"
+                        data-ai-hint="infographic abstract"
+                    />
                 </CardHeader>
                  <CardContent className="p-6">
                      <Accordion type="single" collapsible className="w-full">
@@ -472,6 +480,12 @@ export default function VibeCodingCoursePage() {
                         </div>
                     </div>
                     <p className="text-muted-foreground pt-2">It is time to apply your knowledge and build a real, functional web application. We will walk through building a "Startup Name Generator" from a single prompt, refining it, and deploying it. This is where theory meets practice, and you'll create something you can actually share.</p>
+                    <Image 
+                        src={VibeCodingModule3Image}
+                        alt="Infographic for Module 4 of Vibe Coding course"
+                        className="mt-4 rounded-lg shadow-md w-full"
+                        data-ai-hint="infographic code"
+                    />
                 </CardHeader>
                 <CardContent className="p-6">
                      <Accordion type="single" collapsible className="w-full">
