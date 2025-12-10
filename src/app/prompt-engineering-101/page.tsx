@@ -306,7 +306,7 @@ export default function PromptEngineeringCoursePage() {
                 </div>
             </section>
 
-             <section id="learn-more" className="py-16">
+             <section id="learn-more" className="pb-16">
                 <div className="text-center">
                     <h2 className="text-3xl font-semibold tracking-tight">Learn More</h2>
                     <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -317,7 +317,7 @@ export default function PromptEngineeringCoursePage() {
                     
                     <h3 className="text-2xl font-semibold tracking-tight">Excellent Starting Guides & Tutorials</h3>
                     <ul>
-                        <li><Link href="https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DAIR.AI - Prompt Engineering Guide</Link>: A community-driven, comprehensive guide-hub that collects many of the latest papers, tutorials, tools and best practices.</li>
+                        <li><Link href="https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DAIR.AI Prompt Engineering Guide</Link>: A community-driven, comprehensive guide-hub that collects many of the latest papers, tutorials, tools and best practices.</li>
                         <li><Link href="https://learnprompting.org/docs/introduction?srsltid=AfmBOoofk_9KZ9_AF0jWr8FFquJNivbNDE0Zhha-pATc_fHk6MHgZh3o&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">LearnPrompting.org</Link>: A free, well-structured online guide to generative AI and prompt engineering.</li>
                         <li><Link href="https://platform.openai.com/docs/guides/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">OpenAI Prompt Engineering Documentation / Guide</Link>: This official guide lays out core principles and best practices.</li>
                         <li><Link href="https://developers.google.com/machine-learning/resources/prompt-eng?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Google Prompt Engineering Guide</Link>: A practical guide for developers using Google’s AI services.</li>
@@ -325,8 +325,8 @@ export default function PromptEngineeringCoursePage() {
 
                     <h3 className="text-2xl font-semibold tracking-tight mt-12">Courses & Structured Learning Paths</h3>
                     <ul>
-                        <li><Link href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DeepLearning.AI in partnership with OpenAI</Link>: “ChatGPT Prompt Engineering for Developers” - a short, practical course.</li>
-                        <li><Link href="https://www.coursera.org/learn/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Vanderbilt University on Coursera</Link>: “Prompt Engineering for ChatGPT” - a beginner-friendly course with structured modules.</li>
+                        <li><Link href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DeepLearning.AI in partnership with OpenAI</Link>: “ChatGPT Prompt Engineering for Developers” a short, practical course.</li>
+                        <li><Link href="https://www.coursera.org/learn/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Vanderbilt University on Coursera</Link>: “Prompt Engineering for ChatGPT” a beginner-friendly course with structured modules.</li>
                         <li>Other curated course lists like this one from <Link href="https://www.analyticsvidhya.com/blog/2024/03/free-chatgpt-prompt-engineering-courses-and-resources/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Analytics Vidhya</Link> can highlight a mix of free and paid offerings.</li>
                     </ul>
 
