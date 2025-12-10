@@ -14,6 +14,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import VibeCodingInfographic from './Vibe_coding_infographic_Vedang_Vatsa.png';
+import VibeCodingModule1 from './Vibe_coding_module1_vedang_vatsa.webp';
 
 
 export const metadata: Metadata = {
@@ -201,6 +202,12 @@ export default function VibeCodingCoursePage() {
                         </div>
                     </div>
                     <p className="text-muted-foreground pt-2">Vibe coding is a fundamental shift in how we create. It is not just about writing code faster; it is about changing your role from a bricklayer to an architect. This module is about adopting the right mindset to effectively guide an AI, turning your vision into a real product without getting lost in the syntax. You will learn to think about the 'what' and 'why,' leaving the 'how' to your new AI partner.</p>
+                    <Image 
+                        src={VibeCodingModule1}
+                        alt="Infographic for Module 1 of Vibe Coding course"
+                        className="mt-4 rounded-lg shadow-md w-full"
+                        data-ai-hint="infographic technology"
+                    />
                 </CardHeader>
                 <CardContent className="p-6">
                     <Accordion type="single" collapsible className="w-full">
