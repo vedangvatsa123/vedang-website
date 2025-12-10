@@ -33,23 +33,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     console.error("Could not read essays directory for sitemap:", error);
   }
   
-  const vibeCodingLessonsDirectory = path.join(process.cwd(), 'src', 'content', 'vibe-coding');
-  let vibeCodingRoutes: MetadataRoute.Sitemap = [];
-    try {
-    if (fs.existsSync(vibeCodingLessonsDirectory)) {
-        const lessonFiles = fs.readdirSync(vibeCodingLessonsDirectory).filter(file => file.endsWith('.mdx'));
-        vibeCodingRoutes = lessonFiles.map(file => {
-            const slug = file.replace(/\.mdx$/, '');
-            return {
-                url: `${BASE_URL}/courses/vibe-coding/${slug}`,
-                lastModified: new Date(),
-            };
-        });
-    }
-    } catch (error) {
-        console.error("Could not read vibe coding lessons directory for sitemap:", error);
-    }
-
-
-  return [...staticPages, ...essayRoutes, ...vibeCodingRoutes];
+  return [...staticPages, ...essayRoutes];
 }

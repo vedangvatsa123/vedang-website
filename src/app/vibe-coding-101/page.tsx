@@ -159,13 +159,10 @@ export default function VibeCodingCoursePage() {
                     A Free, Self-Paced Course
                 </Badge>
                 <h1 className="mt-4 text-5xl font-semibold tracking-tight text-primary">
-                    Welcome to Vibe Coding 101
+                    Vibe Coding 101
                 </h1>
                 <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                    This isn't just another coding course. It's a journey into a new way of creating. Forget the endless lines of syntax and frustrating bugs. Here, you'll learn the art of building software by describing what you want, in plain English, and partnering with an AI to bring your ideas to life.
-                </p>
-                <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                    Whether you're a designer with an idea, a founder needing an MVP, a marketer automating a task, or just a curious builder, this course will empower you to build real, working applications. Your creativity is the only limit. Let's start building.
+                Build real apps without writing code. Just describe what you want in plain English and work with AI to make it happen. Perfect for founders, designers, marketers, and curious builders. Turn ideas into working products fast. Let’s build.
                 </p>
                 <div className="mt-6 flex justify-center items-center gap-4">
                     <Badge variant="outline">Instructor: Vedang Vatsa</Badge>
@@ -185,25 +182,24 @@ export default function VibeCodingCoursePage() {
                         </div>
                         <div>
                             <CardDescription>Module 1</CardDescription>
-                            <CardTitle className="text-2xl">The Philosophy & The "Friendly Cat" Framework</CardTitle>
+                            <CardTitle className="text-2xl">The Philosophy: From Coder to Director</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground pt-2">Switch your mindset from "writing code" to "managing an AI." You'll learn to think like a product manager, not just a typist, which is the key to getting great results. This module is about establishing the right mental model before you ever write a prompt.</p>
+                    <p className="text-muted-foreground pt-2">Vibe coding is a fundamental shift in how we create. It is not just about writing code faster; it is about changing your role from a bricklayer to an architect. This module is about adopting the right mindset to effectively guide an AI, turning your vision into a real product without getting lost in the syntax. You will learn to think about the 'what' and 'why,' leaving the 'how' to your new AI partner.</p>
                 </CardHeader>
                 <CardContent className="p-6">
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-lg">1.1 The Definition: What is Vibe Coding?</AccordionTrigger>
+                            <AccordionTrigger className="text-lg">What is Vibe Coding?</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>"Vibe Coding" isn't just a buzzword; it's a fundamental shift in how we create things with computers. Coined by Andrej Karpathy, a founding member of OpenAI, it describes a new, conversational relationship with the machine. It’s about moving from a world of rigid instructions to one of intuitive conversation, where your primary skill is not syntax, but vision.</p>
-                                <p>Think of it this way:</p>
+                                <p>Coined by AI researcher Andrej Karpathy, “vibe coding” describes a new partnership between human and machine. Instead of manually writing every line of code, you describe your goal in natural language and the AI generates the application. Your role evolves from a coder, focused on syntax and implementation, to a director, focused on vision, refinement, and user experience.</p>
                                 <div className="grid md:grid-cols-2 gap-6 my-6">
                                     <Card>
                                         <CardHeader>
                                             <CardTitle className="text-lg font-semibold">The Old Way: Architect & Bricklayer</CardTitle>
                                         </CardHeader>
                                         <CardContent>
-                                            <p className="text-sm text-muted-foreground">Traditionally, you had to be both the person who designs the house and the person who lays every single brick. You needed to know the exact syntax for every programming language: JavaScript, Python, CSS, SQL. If you forgot a single semicolon, parenthesis, or bracket, the entire application could crash. Your value was tied to your memorization of syntax and arcane commands. It was a world of precision and punishment, where a tiny mistake could cost hours of debugging. This created a high barrier to entry, reserving software creation for a specialized few.</p>
+                                            <p className="text-sm text-muted-foreground">Traditionally, you had to design the house and lay every brick. You needed to know JavaScript, Python, CSS, and SQL. A forgotten semicolon could crash everything. Your value was tied to memorizing syntax, creating a high barrier for new builders.</p>
                                         </CardContent>
                                     </Card>
                                     <Card className="border-primary/50">
@@ -211,61 +207,48 @@ export default function VibeCodingCoursePage() {
                                             <CardTitle className="text-lg font-semibold">The Vibe Way: Product Manager & Creative Director</CardTitle>
                                         </CardHeader>
                                         <CardContent>
-                                            <p className="text-sm text-muted-foreground">Now, your role changes. You are the person with the vision. You describe *what* you want ("I need a recipe app with a clean, minimalist design that feels calming and easy to use") and the AI handles the *how* (writing the hundreds of lines of React, CSS, and database queries). Your value is now tied to the clarity of your vision, your ability to communicate it effectively, and your judgment in refining the result. The AI becomes a tireless junior developer that handles the tedious implementation details, allowing you to stay in a state of creative flow.</p>
+                                            <p className="text-sm text-muted-foreground">Now, you are the visionary. You say, "I need a recipe app with a clean design," and the AI writes the React code. Your value is in your clarity of vision and your ability to refine the result. The AI is a tireless junior developer that handles the tedious details.</p>
                                         </CardContent>
                                     </Card>
                                 </div>
-                                <p>The goal isn't just to write code faster. It's to transcend the code entirely. As Karpathy put it, the ultimate goal is to "forget that the code even exists." You are meant to focus on the product vision, the user experience, and the business logic. Instead of being bogged down by implementation details, you operate at a higher level of abstraction, guiding the AI as an extension of your creative will. This shift democratizes building, empowering designers, entrepreneurs, and marketers to bring their ideas to life without needing a traditional computer science degree. It’s a move from a world of rigid instructions to one of intuitive conversation and rapid iteration.</p>
+                                <p>The goal is to focus on the product, not the code. You operate at a higher level of abstraction, guiding the AI as an extension of your creative will. This democratizes building, empowering anyone with a good idea to bring it to life.</p>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
-                            <AccordionTrigger className="text-lg">1.2 The 4 Levels of Thinking: How to Plan Your "Vibe"</AccordionTrigger>
+                            <AccordionTrigger className="text-lg">The GCES Framework for Prompting</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>You can't just walk up to an AI and say "make me a billion-dollar app" and expect magic. The quality of the AI's output is a direct reflection of the quality of your input. To build something great, you must use <strong>Procedural Thinking</strong>. Before you write a single prompt, you need a plan. Think through these four levels, moving from the abstract to the concrete. This structured approach is what separates a focused, successful project from a frustrating, meandering one.</p>
+                                <p>The quality of your output depends entirely on the quality of your input. The GCES framework helps you write effective prompts that leave no room for AI guesswork. It ensures you provide the necessary detail for the AI to give you what you need on the first try.</p>
                                 <div className="space-y-4 my-6">
-                                    <div className="flex items-start gap-4">
-                                        <Lightbulb className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
-                                        <div>
-                                            <h4 className="font-semibold text-foreground">1. The Logical Level: The "What"</h4>
-                                            <p className="text-muted-foreground">What is the absolute core function of what you're building? Boil it down to a single, simple sentence. This is your elevator pitch. If you can't explain it in one line, it's too complicated, and the AI will get confused. This forces you to find the essential truth of your idea. <br/><em>Example: "It's a web app that generates healthy recipes from a list of ingredients a user already has."</em></p>
-                                        </div>
-                                    </div>
                                     <div className="flex items-start gap-4">
                                         <Goal className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
                                         <div>
-                                            <h4 className="font-semibold text-foreground">2. The Analytical Level: The "Why"</h4>
-                                            <p className="text-muted-foreground">What is the *objective*? Why does this need to exist? Who is it for? This 'why' is your north star. Every feature you add, every design choice you make, should serve this purpose. Without a clear 'why', you'll get lost in endless features that don't add value. <br/><em>Example: "To help busy parents with kids who have food allergies cook safe, interesting meals quickly, reducing their mental load and stress."</em></p>
+                                            <h4 className="font-semibold text-foreground">1. Goal: What do you want the AI to do?</h4>
+                                            <p className="text-muted-foreground">Be specific and action-oriented. Start with a verb. This tells the AI its primary objective. Example: "Create a contact form with name, email, and message fields."</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <Sigma className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                                        <BrainCircuit className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
                                         <div>
-                                            <h4 className="font-semibold text-foreground">3. The Computational Level: The "How" (Data Flow)</h4>
-                                            <p className="text-muted-foreground">How does the data move? You don't need to be a programmer to think this way. Just imagine a simple flowchart. What are the steps from start to finish? This is the user journey in its simplest form. <br/><em>Example: "User lands on the page → They see a form → They input ingredients and allergies → They click 'Generate' → The app sends this data to an AI → The AI sends back a recipe → The app displays the recipe in a clean format."</em></p>
+                                            <h4 className="font-semibold text-foreground">2. Context: What does the AI need to know?</h4>
+                                            <p className="text-muted-foreground">Who is the user? What is the purpose of this feature? This helps the AI make better decisions about tone and style. Example: "This is for a local bakery's website. The vibe should be warm and friendly."</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
                                         <DraftingCompass className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
                                         <div>
-                                            <h4 className="font-semibold text-foreground">4. The Procedural Level: The "Polish"</h4>
-                                            <p className="text-muted-foreground">How do we make this *great*? What are the details that create a delightful user experience? This is where the "vibe" really comes to life. It's the difference between a functional tool and a product people love to use. <br/><em>Example: "We need a 'Save to Favorites' button. The recipes should have beautiful photos. Let's add a feature to generate a 'Shopping List' for missing ingredients. The design should feel calm and uncluttered, not chaotic."</em></p>
+                                            <h4 className="font-semibold text-foreground">3. Expectations: What should the final output look like?</h4>
+                                            <p className="text-muted-foreground">Define the constraints. Be specific about design, components, and behavior. Example: "Use the 'Card' and 'Button' components. The primary color should be a pastel pink. The form must be mobile-responsive."</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start gap-4">
+                                        <MonitorPlay className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                                        <div>
+                                            <h4 className="font-semibold text-foreground">4. Source: Can you provide an example?</h4>
+                                            <p className="text-muted-foreground">AIs are excellent pattern-matchers. Give a concrete example. Example: "For the layout, I'm inspired by Stripe.com's homepage. Use that as a visual reference for spacing and fonts."</p>
                                         </div>
                                     </div>
                                 </div>
-                                <p>Thinking through these levels turns a vague idea into a concrete plan that you can communicate clearly to your AI partner. A good plan is 50% of the work done. It sets you up for success and prevents the aimless wandering that leads to frustration.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="item-3">
-                            <AccordionTrigger className="text-lg">1.3 The Core Framework: "The Friendly Cat"</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>To succeed in Vibe Coding, remember this mnemonic: <strong>"The Friendly Cat Dances Constantly."</strong> It's a silly phrase, but it covers the five pillars of effective AI-assisted development. This framework will be your guide through the entire process, ensuring you stay in control and build something robust.</p>
-                                <div className="space-y-4 my-6">
-                                    <p><strong>(T)hinking (Frameworks):</strong> This is your pre-flight check. Use the 4 Levels of Thinking to create a clear plan *before* you type a single prompt. Know what you're building and why. Don't start a conversation with the AI without a clear agenda. This simple act of planning will save you hours of frustration and rework.</p>
-                                    <p><strong>(F)riendly (Interface):</strong> Always prioritize the end-user. The "vibe" isn't just about pretty colors; it's about creating an experience that is intuitive, frictionless, and enjoyable. Before adding any feature, ask yourself: "Does this make the user's life easier or harder? Would my grandma be able to use this without instructions?" Simplicity is your best friend. A good user interface is invisible; it just works.</p>
-                                    <p><strong>(C)heckpoints (Version Control):</strong> This is non-negotiable. The AI will make mistakes. It will misunderstand you. It will break things that were working perfectly five minutes ago. You *must* "save your game" frequently. In developer terms, this is called 'version control' (using a tool like Git). After every single successful feature addition, you create a checkpoint (a "commit"). If the AI messes something up, you can instantly rewind to the last working version without losing progress. We will cover this in detail.</p>
-                                    <p><strong>(D)ebugging:</strong> When errors inevitably happen, your job is not to fix the code yourself. Your job is to be an expert diagnostician. The error message the computer gives you is not a sign of failure; it's a clue. It's usually very descriptive. Your task is to copy the entire error message, paste it back to the AI, and say, "We have an error. Here it is. Fix this." You don't need to be the surgeon; you just need to tell the surgeon where it hurts. This is one of the most powerful aspects of Vibe Coding.</p>
-                                    <p><strong>(C)ontext:</strong> The AI has no eyes, no history, and no real-world experience. It needs rich, specific context. Don't just say "make it pretty." That's useless. Instead, take a screenshot of a website you admire (like Stripe or Airbnb) and say, "Make the layout, color scheme, and font choices look and feel like this." Give it examples of what you like and what you don't like. The more context you provide, the better it will understand your "vibe" and the faster it will deliver what you want. Context is king in the world of AI.</p>
-                                </div>
+                                <p>Using this framework turns a vague idea into a concrete plan, dramatically improving the quality of the AI's first draft and saving you hours of refinement.</p>
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
@@ -283,21 +266,21 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">The Modern Toolkit</CardTitle>
                         </div>
                     </div>
-                     <p className="text-muted-foreground pt-2">Choose the right tool for your project. Your toolbox determines your speed, capabilities, and how much fun you have. There's no single "best" tool, only the right tool for the job. We'll explore the landscape from beginner-friendly visual builders to professional-grade code editors.</p>
+                     <p className="text-muted-foreground pt-2">Your toolbox determines your speed and capabilities. There is no single 'best' tool, only the right tool for the job. We will explore the landscape from beginner friendly visual builders to professional grade code editors, so you can choose the one that best fits your project and your style.</p>
                 </CardHeader>
                 <CardContent className="p-6">
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-lg">2.1 The Big Choice: Cloud vs. Local</AccordionTrigger>
+                            <AccordionTrigger className="text-lg">Choosing Your Environment: Cloud vs. Local</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>First, a fundamental choice: where will you "vibe code"? Think of it like choosing between renting a fully-equipped workshop versus building one in your own garage. Both have their advantages, and the right choice depends on your comfort level and the project's needs.</p>
+                                <p>The first choice is where you will code. Think of it like a workshop: do you want to rent a fully equipped space, or build one in your garage? Both have advantages.</p>
                                 <div className="grid md:grid-cols-2 gap-6 my-6">
                                     <Card>
                                         <CardHeader>
                                             <CardTitle className="text-lg font-semibold">Cloud IDEs (The Rented Workshop)</CardTitle>
                                         </CardHeader>
                                         <CardContent>
-                                            <p className="text-sm text-muted-foreground">Examples: <strong>Replit, Firebase Studio, Lovable.dev, CodeSandbox.</strong><br/><br/>These are all-in-one platforms that run in your web browser. You code, run, and deploy your application from a single tab. They are *perfect for beginners* because there is zero setup required. You just sign up and start building. The computer, the software, the AI, it's all managed for you. This removes a major barrier to entry and lets you focus immediately on creating.</p>
+                                            <p className="text-sm text-muted-foreground">Examples: <strong>Replit, Firebase Studio, Lovable.dev.</strong><br/><br/>These all in one platforms run in your browser. They require zero setup, making them perfect for beginners. You sign up and start building immediately, letting you focus on creating instead of configuring.</p>
                                         </CardContent>
                                     </Card>
                                     <Card>
@@ -305,17 +288,16 @@ export default function VibeCodingCoursePage() {
                                             <CardTitle className="text-lg font-semibold">Local IDEs (Your Garage Workshop)</CardTitle>
                                         </CardHeader>
                                         <CardContent>
-                                             <p className="text-sm text-muted-foreground">Examples: <strong>VS Code, Cursor, Claude Code CLI.</strong><br/><br/>This is software you install and run on your own computer. It gives you more control, works offline, and is preferred by many professionals for its power and customization. However, it requires some initial setup (installing tools like Node.js and Git), which can be a small hurdle for absolute beginners. This path gives you ultimate power but requires a bit more responsibility in managing your environment.</p>
+                                             <p className="text-sm text-muted-foreground">Examples: <strong>Cursor, VS Code with Gemini.</strong><br/><br/>This is software you install on your computer. It gives you more control and is preferred by many professionals. It requires some initial setup but offers ultimate power and customization. This course recommends starting with a Cloud IDE.</p>
                                         </CardContent>
                                     </Card>
                                 </div>
-                                <p>For this course, we'll focus on examples from both worlds, but we highly recommend starting with a Cloud IDE like Replit or Lovable.dev to get a feel for the workflow without getting bogged down in setup.</p>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
-                             <AccordionTrigger className="text-lg">2.2 A Tour of Your Options</AccordionTrigger>
+                             <AccordionTrigger className="text-lg">A Tour of Your Options</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>Let's look at some of the best tools available today. Each has a different "vibe" and is suited for different kinds of projects. Understanding their strengths will help you pick the right one for your idea.</p>
+                                <p>Let us look at some of the best tools available. Each has a different 'vibe' and is suited for different kinds of projects.</p>
                                 
                                 <Card className="my-6">
                                     <CardHeader>
@@ -324,63 +306,36 @@ export default function VibeCodingCoursePage() {
                                      <CardContent className="flex flex-col sm:flex-row items-start gap-4">
                                          <Image src="https://picsum.photos/seed/firebase/200/120" alt="Firebase Studio interface" width={200} height={120} className="rounded-md m-0 flex-shrink-0" data-ai-hint="cloud dashboard" />
                                         <div>
-                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Building robust, production-ready applications that need to handle millions of users and integrate with Google's ecosystem.</h5>
-                                            <p className="text-sm text-muted-foreground"><strong>Workflow:</strong> Firebase Studio offers a unique and safe Vibe Coding workflow. Instead of applying changes directly, it first generates a **"Blueprint"** (a detailed plan of all file changes) that you review and approve. This gives you maximum control and prevents the AI from making unwanted changes. It's like having an architect show you the blueprints before the construction crew starts working.</p>
-                                            <p className="text-sm text-muted-foreground"><strong>Deployment:</strong> It deploys to Google Cloud, providing enterprise-grade security, scalability, and performance automatically. This makes it ideal for projects that you intend to grow into serious businesses that need to be reliable and fast from day one.</p>
+                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Building robust, production ready applications that need to handle millions of users.</h5>
+                                            <p className="text-sm text-muted-foreground"><strong>Workflow:</strong> Firebase Studio generates a "Blueprint" (a detailed plan of all file changes) that you review and approve. This gives you maximum control and prevents the AI from making unwanted changes. It deploys to Google Cloud, providing enterprise grade security and scalability automatically.</p>
                                         </div>
                                     </CardContent>
                                 </Card>
 
                                 <Card className="my-6">
                                     <CardHeader>
-                                        <CardTitle>Lovable.dev: The "Magic Wand" for Visual Apps</CardTitle>
+                                        <CardTitle>Lovable.dev: The Visual App Builder</CardTitle>
                                     </CardHeader>
                                     <CardContent className="flex flex-col sm:flex-row items-start gap-4">
                                         <Image src="https://picsum.photos/seed/lovable/200/120" alt="Lovable.dev interface" width={200} height={120} className="rounded-md m-0 flex-shrink-0" data-ai-hint="dashboard interface" />
                                         <div>
-                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Beautiful, visual web apps (Dashboards, SaaS, Consumer apps).</h5>
+                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Beautiful, visual web apps like dashboards and SaaS products.</h5>
                                             <p className="text-sm text-muted-foreground">
-                                              <strong>How it works:</strong> It's a "conversational" development environment. You chat with the AI, and it visually paints the user interface in real-time. It feels like a "No-Code" tool like Webflow, but it produces high-quality React code that you can own and export. It's incredibly satisfying for visual thinkers and designers who want to see their ideas come to life instantly.
+                                              <strong>How it works:</strong> You chat with the AI, and it visually paints the user interface in real time. It feels like a no code tool, but it produces high quality React code you can own. It connects seamlessly with <strong>Supabase</strong> to handle user logins and data with simple prompts.
                                             </p>
-                                            <p className="text-sm text-muted-foreground"><strong>Key Integration:</strong> It connects seamlessly with <strong>Supabase</strong> (a user-friendly database) to handle user logins, save data, and store files with simple text prompts like, "Add user login with Google."</p>
                                         </div>
                                     </CardContent>
                                 </Card>
 
                                 <Card className="my-6">
                                     <CardHeader>
-                                        <CardTitle>Replit: The "Builder's Workshop" for Logic-Heavy Apps</CardTitle>
+                                        <CardTitle>Replit: The All-in-One Workshop</CardTitle>
                                     </CardHeader>
-                                     <CardContent className="flex flex-col sm:flex-row items-start gap-4">
+                                     <CardContent className="flex flex-col smm:flex-row items-start gap-4">
                                         <Image src="https://picsum.photos/seed/replit/200/120" alt="Replit interface" width={200} height={120} className="rounded-md m-0 flex-shrink-0" data-ai-hint="code editor" />
                                         <div>
-                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Logic-heavy apps, bots, backend services, and learning any programming language.</h5>
-                                            <p className="text-sm text-muted-foreground"><strong>How it works:</strong> Replit gives you a full computer in the cloud. You get a code editor, a command-line terminal, and a live preview all in one browser tab. Its AI capabilities are powerful for generating entire projects from scratch.</p>
-                                            <p className="text-sm text-muted-foreground"><strong>Key Features:</strong>
-                                                <ul className="list-disc pl-5">
-                                                    <li><strong>Agent:</strong> Can build an entire project structure (all the files and folders) from a single, detailed prompt.</li>
-                                                    <li><strong>Assistant:</strong> An AI pair programmer inside the editor that helps you edit specific files, write functions, and fix bugs.</li>
-                                                    <li><strong>Deployment:</strong> One-click publishing to a live URL that you can share with anyone.</li>
-                                                </ul>
-                                            </p>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-
-                                <Card className="my-6">
-                                     <CardHeader>
-                                        <CardTitle>Cursor & Claude Code: The Professional's Command Center</CardTitle>
-                                    </CardHeader>
-                                     <CardContent className="flex flex-col sm:flex-row items-start gap-4">
-                                        <Image src="https://picsum.photos/seed/claude/200/120" alt="Cursor editor interface" width={200} height={120} className="rounded-md m-0 flex-shrink-0" data-ai-hint="dark code editor" />
-                                        <div>
-                                           <h5 className="mt-0 font-semibold text-foreground">Best For: Professionals who want maximum control and work from their local computer.</h5>
-                                           <p className="text-sm text-muted-foreground"><strong>How they work:</strong>
-                                                <ul className="list-disc pl-5">
-                                                    <li><strong>Cursor</strong> is a modified version of VS Code (the most popular code editor in the world) with deeply integrated AI. You can highlight any piece of code and ask the AI to refactor it, debug it, or explain it. It can also read your entire project for context, making it very powerful for working on existing codebases.</li>
-                                                    <li><strong>Claude Code</strong> is a command-line tool. You interact with it in your terminal. It's less visual but extremely powerful because it reads your entire project folder to understand the full context, allowing it to make intelligent, project-wide changes. You can give it instructions like `claude > create a new React component for a user profile card` and it will create the file with the necessary code, following the patterns it sees elsewhere in your project.</li>
-                                                </ul>
-                                           </p>
+                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Logic heavy apps, bots, backend services, and learning any programming language.</h5>
+                                            <p className="text-sm text-muted-foreground"><strong>How it works:</strong> Replit gives you a full computer in the cloud with a code editor, terminal, and live preview. Its AI can generate entire projects from a single, detailed prompt and offers one click deployment to a live URL.</p>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -398,54 +353,41 @@ export default function VibeCodingCoursePage() {
                         </div>
                         <div>
                             <CardDescription>Module 3</CardDescription>
-                            <CardTitle className="text-2xl">The Art of Prompting (The PRD)</CardTitle>
+                            <CardTitle className="text-2xl">The Art of the Prompt</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground pt-2">Learn to write the "documents" that guide the AI. In Vibe Coding, the quality of your prompt determines the quality of your product. This is the single most important skill to master. This isn't about "prompt hacks"; it's about structured communication.</p>
+                    <p className="text-muted-foreground pt-2">In Vibe Coding, the quality of your prompt determines the quality of your product. This is not about 'prompt hacks' it is about structured communication. This module will teach you how to write the 'documents' that guide the AI, turning you into a master communicator and an effective director of your AI partner.</p>
                 </CardHeader>
                  <CardContent className="p-6">
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-lg">3.1 The PRD (Product Requirements Document)</AccordionTrigger>
+                            <AccordionTrigger className="text-lg">The PRD (Product Requirements Document)</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>Never start a project with an empty chat box. You need a plan. In the product world, this is called a PRD. For us, it's a simple text file that tells the AI exactly what to build. It's your architectural blueprint, and it's essential for getting a good result. A vague idea leads to a vague and messy application.</p>
+                                <p>Never start a project with an empty chat box. You need a plan. In product management, this is called a PRD. For us, it is a simple text file that tells the AI exactly what to build. It is your architectural blueprint. A vague idea leads to a vague app.</p>
                                 <ul>
-                                  <li><strong>Why it's critical:</strong> The saying is "Garbage in, garbage out." If your prompt is vague ("make a cool app"), your app will be a generic, useless mess. A PRD forces you to clarify your own thinking before you even start "coding." The act of writing down your plan is half the work.</li>
-                                  <li><strong>How to Generate One (The Meta-Skill):</strong> You don't have to write it from scratch! You can use an AI to help you create the plan for your *other* AI. This is a common and powerful workflow that professionals use. Prompt another AI like ChatGPT, Gemini, or Claude:
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">"You are an expert product manager. I want to build a [Recipe App for users with food allergies]. Your job is to interview me to create a detailed Product Requirements Document (PRD). Ask me clarifying questions about features, user roles, data models, and design to ensure the requirements are complete and unambiguous. Start by asking me the first question."</blockquote>
-                                    The AI will then guide you through the process, forcing you to think through all the details you might have missed. It will help you build the perfect blueprint for your building AI, making the whole process smoother and more predictable.
+                                  <li><strong>Why it's critical:</strong> The saying is "Garbage in, garbage out." A PRD forces you to clarify your own thinking before you start "coding." The act of writing down your plan is half the work.</li>
+                                  <li><strong>How to Generate One (The Meta Skill):</strong> You can use an AI to help you create the plan for your other AI. Prompt ChatGPT or Gemini:
+                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">"You are an expert product manager. I want to build a [Recipe App for users with food allergies]. Interview me to create a detailed Product Requirements Document (PRD). Ask me clarifying questions about features, user roles, data models, and design."</blockquote>
+                                    The AI will then guide you, forcing you to think through all the details.
                                   </li>
                                 </ul>
                             </AccordionContent>
                         </AccordionItem>
                          <AccordionItem value="item-2">
-                             <AccordionTrigger className="text-lg">3.2 The Perfect Prompt Structure (GCES Framework)</AccordionTrigger>
+                             <AccordionTrigger className="text-lg">The Iterative Loop: Your Conversation with the AI</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>When you're ready to prompt your coding tool (like Replit or Firebase Studio), use a structured approach for maximum clarity. A great model to use is the GCES framework: Goal, Context, Expectations, Source. This ensures you provide all the necessary information for the AI to succeed.</p>
-                                <div className="space-y-4 my-6">
-                                    <p><strong>1. Goal:</strong> What, specifically, do you want the AI to do? Be direct and action-oriented. Start with a verb. (e.g., "Create the main dashboard page for my recipe app.") This tells the AI its primary objective.</p>
-                                    <p><strong>2. Context:</strong> What does the AI need to know? Who is the user? What is the purpose of this feature? This helps the AI make better decisions about tone, complexity, and style. (e.g., "The target audience is busy parents who need quick, reliable meal ideas. The app should feel calming and simple, not overwhelming.")</p>
-                                    <p><strong>3. Expectations:</strong> What should the final output look like? Define the constraints and guidelines. Be as specific as possible here. This is where you set the "vibe." (e.g., "Use a clean, minimalist design. Use the pre-built 'Card' and 'Button' components from our library. The primary brand color should be a calming, earthy green (#6B8E23). Do not use any paid fonts. The app must be fully responsive and work perfectly on mobile devices.")</p>
-                                    <p><strong>4. Source:</strong> Can you provide an example? This is the most powerful part of the prompt. AIs are excellent pattern matchers. Giving them a concrete example is far more effective than describing something abstractly. (e.g., "For the layout and feel, I'm inspired by the website for 'Stripe.com'. Use that as a visual reference for spacing, fonts, and the overall aesthetic." You can even provide screenshots to some tools).</p>
-                                </div>
-                                <p>Using the GCES framework consistently will dramatically improve the quality of the AI's first draft, saving you significant time on refinements.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="item-3">
-                             <AccordionTrigger className="text-lg">3.3 The Iterative Loop: Your Conversation with the AI</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>Vibe coding is not a one-shot command; it's a conversation. Great products are built through iteration. You must embrace this loop. It's like sculpting: you start with a block of stone and slowly chip away until you have a masterpiece. No one gets it perfect on the first try.</p>
+                                <p>Vibe coding is not a one shot command; it is a conversation. Great products are built through iteration. It is like sculpting: you start with a block and slowly chip away. No one gets it perfect on the first try.</p>
                                 <ol className="my-6 space-y-4">
-                                  <li><strong>1. Prompt:</strong> Give your clear, structured instruction using the GCES framework.
+                                  <li><strong>1. Prompt:</strong> Give your clear, structured instruction.
                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Build the login page with email and password fields, plus a 'Login' button. Use our brand's primary blue for the button."</blockquote>
                                   </li>
-                                  <li><strong>2. Review:</strong> The AI generates the page. It's functional. You look at it and think, "Okay, the button is there, but it's too small and the color is a bit too bright. It doesn't match our calm vibe." This is your critical judgment at work.</li>
-                                  <li><strong>3. Refine:</strong> You provide specific, actionable feedback in your next prompt. Don't say "it's wrong." Say *what* to change. Be precise.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"The login button is a good start, but let's refine it. Make it 20% larger and use a slightly darker shade of blue (#4A90E2). Also, add a 'Forgot Password?' link directly below it in a smaller, gray font."</blockquote>
+                                  <li><strong>2. Review:</strong> The AI generates the page. It is functional. You look at it and think, "The button is too small and the color is too bright."</li>
+                                  <li><strong>3. Refine:</strong> You provide specific, actionable feedback. Do not say "it is wrong." Say what to change.
+                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Make the login button 20% larger and use a darker shade of blue (#4A90E2). Add a 'Forgot Password?' link below it."</blockquote>
                                   </li>
-                                  <li><strong>4. Repeat:</strong> Continue this cycle of prompting and refining. Each loop gets you closer to your perfect product. This is where the "vibe" is shaped, in the small details and adjustments. Don't be afraid to go through 5, 10, or 20 iterations on a single component. That's not failure; that's the creative process in action.</li>
+                                  <li><strong>4. Repeat:</strong> Continue this cycle. Each loop gets you closer to your perfect product. This is not failure; it is the creative process.</li>
                                 </ol>
-                                <p>Embracing this loop is the key to creating something truly great. It’s a dance between your vision and the AI’s execution, and your job is to lead the dance.</p>
+                                <p>Embracing this loop is the key to creating something truly great. It’s a dance between your vision and the AI’s execution, and your job is to lead.</p>
                             </AccordionContent>
                         </AccordionItem>
                      </Accordion>
@@ -460,66 +402,28 @@ export default function VibeCodingCoursePage() {
                         </div>
                         <div>
                             <CardDescription>Module 4</CardDescription>
-                            <CardTitle className="text-2xl">Lab – Building a "Healthy Recipe Generator"</CardTitle>
+                            <CardTitle className="text-2xl">Lab: Building a "Startup Name Generator"</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground pt-2">Apply your knowledge to build a real, functional web application. We'll walk through examples using different tools to show how the core concepts of Vibe Coding apply everywhere. This is where theory meets practice.</p>
+                    <p className="text-muted-foreground pt-2">It is time to apply your knowledge and build a real, functional web application. We will walk through building a "Startup Name Generator" from a single prompt, refining it, and deploying it. This is where theory meets practice, and you'll create something you can actually share.</p>
                 </CardHeader>
                 <CardContent className="p-6">
                      <Accordion type="single" collapsible className="w-full">
-                        <AccordionItem value="item-1">
-                             <AccordionTrigger className="text-lg">Project Overview</AccordionTrigger>
+                         <AccordionItem value="item-1">
+                            <AccordionTrigger className="text-lg">Building with Firebase Studio</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>Our goal is to build a simple but useful app where a user can enter ingredients they have and any allergies to avoid, and get a delicious recipe back from an AI. We'll explore two different paths to building this, one visual-first and one code-first, to show how the principles apply across different tools.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="item-2">
-                            <AccordionTrigger className="text-lg">Path 1: The Visual-First Method (using Lovable.dev)</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>This path is great for beginners and visual thinkers who want to see their app come to life in real-time. It’s the most direct way to experience the "vibe" of creation.</p>
+                                <p>We will use Firebase Studio for this project because it is one of the fastest ways to go from an idea to a live, scalable application. It handles the backend, frontend, and deployment in one place.</p>
                                 <ol className="space-y-4">
-                                  <li>Go to <strong>Lovable.dev</strong> and sign up for a free account. Start a new project.</li>
-                                  <li><strong>Initial Prompt (Your PRD):</strong> In the chat interface, paste in a clear and detailed PRD based on our GCES framework. This single prompt will generate the entire initial application.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2"><strong>Goal:</strong> Build a healthy recipe generating app. <br/><strong>Context:</strong> The main page should have a form with a text area for 'Available Ingredients', another for 'Allergies to Avoid', and a dropdown for 'Preferred Cuisine' (e.g., 'Italian', 'Mexican', 'Any'). <br/><strong>Expectations:</strong> When the user clicks a 'Generate Recipe' button, the app should display the result in a card below. The card should have a title for the recipe name, a beautiful image, and the recipe steps. Use a clean and modern design with large, readable fonts. <br/><strong>Source:</strong> For the overall aesthetic, aim for something similar to the calm and clean feel of the Headspace app.</blockquote>
+                                  <li>Go to <strong>Firebase Studio</strong> and start a new project.</li>
+                                  <li><strong>Initial Prompt (The Big Idea):</strong> In the main prompt area, describe the entire application you want to build. This is where your PRD pays off.
+                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Create a 'startup name generator' app. It needs a text box where I can enter an industry, and a 'Generate' button. When I click the button, it should show a list of 10 creative names. The design should be modern and professional, with a dark gray background and bright green text for a 'techy' feel. The app should be fully responsive."</blockquote>
                                   </li>
-                                  <li><strong>Refining the UI (The "Vibe"):</strong> The AI will generate a functional but probably plain interface. Now, we add the "vibe." This is a conversational process of refinement.
-                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"The current design is too basic. Let's refine it. Make the background an off-white color (#F0F4F8). For the recipe results, display each recipe in a 'Card' component with soft shadows. The headings should use the 'Lora' font, and body text should use 'Inter'. Make the primary 'Generate' button a midnight blue (#2C3E50) and give it rounded corners. It should feel inviting and trustworthy."</blockquote>
+                                  <li><strong>Review the Blueprint:</strong> Firebase Studio will generate a blueprint for you to review. This is its plan. You can provide feedback here before any code is written. Example feedback: <br/><blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"This looks good, but add a 'Copy to Clipboard' button next to each generated name."</blockquote></li>
+                                  <li><strong>Generate and Refine:</strong> Once you approve the blueprint, the AI generates the full application. Now you can use the chat to refine it.
+                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"The generated names are too generic. Modify the backend prompt to the AI to be more creative and witty. Tell it to 'think like a Silicon Valley branding expert.' Also, make the loading spinner more subtle."</blockquote>
                                   </li>
-                                  <li><strong>Adding a Backend (Supabase):</strong> Let's add user accounts so they can save their favorite recipes. Lovable makes this incredibly simple.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"This is great. Now, integrate user authentication using Supabase. Add 'Login' and 'Sign Up' buttons to the header. The login page should support both email/password and Google sign-in. Once a user is logged in, add a small heart icon to each recipe card that allows them to save it to their profile."</blockquote>
-                                    Lovable will automatically write the code to create the `users` and `saved_recipes` tables in Supabase and connect them. You just described what you wanted.
-                                  </li>
-                                   <li><strong>Connecting the AI Logic (OpenAI):</strong> Now for the magic.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Let's wire up the core logic. Modify the 'Generate Recipe' button's logic. When clicked, take the user's inputs (ingredients, allergies, cuisine) and send them to the OpenAI GPT-4o model via an API call. The prompt to OpenAI should be: 'You are a master chef specializing in healthy and delicious meals. Create a recipe based on these constraints...'. Then, parse the response from OpenAI and display the recipe title, steps, and a generated image in the results card on the page."</blockquote>
-                                  </li>
-                                  <li><strong>Publishing:</strong> In the Lovable dashboard, click the <strong>Publish</strong> button. You get a live URL instantly. You can send this to your friends and it will work. Congratulations, you've just built and deployed a full-stack AI application.</li>
+                                   <li><strong>Deploy to the World:</strong> In the Firebase Studio dashboard, click the <strong>Publish</strong> button. Your app is now live on the internet, running on Google's scalable infrastructure. Congratulations, you have just built and deployed a full stack AI application.</li>
                                 </ol>
-                            </AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="item-3">
-                            <AccordionTrigger className="text-lg">Path 2: The Code-First Method (using Replit or a Local Editor)</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>This path is closer to traditional development and is great for those who want more control over the file structure from the start. It's how you might work on an existing project.</p>
-                                <ol className="space-y-4">
-                                  <li>Open <strong>Replit</strong> (or your local editor like Cursor/VS Code).</li>
-                                  <li><strong>Initial Prompt (Project Scaffolding):</strong> You are more explicit about the technical stack here.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"/init - Create a new Next.js 14 application using TypeScript and Tailwind CSS. Set up a basic project structure with a `components` folder for UI elements and a `lib` folder for our AI logic. Install the `shadcn-ui` library for our components."</blockquote>
-                                  </li>
-                                  <li><strong>Build Component by Component:</strong> Don't build the whole page at once. Build it in pieces. This is a more robust and testable approach.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Create a new component named `RecipeForm.tsx` in the `components` folder. It should contain a form with a text area for 'ingredients', a text area for 'allergies', and a submit button. Use ShadCN UI components for the form elements."</blockquote>
-                                    You would then import this component onto your main page and test it in isolation.
-                                  </li>
-                                  <li><strong>Create the AI Logic:</strong>
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"In the `lib` folder, create a new file `recipe.ts`. It should export an async function called `generateRecipe` that takes the form data as an argument. Inside this function, use the OpenAI Node.js library to call the GPT-4o API with the user's input. The function should return the recipe as a JSON object."</blockquote>
-                                  </li>
-                                  <li><strong>Connect Frontend to Backend (The Final Step):</strong>
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"In the main page file, import the `generateRecipe` function and the `RecipeForm` component. When the form is submitted, call the `generateRecipe` function with the form data. Take the returned recipe and display it in a new `RecipeCard` component below the form. Make sure to handle loading states (show a spinner while the AI is thinking) and error states (show a friendly message if something goes wrong)."</blockquote>
-                                  </li>
-                                   <li><strong>Publishing:</strong> With Replit, you click "Deploy." With a local setup, you connect your project to a service like Vercel or Netlify.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Generate a `vercel.json` configuration file to deploy this Next.js app. Set the appropriate build commands and output directory."</blockquote>
-                                  </li>
-                                </ol>
-                                <p>Notice the difference? The first path is visual and iterative, like painting. The second is structured and file-oriented, like building with Lego blocks. Both are valid ways to "Vibe Code," and the one you choose will depend on your project and personal style.</p>
                             </AccordionContent>
                         </AccordionItem>
                      </Accordion>
@@ -534,49 +438,46 @@ export default function VibeCodingCoursePage() {
                         </div>
                         <div>
                             <CardDescription>Module 5</CardDescription>
-                            <CardTitle className="text-2xl">Security, Monetization, & Your Career</CardTitle>
+                            <CardTitle className="text-2xl">From Project to Professional Product</CardTitle>
                         </div>
                     </div>
-                     <p className="text-muted-foreground pt-2">Learn how to turn your Vibe Coding hobby into a secure product or a viable career path. Building is the first step; creating sustainable value is the goal. This module is about moving from prototype to professional.</p>
+                     <p className="text-muted-foreground pt-2">Building is the first step; creating sustainable value is the goal. This module covers how to turn your vibe coded project into a secure, monetizable product and how this new skill reshapes your career path. This is about moving from prototype to professional.</p>
                 </CardHeader>
                  <CardContent className="p-6">
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-lg">5.1 Security: The `.cursorrules` File and AI Guardrails</AccordionTrigger>
+                            <AccordionTrigger className="text-lg">Security: Your Responsibility as Director</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>Vibe coding moves incredibly fast, which is amazing. But speed can introduce security gaps if you're not careful. The AI is a powerful tool, but it's a junior developer; it doesn't automatically know your security requirements. You must be the senior developer who sets the rules. This is a non-negotiable part of professional Vibe Coding.</p>
+                                <p>Speed can introduce security gaps. The AI is a junior developer; it does not automatically know your security requirements. You must be the senior developer who sets the rules. This is a non negotiable part of professional vibe coding.</p>
                                 <ul>
-                                  <li><strong>The Risk:</strong> An AI might accidentally hardcode your private API keys directly into the public-facing code (a huge security breach). It might generate a login function with weak password requirements. It could create a database query that is vulnerable to attack (known as SQL injection). It doesn't know what's sensitive unless you tell it.</li>
-                                  <li><strong>The Fix: The Rule File.</strong> You must create a rule file. Different tools have different names for it (`.cursorrules`, `guardrails.md`, or the `CLAUDE.md` file). This file is automatically read by the AI before every single action. It is your permanent set of instructions that the AI cannot ignore. Think of it as setting company policy for your AI employee.</li>
-                                  <li><strong>What to write in your rule file (Your "Company Policy"):</strong>
+                                  <li><strong>The Risk:</strong> An AI might hardcode your private API keys into public code or create a login function with weak password requirements. It does not know what is sensitive unless you tell it.</li>
+                                  <li><strong>The Fix: The Rule File.</strong> You must create a rule file (e.g., `.cursorrules` or `CLAUDE.md`). This file is your permanent set of instructions that the AI cannot ignore.
                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
-                                    <strong>Rule #1 (Secrets):</strong> Always use environment variables for API keys, database URLs, and other secrets. Never hardcode secrets directly in the source code. Refer to them using `process.env.VARIABLE_NAME`. If you see a hardcoded secret, stop and ask me to fix it. <br/><br/>
-                                    <strong>Rule #2 (API Abuse):</strong> All public-facing API endpoints must have rate limiting to prevent abuse and denial-of-service attacks. Use a library like `express-rate-limit`. <br/><br/>
-                                    <strong>Rule #3 (Passwords):</strong> All user passwords must be securely hashed using a strong, modern algorithm like `bcrypt` before being stored in the database. Never, under any circumstances, store passwords in plain text.
+                                    <strong>Rule #1 (Secrets):</strong> Always use environment variables for API keys. Never hardcode secrets. Refer to them using `process.env.VARIABLE_NAME`.<br/><br/>
+                                    <strong>Rule #2 (Passwords):</strong> All user passwords must be securely hashed using `bcrypt` before being stored. Never store passwords in plain text.
                                     </blockquote>
                                   </li>
                                 </ul>
-                                <p>By setting these guardrails up front, you empower the AI to build safely and responsibly on your behalf, turning it from a potential liability into a trusted partner.</p>
+                                <p>Setting these guardrails up front empowers the AI to build safely on your behalf, turning it from a potential liability into a trusted partner.</p>
                             </AccordionContent>
                         </AccordionItem>
                          <AccordionItem value="item-2">
-                             <AccordionTrigger className="text-lg">5.2 Monetization: From Project to Profit</AccordionTrigger>
+                             <AccordionTrigger className="text-lg">Monetization: From Project to Profit</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>So you've built a cool app. How do you turn it into a business? Vibe coding makes this faster than ever by dramatically lowering the cost and time of experimentation. You can test ideas in a weekend that used to take months and a full team.</p>
+                                <p>How do you turn your cool app into a business? Vibe coding makes this faster than ever by dramatically lowering the cost of experimentation. You can test ideas in a weekend that used to take months.</p>
                                 <ul>
-                                  <li><strong>SaaS (Software as a Service):</strong> This is the most common path. Build a niche tool that solves a specific problem for a specific group of people, and charge a monthly subscription fee. The key is to be specific. Don't try to build the next Facebook. Instead, use your recipe generator skills to build a "Weekly Meal Planner for Vegan Athletes" and charge $10/month. Find a small, painful problem and solve it beautifully. The internet is large enough that even a small niche can be a very profitable business.</li>
-                                  <li><strong>Example from the Real World:</strong> Peter Levels, a well-known indie developer, vibe-coded an AI-powered interior design app and generated over $1 million in revenue in its first month. He didn't spend six months writing code; he spent his time understanding what users wanted, marketing the product, and letting the AI handle the implementation. Vibe Coding enabled him to move at the speed of the market.</li>
-                                  <li><strong>Freelancing and Consulting:</strong> Your new superpower is speed. You can now use tools like Lovable and Replit to build full-stack applications for clients in a fraction of the time it would take a traditional developer. You can charge a premium for your speed and deliver a working prototype in days, not months. This is incredibly valuable to businesses that want to test new ideas quickly without a massive upfront investment.</li>
+                                  <li><strong>SaaS (Software as a Service):</strong> This is the most common path. Build a niche tool that solves a specific problem and charge a monthly subscription. Do not try to build the next Facebook. Instead, build a "Weekly Meal Planner for Vegan Athletes" and charge $10/month.</li>
+                                  <li><strong>Freelancing and Consulting:</strong> Your new superpower is speed. You can build full stack applications for clients in a fraction of the time. You can charge a premium for your speed and deliver a working prototype in days, not months. This is incredibly valuable to businesses.</li>
                                 </ul>
-                                <p>The barrier to entry for entrepreneurship has never been lower. With Vibe Coding, a single person with a great idea and clear communication skills can build a profitable business from their bedroom.</p>
+                                <p>The barrier to entry for entrepreneurship has never been lower. With Vibe Coding, a single person with a great idea can build a profitable business from their bedroom.</p>
                             </AccordionContent>
                         </AccordionItem>
                          <AccordionItem value="item-3">
-                            <AccordionTrigger className="text-lg">5.3 The "Product Engineer": Your New Career Title</AccordionTrigger>
+                            <AccordionTrigger className="text-lg">The "Product Engineer": Your New Career</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base pt-2">
-                                <p>By mastering Vibe Coding, you are becoming a <strong>"Product Engineer."</strong> This is a new, highly valuable hybrid role that sits at the intersection of product management, design, and engineering. It's one of the most sought-after roles in modern tech companies because it bridges the gap between vision and execution.</p>
+                                <p>By mastering Vibe Coding, you are becoming a <strong>"Product Engineer."</strong> This is a new, highly valuable hybrid role that sits at the intersection of product management, design, and engineering. It is one of the most sought after roles in modern tech companies.</p>
                                 <div className="my-6">
-                                    <h4 className="font-semibold text-foreground">The Old Skill Stack vs. The New Skill Stack</h4>
+                                    <h4 className="font-semibold text-foreground">The Skill Stack Shift</h4>
                                     <div className="overflow-x-auto">
                                         <table className="w-full mt-2">
                                             <thead>
@@ -586,34 +487,22 @@ export default function VibeCodingCoursePage() {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr className="border-b">
-                                                    <td className="p-2">Syntax Mastery</td>
-                                                    <td className="p-2">Problem Decomposition</td>
-                                                </tr>
-                                                <tr className="border-b">
-                                                    <td className="p-2">Algorithm Knowledge</td>
-                                                    <td className="p-2">Prompt Engineering</td>
-                                                </tr>
-                                                <tr className="border-b">
-                                                    <td className="p-2">Framework Expertise</td>
-                                                    <td className="p-2">System Thinking</td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="p-2">Database Design</td>
-                                                    <td className="p-2">User Empathy & Quality Judgment</td>
-                                                </tr>
+                                                <tr className="border-b"><td className="p-2">Syntax Mastery</td><td className="p-2">Problem Decomposition</td></tr>
+                                                <tr className="border-b"><td className="p-2">Algorithm Knowledge</td><td className="p-2">Prompt Engineering</td></tr>
+                                                <tr className="border-b"><td className="p-2">Framework Expertise</td><td className="p-2">System Thinking</td></tr>
+                                                <tr><td className="p-2">Database Design</td><td className="p-2">User Empathy & Quality Judgment</td></tr>
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
-                                <p>Your value is no longer in your ability to type code quickly or memorize syntax. Your value is in your ability to <strong>identify valuable problems, design elegant solutions, and guide an AI to implement them effectively, securely, and beautifully.</strong> You are the architect, the visionary, and the project manager all in one. The AI is your team of infinitely scalable junior developers, ready to execute your vision 24/7. This is the future of building, and by completing this course, you're now a part of it.</p>
+                                <p>Your value is no longer in your ability to type code. Your value is in your ability to <strong>identify valuable problems, design elegant solutions, and guide an AI to implement them effectively.</strong> You are the architect and the visionary. The AI is your team of infinitely scalable junior developers. This is the future of building.</p>
                             </AccordionContent>
                         </AccordionItem>
                      </Accordion>
                 </CardContent>
             </Card>
 
-             <section id="references" className="py-16">
+            <section id="references" className="py-16">
                 <div className="text-center">
                     <BookOpen className="mx-auto h-12 w-12 text-muted-foreground" />
                     <h2 className="mt-4 text-3xl font-semibold tracking-tight">Learn More & References</h2>

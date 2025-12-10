@@ -22,8 +22,8 @@ import { AsSeenIn } from '@/components/as-seen-in';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
-    title: 'Full Profile of Vedang Vatsa (FRSA) | AI & Web3 Innovator',
-    description: 'Explore the detailed profile of Vedang Vatsa, a community founder (100k+ members), thought leader in AI & Web3, and Fellow of the Royal Society of Arts.',
+    title: 'Full Profile of Vedang Vatsa | AI & Web3 Innovator',
+    description: 'Here is the detailed profile of Vedang Vatsa, a community founder (100k+ members) and thought leader in AI & Web3.',
     alternates: {
       canonical: '/profile',
     },
@@ -45,10 +45,7 @@ const personSchema = {
       '@type': 'CollegeOrUniversity',
       name: 'Indian Institute of Technology, Kanpur',
     },
-     {
-      '@type': 'CollegeOrUniversity',
-      name: 'Indian Institute of Management Indore',
-    }
+    
   ],
   sameAs: [
     'https://linkedin.com/in/vedangvatsa',
@@ -87,7 +84,7 @@ export default function ProfilePage() {
             
             <h1 className="mt-4 text-4xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
             <p className="mx-auto mt-2 max-w-3xl text-sm text-muted-foreground">
-             Computer Engineer, MBA, Chartered Engineer | Young Researcher 2020 Awardee (22 publications) & Young Achiever 2020-21 Awardee
+             Computer Engineer, MBA, Chartered Engineer | Young Researcher 2020 & Young Achiever 2020-21 Awardee
             </p>
             <div className="mt-4 flex justify-center items-center space-x-4 flex-wrap gap-y-2">
               <Link
