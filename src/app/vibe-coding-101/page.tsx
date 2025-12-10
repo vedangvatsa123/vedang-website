@@ -17,6 +17,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import VibeCodingInfographic from './Vibe_coding_infographic_Vedang_Vatsa.webp';
 import VibeCodingModule1 from './Vibe_coding_module1_vedang_vatsa.webp';
 import VibeCodingModule3Image from './Vibe_coding_module3_vedang_vatsa.webp';
+import VibeCodingModule5Image from './Vibe_coding_module5_vedang_vatsa.webp';
 
 
 export const metadata: Metadata = {
@@ -575,6 +576,12 @@ export default function VibeCodingCoursePage() {
                         </div>
                     </div>
                      <p className="text-muted-foreground pt-2">Building is the first step; creating sustainable value is the goal. This module covers how to turn your vibe coded project into a secure, monetizable product and how this new skill reshapes your career path. This is about moving from prototype to professional.</p>
+                    <Image 
+                        src={VibeCodingModule5Image}
+                        alt="Infographic for Module 5 of Vibe Coding course"
+                        className="mt-4 rounded-lg shadow-md w-full"
+                        data-ai-hint="infographic security"
+                    />
                 </CardHeader>
                  <CardContent className="p-6">
                      <Accordion type="single" collapsible className="w-full">
