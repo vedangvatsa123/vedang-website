@@ -10,16 +10,16 @@ import { Header } from '@/components/header';
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
 import { Code, GitBranch, Lightbulb, Bot, MonitorPlay, Palette, Rocket, ShieldCheck, Sigma, Hand, BrainCircuit, Goal, DraftingCompass } from 'lucide-react';
-
+import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Vibe Coding 101: From Beginner to Builder | Vedang Vatsa',
-  description:
-    'A free, comprehensive course on Vibe Coding. Learn the philosophy, tools, and practical steps to build and deploy modern web applications by managing an AI.',
-  alternates: {
-    canonical: '/vibe-coding-101',
-  },
+    title: 'Vibe Coding 101 | A Free Course on Building with AI',
+    description: 'A free, self-paced course on the art of building software by describing what you want, not by writing code line-by-line. Go from beginner to builder by learning to manage an AI partner.',
+    alternates: {
+      canonical: '/vibe-coding-101',
+    },
 };
+
 
 export default function VibeCodingCoursePage() {
   return (
@@ -58,7 +58,7 @@ export default function VibeCodingCoursePage() {
                 
                 <h3>1.1 The Definition: What is Vibe Coding?</h3>
                 <p>
-                  "Vibe Coding" is a term that perfectly captures a massive shift in how we build things. Coined by Andrej Karpathy, a founding member of OpenAI, in early 2025, it describes a new relationship with the machine.
+                  "Vibe Coding" is a term that perfectly captures a massive shift in how we build things. Coined by Andrej Karpathy, a founding member of OpenAI, it describes a new relationship with the machine.
                 </p>
                 <ul>
                   <li>
@@ -148,8 +148,8 @@ export default function VibeCodingCoursePage() {
                 <h3>2.2 The Tools: A Tour of Your Options</h3>
                 
                 <h4>Lovable.dev: The "Magic Wand" for Visual Apps</h4>
-                <div className="flex items-start gap-4 my-4">
-                  <img src="https://picsum.photos/seed/lovable/150/100" alt="Lovable.dev interface" className="rounded-md m-0" data-ai-hint="dashboard interface" />
+                <div className="flex flex-col sm:flex-row items-start gap-4 my-4">
+                  <Image src="https://picsum.photos/seed/lovable/150/100" alt="Lovable.dev interface" width={150} height={100} className="rounded-md m-0" data-ai-hint="dashboard interface" />
                   <div>
                     <h5 className="mt-0">Best For: Beautiful, visual web apps (Dashboards, SaaS, Consumer apps).</h5>
                     <p>
@@ -161,8 +161,8 @@ export default function VibeCodingCoursePage() {
 
 
                 <h4>Replit: The "Builder's Workshop" for Logic-Heavy Apps</h4>
-                 <div className="flex items-start gap-4 my-4">
-                  <img src="https://picsum.photos/seed/replit/150/100" alt="Replit interface" className="rounded-md m-0" data-ai-hint="code editor" />
+                 <div className="flex flex-col sm:flex-row items-start gap-4 my-4">
+                  <Image src="https://picsum.photos/seed/replit/150/100" alt="Replit interface" width={150} height={100} className="rounded-md m-0" data-ai-hint="code editor" />
                   <div>
                     <h5 className="mt-0">Best For: Logic-heavy apps, bots, backend services, and learning any programming language.</h5>
                     <p><strong>How it works:</strong> Replit gives you a full computer in the cloud. You get a code editor, a terminal, and a live preview all in one. Its AI capabilities are powerful for generating entire projects from scratch.</p>
@@ -175,18 +175,18 @@ export default function VibeCodingCoursePage() {
                 </div>
 
                 <h4>Claude Code: The Professional's Command Center</h4>
-                <div className="flex items-start gap-4 my-4">
-                  <img src="https://picsum.photos/seed/claude/150/100" alt="Claude Code in terminal" className="rounded-md m-0" data-ai-hint="terminal command" />
+                <div className="flex flex-col sm:flex-row items-start gap-4 my-4">
+                  <Image src="https://picsum.photos/seed/claude/150/100" alt="Claude Code in terminal" width={150} height={100} className="rounded-md m-0" data-ai-hint="terminal command" />
                   <div>
                     <h5 className="mt-0">Best For: Professionals who want maximum control and work from their local terminal.</h5>
                      <p><strong>How it works:</strong> This is a command-line tool. You interact with it in your terminal. It's less visual but extremely powerful. It reads your entire project folder to understand the full context, allowing it to make intelligent, project-wide changes.</p>
-                     <p>You can give it instructions like `claude > create a new React component for a user profile card` and it will create the file with the necessary code, following the patterns it sees elsewhere in your project. As the guide you shared notes, it excels at structured, step-by-step development.</p>
+                     <p>You can give it instructions like `claude > create a new React component for a user profile card` and it will create the file with the necessary code, following the patterns it sees elsewhere in your project. It excels at structured, step-by-step development.</p>
                   </div>
                 </div>
 
                 <h4>Google Firebase Studio: The Production Scaler</h4>
-                 <div className="flex items-start gap-4 my-4">
-                  <img src="https://picsum.photos/seed/firebase/150/100" alt="Firebase Studio interface" className="rounded-md m-0" data-ai-hint="cloud dashboard" />
+                 <div className="flex flex-col sm:flex-row items-start gap-4 my-4">
+                  <Image src="https://picsum.photos/seed/firebase/150/100" alt="Firebase Studio interface" width={150} height={100} className="rounded-md m-0" data-ai-hint="cloud dashboard" />
                   <div>
                     <h5 className="mt-0">Best For: Building robust, production-ready applications that need to handle millions of users and integrate with Google's ecosystem.</h5>
                     <p><strong>Workflow:</strong> It's a unique Vibe Coding tool that adds a crucial safety step. It generates a <strong>"Blueprint"</strong> (a detailed plan of all file changes) that you review and approve *before* it writes any code. This gives you maximum control and prevents the AI from making unwanted changes. It's like having an architect show you the blueprints before the construction crew starts working.</p>
@@ -195,8 +195,8 @@ export default function VibeCodingCoursePage() {
                 </div>
 
                 <h4>Cursor: The AI-First Code Editor</h4>
-                 <div className="flex items-start gap-4 my-4">
-                  <img src="https://picsum.photos/seed/cursor/150/100" alt="Cursor editor interface" className="rounded-md m-0" data-ai-hint="dark code editor" />
+                 <div className="flex flex-col sm:flex-row items-start gap-4 my-4">
+                  <Image src="https://picsum.photos/seed/cursor/150/100" alt="Cursor editor interface" width={150} height={100} className="rounded-md m-0" data-ai-hint="dark code editor" />
                   <div>
                     <h5 className="mt-0">Best For: Professionals who love VS Code but want best-in-class AI assistance.</h5>
                     <p><strong>How it works:</strong> It's a modified version of VS Code (the most popular code editor in the world) with deeply integrated AI. You can highlight any piece of code and ask the AI to refactor it, debug it, or explain it. It can also generate new code from scratch based on a prompt, and it can read your entire project for context, just like Claude Code.</p>
@@ -204,8 +204,8 @@ export default function VibeCodingCoursePage() {
                 </div>
 
                 <h4>Bolt.new: The Rapid Prototyper</h4>
-                <div className="flex items-start gap-4 my-4">
-                  <img src="https://picsum.photos/seed/bolt/150/100" alt="Bolt.new interface" className="rounded-md m-0" data-ai-hint="futuristic interface" />
+                <div className="flex flex-col sm:flex-row items-start gap-4 my-4">
+                  <Image src="https://picsum.photos/seed/bolt/150/100" alt="Bolt.new interface" width={150} height={100} className="rounded-md m-0" data-ai-hint="futuristic interface" />
                   <div>
                     <h5 className="mt-0">Best For: Instantly generating full-stack prototypes directly in your browser.</h5>
                     <p><strong>Key Feature:</strong> Its major selling point is that it is "self-healing." If it tries to install a software package that has a bug or is incompatible, it reads the error message and automatically tries to fix it itself, such as by installing a different version. This can save you hours of debugging dependency issues.</p>
@@ -353,7 +353,7 @@ export default function VibeCodingCoursePage() {
                     <strong>The Risk:</strong> An AI might accidentally hardcode your private API keys directly into the public-facing code. It might generate a login function with weak password requirements. It could create a database query that is vulnerable to attack.
                   </li>
                   <li>
-                    <strong>The Fix:</strong> You must create a rule file. Different tools have different names for it (`.cursorrules`, `guardrails.md`, or the `CLAUDE.md` file you saw in the Claude Code guide). This file is automatically read by the AI before every single action. It is your permanent set of instructions.
+                    <strong>The Fix:</strong> You must create a rule file. Different tools have different names for it (`.cursorrules`, `guardrails.md`, or the `CLAUDE.md` file). This file is automatically read by the AI before every single action. It is your permanent set of instructions.
                   </li>
                   <li>
                     <strong>What to write in your rule file:</strong>
@@ -395,3 +395,6 @@ export default function VibeCodingCoursePage() {
       <Footer />
     </div>
   );
+}
+
+    
