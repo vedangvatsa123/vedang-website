@@ -64,7 +64,7 @@ export default function AgenticWebCoursePage() {
                     The Agentic Web
                 </h1>
                 <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                    The internet is evolving. It's no longer just a place to find information—it's becoming a platform for autonomous AI agents to get things done. This course demystifies the Agentic Web, where you delegate goals, and AI handles the execution.
+                    The internet is evolving. It's no longer just a place to find information-it's becoming a platform for autonomous AI agents to get things done. This course demystifies the Agentic Web, where you delegate goals, and AI handles the execution.
                 </p>
 
                 <div className="mt-8 flex justify-center items-center gap-4">
@@ -126,7 +126,7 @@ export default function AgenticWebCoursePage() {
                                         <strong>Reasoning & Planning:</strong> The cognitive engine. The agent takes a complex, high-level goal and breaks it down into a sequence of smaller, manageable steps. It can form strategies, anticipate obstacles, and adapt its plan based on new information.
                                     </li>
                                     <li>
-                                        <strong>Action:</strong> The ability to execute its plan. This involves interacting with the web—filling out forms, clicking buttons, calling APIs, sending emails, and even communicating with other agents. This is what separates an agent from a purely informational AI.
+                                        <strong>Action:</strong> The ability to execute its plan. This involves interacting with the web-filling out forms, clicking buttons, calling APIs, sending emails, and even communicating with other agents. This is what separates an agent from a purely informational AI.
                                     </li>
                                     <li>
                                         <strong>Learning:</strong> The capacity to improve over time. An agent can learn from the results of its actions, remember user preferences, and adapt its behavior to become more effective and personalized.
@@ -253,7 +253,7 @@ export default function AgenticWebCoursePage() {
                                   <li><strong>Agent-to-Agent Communication:</strong> How do agents from different developers and platforms collaborate? This requires protocols (like <strong>A2A or Agent-to-Agent Protocol</strong>) that let agents negotiate, share information, and work together on a shared goal.</li>
                                   <li><strong>Agent-to-Human Communication:</strong> How does an agent communicate its progress, ask for clarification, and present results to the user in an understandable way?</li>
                                 </ul>
-                                <p>This dimension is creating the "HTTP for agents"—a universal language that will allow the entire ecosystem of agents and tools to connect and interoperate seamlessly.</p>
+                                <p>This dimension is creating the "HTTP for agents"-a universal language that will allow the entire ecosystem of agents and tools to connect and interoperate seamlessly.</p>
                             </AccordionContent>
                         </AccordionItem>
                          <AccordionItem value="item-3">
