@@ -8,13 +8,11 @@ export type Essay = {
   summary: string;
   url:string;
   slug: string;
+  date: string;
 };
 
 const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
 
-// This function reads the file system to get all essays.
-// It will be re-evaluated on each request in development.
-// A comment to force re-evaluation: 2024-08-01
 function getEssays(): Essay[] {
   if (!fs.existsSync(essaysDirectory)) {
     return [];
@@ -30,13 +28,13 @@ function getEssays(): Essay[] {
     return {
       title: data.title,
       summary: data.summary,
+      date: data.date,
       url: `/${slug}`,
       slug,
     };
   });
 
-  // Sort essays by title in alphabetical order
-  return allEssaysData.sort((a, b) => a.title.localeCompare(b.title));
+  return allEssaysData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export const essays = getEssays();

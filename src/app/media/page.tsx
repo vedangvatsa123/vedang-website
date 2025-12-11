@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MoveUpRight } from 'lucide-react';
+import { AsSeenIn } from '@/components/as-seen-in';
 
 export const metadata: Metadata = {
   title: 'Media Features & Speaking Engagements | Vedang Vatsa',
@@ -15,33 +16,6 @@ export const metadata: Metadata = {
     canonical: '/media',
   },
 };
-
-const asSeenInLogos = [
-    { name: 'Inc42', logo: '/images/press/68296-business-media-company-inc42-startup-marketing.png' },
-    { name: 'KPMG', logo: '/images/press/1718209067639.jpeg' },
-    { name: 'ANI', logo: '/images/press/Ani-logo-black.png' },
-    { name: 'Business Today', logo: '/images/press/bt_business_today_vedang%20vatsa-min%20(1).png' },
-    { name: 'Business Insider', logo: '/images/press/Business_Insider_2023_logo.svg.png' },
-    { name: 'Business Standard', logo: '/images/press/business-standard-logo-2.png' },
-    { name: 'Dainik Bhaskar', logo: '/images/press/Dainik_Bhaskar_Logo.png' },
-    { name: 'Decrypt', logo: '/images/press/Decrypt_logo.svg' },
-    { name: 'ET', logo: '/images/press/et-logo4px.png' },
-    { name: 'IEEE Computer', logo: '/images/press/IEEE_Computer.png' },
-    { name: 'BeInCrypto', logo: '/images/press/image-23.webp' },
-    { name: 'The Print', logo: '/images/press/image-24.webp' },
-    { name: 'OpIndia', logo: '/images/press/image-28.webp' },
-    { name: 'IndiaAI', logo: '/images/press/image-29.webp' },
-    { name: 'Lebigdata', logo: '/images/press/image-32.webp' },
-    { name: 'Cryptonews', logo: '/images/press/image-37.webp' },
-    { name: 'TheNewsCrypto', logo: '/images/press/image-42.webp' },
-    { name: 'NDTVGadgets360', logo: '/images/press/image-48.webp' },
-    { name: 'BritishNewsNetwork', logo: '/images/press/image-58.webp' },
-    { name: 'Yourstory', logo: '/images/press/images.png' },
-    { name: 'Outlook Money', logo: '/images/press/money-logo.png' },
-    { name: 'The Tribune IPRD', logo: '/images/press/The_Tribune_India_IPRD_Indian_PR_Distribution.png' },
-    { name: 'ThePrint', logo: '/images/press/ThePrint_logo.png' },
-    { name: 'Yahoo! Finance', logo: '/images/press/Yahoo!_Finance_logo_2021%20(1).png' },
-];
 
 const mediaMentions = [
   { title: "India's CBI Raids 60 Locations in Crackdown on GainBitcoin Scam", source: 'Decrypt', url: 'https://decrypt.co/307790/indias-cbi-raids-60-locations-in-crackdown-on-gainbitcoin-scam' },
@@ -106,34 +80,34 @@ const mediaMentions = [
 ];
 
 const speakingEngagementImages = [
-  '/images/speaker/Vedang%20-%20speaker1.webp',
-  '/images/speaker/Vedang%20-%20speaker2.webp',
-  '/images/speaker/Vedang%20-%20speaker3.webp',
-  '/images/speaker/Vedang%20-%20speaker4.webp',
-  '/images/speaker/Vedang%20-%20speaker5.webp',
-  '/images/speaker/Vedang%20-%20speaker6.webp',
-  '/images/speaker/Vedang%20-%20speaker7.webp',
-  '/images/speaker/Vedang%20-%20speaker8.webp',
-  '/images/speaker/Vedang%20-%20speaker9.webp',
-  '/images/speaker/Vedang%20-%20speaker10.webp',
-  '/images/speaker/Vedang%20-%20speaker11.webp',
-  '/images/speaker/Vedang%20-%20speaker12.webp',
-  '/images/speaker/Vedang%20-%20speaker13.webp',
-  '/images/speaker/Vedang%20-%20speaker14.webp',
-  '/images/speaker/Vedang%20-%20speaker15.webp',
-  '/images/speaker/Vedang%20-%20speaker16.webp',
-  '/images/speaker/Vedang%20-%20speaker17.webp',
-  '/images/speaker/Vedang%20-%20speaker18.webp',
-  '/images/speaker/Vedang%20-%20speaker19.webp',
-  '/images/speaker/Vedang%20-%20speaker20.webp',
-  '/images/speaker/Vedang%20-%20speaker21.webp',
-  '/images/speaker/Vedang%20-%20speaker22.jpg',
-  '/images/speaker/Vedang%20-%20speaker23.jpg',
-  '/images/speaker/Vedang%20-%20speaker24.jpeg',
-  '/images/speaker/Vedang%20-%20speaker25.jpeg',
-  '/images/speaker/Vedang%20-%20speaker26.jpg',
-  '/images/speaker/Vedang%20-%20speaker27.jpeg',
-  '/images/speaker/Vedang%20-%20speaker28.jpeg',
+  '/images/speaker/Vedang - speaker1.webp',
+  '/images/speaker/Vedang - speaker2.webp',
+  '/images/speaker/Vedang - speaker3.webp',
+  '/images/speaker/Vedang - speaker4.webp',
+  '/images/speaker/Vedang - speaker5.webp',
+  '/images/speaker/Vedang - speaker6.webp',
+  '/images/speaker/Vedang - speaker7.webp',
+  '/images/speaker/Vedang - speaker8.webp',
+  '/images/speaker/Vedang - speaker9.webp',
+  '/images/speaker/Vedang - speaker10.webp',
+  '/images/speaker/Vedang - speaker11.webp',
+  '/images/speaker/Vedang - speaker12.webp',
+  '/images/speaker/Vedang - speaker13.webp',
+  '/images/speaker/Vedang - speaker14.webp',
+  '/images/speaker/Vedang - speaker15.webp',
+  '/images/speaker/Vedang - speaker16.webp',
+  '/images/speaker/Vedang - speaker17.webp',
+  '/images/speaker/Vedang - speaker18.webp',
+  '/images/speaker/Vedang - speaker19.webp',
+  '/images/speaker/Vedang - speaker20.webp',
+  '/images/speaker/Vedang - speaker21.webp',
+  '/images/speaker/Vedang - speaker22.jpg',
+  '/images/speaker/Vedang - speaker23.jpg',
+  '/images/speaker/Vedang - speaker24.jpeg',
+  '/images/speaker/Vedang - speaker25.jpeg',
+  '/images/speaker/Vedang - speaker26.jpg',
+  '/images/speaker/Vedang - speaker27.jpeg',
+  '/images/speaker/Vedang - speaker28.jpeg',
 ];
 
 
@@ -168,22 +142,7 @@ export default function MediaPage() {
             </ul>
           </section>
 
-          <section className="py-8">
-            <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 items-center">
-              {asSeenInLogos.map((media, index) => (
-                <div key={index} className="flex justify-center">
-                   <Image
-                      src={media.logo}
-                      alt={media.name}
-                      width={120}
-                      height={40}
-                      className="object-contain dark:brightness-0 dark:invert"
-                    />
-                </div>
-              ))}
-            </div>
-          </section>
+          <AsSeenIn />
 
           <section className="py-8">
             <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Speaking Engagements</h2>

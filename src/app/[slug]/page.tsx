@@ -51,6 +51,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const essayUrl = `${siteUrl}/${params.slug}`;
   const imageUrl = `${siteUrl}/images/icon.png`;
 
+  const publishedTime = essay.frontmatter.date ? new Date(essay.frontmatter.date).toISOString() : new Date().toISOString();
+
   return {
     title: essay.frontmatter.title,
     description: essay.frontmatter.summary,
@@ -62,6 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: essay.frontmatter.summary,
       url: essayUrl,
       type: 'article',
+      publishedTime: publishedTime,
       images: [
         {
           url: imageUrl,
@@ -87,13 +90,15 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
     notFound();
   }
 
+  const datePublished = essay.frontmatter.date ? new Date(essay.frontmatter.date).toISOString() : new Date().toISOString();
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: essay.frontmatter.title,
     author: {
       '@type': 'Person',
-      name: 'Vedang Vatsa',
+      name: essay.frontmatter.author || 'Vedang Vatsa',
       url: 'https://veda.ng',
     },
     description: essay.frontmatter.summary,
@@ -110,6 +115,8 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
       '@type': 'WebPage',
       '@id': `https://veda.ng/${params.slug}`,
     },
+    datePublished: datePublished,
+    dateModified: datePublished,
   };
 
   return (
@@ -122,6 +129,7 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
       <main className="flex-grow py-8">
         <article className="prose dark:prose-invert mx-auto px-4 md:px-6">
           <h1>{essay.frontmatter.title}</h1>
+          {essay.frontmatter.date && <p className="text-sm text-muted-foreground">{new Date(essay.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>}
           <MDXRemote source={essay.content} />
         </article>
 

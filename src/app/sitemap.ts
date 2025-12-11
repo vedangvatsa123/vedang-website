@@ -5,38 +5,45 @@ import path from 'path';
 
 const BASE_URL = 'https://veda.ng';
 
+function getEssayRoutes(): MetadataRoute.Sitemap {
+  const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
+  if (!fs.existsSync(essaysDirectory)) {
+    return [];
+  }
+  
+  try {
+    const essayFiles = fs.readdirSync(essaysDirectory);
+    return essayFiles
+      .filter(file => file.endsWith('.mdx'))
+      .map(file => ({
+        url: `${BASE_URL}/${file.replace(/\.mdx$/, '')}`,
+        lastModified: new Date(),
+      }));
+  } catch (error) {
+    console.error("Could not read essays directory for sitemap:", error);
+    return [];
+  }
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = [
+  const staticPages: MetadataRoute.Sitemap = [
     '/',
     '/writings',
     '/vibe-coding-101',
     '/prompt-engineering-101',
-    '/about/profile',
-    '/about/media',
-    '/about/seo',
-    '/about/community',
+    '/profile',
+    '/media',
+    '/seo',
+    '/community',
   ].map((route) => ({
     url: `${BASE_URL}${route}`,
     lastModified: new Date(),
   }));
 
-  const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
-  let essayRoutes: MetadataRoute.Sitemap = [];
-  try {
-    if (fs.existsSync(essaysDirectory)) {
-      const essayFiles = fs.readdirSync(essaysDirectory);
-      essayRoutes = essayFiles.map(file => ({
-        url: `${BASE_URL}/${file.replace(/\.mdx$/, '')}`,
-        lastModified: new Date(),
-      }));
-    }
-  } catch (error) {
-    console.error("Could not read essays directory for sitemap:", error);
-  }
+  const essayRoutes = getEssayRoutes();
   
   const allRoutes = [...staticPages, ...essayRoutes];
 
-  // A simple way to remove duplicates and ensure canonical URLs are correct
   const uniqueRoutes = allRoutes.reduce((acc, current) => {
     if (!acc.find(item => item.url === current.url)) {
       acc.push(current);
