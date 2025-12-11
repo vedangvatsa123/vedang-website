@@ -9,12 +9,12 @@ import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Bot, BrainCircuit, Code, DraftingCompass, ExternalLink, Hand, Lightbulb, Star, BookOpen, Layers, Globe, ShieldCheck, Wallet, Puzzle } from 'lucide-react';
+import { Globe, Layers, ShieldCheck, Wallet, Puzzle, Star } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
 export const metadata: Metadata = {
-    title: 'Web3 101 | A Free Course on the Decentralized Internet',
+    title: 'Fundamentals of Web3 | A Free Course on the Decentralized Internet',
     description: 'A free, self-paced course on the fundamentals of Web3. Learn about blockchain, cryptocurrencies, NFTs, DAOs, and how they are building the next generation of the internet.',
     alternates: {
       canonical: '/web3-101',
@@ -62,7 +62,7 @@ export default function Web3CoursePage() {
                     A Free, Self-Paced Course
                 </Badge>
                 <h1 className="mt-4 text-5xl font-semibold tracking-tight text-primary">
-                    Web3 101
+                    Fundamentals of Web3
                 </h1>
                 <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
                 Discover the next evolution of the internet. This course will demystify Web3, blockchain, and decentralization, giving you the foundational knowledge to understand and navigate the new digital frontier.
@@ -305,3 +305,5 @@ export default function Web3CoursePage() {
     </div>
   );
 }
+
+    

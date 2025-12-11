@@ -9,12 +9,11 @@ import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Bot, BrainCircuit, Code, DraftingCompass, DollarSign, Hand, Lightbulb, Star, Zap, Users, ShieldCheck, Link as LinkIcon } from 'lucide-react';
-import Link from 'next/link';
+import { BrainCircuit, Users, Hand, ShieldCheck, Zap, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
 export const metadata: Metadata = {
-    title: 'The Agentic Web 101 | A Free Course on AI Agents',
+    title: 'The Agentic Web | A Free Course on AI Agents',
     description: 'A free, self-paced course on the Agentic Web. Learn how autonomous AI agents are transforming the internet from a network of information into a platform for action.',
     alternates: {
       canonical: '/agentic-web',
@@ -62,7 +61,7 @@ export default function AgenticWebCoursePage() {
                     A Free, Self-Paced Course
                 </Badge>
                 <h1 className="mt-4 text-5xl font-semibold tracking-tight text-primary">
-                    The Agentic Web 101
+                    The Agentic Web
                 </h1>
                 <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
                     The internet is evolving. It's no longer just a place to find information—it's becoming a platform for autonomous AI agents to get things done. This course demystifies the Agentic Web, where you delegate goals, and AI handles the execution.
@@ -334,3 +333,5 @@ export default function AgenticWebCoursePage() {
     </div>
   );
 }
+
+    
