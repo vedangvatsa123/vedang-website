@@ -318,7 +318,7 @@ export default function AgenticWebCoursePage() {
                     <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
                        {faqItems.map((item, index) => (
                          <AccordionItem key={index} value={`faq-${index + 1}`}>
-                            <AccordionTrigger>{item.question}</AccordionTrigger>
+                            <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
                             <AccordionContent>
                                 {item.answer}
                             </AccordionContent>
@@ -333,5 +333,3 @@ export default function AgenticWebCoursePage() {
     </div>
   );
 }
-
-    
