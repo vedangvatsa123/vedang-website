@@ -5,7 +5,7 @@ const asSeenInLogos = [
     { name: 'Inc42', logo: '/images/press/68296-business-media-company-inc42-startup-marketing.png' },
     { name: 'KPMG', logo: '/images/press/1718209067639.jpeg' },
     { name: 'ANI', logo: '/images/press/Ani-logo-black.png' },
-    { name: 'Business Today', logo: '/images/press/bt_business_today_vedang%20vatsa-min%20(1).png' },
+    { name: 'Business Today', logo: '/images/press/bt_business_today_vedang vatsa-min (1).png' },
     { name: 'Business Insider', logo: '/images/press/Business_Insider_2023_logo.svg.png' },
     { name: 'Business Standard', logo: '/images/press/business-standard-logo-2.png' },
     { name: 'Dainik Bhaskar', logo: '/images/press/Dainik_Bhaskar_Logo.png' },
@@ -25,12 +25,12 @@ const asSeenInLogos = [
     { name: 'Outlook Money', logo: '/images/press/money-logo.png' },
     { name: 'The Tribune IPRD', logo: '/images/press/The_Tribune_India_IPRD_Indian_PR_Distribution.png' },
     { name: 'ThePrint', logo: '/images/press/ThePrint_logo.png' },
-    { name: 'Yahoo! Finance', logo: '/images/press/Yahoo!_Finance_logo_2021%20(1).png' },
+    { name: 'Yahoo! Finance', logo: '/images/press/Yahoo!_Finance_logo_2021 (1).png' },
 ];
 
 export function AsSeenIn() {
   return (
-    <section className="py-12 bg-background">
+    <section className="py-12 bg-secondary/30">
         <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 items-center">
