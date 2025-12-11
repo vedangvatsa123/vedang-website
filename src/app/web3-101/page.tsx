@@ -217,7 +217,7 @@ export default function Web3CoursePage() {
                             <CardTitle className="text-2xl">Getting Started with Web3</CardTitle>
                         </div>
                     </div>
-                </Header>
+                </CardHeader>
                 <CardContent className="p-6">
                     <p className="text-muted-foreground">Ready to dive in? This module covers the practical first steps to begin your journey into the world of Web3.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
@@ -253,7 +253,7 @@ export default function Web3CoursePage() {
                             <CardTitle className="text-2xl">The Future of Web3 and its Challenges</CardTitle>
                         </div>
                     </div>
-                </Header>
+                </CardHeader>
                  <CardContent className="p-6">
                      <p className="text-muted-foreground">Web3 is still a nascent and evolving space. This final module looks at the exciting possibilities and the significant hurdles that lie ahead.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
