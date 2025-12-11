@@ -71,6 +71,18 @@ export default function AgenticWebCoursePage() {
                     <Badge variant="outline">By: Vedang Vatsa</Badge>
                     <Badge variant="outline">Prerequisite: Curiosity</Badge>
                 </div>
+                
+                <div className="mt-8 aspect-video rounded-lg overflow-hidden shadow-2xl border max-w-3xl mx-auto">
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/Gqgk25SOIMM" 
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen>
+                  </iframe>
+                </div>
             </div>
         </section>
 
