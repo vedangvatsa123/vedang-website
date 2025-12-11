@@ -27,16 +27,13 @@ const asSeenInLogos = [
     { name: 'Decrypt', logo: '/images/press/Decrypt_logo.svg' },
     { name: 'ET', logo: '/images/press/et-logo4px.png' },
     { name: 'IEEE Computer', logo: '/images/press/IEEE_Computer.png' },
-
     { name: 'YourStory', logo: '/images/press/image-23.webp' },
     { name: 'The Print', logo: '/images/press/image-24.webp' },
     { name: 'News Outlet 1', logo: '/images/press/image-28.webp' },
     { name: 'News Outlet 2', logo: '/images/press/image-29.webp' },
     { name: 'News Outlet 3', logo: '/images/press/image-32.webp' },
     { name: 'News Outlet 4', logo: '/images/press/image-37.webp' },
-
     { name: 'News Outlet 7', logo: '/images/press/image-42.webp' },
-
     { name: 'News Outlet 9', logo: '/images/press/image-48.webp' },
     { name: 'News Outlet 10', logo: '/images/press/image-58.webp' },
     { name: 'News Outlet 11', logo: '/images/press/images.png' },
