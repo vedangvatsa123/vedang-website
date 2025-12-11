@@ -37,6 +37,9 @@ export function Header() {
                 <DropdownMenuItem asChild>
                   <Link href="/prompt-engineering-101">Prompt Engineering 101</Link>
                 </DropdownMenuItem>
+                 <DropdownMenuItem asChild>
+                  <Link href="/web3-101">Web3 101</Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
