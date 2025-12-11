@@ -30,6 +30,25 @@ export const metadata: Metadata = {
     alternates: {
       canonical: '/community',
     },
+    openGraph: {
+        title: 'Content & Community Building | Vedang Vatsa',
+        description: 'Explore how Vedang Vatsa builds and scales engaged online communities through high-impact content strategy and strategic partnerships.',
+        url: '/community',
+        images: [
+          {
+            url: '/images/icon.png',
+            width: 1200,
+            height: 630,
+            alt: 'Vedang Vatsa - Content & Community',
+          },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Content & Community Building | Vedang Vatsa',
+        description: 'Expert in building and scaling online communities, having founded a 100k+ member professional network for Web3 and tech.',
+        images: ['/images/icon.png'],
+    },
 };
 
 export default function CommunityProfilePage() {

@@ -19,6 +19,25 @@ export const metadata: Metadata = {
     alternates: {
       canonical: '/web3-101',
     },
+    openGraph: {
+        title: 'Fundamentals of Web3 | A Free Course on the Decentralized Internet',
+        description: 'Explore blockchain, cryptocurrencies, smart contracts, dApps, NFTs, DAOs, and the future of a user-owned internet.',
+        url: '/web3-101',
+        images: [
+          {
+            url: '/images/icon.png',
+            width: 1200,
+            height: 630,
+            alt: 'Fundamentals of Web3 Course',
+          },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Fundamentals of Web3 | A Free Course on the Decentralized Internet',
+        description: 'Explore blockchain, cryptocurrencies, smart contracts, dApps, NFTs, DAOs, and the future of a user-owned internet.',
+        images: ['/images/icon.png'],
+    },
 };
 
 const faqItems = [

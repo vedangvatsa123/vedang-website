@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const essay = getEssay(params.slug);
 
   if (!essay) {
-    return {};
+    notFound();
   }
 
   const siteUrl = 'https://veda.ng';

@@ -18,6 +18,25 @@ export const metadata: Metadata = {
     alternates: {
       canonical: '/agentic-web',
     },
+    openGraph: {
+        title: 'The Agentic Web | A Free Course on AI Agents',
+        description: 'Learn how autonomous AI agents are transforming the internet from a network of information into a platform for action.',
+        url: '/agentic-web',
+        images: [
+          {
+            url: '/images/icon.png',
+            width: 1200,
+            height: 630,
+            alt: 'The Agentic Web Course',
+          },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'The Agentic Web | A Free Course on AI Agents',
+        description: 'Learn how autonomous AI agents are transforming the internet from a network of information into a platform for action.',
+        images: ['/images/icon.png'],
+    },
 };
 
 const faqItems = [
@@ -405,7 +424,7 @@ export default function AgenticWebCoursePage() {
                                <p>The Agentic Web will require new, machine-native business models. This presents both a massive challenge and a huge opportunity:</p>
                                 <ul>
                                     <li><strong>Transactional Fees / Pay-per-Action:</strong> The most direct model. Instead of paying for ads, services will charge a small fee for each successful action an agent performs (e.g., a micro-payment for a successful booking or a successful API call).</li>
-                                    <li><strong>Subscription Services:</strong> Users might pay a monthly fee for access to a powerful, specialized agent (e.g., a "Pro" subscription for a sophisticated financial analysis agent).</li>
+                                    <li><strong>Subscription Services:</strong> Users might pay a monthly fee for access to a powerful, specialized agent (e.g., a "Pro" subscription for a financial analysis agent).</li>
                                     <li><strong>Value-Based Pricing:</strong> Paying for the outcome. For example, a "Negotiation Agent" that saves you money on a large purchase could take a small percentage of the savings as its fee.</li>
                                     <li><strong>Agent-Targeted Advertising:</strong> A new form of advertising could emerge where tool providers pay to have their services ranked higher in an agent's consideration set. This "advertising" would be based on performance, reliability, and cost, not on emotional appeal.</li>
                                 </ul>

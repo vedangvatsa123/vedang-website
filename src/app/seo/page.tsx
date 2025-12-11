@@ -28,6 +28,25 @@ export const metadata: Metadata = {
     alternates: {
       canonical: '/seo',
     },
+    openGraph: {
+        title: 'SEO & Growth Marketing Specialist | Vedang Vatsa',
+        description: 'Explore the profile of Vedang Vatsa, a growth marketing specialist with expertise in SEO, ASO, and community-led growth for Web3 and FinTech.',
+        url: '/seo',
+        images: [
+          {
+            url: '/images/icon.png',
+            width: 1200,
+            height: 630,
+            alt: 'Vedang Vatsa - SEO & Growth Specialist',
+          },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'SEO & Growth Marketing Specialist | Vedang Vatsa',
+        description: 'Data-driven growth leader with experience scaling organic acquisition for Web3, FinTech, and mobile products.',
+        images: ['/images/icon.png'],
+    },
 };
 
 const asSeenInLogos = [

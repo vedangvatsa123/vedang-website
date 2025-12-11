@@ -19,6 +19,25 @@ export const metadata: Metadata = {
     alternates: {
       canonical: '/prompt-engineering-101',
     },
+    openGraph: {
+        title: 'Prompt Engineering 101 | A Free Course on Mastering LLMs',
+        description: 'Learn to craft effective prompts that guide Large Language Models to produce accurate, relevant, and creative outputs.',
+        url: '/prompt-engineering-101',
+        images: [
+          {
+            url: '/images/icon.png',
+            width: 1200,
+            height: 630,
+            alt: 'Prompt Engineering 101 Course',
+          },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Prompt Engineering 101 | A Free Course on Mastering LLMs',
+        description: 'Learn to craft effective prompts that guide Large Language Models to produce accurate, relevant, and creative outputs.',
+        images: ['/images/icon.png'],
+    },
 };
 
 const faqItems = [

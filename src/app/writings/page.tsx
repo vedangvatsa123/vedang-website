@@ -13,6 +13,25 @@ export const metadata: Metadata = {
     alternates: {
       canonical: '/writings',
     },
+    openGraph: {
+        title: 'Writings on AI & The Future of Technology | Vedang Vatsa',
+        description: 'Explore a collection of essays and research papers by Vedang Vatsa on AI, Web3, and the future of technology.',
+        url: '/writings',
+        images: [
+          {
+            url: '/images/icon.png',
+            width: 1200,
+            height: 630,
+            alt: 'Vedang Vatsa - Writings',
+          },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Writings on AI & The Future of Technology | Vedang Vatsa',
+        description: 'Explore a collection of essays and research papers by Vedang Vatsa on AI, Web3, and the future of technology.',
+        images: ['/images/icon.png'],
+    },
 };
 
 const recentPapers = [
