@@ -32,6 +32,9 @@ export function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
+                  <Link href="/agentic-web">Agentic Web 101</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link href="/vibe-coding">Vibe Coding 101</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>

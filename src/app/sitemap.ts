@@ -32,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/vibe-coding',
     '/prompt-engineering-101',
     '/web3-101',
+    '/agentic-web',
     '/profile',
     '/media',
     '/seo',
