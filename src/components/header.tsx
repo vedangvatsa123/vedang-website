@@ -32,7 +32,7 @@ export function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
-                  <Link href="/vibe-coding-101">Vibe Coding 101</Link>
+                  <Link href="/vibe-coding">Vibe Coding 101</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/prompt-engineering-101">Prompt Engineering 101</Link>

@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     '/',
     '/writings',
-    '/vibe-coding-101',
+    '/vibe-coding',
     '/prompt-engineering-101',
     '/profile',
     '/media',

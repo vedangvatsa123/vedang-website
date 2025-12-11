@@ -14,22 +14,22 @@ import { Bot, BrainCircuit, Code, DraftingCompass, ExternalLink, Hand, Lightbulb
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import VibeCodingInfographic from './Vibe_coding_infographic_Vedang_Vatsa.webp';
-import VibeCodingModule1 from './Vibe_coding_module1_vedang_vatsa.webp';
-import VibeCodingModule2Image from './Vibe_coding_module2_vedang_vatsa.webp';
-import VibeCodingModule3Image from './Vibe_coding_module3_vedang_vatsa.webp';
-import VibeCodingModule5Image from './Vibe_coding_module5_vedang_vatsa.webp';
-import FirebaseStudioImage from './Google_Firebase_Studio_Vedang_Vatsa.jpg';
-import LovableImage from './lovable_vedang_vatsa.webp';
-import ReplitImage from './replit_vedang_vatsa.jpeg';
-import CursorImage from './Cursor_vedang_vatsa.jpg';
+import VibeCodingInfographic from '../vibe-coding-101/Vibe_coding_infographic_Vedang_Vatsa.webp';
+import VibeCodingModule1 from '../vibe-coding-101/Vibe_coding_module1_vedang_vatsa.webp';
+import VibeCodingModule2Image from '../vibe-coding-101/Vibe_coding_module2_vedang_vatsa.webp';
+import VibeCodingModule3Image from '../vibe-coding-101/Vibe_coding_module3_vedang_vatsa.webp';
+import VibeCodingModule5Image from '../vibe-coding-101/Vibe_coding_module5_vedang_vatsa.webp';
+import FirebaseStudioImage from '../vibe-coding-101/Google_Firebase_Studio_Vedang_Vatsa.jpg';
+import LovableImage from '../vibe-coding-101/lovable_vedang_vatsa.webp';
+import ReplitImage from '../vibe-coding-101/replit_vedang_vatsa.jpeg';
+import CursorImage from '../vibe-coding-101/Cursor_vedang_vatsa.jpg';
 
 
 export const metadata: Metadata = {
     title: 'Vibe Coding 101 | A Free Course on Building with AI',
     description: 'A free, self-paced course on the art of building software by describing what you want, not by writing code line-by-line. Go from beginner to builder by learning to manage an AI partner.',
     alternates: {
-      canonical: '/vibe-coding-101',
+      canonical: '/vibe-coding',
     },
 };
 
