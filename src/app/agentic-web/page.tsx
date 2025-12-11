@@ -1,4 +1,5 @@
 
+
 import {
   Accordion,
   AccordionContent,
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
         url: '/agentic-web',
         images: [
           {
-            url: '/images/icon.png',
+            url: '/agentic-web/AgenticAIPreview.png',
             width: 1200,
             height: 630,
             alt: 'The Agentic Web Course',
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'The Agentic Web | A Free Course on AI Agents',
         description: 'Learn how autonomous AI agents are transforming the internet from a network of information into a platform for action.',
-        images: ['/images/icon.png'],
+        images: ['/agentic-web/AgenticAIPreview.png'],
     },
 };
 

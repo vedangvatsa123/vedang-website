@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         url: '/vibe-coding',
         images: [
           {
-            url: '/images/icon.png',
+            url: '/vibe-coding-101/VibeCodingPreview.png',
             width: 1200,
             height: 630,
             alt: 'Vibe Coding 101 Course',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Vibe Coding 101 | A Free Course on Building with AI',
         description: 'Learn to build software by describing what you want, not by writing code. Go from beginner to builder by learning to manage an AI partner.',
-        images: ['/images/icon.png'],
+        images: ['/vibe-coding-101/VibeCodingPreview.png'],
     },
 };
 
