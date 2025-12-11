@@ -1,5 +1,4 @@
 
-
 import {
   Accordion,
   AccordionContent,
@@ -462,3 +461,5 @@ export default function AgenticWebCoursePage() {
     </div>
   );
 }
+
+    

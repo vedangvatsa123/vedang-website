@@ -9,7 +9,7 @@ import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Globe, Layers, ShieldCheck, Wallet, Puzzle, Star, BrainCircuit, Users, Link as LinkIcon, Handshake, Briefcase } from 'lucide-react';
+import { Globe, Layers, ShieldCheck, Wallet, Puzzle, Star, BrainCircuit } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
@@ -168,7 +168,7 @@ export default function Web3CoursePage() {
                                     <li><strong>Chain is the Binding:</strong> Each new page is cryptographically "chained" to the previous one, creating a chronological and unbreakable sequence. This cryptographic link makes it impossible to alter a past page without invalidating all the pages that come after it.</li>
                                     <li><strong>Distributed and Synchronized:</strong> Everyone in the network has a copy of the notebook. When a new page is added, everyone updates their copy. This massive redundancy is what makes it so secure. There's no single "master copy" to attack or corrupt.</li>
                                 </ul>
-                                <p>This creates a shared, immutable ledger—a single source of truth that isn't controlled by any one person or company. It allows people who don't know or trust each other to agree on a set of facts without needing a middleman.</p>
+                                <p>This creates a shared, immutable ledger-a single source of truth that isn't controlled by any one person or company. It allows people who don't know or trust each other to agree on a set of facts without needing a middleman.</p>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
@@ -176,7 +176,7 @@ export default function Web3CoursePage() {
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>Cryptocurrencies are not just speculative assets; they are essential for the functioning of a blockchain network. They serve two critical purposes:</p>
                                  <ul>
-                                    <li><strong>Paying for Computation ("Gas"):</strong> Every action on a blockchain—sending money, minting an NFT, voting in a DAO—requires computational resources from the network. Cryptocurrencies (like Ether, or ETH, on the Ethereum blockchain) are used to pay the network participants ("validators" or "miners") for this computation. This fee is often called "gas."</li>
+                                    <li><strong>Paying for Computation ("Gas"):</strong> Every action on a blockchain-sending money, minting an NFT, voting in a DAO-requires computational resources from the network. Cryptocurrencies (like Ether, or ETH, on the Ethereum blockchain) are used to pay the network participants ("validators" or "miners") for this computation. This fee is often called "gas."</li>
                                     <li><strong>Economic Security (Incentives):</strong> Cryptocurrencies are used to reward validators for honestly processing transactions and securing the network. Validators often have to "stake" a large amount of crypto as collateral. If they act dishonestly, they can lose their stake. This powerful economic incentive aligns their interests with the health of the network, removing the need for a central administrator.</li>
                                 </ul>
                                 <p>In essence, crypto provides the economic layer that allows a decentralized network of strangers to coordinate and secure itself.</p>
@@ -310,7 +310,7 @@ export default function Web3CoursePage() {
                                 <p>A digital wallet is your primary tool for interacting with Web3. It's a secure application that lets you store and manage your cryptocurrencies and NFTs. More importantly, it acts as your digital identity, allowing you to log in to dApps without needing a username and password.</p>
                                 <ul>
                                     <li><strong>Self-Custodial vs. Custodial:</strong> A self-custodial wallet (like MetaMask or Rainbow) means YOU, and only you, have control over your assets. A custodial wallet (like a Coinbase account) means the company holds your assets for you. For true Web3 participation, you need a self-custodial wallet.</li>
-                                    <li><strong>The Seed Phrase: The Golden Rule of Web3.</strong> When you create a self-custodial wallet, you will be given a "seed phrase" or "recovery phrase"—a unique 12 or 24-word password. This is the master key to all your assets.
+                                    <li><strong>The Seed Phrase: The Golden Rule of Web3.</strong> When you create a self-custodial wallet, you will be given a "seed phrase" or "recovery phrase"-a unique 12 or 24-word password. This is the master key to all your assets.
                                       <ul className="my-4">
                                         <li><strong>You MUST write it down and store it securely offline.</strong></li>
                                         <li><strong>NEVER share it with anyone.</strong></li>
@@ -420,3 +420,5 @@ export default function Web3CoursePage() {
     </div>
   );
 }
+
+    
