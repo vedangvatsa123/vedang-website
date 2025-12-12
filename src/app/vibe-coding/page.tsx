@@ -191,7 +191,7 @@ export default function VibeCodingCoursePage() {
                     
                 </div>
 
-                <div className="mt-8 aspect-video rounded-lg overflow-hidden shadow-2xl border max-w-3xl mx-auto">
+                <div className="mt-8 aspect-video rounded-lg overflow-hidden max-w-3xl mx-auto">
                   <iframe 
                     width="100%" 
                     height="100%" 
@@ -207,7 +207,7 @@ export default function VibeCodingCoursePage() {
 
         <div className="container mx-auto px-4 md:px-6 max-w-5xl py-16 space-y-12">
             
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-primary/20">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div className="bg-primary/10 p-3 rounded-lg">
@@ -295,7 +295,7 @@ export default function VibeCodingCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-primary/20">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div className="bg-primary/10 p-3 rounded-lg">
@@ -404,7 +404,7 @@ export default function VibeCodingCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-primary/20">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div className="bg-primary/10 p-3 rounded-lg">
@@ -504,7 +504,7 @@ export default function VibeCodingCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-primary/20">
                 <CardHeader className="bg-secondary/30 p-6">
                      <div className="flex items-center gap-4">
                         <div className="bg-primary/10 p-3 rounded-lg">
@@ -604,7 +604,7 @@ export default function VibeCodingCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-primary/20">
                 <CardHeader className="bg-secondary/30 p-6">
                      <div className="flex items-center gap-4">
                         <div className="bg-primary/10 p-3 rounded-lg">
@@ -753,5 +753,6 @@ export default function VibeCodingCoursePage() {
     </div>
   );
 }
+
 
 
