@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: '/vibe-coding',
         images: [
           {
-            url: '/vibe-coding/VibeCodingPreview.png',
+            url: '/images/courses/VibeCoding/VibeCodingPreview.png',
             width: 1200,
             height: 630,
             alt: 'Vibe Coding 101 Course',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Vibe Coding 101 | A Free Course on Building with AI',
         description: 'Learn to build software by describing what you want, not by writing code. Go from beginner to builder by learning to manage an AI partner.',
-        images: ['/vibe-coding/VibeCodingPreview.png'],
+        images: ['/images/courses/VibeCoding/VibeCodingPreview.png'],
     },
 };
 
@@ -221,6 +221,13 @@ export default function VibeCodingCoursePage() {
                      <p className="text-muted-foreground mt-4">Vibe Coding isn't just about speed; it's a fundamental shift in how we create software. This module introduces the core philosophy, moving your mindset from a hands-on coder to a high-level creative director. You will learn to articulate your vision and guide the AI, focusing on the "what" and "why" instead of getting lost in the "how."</p>
                 </CardHeader>
                 <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/VibeCoding/Vibe_coding_module1_vedang_vatsa.webp"
+                        alt="Module 1 Infographic for Vibe Coding"
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg text-left">What is Vibe Coding?</AccordionTrigger>
@@ -302,6 +309,13 @@ export default function VibeCodingCoursePage() {
                      <p className="text-muted-foreground mt-4">Your toolbox determines your speed and capabilities. There is no single 'best' tool, only the right tool for the job. Let's explore the landscape from beginner-friendly visual builders to professional-grade code editors, so you can choose the one that best fits your project and your style.</p>
                 </CardHeader>
                 <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/VibeCoding/Vibe_coding_module2_vedang_vatsa.webp"
+                        alt="Module 2 Infographic for Vibe Coding"
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg text-left">Choosing Your Environment: Cloud vs. Local</AccordionTrigger>
@@ -338,6 +352,7 @@ export default function VibeCodingCoursePage() {
                                     </CardHeader>
                                      <CardContent>
                                         <div>
+                                             <Image src="/images/courses/VibeCoding/Google_Firebase_Studio_Vedang_Vatsa.jpg" alt="Firebase Studio" width={800} height={450} className="w-full rounded-md mb-4" />
                                             <h5 className="mt-0 font-semibold text-foreground">Best For: Building robust, production-ready applications that need to handle millions of users.</h5>
                                             <p className="text-sm text-muted-foreground"><strong>Workflow:</strong> Firebase Studio generates a "Blueprint" (a detailed plan of all file changes) that you review and approve. This gives you maximum control and prevents the AI from making unwanted changes. It deploys to Google Cloud, providing enterprise-grade security and scalability automatically.</p>
                                         </div>
@@ -350,6 +365,7 @@ export default function VibeCodingCoursePage() {
                                     </CardHeader>
                                     <CardContent>
                                         <div>
+                                            <Image src="/images/courses/VibeCoding/lovable_vedang_vatsa.webp" alt="Lovable.dev" width={800} height={450} className="w-full rounded-md mb-4" />
                                             <h5 className="mt-0 font-semibold text-foreground">Best For: Beautiful, visual web apps like dashboards and SaaS products.</h5>
                                             <p className="text-sm text-muted-foreground">
                                               <strong>How it works:</strong> You chat with the AI, and it visually paints the user interface in real time. It feels like a no-code tool, but it produces high-quality React code you can own. It can connect seamlessly with <strong><Link href="https://supabase.com/" target="_blank" rel="noopener noreferrer">Supabase</Link></strong> to handle user logins and data with simple prompts.
@@ -364,8 +380,21 @@ export default function VibeCodingCoursePage() {
                                     </CardHeader>
                                      <CardContent>
                                         <div>
+                                            <Image src="/images/courses/VibeCoding/replit_vedang_vatsa.jpeg" alt="Replit" width={800} height={450} className="w-full rounded-md mb-4" />
                                             <h5 className="mt-0 font-semibold text-foreground">Best For: Logic-heavy apps, bots, backend services, and learning any programming language.</h5>
                                             <p className="text-sm text-muted-foreground"><strong>How it works:</strong> Replit gives you a full computer in the cloud with a code editor, terminal, and live preview. Its AI can generate entire projects from a single, detailed prompt and offers one-click deployment to a live URL.</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                                <Card className="my-6">
+                                    <CardHeader>
+                                        <CardTitle><Link href="https://cursor.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Cursor</Link>: The AI-Native Code Editor</CardTitle>
+                                    </CardHeader>
+                                     <CardContent>
+                                        <div>
+                                            <Image src="/images/courses/VibeCoding/Cursor_vedang_vatsa.jpg" alt="Cursor" width={800} height={450} className="w-full rounded-md mb-4" />
+                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Professional developers who want to integrate AI into their local workflow.</h5>
+                                            <p className="text-sm text-muted-foreground"><strong>How it works:</strong> Cursor is a fork of VS Code built from the ground up for AI-powered development. It lets you chat with your entire codebase, generate code with a keystroke, and apply AI-suggested changes with a single click. It's about augmenting a developer's workflow, not replacing it.</p>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -389,6 +418,13 @@ export default function VibeCodingCoursePage() {
                     <p className="text-muted-foreground mt-4">In Vibe Coding, the quality of your prompt determines the quality of your product. This is not about 'prompt hacks'; it is about structured communication. This module will teach you how to write the 'documents' that guide the AI, turning you into a master communicator and an effective director of your AI partner.</p>
                 </CardHeader>
                  <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/VibeCoding/Vibe_coding_module3_vedang_vatsa.webp"
+                        alt="Module 3 Infographic for Vibe Coding"
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg text-left">The PRD (Product Requirements Document)</AccordionTrigger>
@@ -470,7 +506,7 @@ export default function VibeCodingCoursePage() {
 
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
+                     <div className="flex items-center gap-4">
                         <div className="bg-primary/10 p-3 rounded-lg">
                            <Code className="w-8 h-8 text-primary"/>
                         </div>
@@ -482,6 +518,13 @@ export default function VibeCodingCoursePage() {
                     <p className="text-muted-foreground mt-4">It is time to apply your knowledge and build a real, functional web application. In this lab, you can walk through building a "Startup Name Generator" from a single prompt, refining it, and deploying it. This is where theory meets practice, and you'll create something you can actually share.</p>
                 </CardHeader>
                 <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/VibeCoding/Vibe_coding_module4_vedang_vatsa.webp"
+                        alt="Module 4 Infographic for Vibe Coding"
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                      <Accordion type="single" collapsible className="w-full">
                          <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg text-left">Building with Firebase Studio</AccordionTrigger>
@@ -575,6 +618,13 @@ export default function VibeCodingCoursePage() {
                      <p className="text-muted-foreground mt-4">Building is the first step; creating sustainable value is the goal. This module covers how to turn your vibe-coded project into a secure, monetizable product and how this new skill reshapes your career path. This is about moving from prototype to professional.</p>
                 </CardHeader>
                  <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/VibeCoding/Vibe_coding_module5_vedang_vatsa.webp"
+                        alt="Module 5 Infographic for Vibe Coding"
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg text-left">Security: Your Responsibility as Director</AccordionTrigger>
@@ -634,6 +684,24 @@ export default function VibeCodingCoursePage() {
                      </Accordion>
                 </CardContent>
             </Card>
+
+            <section className="py-16">
+                 <div className="text-center">
+                    <h2 className="text-3xl font-semibold tracking-tight">The Vibe Coding Infographic</h2>
+                    <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Here's a summary of the key concepts of Vibe Coding in a single infographic.
+                    </p>
+                </div>
+                <div className="mt-8 max-w-4xl mx-auto">
+                     <Image
+                        src="/images/courses/VibeCoding/Vibe_coding_infographic_Vedang_Vatsa.webp"
+                        alt="Vibe Coding Infographic"
+                        width={1200}
+                        height={1600}
+                        className="w-full rounded-lg shadow-lg"
+                    />
+                </div>
+            </section>
 
             <section id="references" className="py-16">
                 <div className="text-center">
