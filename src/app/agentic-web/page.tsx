@@ -27,7 +27,7 @@ export const metadata: Metadata = {
             url: '/agentic-web/AgenticAIPreview.png',
             width: 1200,
             height: 630,
-            alt: 'The Agentic Web Course',
+            alt: 'The Agentic Web Course Preview Image',
           },
         ],
     },

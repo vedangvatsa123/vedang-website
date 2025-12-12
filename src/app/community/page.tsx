@@ -1,4 +1,5 @@
 
+
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
             url: '/images/icon.png',
             width: 1200,
             height: 630,
-            alt: 'Vedang Vatsa - Content & Community',
+            alt: 'Vedang Vatsa - Content & Community Strategist',
           },
         ],
     },
@@ -64,7 +65,7 @@ export default function CommunityProfilePage() {
           <section className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
               <Image
                 src="/images/icon.png"
-                alt="Vedang Vatsa"
+                alt="Headshot of Vedang Vatsa, a content and community strategist."
                 width={128}
                 height={128}
                 className="h-32 w-32 rounded-full object-cover border-4 border-card"

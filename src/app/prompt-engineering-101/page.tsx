@@ -28,7 +28,7 @@ export const metadata: Metadata = {
             url: '/images/icon.png',
             width: 1200,
             height: 630,
-            alt: 'Prompt Engineering 101 Course',
+            alt: 'Prompt Engineering 101 Course Preview Image',
           },
         ],
     },

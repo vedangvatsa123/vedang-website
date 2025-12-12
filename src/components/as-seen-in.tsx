@@ -38,7 +38,7 @@ export function AsSeenIn() {
                 <div key={index} className="flex justify-center">
                    <Image
                       src={media.logo}
-                      alt={media.name}
+                      alt={`${media.name} logo`}
                       width={120}
                       height={40}
                       className="object-contain dark:brightness-0 dark:invert"

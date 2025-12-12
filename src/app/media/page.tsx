@@ -1,4 +1,5 @@
 
+
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Card, CardContent } from '@/components/ui/card';
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
           url: '/images/speaker/Vedang - speaker1.webp',
           width: 1200,
           height: 630,
-          alt: 'Vedang Vatsa - Media & Speaking',
+          alt: 'Vedang Vatsa speaking at a conference.',
         },
       ],
   },
@@ -170,7 +171,7 @@ export default function MediaPage() {
                 <div key={index} className="mb-4 break-inside-avoid">
                   <Image
                     src={src}
-                    alt={`Vedang speaking engagement ${index + 1}`}
+                    alt={`Vedang Vatsa speaking at engagement ${index + 1}`}
                     width={500}
                     height={500}
                     className="rounded-md object-cover w-full h-auto"

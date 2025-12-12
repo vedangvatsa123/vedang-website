@@ -1,4 +1,5 @@
 
+
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -89,7 +90,7 @@ export default function SeoProfilePage() {
           <section className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
               <Image
                 src="/images/icon.png"
-                alt="Vedang Vatsa"
+                alt="Headshot of Vedang Vatsa, a growth marketing and SEO specialist."
                 width={128}
                 height={128}
                 className="h-32 w-32 rounded-full object-cover border-4 border-card"
@@ -280,7 +281,7 @@ export default function SeoProfilePage() {
                     <div key={index} className="flex justify-center">
                     <Image
                         src={media.logo}
-                        alt={media.name}
+                        alt={`${media.name} logo`}
                         width={120}
                         height={40}
                         className="object-contain dark:brightness-0 dark:invert"

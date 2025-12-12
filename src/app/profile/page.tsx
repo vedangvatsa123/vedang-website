@@ -1,4 +1,5 @@
 
+
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
             url: '/images/icon.png',
             width: 1200,
             height: 630,
-            alt: 'Vedang Vatsa - Full Profile',
+            alt: 'Profile of Vedang Vatsa, FRSA - AI & Web3 Innovator',
           },
         ],
     },
@@ -95,7 +96,7 @@ export default function ProfilePage() {
             
               <Image
                 src="/images/icon.png"
-                alt="Vedang Vatsa"
+                alt="Professional headshot of Vedang Vatsa."
                 width={96}
                 height={96}
                 className="mx-auto h-24 w-24 rounded-full object-cover"

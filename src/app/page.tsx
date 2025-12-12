@@ -1,4 +1,5 @@
 
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
         url: '/images/icon.png',
         width: 1200,
         height: 630,
-        alt: 'Vedang Vatsa',
+        alt: 'Vedang Vatsa, an innovator in AI and Web3.',
       },
     ],
   },
