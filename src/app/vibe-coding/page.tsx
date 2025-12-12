@@ -221,6 +221,7 @@ export default function VibeCodingCoursePage() {
                      <p className="text-muted-foreground mt-4">Vibe Coding isn't just about speed; it's a fundamental shift in how we create software. This module introduces the core philosophy, moving your mindset from a hands-on coder to a high-level creative director. You will learn to articulate your vision and guide the AI, focusing on the "what" and "why" instead of getting lost in the "how."</p>
                 </CardHeader>
                 <CardContent className="p-6">
+                    <Image src="/vibe-coding/Vibe_coding_module1_vedang_vatsa.webp" alt="Vibe Coding Module 1" width={1200} height={630} className="w-full h-auto rounded-lg mb-6" />
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg text-left">What is Vibe Coding?</AccordionTrigger>
@@ -302,6 +303,7 @@ export default function VibeCodingCoursePage() {
                      <p className="text-muted-foreground mt-4">Your toolbox determines your speed and capabilities. There is no single 'best' tool, only the right tool for the job. Let's explore the landscape from beginner-friendly visual builders to professional-grade code editors, so you can choose the one that best fits your project and your style.</p>
                 </CardHeader>
                 <CardContent className="p-6">
+                     <Image src="/vibe-coding/Vibe_coding_module2_vedang_vatsa.webp" alt="Vibe Coding Module 2" width={1200} height={630} className="w-full h-auto rounded-lg mb-6" />
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg text-left">Choosing Your Environment: Cloud vs. Local</AccordionTrigger>
@@ -389,6 +391,7 @@ export default function VibeCodingCoursePage() {
                     <p className="text-muted-foreground mt-4">In Vibe Coding, the quality of your prompt determines the quality of your product. This is not about 'prompt hacks'; it is about structured communication. This module will teach you how to write the 'documents' that guide the AI, turning you into a master communicator and an effective director of your AI partner.</p>
                 </CardHeader>
                  <CardContent className="p-6">
+                     <Image src="/vibe-coding/Vibe_coding_module3_vedang_vatsa.webp" alt="Vibe Coding Module 3" width={1200} height={630} className="w-full h-auto rounded-lg mb-6" />
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg text-left">The PRD (Product Requirements Document)</AccordionTrigger>
@@ -482,6 +485,7 @@ export default function VibeCodingCoursePage() {
                     <p className="text-muted-foreground mt-4">It is time to apply your knowledge and build a real, functional web application. In this lab, you can walk through building a "Startup Name Generator" from a single prompt, refining it, and deploying it. This is where theory meets practice, and you'll create something you can actually share.</p>
                 </CardHeader>
                 <CardContent className="p-6">
+                     <Image src="/vibe-coding/Vibe_coding_module4_vedang_vatsa.webp" alt="Vibe Coding Module 4" width={1200} height={630} className="w-full h-auto rounded-lg mb-6" />
                      <Accordion type="single" collapsible className="w-full">
                          <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg text-left">Building with Firebase Studio</AccordionTrigger>
@@ -575,6 +579,7 @@ export default function VibeCodingCoursePage() {
                      <p className="text-muted-foreground mt-4">Building is the first step; creating sustainable value is the goal. This module covers how to turn your vibe-coded project into a secure, monetizable product and how this new skill reshapes your career path. This is about moving from prototype to professional.</p>
                 </CardHeader>
                  <CardContent className="p-6">
+                     <Image src="/vibe-coding/Vibe_coding_module5_vedang_vatsa.webp" alt="Vibe Coding Module 5" width={1200} height={630} className="w-full h-auto rounded-lg mb-6" />
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg text-left">Security: Your Responsibility as Director</AccordionTrigger>
@@ -643,6 +648,7 @@ export default function VibeCodingCoursePage() {
                         The tools and platforms for Vibe Coding are always evolving. Here are some of the official documentation and learning resources to help you go deeper.
                     </p>
                 </div>
+                 <Image src="/vibe-coding/Vibe_coding_infographic_Vedang_Vatsa.webp" alt="Vibe Coding Infographic" width={1200} height={630} className="w-full h-auto rounded-lg my-6" />
 
                  <div className="mt-12 columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
                     {referenceLinks.map((tool) => (
