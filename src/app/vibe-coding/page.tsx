@@ -694,7 +694,7 @@ export default function VibeCodingCoursePage() {
                         alt="Vibe Coding Infographic"
                         width={1200}
                         height={1600}
-                        className="w-full rounded-lg shadow-lg"
+                        className="w-full rounded-lg"
                     />
                 </div>
             </section>
@@ -753,4 +753,5 @@ export default function VibeCodingCoursePage() {
     </div>
   );
 }
+
 
