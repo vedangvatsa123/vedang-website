@@ -687,10 +687,6 @@ export default function VibeCodingCoursePage() {
 
             <section className="py-16">
                  <div className="text-center">
-                    <h2 className="text-3xl font-semibold tracking-tight">The Vibe Coding Infographic</h2>
-                    <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Here's a summary of the key concepts of Vibe Coding in a single infographic.
-                    </p>
                 </div>
                 <div className="mt-8 max-w-4xl mx-auto">
                      <Image
