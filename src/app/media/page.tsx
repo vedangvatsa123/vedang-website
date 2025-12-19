@@ -98,8 +98,10 @@ const mediaMentions = [
   { title: 'Loyalty has gone for a toss: Millennials, moonlighting & start-ups', source: 'Business Today', url: 'https://www.businesstoday.in/entrepreneurship/story/loyalty-has-gone-for-a-toss-millennials-moonlighting-start-ups-350929-2022-10-27' },
   { title: '5 Common Mistakes Every Beginner Should Avoid In Crypto', source: 'Outlook Money', url: 'https://www.outlookmoney.com/cryptocurrency/5-common-mistakes-every-beginner-should-avoid-in-crypto' },
   { title: "YouTube to Let US Creators Take Earnings in PayPal's Stablecoin", source: 'Decrypt', url: 'https://decrypt.co/352125/youtube-us-creators-take-earnings-paypals-stablecoin' },
+  { title: "Przełom! YouTube Płaci Twórcom w Kryptowalutach. Rewolucja w Monetyzacji 2025?", source: 'Investing.com', url: 'https://pl.investing.com/analysis/przelom-youtube-placi-tworcom-w-kryptowalutach-rewolucja-w-monetyzacji-2025-200294875' },
   { title: "YouTube Now Lets U.S. Creators Take Earnings in PayPal's Stablecoin", source: 'Yahoo Finance', url: 'https://finance.yahoo.com/news/youtube-now-lets-us-creators-053731369.html' },
-  { title: 'Przełom! YouTube Płaci Twórcom w Kryptowalutach. Rewolucja w Monetyzacji 2025?', source: 'Investing.com', url: 'https://pl.investing.com/analysis/przelom-youtube-placi-tworcom-w-kryptowalutach-rewolucja-w-monetyzacji-2025-200294875' },
+  { title: 'Blockchain Applications', source: 'Startup India', url: 'https://www.startupindia.gov.in/content/sih/en/bloglist/blogs/Blockchain_Applications.html' },
+  { title: 'YouTube now allows creators to be paid in cryptocurrencies', source: 'Portal do Bitcoin', url: 'https://portaldobitcoin.uol.com.br/youtube-agora-permite-que-criadores-sejam-pagos-em-criptomoedas/' },
 ];
 
 const speakingEngagementImages = [
