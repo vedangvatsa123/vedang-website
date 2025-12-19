@@ -138,7 +138,7 @@ export default function MediaPage() {
       <main className="flex-grow py-8">
         <div className="container mx-auto px-4 md:px-6">
           <section className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl font-semibold tracking-tight">Speaking on Emerging Technologies</h1>
+            <h1 className="text-4xl font-semibold tracking-tight">Speaker on Emerging Technologies</h1>
             <p className="mt-3 text-base text-muted-foreground">
               As a recognized voice in AI, Web3, and the future of technology, Vedang is a frequent speaker at
               international conferences, academic institutions, and corporate events. His talks demystify complex
