@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 
 const asSeenInLogos = [
     { name: 'Inc42', logo: '/images/press/68296-business-media-company-inc42-startup-marketing.png' },
-    { name: 'KPMG', logo: '/images/press/1718209067639.jpeg' },
+    { name: 'KPMG', logo: '/images/press/TheStreetRoundtable_Vedang.png' },
     { name: 'ANI', logo: '/images/press/Ani-logo-black.png' },
     { name: 'Business Today', logo: '/images/press/bt_business_today_vedang%20vatsa-min%20(1).png' },
     { name: 'Business Insider', logo: '/images/press/Business_Insider_2023_logo.svg.png' },
