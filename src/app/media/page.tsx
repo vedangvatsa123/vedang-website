@@ -97,6 +97,8 @@ const mediaMentions = [
   { title: 'Parliamentary Committee on Finance selects Virtual Digital Assets for 2024-25 examination', source: 'The Tribune', url: 'https://www.tribuneindia.com/news/business/parliamentary-committee-on-finance-selects-virtual-digital-assets-for-2024-25-examination/' },
   { title: 'Loyalty has gone for a toss: Millennials, moonlighting & start-ups', source: 'Business Today', url: 'https://www.businesstoday.in/entrepreneurship/story/loyalty-has-gone-for-a-toss-millennials-moonlighting-start-ups-350929-2022-10-27' },
   { title: '5 Common Mistakes Every Beginner Should Avoid In Crypto', source: 'Outlook Money', url: 'https://www.outlookmoney.com/cryptocurrency/5-common-mistakes-every-beginner-should-avoid-in-crypto' },
+  { title: 'Przełom! YouTube Płaci Twórcom w Kryptowalutach. Rewolucja w Monetyzacji 2025?', source: 'Investing.com', url: 'https://pl.investing.com/analysis/przelom-youtube-placi-tworcom-w-kryptowalutach-rewolucja-w-monetyzacji-2025-200294875' },
+  { title: "YouTube to Let US Creators Take Earnings in PayPal's Stablecoin", source: 'Decrypt', url: 'https://decrypt.co/352125/youtube-us-creators-take-earnings-paypals-stablecoin' },
 ];
 
 const speakingEngagementImages = [
