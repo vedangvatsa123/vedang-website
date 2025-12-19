@@ -162,6 +162,15 @@ export default function MediaPage() {
             </ul>
           </section>
 
+          <section className="py-8">
+             <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Invited at the Parliament of India to discuss about Virtual Digital Assets</h2>
+             <div className="flex justify-center">
+                <blockquote className="twitter-tweet" data-media-max-width="560">
+                   <a href="https://x.com/LokSabhaSectt/status/1996239975906676795"></a>
+                </blockquote>
+             </div>
+          </section>
+
           <AsSeenIn />
 
           <section className="py-8">

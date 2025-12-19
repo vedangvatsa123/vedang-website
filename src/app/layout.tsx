@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import '@/app/globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://veda.ng'),
@@ -88,6 +89,7 @@ export default function RootLayout({
           {children}
           <Toaster />
         </ThemeProvider>
+        <Script src="https://platform.twitter.com/widgets.js" strategy="lazyOnload" />
       </body>
     </html>
   );
