@@ -12,7 +12,7 @@ const asSeenInLogos = [
     { name: 'Decrypt', logo: '/images/press/Decrypt_logo.svg' },
     { name: 'ET', logo: '/images/press/et-logo4px.png' },
     { name: 'IEEE Computer', logo: '/images/press/IEEE_Computer.png' },
-    { name: 'BeInCrypto', logo: '/images/press/image-23.webp' },
+    { name: 'BeInCrypto', logo: '/images/press/beincrypto_Vedang.png' },
     { name: 'The Print', logo: '/images/press/image-24.webp' },
     { name: 'OpIndia', logo: '/images/press/image-28.webp' },
     { name: 'IndiaAI', logo: '/images/press/image-29.webp' },
