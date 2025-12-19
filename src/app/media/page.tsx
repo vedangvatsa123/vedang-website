@@ -161,7 +161,7 @@ export default function MediaPage() {
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Traveled 18 countries & jumped the world’s highest canyon swing</span></li>
             </ul>
           </section>
-
+          
           <section className="py-8">
              <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Invited at the Parliament of India to discuss about Virtual Digital Assets</h2>
              <div className="flex justify-center">
