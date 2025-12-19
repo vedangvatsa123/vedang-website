@@ -322,6 +322,13 @@ export default function ProfilePage() {
                         </ul>
                     </CardContent>
                 </Card>
+                <div className="mt-6 flex justify-center">
+                    <Button variant="outline" asChild>
+                        <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+                            Read More on Google Scholar
+                        </Link>
+                    </Button>
+                </div>
             </section>
             
             <section id="projects">
