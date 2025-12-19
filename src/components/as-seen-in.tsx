@@ -27,6 +27,7 @@ const asSeenInLogos = [
     { name: 'ThePrint', logo: '/images/press/ThePrint_logo.png' },
     { name: 'Yahoo! Finance', logo: '/images/press/Yahoo!_Finance_logo_2021%20(1).png' },
     { name: 'Startup India', logo: '/images/press/DPIIT_StartupIndia_Vedang.png' },
+    { name: 'Investing.com', logo: '/images/press/investing_vedang.webp' },
 ];
 
 export function AsSeenIn() {
