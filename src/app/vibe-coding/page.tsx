@@ -650,7 +650,7 @@ export default function VibeCodingCoursePage() {
                                 <ul>
                                   <li><strong>SaaS (Software as a Service):</strong> This is the most common way. Do not try to build a huge app like Facebook. Instead, build a tool that solves a specific problem for a small group of people. For example, build a "Meal Planner for Vegan Athletes" and charge $10 per month. You can add payment tools like <Link href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</Link> with simple prompts.</li>
                                   <li><strong>Freelancing and Consulting:</strong> Your new skill is speed. You can build apps for clients much faster than a traditional developer. You can market yourself as someone who builds prototypes quickly. Building a client's first version in days, not months, is very valuable.</li>
-                                   <li><strong>Marketplace Apps & Plugins:</strong> Build an app for a store like the <Link href="https://marketplace.visualstudio.com/" target="_blank" rel="noopener noreferrer">VS Code Marketplace</Link>, <Link href="https://www.shopify.com/app-store" target="_blank" rel="noopener noreferrer">Shopify App Store</Link>, or <Link href="https://workspace.google.com/marketplace" target="_blank" rel="noopener noreferrer">Google Workspace Marketplace</Link>. These platforms already have users and payment systems, which solves two of the hardest problems for a new product.</li>
+                                   <li><strong>Marketplace Apps & Plugins:</strong> Build an app for a store like the <Link href="https://marketplace.visualstudio.com/" target="_blank" rel="noopener noreferrer">VS Code Marketplace</Link>, <Link href="https://apps.shopify.com/" target="_blank" rel="noopener noreferrer">Shopify App Store</Link>, or <Link href="https://workspace.google.com/marketplace" target="_blank" rel="noopener noreferrer">Google Workspace Marketplace</Link>. These platforms already have users and payment systems, which solves two of the hardest problems for a new product.</li>
                                 </ul>
                                 <p>It has never been easier to start a business. With Vibe Coding, one person with a good idea can build a successful business from home.</p>
                             </AccordionContent>
@@ -752,6 +752,7 @@ export default function VibeCodingCoursePage() {
     </div>
   );
 }
+
 
 
 
