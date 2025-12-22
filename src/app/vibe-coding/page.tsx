@@ -438,7 +438,7 @@ export default function VibeCodingCoursePage() {
                                     <li><strong>Data Model:</strong> How will you store information? (e.g., "A `users` table with email and password. A `water_logs` table with user_id and amount.")</li>
                                     <li><strong>What Not to Build:</strong> What will you NOT build in the first version? (e.g., "No social features," "No integrations.")</li>
                                 </ul>
-                                <p><strong>A Useful Trick:</strong> You can use one AI to help you make a plan for another AI. Prompt a powerful model like <Link href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude</Link> or <Link href="https://chat.openai.com" target="_blank" rel="noopener noreferrer">ChatGPT</Link>:</p>
+                                <p><strong>A Useful Trick:</strong> You can use one AI to help you make a plan for another AI. For example, you can prompt a powerful model like <Link href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude</Link> or <Link href="https://chat.openai.com" target="_blank" rel="noopener noreferrer">ChatGPT</Link> with this:</p>
                                 <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">"You are an expert product manager. I want to build a [Recipe App for users with food allergies]. Ask me questions to create a detailed Product Requirements Document (PRD)."</blockquote>
                                 <p>The AI will ask you questions to help you think about all the details. The final document becomes the main prompt for your project.</p>
                             </AccordionContent>
@@ -752,6 +752,7 @@ export default function VibeCodingCoursePage() {
     </div>
   );
 }
+
 
 
 
