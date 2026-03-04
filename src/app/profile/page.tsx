@@ -30,27 +30,6 @@ export const metadata: Metadata = generateMetadata({
   url: pageMetadata.profile.url,
   ogImageAlt: 'Vedang Vatsa - Full Profile',
 });
-    },
-    openGraph: {
-        title: 'Full Profile of Vedang Vatsa (FRSA) | AI & Web3 Innovator',
-        description: 'Explore the detailed profile of Vedang Vatsa, covering his professional experience, education, publications, and achievements in AI and Web3.',
-        url: '/profile',
-        images: [
-          {
-            url: '/images/icon.png',
-            width: 1200,
-            height: 630,
-            alt: 'Profile of Vedang Vatsa, FRSA - AI & Web3 Innovator',
-          },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Full Profile of Vedang Vatsa (FRSA) | AI & Web3 Innovator',
-        description: 'Explore the detailed profile of Vedang Vatsa, covering his professional experience, education, publications, and achievements in AI and Web3.',
-        images: ['/images/icon.png'],
-    },
-};
 
 const personSchema = {
   '@context': 'https://schema.org',

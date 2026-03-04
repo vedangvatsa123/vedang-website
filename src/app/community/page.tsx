@@ -31,9 +31,6 @@ export const metadata: Metadata = generateMetadata({
   url: pageMetadata.community.url,
   ogImageAlt: 'Community Building & Content Strategy - Vedang Vatsa',
 });
-        images: ['/images/icon.png'],
-    },
-};
 
 export default function CommunityProfilePage() {
 
