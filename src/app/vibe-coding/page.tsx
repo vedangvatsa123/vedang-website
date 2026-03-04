@@ -115,7 +115,7 @@ const faqItems = [
   },
   {
     question: "Can I build complex applications with this method?",
-    answer: "Absolutely. While it's perfect for prototypes and simple tools, you can build incredibly complex applications. The key is to break down the complexity into smaller, manageable parts and guide the AI step-by-step, just as a project manager would guide a team of developers."
+    answer: "Yes. You can build complex applications with multi-step workflows, databases, and integrations. Break down the complexity into manageable parts and guide the AI step-by-step, just as a project manager would guide a development team."
   },
   {
     question: "What are the biggest mistakes beginners make?",
@@ -135,7 +135,7 @@ const faqItems = [
   },
   {
     question: "Is my job as a developer at risk?",
-    answer: "No, but it is changing. Your value is shifting from writing boilerplate code to high-level architecture, system design, and product vision. Developers who embrace Vibe Coding become 10x more productive and valuable. It's a massive career accelerator."
+    answer: "No, but it is changing. Your value is shifting from writing boilerplate code to high-level architecture, system design, and product vision. Developers who embrace Vibe Coding become 10x more productive."
   },
   {
     question: "What about security and privacy?",
@@ -143,7 +143,7 @@ const faqItems = [
   },
   {
     question: "Where can I learn more?",
-    answer: "This course is your starting point. The best way to learn is by building. Think of a small, fun project and try to build it with one of the tools mentioned. Follow people like Andrej Karpathy and other Vibe Coders on social media to see what's possible. The field is moving incredibly fast, and the community is the best resource."
+    answer: "This course is your starting point. The best way to learn is by building. Pick a small project and build it with one of the tools mentioned. Follow people like Andrej Karpathy and other Vibe Coders on social media to see what's possible. The community is the best resource."
   },
 ];
 
@@ -326,7 +326,7 @@ export default function VibeCodingCoursePage() {
                         <AccordionItem value="item-2">
                              <AccordionTrigger className="text-lg text-left">A Tour of Your Options</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>Let's look at some popular tools. Each one feels different and is good for different kinds of projects.</p>
+                                <p>Popular tools, each optimized for different project types:</p>
                                 
                                 <Card className="my-6">
                                     <CardHeader>
@@ -474,7 +474,7 @@ export default function VibeCodingCoursePage() {
                                         <div className="bg-primary/10 p-2 rounded-md mt-1"><Hand className="w-5 h-5 text-primary flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">Negative Prompts: State What to Avoid</h4>
-                                            <p className="text-muted-foreground">Sometimes, it's easier to say what you *don't* want. Clearly telling the AI what to avoid is a good way to guide it.</p>
+                                            <p className="text-muted-foreground">Specify what you *don't* want. Tell the AI what to avoid.</p>
                                              <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2 text-sm">"Generate a list of startup names. Do not use generic words like 'synergy,' 'cloud,' or 'link'."</blockquote>
                                         </div>
                                     </div>
@@ -529,7 +529,7 @@ export default function VibeCodingCoursePage() {
                         <AccordionItem value="item-2">
                             <AccordionTrigger className="text-lg text-left">Building with Lovable.dev</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>For a more visual and interactive way to build, you can use <Link href="https://lovable.dev" target="_blank" rel="noopener noreferrer">Lovable.dev</Link>. It's great for frontend design and quickly making prototypes.</p>
+                                <p>For a more visual and interactive way to build, use <Link href="https://lovable.dev" target="_blank" rel="noopener noreferrer">Lovable.dev</Link>. Frontend design and rapid prototyping.</p>
                                 
                                 <ol className="space-y-4">
                                   <li>To start, go to <strong>Lovable.dev</strong> and create a new project.</li>
@@ -567,7 +567,7 @@ export default function VibeCodingCoursePage() {
                         <AccordionItem value="item-4">
                             <AccordionTrigger className="text-lg text-left">Building with Cursor</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>For professional developers who want AI help on their local computer, <Link href="https://cursor.com" target="_blank" rel="noopener noreferrer">Cursor</Link> is a great choice. It's a code editor made for AI.</p>
+                                <p>For professional developers who want AI help on their local computer, <Link href="https://cursor.com" target="_blank" rel="noopener noreferrer">Cursor</Link> is the AI-native code editor.</p>
                                 
                                 <ol className="space-y-4">
                                   <li>First, set up a new Next.js project on your computer and open the project folder in <strong>Cursor</strong>.</li>
