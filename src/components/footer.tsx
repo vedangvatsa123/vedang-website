@@ -1,4 +1,4 @@
-import { BookOpen, Instagram, Linkedin, Mail, Send, Twitter, Youtube } from 'lucide-react';
+import { BookOpen, Linkedin, Mail, Send, Twitter, Youtube } from 'lucide-react';
 import Link from 'next/link';
 
 export function Footer() {
@@ -11,9 +11,6 @@ export function Footer() {
           </Link>
           <Link href="https://linkedin.com/in/vedangvatsa" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary" target="_blank" rel="noopener noreferrer">
             <Linkedin className="h-5 w-5" />
-          </Link>
-          <Link href="https://www.instagram.com/vedangvatsa" aria-label="Instagram" className="text-muted-foreground hover:text-primary" target="_blank" rel="noopener noreferrer">
-            <Instagram className="h-5 w-5" />
           </Link>
           <Link href="https://www.youtube.com/@vedangvatsa" aria-label="YouTube" className="text-muted-foreground hover:text-primary" target="_blank" rel="noopener noreferrer">
             <Youtube className="h-5 w-5" />

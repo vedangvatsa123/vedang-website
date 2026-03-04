@@ -58,7 +58,6 @@ const organizationSchema = {
   logo: 'https://veda.ng/images/icon.png',
   sameAs: [
     'https://linkedin.com/in/vedangvatsa',
-    'https://www.instagram.com/vedangvatsa',
     'https://www.youtube.com/@vedangvatsa',
     'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
     'https://x.com/vedangvatsa',
@@ -79,7 +78,6 @@ const personSchema = {
   },
   sameAs: [
     'https://linkedin.com/in/vedangvatsa',
-    'https://www.instagram.com/vedangvatsa',
     'https://www.youtube.com/@vedangvatsa',
     'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
     'https://x.com/vedangvatsa',
