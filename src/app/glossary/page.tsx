@@ -27,7 +27,7 @@ const glossaryTerms = [
   {
     term: "Prompt Engineering",
     category: "AI",
-    definition: "The practice of crafting inputs to AI systems to produce desired outputs. Effective prompts specify context, format, constraints, and examples. Critical skill for working with LLMs."
+    definition: "Crafting inputs to AI systems to produce desired outputs. Effective prompts specify context, format, constraints, and examples. Required for working with LLMs."
   },
   {
     term: "Fine-Tuning",
@@ -37,7 +37,7 @@ const glossaryTerms = [
   {
     term: "Retrieval-Augmented Generation (RAG)",
     category: "AI",
-    definition: "Technique where an LLM queries external knowledge bases before generating responses. Reduces hallucination, enables real-time data access, separates knowledge from model weights."
+    definition: "Technique where an LLM queries external knowledge bases before generating responses. Reduces hallucination, adds real-time data access, separates knowledge from model weights."
   },
   {
     term: "Hallucination",
@@ -47,7 +47,7 @@ const glossaryTerms = [
   {
     term: "Alignment",
     category: "AI",
-    definition: "Ensuring AI systems pursue goals compatible with human values. The alignment problem: how to specify what we want AI to do when our values are complex, contradictory, and context-dependent."
+    definition: "Making AI systems pursue goals compatible with human values. The alignment problem: specifying what we want when our values conflict and change with context."
   },
   {
     term: "Constitutional AI",
@@ -87,7 +87,7 @@ const glossaryTerms = [
   {
     term: "Multimodal AI",
     category: "AI",
-    definition: "Models that process multiple data types—text, images, audio, video. Examples: GPT-4V (vision), Gemini (native multimodal). Enables richer understanding and more complex tasks."
+    definition: "Models that process multiple data types—text, images, audio, video. Examples: GPT-4V (vision), Gemini (native multimodal). Supports tasks requiring combined understanding."
   },
 
   // Web3 Terms
@@ -134,7 +134,7 @@ const glossaryTerms = [
   {
     term: "Wallet",
     category: "Web3",
-    definition: "Software for storing private keys and interacting with blockchains. Custodial (exchange holds keys) vs. non-custodial (you control keys). MetaMask, Coinbase Wallet, Phantom are popular wallets."
+    definition: "Software for storing private keys and interacting with blockchains. Custodial (exchange holds keys) vs. non-custodial (you control keys). Examples: MetaMask, Coinbase Wallet, Phantom."
   },
   {
     term: "Token",
@@ -144,17 +144,17 @@ const glossaryTerms = [
   {
     term: "Stablecoin",
     category: "Web3",
-    definition: "Cryptocurrency pegged to stable assets like USD. USDC and USDT are fiat-backed. DAI is crypto-collateralized. Reduces volatility, enables on-chain payments and DeFi without price risk."
+    definition: "Cryptocurrency pegged to stable assets like USD. USDC and USDT are fiat-backed. DAI is crypto-collateralized. Reduces volatility for on-chain payments and DeFi without price risk."
   },
   {
     term: "Bridge",
     category: "Web3",
-    definition: "Protocol for transferring assets between different blockchains. Lock tokens on Chain A, mint equivalent on Chain B. Security risks: bridges are frequent attack vectors. Enables cross-chain DeFi."
+    definition: "Protocol for transferring assets between different blockchains. Lock tokens on Chain A, mint equivalent on Chain B. Security risks: bridges are frequent attack vectors. Supports cross-chain DeFi."
   },
   {
     term: "Oracle",
     category: "Web3",
-    definition: "Service providing external data to smart contracts. Blockchains can't access off-chain information directly. Chainlink is the largest oracle network. Critical for DeFi pricing, weather data, sports results."
+    definition: "Service providing external data to smart contracts. Blockchains can't access off-chain information directly. Chainlink is the largest oracle network. Required for DeFi pricing, weather data, sports results."
   },
   {
     term: "Validator",
@@ -171,12 +171,12 @@ const glossaryTerms = [
   {
     term: "API (Application Programming Interface)",
     category: "Tech",
-    definition: "Interface for software to communicate with other software. REST APIs use HTTP requests. GraphQL queries specific data. gRPC uses protocol buffers. Abstracts complexity, enables integration."
+    definition: "Interface for software to communicate with other software. REST APIs use HTTP requests. GraphQL queries specific data. gRPC uses protocol buffers. Abstracts complexity for integration."
   },
   {
     term: "Microservices",
     category: "Tech",
-    definition: "Architecture pattern where applications are built as independent, loosely coupled services. Each service handles one business function. Scalable, flexible, but adds operational complexity."
+    definition: "Architecture pattern where applications are built as independent, loosely coupled services. Each service handles one business function. Scales well, but harder to operate."
   },
   {
     term: "Kubernetes",
@@ -196,17 +196,17 @@ const glossaryTerms = [
   {
     term: "Edge Computing",
     category: "Tech",
-    definition: "Processing data near the source (edge) rather than centralized cloud. Reduces latency, bandwidth costs. CDNs, IoT devices, 5G networks enable edge deployment. Critical for real-time applications."
+    definition: "Processing data near the source (edge) rather than centralized cloud. Reduces latency, bandwidth costs. CDNs, IoT devices, 5G networks support edge deployment. Required for real-time applications."
   },
   {
     term: "Zero-Knowledge Proof",
     category: "Tech",
-    definition: "Cryptographic method to prove knowledge of information without revealing the information itself. Enables privacy-preserving verification. Used in zk-rollups, private transactions, identity systems."
+    definition: "Cryptographic method to prove knowledge of information without revealing the information itself. Privacy-preserving verification. Used in zk-rollups, private transactions, identity systems."
   },
   {
     term: "Merkle Tree",
     category: "Tech",
-    definition: "Data structure for efficiently verifying integrity of large datasets. Hash leaf nodes, combine hashes up the tree. Bitcoin and Ethereum use Merkle trees. Enables light clients to verify transactions."
+    definition: "Data structure for efficiently verifying integrity of large datasets. Hash leaf nodes, combine hashes up the tree. Bitcoin and Ethereum use Merkle trees. Lets light clients verify transactions."
   },
   {
     term: "Sharding",
@@ -221,7 +221,7 @@ const glossaryTerms = [
   {
     term: "WebAssembly (Wasm)",
     category: "Tech",
-    definition: "Binary instruction format for stack-based virtual machine. Compile C++, Rust, Go to run in browsers at near-native speed. Enables high-performance web apps. Used in games, video editing, blockchain clients."
+    definition: "Binary instruction format for stack-based virtual machine. Compile C++, Rust, Go to run in browsers at near-native speed. Supports high-performance web apps. Used in games, video editing, blockchain clients."
   },
   {
     term: "GraphQL",
@@ -236,7 +236,7 @@ const glossaryTerms = [
   {
     term: "Message Queue",
     category: "Tech",
-    definition: "Asynchronous communication pattern where services send messages to a queue for later processing. Decouples producers and consumers. RabbitMQ, Kafka, AWS SQS. Enables scalable event-driven architectures."
+    definition: "Asynchronous communication pattern where services send messages to a queue for later processing. Decouples producers and consumers. RabbitMQ, Kafka, AWS SQS. Supports scalable event-driven architectures."
   },
   {
     term: "Rate Limiting",
@@ -262,7 +262,7 @@ export default function GlossaryPage() {
               Glossary
             </h1>
             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive definitions of AI, Web3, and technical terms. Clear explanations without jargon.
+              Definitions of AI, Web3, and technical terms. Clear explanations without jargon.
             </p>
           </div>
         </section>
