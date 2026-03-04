@@ -52,3 +52,4 @@ This file provides a structured overview of the site's content for Large Languag
 - [Full Profile](/profile): A comprehensive overview of my professional experience, education, and achievements.
 - [Community & Speaking](/community): A profile detailing my work in building and scaling online communities.
 - [Media & Speaking](/media): A collection of media features, speaking engagements, and public appearances.
+- [SEO Services](/seo): SEO consulting and optimization services for Web3 and tech companies.
