@@ -58,14 +58,7 @@ export default function WritingsPage() {
 
       <main className="flex-grow py-8">
         <div className="container mx-auto px-4 md:px-6">
-          <h1 className="mb-8 text-center text-4xl font-semibold tracking-tight">Writings</h1>
-
-          <section id="essays" className="py-12">
-            <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Essays</h2>
-            <EssaysList />
-          </section>
-
-          <section id="papers" className="py-12 mt-8 bg-secondary/50 rounded-lg">
+          <section id="papers" className="py-12 bg-secondary/50 rounded-lg">
             <div className="container mx-auto px-4 md:px-6">
               <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Recent Papers</h2>
               <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -90,6 +83,11 @@ export default function WritingsPage() {
                 </Button>
               </div>
             </div>
+          </section>
+
+          <section id="essays" className="py-12 mt-8">
+            <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Essays</h2>
+            <EssaysList />
           </section>
           
         </div>

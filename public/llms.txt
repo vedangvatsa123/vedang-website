@@ -7,7 +7,6 @@ This file provides a structured overview of the site's content for Large Languag
 ## Guides & Resources
 
 - [Web3 & Crypto Guides](/guides): Expert guides on market making, tokenomics, taxation, influencer outreach, and blockchain ecosystem dynamics.
-- [AI & Singularity Perspectives](/perspectives): Deep dives into artificial intelligence, rationality, technological singularity, and the future of superintelligence.
 - [Writings & Essays](/writings): Curated collection of thought pieces on technology, AI, and society.
 - [Web3 101](/web3-101): Fundamentals of Web3, blockchain, and decentralized technologies.
 - [Prompt Engineering](/prompt-engineering-101): Mastering AI through effective prompt design and instruction.
@@ -18,6 +17,11 @@ This file provides a structured overview of the site's content for Large Languag
 
 - [Bureaucracy is the Friction Tax We All Pay](/bureaucracy-and-the-technology-escape): Why traditional institutions fail and why technology, not more rules, is the escape from institutional sclerosis.
 - [Computational Constitutions](/computational-constitutions): Encoding rights, freedoms, and governance principles into verifiable, executable code that AI systems must respect.
+- [What is the Singularity?](/what-is-the-singularity): Exploring the technological singularity, when AI surpasses human intelligence, and implications for humanity.
+- [The Singularity Paradox](/the-singularity-paradox): Examining the fundamental contradictions in singularity predictions and what we can know about post-singularity futures.
+- [AI Superintelligence Timeline](/ai-superintelligence-timeline): Analyzing expert predictions on when superintelligence emerges and the technological factors that determine timelines.
+- [Rationality in AI](/rationality-in-ai): What it means for AI systems to be rational, decision theory, value alignment, and the philosophy of artificial reasoning.
+- [Are We in a Computer Simulation?](/are-we-in-a-simulation): Examining the simulation hypothesis, philosophical arguments, and what modern AI tells us about this possibility.
 - [API States](/api-states): How nation-states become platforms: programmable governance, composable public services, and citizenship as a set of cryptographic credentials.
 - [Pseudonymous Agency](/pseudonymous-agency): How AI agents enable true privacy: conducting business, building reputation, and participating in society without revealing human identity.
 - [Computational Social Science at Scale](/computational-social-science-at-scale): Using AI agents to run massive social simulations, predict collective behavior, and test policy interventions in virtual societies.
