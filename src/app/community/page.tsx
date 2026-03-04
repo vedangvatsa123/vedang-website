@@ -23,31 +23,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AsSeenIn } from '@/components/as-seen-in';
 import { essays } from '@/lib/essays';
+import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
-
-export const metadata: Metadata = {
-    title: 'Content & Community Building | Vedang Vatsa',
-    description: 'Expert in building and scaling online communities. I create high-impact content strategies for Web3 and tech audiences, having founded a 100k+ member professional network.',
-    alternates: {
-      canonical: '/community',
-    },
-    openGraph: {
-        title: 'Content & Community Building | Vedang Vatsa',
-        description: 'Explore how Vedang Vatsa builds and scales engaged online communities through high-impact content strategy and strategic partnerships.',
-        url: '/community',
-        images: [
-          {
-            url: '/images/icon.png',
-            width: 1200,
-            height: 630,
-            alt: 'Vedang Vatsa - Content & Community Strategist',
-          },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Content & Community Building | Vedang Vatsa',
-        description: 'Expert in building and scaling online communities, having founded a 100k+ member professional network for Web3 and tech.',
+export const metadata: Metadata = generateMetadata({
+  title: pageMetadata.community.title,
+  description: pageMetadata.community.description,
+  url: pageMetadata.community.url,
+  ogImageAlt: 'Community Building & Content Strategy - Vedang Vatsa',
+});
         images: ['/images/icon.png'],
     },
 };

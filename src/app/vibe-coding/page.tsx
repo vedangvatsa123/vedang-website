@@ -14,33 +14,15 @@ import { Bot, BrainCircuit, Code, DraftingCompass, ExternalLink, Hand, Lightbulb
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-    title: 'Vibe Coding 101 | A Free Course on Building with AI',
-    description: 'A free, self-paced course on the art of building software by describing what you want, not by writing code line-by-line. Go from beginner to builder by learning to manage an AI partner.',
-    alternates: {
-      canonical: '/vibe-coding',
-    },
-    openGraph: {
-        title: 'Vibe Coding 101 | A Free Course on Building with AI',
-        description: 'Learn to build software by describing what you want, not by writing code. Go from beginner to builder by learning to manage an AI partner.',
-        url: '/vibe-coding',
-        images: [
-          {
-            url: '/images/courses/VibeCoding/VibeCodingPreview.png',
-            width: 1200,
-            height: 630,
-            alt: 'Vibe Coding 101 Course Preview',
-          },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Vibe Coding 101 | A Free Course on Building with AI',
-        description: 'Learn to build software by describing what you want, not by writing code. Go from beginner to builder by learning to manage an AI partner.',
-        images: ['/images/courses/VibeCoding/VibeCodingPreview.png'],
-    },
-};
+export const metadata: Metadata = generateMetadata({
+  title: pageMetadata.vibeCoding.title,
+  description: pageMetadata.vibeCoding.description,
+  url: pageMetadata.vibeCoding.url,
+  ogImage: '/images/courses/VibeCoding/VibeCodingPreview.png',
+  ogImageAlt: 'Vibe Coding 101 - Engineering Intuition & Creativity',
+});
 
 const referenceLinks = [
     { 

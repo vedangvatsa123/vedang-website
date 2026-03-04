@@ -9,33 +9,14 @@ import { Header } from '@/components/header';
 import { MoveUpRight } from 'lucide-react';
 import { AsSeenIn } from '@/components/as-seen-in';
 import { Metadata } from 'next';
+import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Vedang Vatsa - AI & Web3 Innovator, Community Founder',
-  description: "Official website of Vedang Vatsa, a thought leader in AI and Web3, and the founder of Hashtag Web3, a global community of over 100,000 professionals.",
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'Vedang Vatsa - AI & Web3 Innovator, Community Founder',
-    description: 'Founder of Hashtag Web3, a 100,000+ member community of AI & Web3 professionals. Fellow of the Royal Society of Arts.',
-    url: '/',
-    images: [
-      {
-        url: '/images/icon.png',
-        width: 1200,
-        height: 630,
-        alt: 'Vedang Vatsa, an innovator in AI and Web3.',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Vedang Vatsa - AI & Web3 Innovator, Community Founder',
-    description: 'Founder of Hashtag Web3, a 100,000+ member community of AI & Web3 professionals. Fellow of the Royal Society of Arts.',
-    images: ['/images/icon.png'],
-  },
-};
+export const metadata: Metadata = generateMetadata({
+  title: pageMetadata.home.title,
+  description: pageMetadata.home.description,
+  url: pageMetadata.home.url,
+  ogImageAlt: 'Vedang Vatsa - AI & Web3 Innovator, Community Founder',
+});
 
 const recentPapers = [
   {

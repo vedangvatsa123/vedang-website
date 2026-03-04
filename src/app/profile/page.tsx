@@ -22,12 +22,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AsSeenIn } from '@/components/as-seen-in';
 import { Button } from '@/components/ui/button';
+import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-    title: 'Full Profile of Vedang Vatsa (FRSA) | AI & Web3 Innovator',
-    description: 'Explore the detailed profile of Vedang Vatsa, a community founder (100k+ members), thought leader in AI & Web3, and Fellow of the Royal Society of Arts.',
-    alternates: {
-      canonical: '/profile',
+export const metadata: Metadata = generateMetadata({
+  title: pageMetadata.profile.title,
+  description: pageMetadata.profile.description,
+  url: pageMetadata.profile.url,
+  ogImageAlt: 'Vedang Vatsa - Full Profile',
+});
     },
     openGraph: {
         title: 'Full Profile of Vedang Vatsa (FRSA) | AI & Web3 Innovator',

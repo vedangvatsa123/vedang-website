@@ -12,33 +12,14 @@ import { Badge } from '@/components/ui/badge';
 import { Globe, Layers, ShieldCheck, Wallet, Puzzle, Star, BrainCircuit } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-    title: 'Fundamentals of Web3 | A Free Course on the Decentralized Internet',
-    description: 'A comprehensive, free course on the fundamentals of Web3. Explore blockchain, cryptocurrencies, smart contracts, dApps, NFTs, DAOs, and the future of a user-owned internet.',
-    alternates: {
-      canonical: '/web3-101',
-    },
-    openGraph: {
-        title: 'Fundamentals of Web3 | A Free Course on the Decentralized Internet',
-        description: 'Explore blockchain, cryptocurrencies, smart contracts, dApps, NFTs, DAOs, and the future of a user-owned internet.',
-        url: '/web3-101',
-        images: [
-          {
-            url: '/images/icon.png',
-            width: 1200,
-            height: 630,
-            alt: 'Fundamentals of Web3 Course',
-          },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Fundamentals of Web3 | A Free Course on the Decentralized Internet',
-        description: 'Explore blockchain, cryptocurrencies, smart contracts, dApps, NFTs, DAOs, and the future of a user-owned internet.',
-        images: ['/images/icon.png'],
-    },
-};
+export const metadata: Metadata = generateMetadata({
+  title: pageMetadata.web3101.title,
+  description: pageMetadata.web3101.description,
+  url: pageMetadata.web3101.url,
+  ogImageAlt: 'Web3 Fundamentals Course - Learn Blockchain & Decentralization',
+});
 
 const faqItems = [
   {

@@ -12,33 +12,14 @@ import { Badge } from '@/components/ui/badge';
 import { Bot, BrainCircuit, Code, DraftingCompass, ExternalLink, Hand, Lightbulb, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
+import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-    title: 'Prompt Engineering 101 | A Free Course on Mastering LLMs',
-    description: 'A free, self-paced course on the art and science of prompt engineering. Learn to craft effective prompts that guide Large Language Models to produce accurate, relevant, and creative outputs.',
-    alternates: {
-      canonical: '/prompt-engineering-101',
-    },
-    openGraph: {
-        title: 'Prompt Engineering 101 | A Free Course on Mastering LLMs',
-        description: 'Learn to craft effective prompts that guide Large Language Models to produce accurate, relevant, and creative outputs.',
-        url: '/prompt-engineering-101',
-        images: [
-          {
-            url: '/images/icon.png',
-            width: 1200,
-            height: 630,
-            alt: 'Prompt Engineering 101 Course Preview Image',
-          },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Prompt Engineering 101 | A Free Course on Mastering LLMs',
-        description: 'Learn to craft effective prompts that guide Large Language Models to produce accurate, relevant, and creative outputs.',
-        images: ['/images/icon.png'],
-    },
-};
+export const metadata: Metadata = generateMetadata({
+  title: pageMetadata.promptEngineering.title,
+  description: pageMetadata.promptEngineering.description,
+  url: pageMetadata.promptEngineering.url,
+  ogImageAlt: 'Prompt Engineering 101 Course - Master AI Interactions',
+});
 
 const faqItems = [
   {
@@ -55,7 +36,7 @@ const faqItems = [
   },
   {
     question: "Why is providing context so important?",
-    answer: "Context is everything. An LLM without context is just a powerful prediction engine. By providing context—like a persona for the AI, background information, or examples—you narrow down the infinite possibilities and guide the model toward the specific, high-quality output you need."
+    answer: "Context is everything. An LLM without context is just a powerful prediction engine. By providing context, like a persona for the AI, background information, or examples, you narrow down the infinite possibilities and guide the model toward the specific, high-quality output you need."
   },
   {
     question: "Can I use prompt engineering to generate code?",

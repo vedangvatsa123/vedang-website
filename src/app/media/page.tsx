@@ -171,11 +171,11 @@ export default function MediaPage() {
             <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Invited at the Parliament of India to discuss about Virtual Digital Assets</h2>
             <Card className="max-w-xl mx-auto">
                 <CardContent className="p-2 sm:p-4">
-                    <div className="flex justify-center" dangerouslySetInnerHTML={{ __html: `
-                        <blockquote class="twitter-tweet" data-dnt="true" align="center" data-width="500">
-                            <p lang="en" dir="ltr">The Standing Committee on Finance, chaired by Shri @Mehtab_BJD, held a discussion with representatives of Bharat Web3 Association, Digital South Trust, CoinSwitch, CoinDCX, BlockOnVentures, HashtagWeb3, and KoinBX on the subject ‘A Study on Virtual Digital Assets (VDAs) and Way… <a href="https://t.co/1njtEj2c5P">pic.twitter.com/1njtEj2c5P</a></p>&mdash; LOK SABHA (@LokSabhaSectt) <a href="https://twitter.com/LokSabhaSectt/status/1996239975906676795?ref_src=twsrc%5Etfw">December 3, 2025</a>
+                    <div className="flex justify-center">
+                        <blockquote className="twitter-tweet" data-dnt="true" align="center">
+                            <p lang="en" dir="ltr">The Standing Committee on Finance, chaired by Shri @Mehtab_BJD, held a discussion with representatives of Bharat Web3 Association, Digital South Trust, CoinSwitch, CoinDCX, BlockOnVentures, HashtagWeb3, and KoinBX on the subject 'A Study on Virtual Digital Assets (VDAs) and Way… <a href="https://t.co/1njtEj2c5P">pic.twitter.com/1njtEj2c5P</a></p>&mdash; LOK SABHA (@LokSabhaSectt) <a href="https://twitter.com/LokSabhaSectt/status/1996239975906676795?ref_src=twsrc%5Etfw">December 3, 2025</a>
                         </blockquote>
-                    `}}>
+                        <script async src="https://platform.twitter.com/widgets.js"></script>
                     </div>
                 </CardContent>
             </Card>

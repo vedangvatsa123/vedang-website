@@ -11,33 +11,15 @@ import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
 import { BrainCircuit, Users, Hand, ShieldCheck, Zap, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-    title: 'The Agentic Web | A Free Course on AI Agents',
-    description: 'A free, self-paced course on the Agentic Web. Learn how autonomous AI agents are transforming the internet from a network of information into a platform for action.',
-    alternates: {
-      canonical: '/agentic-web',
-    },
-    openGraph: {
-        title: 'The Agentic Web | A Free Course on AI Agents',
-        description: 'Learn how autonomous AI agents are transforming the internet from a network of information into a platform for action.',
-        url: '/agentic-web',
-        images: [
-          {
-            url: '/agentic-web/AgenticAIPreview.png',
-            width: 1200,
-            height: 630,
-            alt: 'The Agentic Web Course Preview Image',
-          },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'The Agentic Web | A Free Course on AI Agents',
-        description: 'Learn how autonomous AI agents are transforming the internet from a network of information into a platform for action.',
-        images: ['/agentic-web/AgenticAIPreview.png'],
-    },
-};
+export const metadata: Metadata = generateMetadata({
+  title: pageMetadata.agenticWeb.title,
+  description: pageMetadata.agenticWeb.description,
+  url: pageMetadata.agenticWeb.url,
+  ogImage: '/agentic-web/AgenticAIPreview.png',
+  ogImageAlt: 'The Agentic Web - AI Agents & Autonomous Systems',
+});
 
 const faqItems = [
   {

@@ -65,6 +65,28 @@ const organizationSchema = {
   ],
 };
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Vedang Vatsa',
+  url: 'https://veda.ng',
+  image: 'https://veda.ng/images/icon.png',
+  jobTitle: ['Founder', 'AI Researcher', 'Web3 Innovator', 'Entrepreneur'],
+  description: 'Founder of Hashtag Web3, a 100,000+ member community of AI & Web3 professionals. Fellow of the Royal Society of Arts.',
+  affiliation: {
+    '@type': 'Organization',
+    name: 'Hashtag Web3',
+  },
+  sameAs: [
+    'https://linkedin.com/in/vedangvatsa',
+    'https://www.instagram.com/vedangvatsa',
+    'https://www.youtube.com/@vedangvatsa',
+    'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
+    'https://x.com/vedangvatsa',
+  ],
+  knowsAbout: ['Artificial Intelligence', 'Web3', 'Blockchain', 'Cryptocurrency', 'Community Building'],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -73,6 +95,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased" suppressHydrationWarning>
       <head>
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-9LJSZF8BGZ"
@@ -96,6 +120,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
         <link rel="alternate" type="application/json" href="/deeprank.json" />
       </head>
