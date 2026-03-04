@@ -164,7 +164,7 @@ export default function VibeCodingCoursePage() {
                     Vibe Coding 101
                 </h1>
                 <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                Build real apps without writing code. Just describe what you want in plain English and work with AI to make it happen. Perfect for founders, designers, marketers, and curious builders. Turn ideas into working products fast. Let’s build.
+                Build real apps without writing code. Describe what you want in plain English and let AI handle the implementation. For founders, designers, marketers, and anyone with an idea.
                 </p>
 
                 <div className="mt-8 flex justify-center items-center gap-4">
@@ -200,7 +200,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">The Philosophy: From Coder to Director</CardTitle>
                         </div>
                     </div>
-                     <p className="text-muted-foreground mt-4">Vibe Coding is a big change in how we make software. This module introduces the main idea. It helps you change your thinking from a coder to a creative director. You will learn to explain your vision and guide the AI. You will focus on the "what" and "why," not the "how."</p>
+                     <p className="text-muted-foreground mt-4">Shift from coder to creative director. Learn to articulate your vision and guide AI toward the product you want. Focus on the "what" and "why," not the "how."</p>
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
@@ -266,7 +266,7 @@ export default function VibeCodingCoursePage() {
                                         <div className="bg-primary/10 p-2 rounded-md mt-1"><MonitorPlay className="w-5 h-5 text-primary flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">4. Source: Can you provide an example?</h4>
-                                            <p className="text-muted-foreground">AIs are good at following patterns. Give a clear example. Example: "For the design, I like Stripe.com's homepage. Use it as a visual guide for spacing and fonts."</p>
+                                            <p className="text-muted-foreground">AI learns patterns from examples. Show a reference. Example: "For the design, reference Stripe.com's homepage. Use it as a visual guide for spacing and fonts."</p>
                                         </div>
                                     </div>
                                 </div>
@@ -288,7 +288,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">The Modern Toolkit</CardTitle>
                         </div>
                     </div>
-                     <p className="text-muted-foreground mt-4">The tools you use decide how fast you can build. There is no "best" tool, only the right tool for your project. This module explores different tools, from easy visual builders to professional code editors, so you can pick the one that fits you best.</p>
+                     <p className="text-muted-foreground mt-4">Tool choice determines development speed. There is no universal best tool—only the right one for your project. This module surveys tools from visual builders to professional editors.</p>
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
@@ -397,7 +397,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">The Art of the Prompt</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground mt-4">In Vibe Coding, a good prompt leads to a good product. This is not about secret tricks; it is about clear communication. This module will teach you how to write clear instructions to guide the AI, making you an effective director for your AI partner.</p>
+                    <p className="text-muted-foreground mt-4">Good prompts produce good products. This module teaches clear communication and instruction-writing to guide AI effectively.</p>
                 </CardHeader>
                  <CardContent className="p-6">
                     <Image
@@ -497,7 +497,7 @@ export default function VibeCodingCoursePage() {
                             <CardTitle className="text-2xl">Lab: Building a "Startup Name Generator"</CardTitle>
                         </div>
                     </div>
-                    <p className="text-muted-foreground mt-4">It is time to use what you have learned to build a real web app. In this lab, we will build a "Startup Name Generator" from a single prompt, then make it better, and finally put it online. This is where you practice and create something you can share with others.</p>
+                    <p className="text-muted-foreground mt-4">Build a real "Startup Name Generator" app from concept to deployment. Practice everything you've learned, iterate, and publish.</p>
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
@@ -685,7 +685,7 @@ export default function VibeCodingCoursePage() {
                     <BookOpen className="mx-auto h-12 w-12 text-muted-foreground" />
                     <h2 className="mt-4 text-3xl font-semibold tracking-tight">Learn More</h2>
                     <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-                        The tools and platforms for Vibe Coding are always evolving. Here are some of the official documentation and learning resources to help you go deeper.
+                        Resources for tools and platforms. Documentation and guides to build deeper knowledge.
                     </p>
                 </div>
                  
@@ -712,7 +712,7 @@ export default function VibeCodingCoursePage() {
                 <div className="text-center">
                     <h2 className="text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
                     <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Still have questions? Here are some of the most common things people ask about Vibe Coding.
+                        Common questions about Vibe Coding answered directly.
                     </p>
                 </div>
                 <div className="max-w-5xl mx-auto mt-12">
