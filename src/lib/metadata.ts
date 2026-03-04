@@ -115,4 +115,10 @@ export const pageMetadata = {
       'Data-driven growth leader with 8+ years of experience scaling organic acquisition for Web3, FinTech, and mobile products. Expert in SEO, ASO, and community-led growth.',
     url: '/seo',
   },
+  glossary: {
+    title: 'AI, Web3 & Tech Glossary - Comprehensive Term Reference',
+    description:
+      'Comprehensive glossary of AI, Web3, and technical terms. Clear definitions of blockchain, smart contracts, LLMs, AGI, DeFi, and more. Reference guide for developers and researchers.',
+    url: '/glossary',
+  },
 };

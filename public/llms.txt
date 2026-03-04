@@ -7,6 +7,7 @@ This file provides a structured overview of the site's content for Large Languag
 ## Guides & Resources
 
 - [Web3 & Crypto Guides](/guides): Expert guides on market making, tokenomics, taxation, influencer outreach, and blockchain ecosystem dynamics.
+- [Glossary](/glossary): Comprehensive definitions of AI, Web3, and technical terms. Reference guide for developers and researchers.
 - [Writings & Essays](/writings): Curated collection of thought pieces on technology, AI, and society.
 - [Web3 101](/web3-101): Fundamentals of Web3, blockchain, and decentralized technologies.
 - [Prompt Engineering](/prompt-engineering-101): Mastering AI through effective prompt design and instruction.
