@@ -109,4 +109,10 @@ export const pageMetadata = {
       'Expert guides on market making in cryptocurrency, token economics, taxation of digital assets, influencer outreach, and blockchain ecosystem dynamics.',
     url: '/guides',
   },
+  seo: {
+    title: 'SEO & Growth Marketing Specialist | Vedang Vatsa',
+    description:
+      'Data-driven growth leader with 8+ years of experience scaling organic acquisition for Web3, FinTech, and mobile products. Expert in SEO, ASO, and community-led growth.',
+    url: '/seo',
+  },
 };

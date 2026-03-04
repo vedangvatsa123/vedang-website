@@ -6,30 +6,14 @@ import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, BookOpen, BarChart3, Lightbulb, Users, Zap } from 'lucide-react';
+import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Web3 & Crypto Guides - Market Making, Tokenomics, Taxation',
-  description: 'Expert guides on market making in crypto, token economics, taxation of digital assets, influencer outreach, and blockchain ecosystem dynamics.',
-  openGraph: {
-    title: 'Web3 & Crypto Guides',
-    description: 'Expert guides on market making, tokenomics, taxation, and Web3 strategies.',
-    url: '/guides',
-    images: [
-      {
-        url: '/images/icon.png',
-        width: 1200,
-        height: 630,
-        alt: 'Web3 Guides by Vedang Vatsa',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Web3 & Crypto Guides - Market Making, Tokenomics, Taxation',
-    description: 'Expert guides on market making in crypto, token economics, taxation, and blockchain strategies.',
-    images: ['/images/icon.png'],
-  },
-};
+export const metadata: Metadata = generateMetadata({
+  title: pageMetadata.guides.title,
+  description: pageMetadata.guides.description,
+  url: pageMetadata.guides.url,
+  ogImageAlt: 'Web3 Guides by Vedang Vatsa',
+});
 
 const guides = [
   {

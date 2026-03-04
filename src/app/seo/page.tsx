@@ -21,34 +21,15 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { essays } from '@/lib/essays';
+import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
 
-export const metadata: Metadata = {
-    title: 'SEO & Growth Marketing Specialist | Vedang Vatsa',
-    description: 'Data-driven growth leader with 8+ years of experience scaling organic acquisition for Web3, FinTech, and mobile products. Expert in SEO, ASO, and community-led growth.',
-    alternates: {
-      canonical: '/seo',
-    },
-    openGraph: {
-        title: 'SEO & Growth Marketing Specialist | Vedang Vatsa',
-        description: 'Explore the profile of Vedang Vatsa, a growth marketing specialist with expertise in SEO, ASO, and community-led growth for Web3 and FinTech.',
-        url: '/seo',
-        images: [
-          {
-            url: '/images/icon.png',
-            width: 1200,
-            height: 630,
-            alt: 'Vedang Vatsa - SEO & Growth Specialist',
-          },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'SEO & Growth Marketing Specialist | Vedang Vatsa',
-        description: 'Data-driven growth leader with experience scaling organic acquisition for Web3, FinTech, and mobile products.',
-        images: ['/images/icon.png'],
-    },
-};
+export const metadata: Metadata = generateMetadata({
+  title: pageMetadata.seo.title,
+  description: pageMetadata.seo.description,
+  url: pageMetadata.seo.url,
+  ogImageAlt: 'Vedang Vatsa - SEO & Growth Specialist',
+});
 
 const asSeenInLogos = [
     { name: 'Inc42', logo: '/images/press/68296-business-media-company-inc42-startup-marketing.png' },

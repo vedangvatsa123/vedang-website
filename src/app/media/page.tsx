@@ -6,36 +6,18 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { MoveUpRight } from 'lucide-react';
 import { AsSeenIn } from '@/components/as-seen-in';
+import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Media Features & Speaking Engagements | Vedang Vatsa',
-  description:
-    'Explore media features and speaking engagements by Vedang Vatsa, a recognized voice on AI, Web3, and the future of decentralized economies and technology.',
-  alternates: {
-    canonical: '/media',
-  },
-  openGraph: {
-      title: 'Media Features & Speaking Engagements | Vedang Vatsa',
-      description: 'Explore media features and speaking engagements by Vedang Vatsa, a recognized voice on AI, Web3, and the future of technology.',
-      url: '/media',
-      images: [
-        {
-          url: '/images/speaker/Vedang - speaker1.webp',
-          width: 1200,
-          height: 630,
-          alt: 'Vedang Vatsa speaking at a conference.',
-        },
-      ],
-  },
-  twitter: {
-      card: 'summary_large_image',
-      title: 'Media Features & Speaking Engagements | Vedang Vatsa',
-      description: 'Explore media features and speaking engagements by Vedang Vatsa, a recognized voice on AI, Web3, and the future of technology.',
-      images: ['/images/speaker/Vedang - speaker1.webp'],
-  },
-};
+export const metadata: Metadata = generateMetadata({
+  title: pageMetadata.media.title,
+  description: pageMetadata.media.description,
+  url: pageMetadata.media.url,
+  ogImage: '/images/speaker/Vedang - speaker1.webp',
+  ogImageAlt: 'Vedang Vatsa speaking at a conference.',
+});
 
 const mediaMentions = [
   { title: "India's CBI Raids 60 Locations in Crackdown on GainBitcoin Scam", source: 'Decrypt', url: 'https://decrypt.co/307790/indias-cbi-raids-60-locations-in-crackdown-on-gainbitcoin-scam' },
