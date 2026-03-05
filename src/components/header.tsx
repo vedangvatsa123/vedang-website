@@ -26,10 +26,6 @@ export function Header() {
               Writings
             </Link>
             
-            <Link href="/glossary" className="text-foreground transition-colors hover:text-primary px-2 py-1">
-              Glossary
-            </Link>
-            
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1 text-foreground transition-colors hover:text-primary px-2 py-1 text-sm font-medium outline-none">
                 Courses <ChevronDown className="h-4 w-4" />
@@ -46,6 +42,9 @@ export function Header() {
                 </DropdownMenuItem>
                  <DropdownMenuItem asChild>
                   <Link href="/web3-101">Fundamentals of Web3</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/glossary">Glossary</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
