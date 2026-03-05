@@ -58,23 +58,26 @@ export default function GlossaryTermPage({ params }: PageProps) {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
       <main className="flex-grow">
-        <article className="container mx-auto px-4 md:px-6 max-w-3xl py-16">
+        <div className="container mx-auto px-4 md:px-6 max-w-3xl py-16">
           <Link 
             href="/glossary" 
-            className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-8"
+            className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-12"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Glossary
           </Link>
+        </div>
 
-          <Badge variant="secondary" className="mb-4">
-            <BookOpen className="w-3 h-3 mr-1.5" />
-            Definition
-          </Badge>
-
-          <h1 className="text-4xl font-semibold tracking-tight text-primary mb-6">
-            {term.term}
-          </h1>
+        <article className="container mx-auto px-4 md:px-6 max-w-3xl pb-16">
+          <div className="mb-8">
+            <h1 className="text-5xl font-semibold tracking-tight text-primary mb-4">
+              {term.term}
+            </h1>
+            <Badge variant="secondary">
+              <BookOpen className="w-3 h-3 mr-1.5" />
+              Definition
+            </Badge>
+          </div>
 
           <p className="text-lg text-foreground leading-relaxed mb-12">
             {term.definition}
