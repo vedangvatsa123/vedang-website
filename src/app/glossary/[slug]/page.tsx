@@ -58,16 +58,15 @@ export default function GlossaryTermPage({ params }: PageProps) {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
       <main className="flex-grow">
-        <article className="container mx-auto px-4 md:px-6 max-w-3xl py-16">
-          <Link 
-            href="/glossary" 
-            className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-6 block"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Glossary
-          </Link>
-
-          <div className="mb-8">
+        <section className="text-center pt-12 pb-8 border-b border-border/30">
+          <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+            <Link 
+              href="/glossary" 
+              className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-6"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Glossary
+            </Link>
             <h1 className="text-5xl font-semibold tracking-tight text-primary mb-4">
               {term.term}
             </h1>
@@ -76,20 +75,22 @@ export default function GlossaryTermPage({ params }: PageProps) {
               Definition
             </Badge>
           </div>
+        </section>
 
+        <article className="container mx-auto px-4 md:px-6 max-w-3xl py-16">
           <p className="text-lg text-foreground leading-relaxed mb-12">
             {term.definition}
           </p>
 
           {relatedTermObjects.length > 0 && (
-            <div className="border-t border-border/50 pt-8">
-              <h2 className="text-xl font-semibold mb-4">Related Terms</h2>
-              <div className="flex flex-wrap gap-2">
+            <div className="border-t border-border/50 pt-12">
+              <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-6">Related Terms</h2>
+              <div className="flex flex-wrap gap-3">
                 {relatedTermObjects.map((relatedTerm) => (
                   <Link 
                     key={relatedTerm!.slug} 
                     href={`/glossary/${relatedTerm!.slug}`}
-                    className="inline-flex px-3 py-1.5 text-sm border border-border/50 rounded-md hover:border-primary hover:text-primary transition-colors"
+                    className="inline-flex px-3 py-2 text-sm font-medium border border-border/50 rounded-md hover:border-primary hover:text-primary transition-colors"
                   >
                     {relatedTerm!.term}
                   </Link>
