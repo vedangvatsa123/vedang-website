@@ -28,17 +28,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const truncatedDescription = term.definition.length > 160 
+    ? term.definition.substring(0, 157) + '...' 
+    : term.definition;
+
   return {
     title: `${term.term} - Glossary | Vedang Vatsa`,
-    description: term.definition,
+    description: truncatedDescription,
     alternates: {
       canonical: `/glossary/${term.slug}`,
     },
     openGraph: {
       title: `${term.term} - Glossary`,
-      description: term.definition,
+      description: truncatedDescription,
       url: `/glossary/${term.slug}`,
       type: 'article',
+    },
+    twitter: {
+      card: 'summary',
+      title: `${term.term} - Glossary`,
+      description: truncatedDescription,
     },
   };
 }
@@ -54,8 +63,50 @@ export default function GlossaryTermPage({ params }: PageProps) {
     ? term.relatedTerms.map(slug => getTermBySlug(slug)).filter(Boolean)
     : [];
 
+  const definitionSchema = {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "name": term.term,
+    "description": term.definition,
+    "inDefinedTermSet": "https://vedangvatsa.com/glossary",
+    "url": `https://vedangvatsa.com/glossary/${term.slug}`,
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://vedangvatsa.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Glossary",
+        "item": "https://vedangvatsa.com/glossary"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": term.term,
+        "item": `https://vedangvatsa.com/glossary/${term.slug}`
+      }
+    ]
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(definitionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Header />
       <main className="flex-grow">
         <section className="text-center pt-12 pb-8 border-b border-border/30">

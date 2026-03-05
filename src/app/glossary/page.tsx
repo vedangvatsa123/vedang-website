@@ -17,8 +17,52 @@ export const metadata: Metadata = generateMetadata({
 export default function GlossaryPage() {
   const terms = getAllTermsSorted();
   
+  const glossarySchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Glossary - AI, Web3 & Tech Terms",
+    "description": "Definitions of AI, Web3, and technical terms. Clear explanations without jargon.",
+    "url": "https://vedangvatsa.com/glossary",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": terms.map((term, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "url": `https://vedangvatsa.com/glossary/${term.slug}`,
+        "name": term.term,
+      }))
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://vedangvatsa.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Glossary",
+        "item": "https://vedangvatsa.com/glossary"
+      }
+    ]
+  };
+  
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(glossarySchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Header />
       <main className="flex-grow">
         <section className="text-center pt-16 pb-12 border-b border-border/30">
