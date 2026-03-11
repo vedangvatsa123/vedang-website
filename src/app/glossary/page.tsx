@@ -22,13 +22,13 @@ export default function GlossaryPage() {
     "@type": "CollectionPage",
     "name": "Glossary - AI, Web3 & Tech Terms",
     "description": "Definitions of AI, Web3, and technical terms. Clear explanations without jargon.",
-    "url": "https://vedangvatsa.com/glossary",
+    "url": "https://veda.ng/glossary",
     "mainEntity": {
       "@type": "ItemList",
       "itemListElement": terms.map((term, index) => ({
         "@type": "ListItem",
         "position": index + 1,
-        "url": `https://vedangvatsa.com/glossary/${term.slug}`,
+        "url": `https://veda.ng/glossary/${term.slug}`,
         "name": term.term,
       }))
     }
@@ -42,13 +42,13 @@ export default function GlossaryPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://vedangvatsa.com"
+        "item": "https://veda.ng"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Glossary",
-        "item": "https://vedangvatsa.com/glossary"
+        "item": "https://veda.ng/glossary"
       }
     ]
   };

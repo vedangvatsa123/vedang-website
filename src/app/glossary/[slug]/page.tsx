@@ -68,8 +68,8 @@ export default function GlossaryTermPage({ params }: PageProps) {
     "@type": "DefinedTerm",
     "name": term.term,
     "description": term.definition,
-    "inDefinedTermSet": "https://vedangvatsa.com/glossary",
-    "url": `https://vedangvatsa.com/glossary/${term.slug}`,
+    "inDefinedTermSet": "https://veda.ng/glossary",
+    "url": `https://veda.ng/glossary/${term.slug}`,
   };
 
   const breadcrumbSchema = {
@@ -80,19 +80,19 @@ export default function GlossaryTermPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://vedangvatsa.com"
+        "item": "https://veda.ng"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Glossary",
-        "item": "https://vedangvatsa.com/glossary"
+        "item": "https://veda.ng/glossary"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": term.term,
-        "item": `https://vedangvatsa.com/glossary/${term.slug}`
+        "item": `https://veda.ng/glossary/${term.slug}`
       }
     ]
   };
