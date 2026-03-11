@@ -1,72 +1,115 @@
-import { postToX } from '@/lib/x';
-import { essays } from '@/lib/essays';
+#!/usr/bin/env node
+import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-interface XPost {
-  essaySlug: string;
-  text: string;
-  schedule?: string; // ISO date or relative time
-  hashtags?: string[];
-}
+// Load .env.local
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.resolve(__dirname, '..', '.env.local') });
 
-async function postEssayToX() {
-  const accessToken = process.env.X_ACCESS_TOKEN;
+const BEARER_TOKEN = process.env.X_BEARER_TOKEN;
 
-  if (!accessToken) {
-    throw new Error('X_ACCESS_TOKEN not found in environment variables');
-  }
-
-  console.log(`📍 Found ${essays.length} essays`);
-  console.log('🐦 Posting to X...\n');
-
-  // Example posts for first 5 essays
-  const posts: XPost[] = essays.slice(0, 5).map((essay) => ({
-    essaySlug: essay.slug,
-    text: `New essay: "${essay.title}"
-
-${essay.summary.substring(0, 150)}...
-
-Read full essay on veda.ng/${essay.slug}
-
-#AI #Thoughts`,
-    hashtags: ['AI', 'Thoughts', 'Philosophy'],
-  }));
-
-  for (let i = 0; i < posts.length; i++) {
-    const post = posts[i];
-
-    try {
-      // Truncate text if needed
-      let postText = post.text;
-      if (postText.length > 280) {
-        postText = postText.substring(0, 277) + '...';
-      }
-
-      console.log(`📝 Posting essay ${i + 1}/${posts.length}: "${post.essaySlug}"`);
-      console.log(`   Text: ${postText.substring(0, 50)}...`);
-
-      const result = await postToX({ text: postText }, accessToken);
-
-      console.log(`   ✅ Posted successfully`);
-      console.log(`   Tweet ID: ${result.data.id}`);
-      console.log(`   URL: https://twitter.com/vedangvatsa/status/${result.data.id}\n`);
-
-      // Rate limiting: 2 second delay between posts
-      if (i < posts.length - 1) {
-        await new Promise((resolve) => setTimeout(resolve, 2000));
-      }
-    } catch (error) {
-      console.error(
-        `   ❌ Failed to post: ${error instanceof Error ? error.message : String(error)}`
-      );
-      console.log('   Continuing to next essay...\n');
-    }
-  }
-
-  console.log('✨ Done!');
-}
-
-// Run the script
-postEssayToX().catch((error) => {
-  console.error('Fatal error:', error);
+if (!BEARER_TOKEN) {
+  console.error('❌ Error: X_BEARER_TOKEN not found in .env.local');
+  console.error('Add your Bearer Token from developer.twitter.com');
   process.exit(1);
-});
+}
+
+// Sample essays data
+const essays = [
+  {
+    slug: 'ai-superintelligence-timeline',
+    title: 'AI Superintelligence Timeline',
+    description: 'Exploring when artificial superintelligence might emerge and what it means for humanity.',
+  },
+  {
+    slug: 'artificial-intuition',
+    title: 'Artificial Intuition',
+    description: 'Can machines develop intuition like humans? A deep dive into the nature of intuitive reasoning.',
+  },
+  {
+    slug: 'api-states',
+    title: 'API States and Governance',
+    description: 'How API architectures reflect and shape power structures in AI systems.',
+  },
+  {
+    slug: 'attention-refinery',
+    title: 'The Attention Refinery',
+    description: 'Understanding how attention mechanisms work and why they matter for AI.',
+  },
+  {
+    slug: 'rationality-in-ai',
+    title: 'Rationality in AI',
+    description: 'Examining rational decision-making in artificial systems.',
+  },
+];
+
+async function postToX(text: string): Promise<{ success: boolean; id?: string; error?: string }> {
+  try {
+    const response = await fetch('https://api.twitter.com/2/tweets', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${BEARER_TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ text }),
+    });
+
+    if (!response.ok) {
+      const error = await response.json();
+      return {
+        success: false,
+        error: JSON.stringify(error),
+      };
+    }
+
+    const data = await response.json();
+    return {
+      success: true,
+      id: data.data.id,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : String(error),
+    };
+  }
+}
+
+async function main() {
+  console.log('🚀 Posting essays to X\n');
+
+  const essayCount = essays.length;
+  const toPost = essays.slice(0, 5);
+
+  for (const essay of toPost) {
+    const postText = `✨ New essay: "${essay.title}"
+
+${essay.description.substring(0, 150)}${essay.description.length > 150 ? '...' : ''}
+
+Read full essay: veda.ng/${essay.slug}
+
+#AI #Writing`;
+
+    if (postText.length > 280) {
+      console.log(`⚠️  Skipped - Post too long (${postText.length} chars): "${essay.title}"`);
+      continue;
+    }
+
+    const result = await postToX(postText);
+
+    if (result.success) {
+      console.log(`✅ Posted - ${essay.title}`);
+      console.log(`   Tweet ID: ${result.id}\n`);
+    } else {
+      console.log(`❌ Failed - ${essay.title}`);
+      console.log(`   Error: ${result.error}\n`);
+    }
+
+    await new Promise(resolve => setTimeout(resolve, 2000));
+  }
+
+  console.log(`\n📊 Summary: Posted ${toPost.length} of ${essayCount} essays`);
+}
+
+main().catch(console.error);

@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 import crypto from 'crypto';
+import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Load .env.local
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.resolve(__dirname, '..', '.env.local') });
 
 // Get environment variables
 const clientId = process.env.X_CLIENT_ID;
@@ -11,20 +18,9 @@ if (!clientId) {
   process.exit(1);
 }
 
-// Generate PKCE challenge
-const codeVerifier = crypto.randomBytes(32).toString('hex');
-const codeChallenge = crypto
-  .createHash('sha256')
-  .update(codeVerifier)
-  .digest('base64')
-  .replace(/\+/g, '-')
-  .replace(/\//g, '_')
-  .replace(/=/g, '');
-
 // Generate state for CSRF protection
 const state = crypto.randomBytes(16).toString('hex');
 
-// Store values for callback (in real app, this would use sessionStorage or similar)
 console.log('\n🔐 X Authorization Setup');
 console.log('========================\n');
 console.log('1. Copy this URL into your browser:\n');
@@ -35,17 +31,14 @@ authUrl.searchParams.append('client_id', clientId);
 authUrl.searchParams.append('redirect_uri', `${baseUrl}/api/auth/x/callback`);
 authUrl.searchParams.append('scope', 'tweet.write tweet.read users.read');
 authUrl.searchParams.append('state', state);
-authUrl.searchParams.append('code_challenge', codeChallenge);
-authUrl.searchParams.append('code_challenge_method', 'S256');
 
 console.log(authUrl.toString());
 
-console.log('\n2. After you authorize, you\'ll be redirected to a page with your access token');
-console.log('3. Copy the access token from the response');
+console.log('\n2. After you authorize, you\'ll see a JSON response with your access token');
+console.log('3. Copy the "access_token" value from the response');
 console.log('4. Add it to .env.local as: X_ACCESS_TOKEN=<your_token>');
 console.log('5. Run: npm run x:post-essays\n');
 
 // For reference in the callback
 console.log('📝 Technical details (for reference):');
-console.log(`   Code Verifier: ${codeVerifier}`);
 console.log(`   State: ${state}\n`);

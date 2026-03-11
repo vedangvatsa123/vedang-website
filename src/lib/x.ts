@@ -1,7 +1,6 @@
 import { randomBytes } from 'crypto';
 
 const X_API_BASE = 'https://api.twitter.com/2';
-const X_AUTH_BASE = 'https://twitter.com/i/oauth2/authorize';
 const X_TOKEN_URL = 'https://twitter.com/2/oauth2/token';
 
 export interface XPostOptions {
@@ -16,28 +15,7 @@ export interface XOAuthConfig {
 }
 
 /**
- * Get X OAuth authorization URL
- */
-export function getXAuthUrl(config: XOAuthConfig): { url: string; state: string } {
-  const state = randomBytes(16).toString('hex');
-  const params = new URLSearchParams({
-    response_type: 'code',
-    client_id: config.clientId,
-    redirect_uri: config.redirectUri,
-    scope: 'tweet.write tweet.read users.read',
-    state,
-    code_challenge: 'challenge',
-    code_challenge_method: 'plain',
-  });
-
-  return {
-    url: `${X_AUTH_BASE}?${params.toString()}`,
-    state,
-  };
-}
-
-/**
- * Exchange OAuth code for access token
+ * Exchange OAuth code for access token using Authorization Code Flow
  */
 export async function getXAccessToken(
   code: string,
@@ -47,14 +25,12 @@ export async function getXAccessToken(
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': `Basic ${Buffer.from(`${config.clientId}:${config.clientSecret}`).toString('base64')}`,
     },
     body: new URLSearchParams({
       grant_type: 'authorization_code',
-      client_id: config.clientId,
-      client_secret: config.clientSecret,
       redirect_uri: config.redirectUri,
       code,
-      code_verifier: 'challenge',
     }).toString(),
   });
 
