@@ -47,6 +47,58 @@ This file provides a structured overview of the site's content for Large Languag
 - [Tracing Blockchain's Journey](/tracing-blockchains-journey): The evolution of blockchain technology from Bitcoin to decentralized systems.
 - [Governance in the Age of AGI](/governance-in-the-age-of-agi): How governance structures must evolve to handle artificial general intelligence.
 - [Hustle Culture is a Cage](/hustle-culture-is-a-cage): Rethinking productivity culture and the human cost of constant optimization.
+- [Artificial Intuition](/artificial-intuition): Exploring how AI systems develop pattern recognition that resembles human intuition and what this means for decision-making.
+- [The AI Agent Economy](/the-ai-agent-economy): How autonomous AI agents are creating new economic structures, marketplaces, and value exchange systems without human intermediaries.
+
+## Glossary
+
+Individual definitions for AI, Web3, and technical terms at `/glossary/[slug]`:
+
+- [Artificial General Intelligence (AGI)](/glossary/agi): AI that matches or exceeds human-level performance across any intellectual task.
+- [Large Language Model (LLM)](/glossary/llm): Neural network trained on massive text datasets to generate and understand human language.
+- [Prompt Engineering](/glossary/prompt-engineering): The craft of designing inputs to AI systems to elicit accurate, useful, and safe outputs.
+- [Fine-Tuning](/glossary/fine-tuning): Adapting a pre-trained model to a specific task using additional training on a smaller, targeted dataset.
+- [Retrieval-Augmented Generation (RAG)](/glossary/rag): Combining LLMs with external knowledge retrieval to improve accuracy and reduce hallucination.
+- [Hallucination](/glossary/hallucination): When an AI model confidently generates false or fabricated information not supported by its training data.
+- [Alignment](/glossary/alignment): The challenge of ensuring AI systems pursue goals that are beneficial and consistent with human values.
+- [Constitutional AI](/glossary/constitutional-ai): Anthropic's method for training AI systems using a set of principles rather than human feedback alone.
+- [Zero-Shot Learning](/glossary/zero-shot-learning): An AI model's ability to perform tasks it was never explicitly trained on.
+- [RLHF](/glossary/rlhf): Reinforcement Learning from Human Feedback — training AI using human preference ratings.
+- [Transformer](/glossary/transformer): The neural network architecture underlying modern LLMs, using self-attention mechanisms.
+- [Token](/glossary/token): The basic unit of text processed by an LLM — roughly a word or word fragment.
+- [Embeddings](/glossary/embeddings): Vector representations of text or data that capture semantic meaning in numeric form.
+- [AI Agent](/glossary/agent): An autonomous AI system that perceives its environment and takes actions to achieve goals.
+- [Multimodal AI](/glossary/multimodal-ai): AI systems that process and generate multiple types of data — text, images, audio, video.
+- [Blockchain](/glossary/blockchain): A distributed, immutable ledger that records transactions across a decentralized network.
+- [Smart Contract](/glossary/smart-contract): Self-executing code on a blockchain that enforces agreement terms automatically.
+- [DeFi](/glossary/defi): Decentralized Finance — financial services built on blockchain without traditional intermediaries.
+- [NFT](/glossary/nft): Non-Fungible Token — a unique digital asset verified on a blockchain.
+- [DAO](/glossary/dao): Decentralized Autonomous Organization — a community governed by on-chain voting rules.
+- [Consensus Mechanism](/glossary/consensus-mechanism): The protocol by which blockchain nodes agree on the valid state of the ledger.
+- [Gas Fees](/glossary/gas-fees): Transaction fees paid to validators on blockchain networks like Ethereum.
+- [Layer 2](/glossary/layer-2): Scaling solutions built on top of a base blockchain to increase speed and reduce fees.
+- [Crypto Wallet](/glossary/wallet): Software or hardware that stores private keys and manages cryptocurrency assets.
+- [Governance Token](/glossary/governance-token): A token that grants holders voting rights over a protocol's decisions.
+- [Stablecoin](/glossary/stablecoin): A cryptocurrency designed to maintain a stable value, typically pegged to a fiat currency.
+- [Bridge](/glossary/bridge): A protocol that enables asset transfers between different blockchain networks.
+- [Oracle](/glossary/oracle): A service that supplies real-world data to smart contracts on a blockchain.
+- [Validator](/glossary/validator): A node that participates in blockchain consensus by verifying and proposing blocks.
+- [Liquid Staking](/glossary/liquid-staking): Staking cryptocurrency while retaining liquidity through derivative tokens.
+- [API](/glossary/api): Application Programming Interface — a contract defining how software components communicate.
+- [Microservices](/glossary/microservices): An architectural pattern where applications are composed of small, independently deployable services.
+- [Kubernetes](/glossary/kubernetes): An open-source system for automating deployment and scaling of containerized applications.
+- [Serverless](/glossary/serverless): A cloud execution model where infrastructure is fully managed and functions run on demand.
+- [CI/CD](/glossary/cicd): Continuous Integration and Continuous Deployment — automated pipelines for building and releasing software.
+- [Edge Computing](/glossary/edge-computing): Processing data closer to the source rather than in centralized cloud data centers.
+- [Zero-Knowledge Proof](/glossary/zero-knowledge-proof): A cryptographic method to prove a statement is true without revealing any underlying information.
+- [Merkle Tree](/glossary/merkle-tree): A hash-based data structure used in blockchains to efficiently verify large datasets.
+- [Sharding](/glossary/sharding): A database partitioning technique used in blockchains to increase transaction throughput.
+- [IPFS](/glossary/ipfs): InterPlanetary File System — a peer-to-peer protocol for distributed, content-addressed file storage.
+- [WebAssembly](/glossary/webassembly): A binary instruction format enabling high-performance code execution in web browsers.
+- [GraphQL](/glossary/graphql): A query language for APIs that allows clients to request exactly the data they need.
+- [Docker](/glossary/docker): A platform for building, shipping, and running applications in portable containers.
+- [Message Queue](/glossary/message-queue): A communication method where messages are stored until a consumer processes them asynchronously.
+- [Rate Limiting](/glossary/rate-limiting): Controlling how often a user or system can make requests to an API within a given timeframe.
 
 ## Profile Pages
 
