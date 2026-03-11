@@ -49,9 +49,37 @@ const faqItems = [
 ];
 
 
+const courseSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name: 'The Agentic Web',
+  description: 'A free, self-paced course on autonomous AI agents, multi-agent systems, and the emerging agentic internet economy.',
+  url: 'https://veda.ng/agentic-web',
+  provider: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
+  isAccessibleForFree: true,
+  educationalLevel: 'Beginner',
+  hasCourseInstance: {
+    '@type': 'CourseInstance',
+    courseMode: 'online',
+    instructor: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(({ question, answer }) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer },
+  })),
+};
+
 export default function AgenticWebCoursePage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Header />
       <main className="flex-grow">
 

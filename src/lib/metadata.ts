@@ -33,8 +33,8 @@ export function generateMetadata(params: MetadataParams): Metadata {
       images: [
         {
           url: ogImage,
-          width: 1200,
-          height: 630,
+          width: ogImage === '/images/icon.png' ? 256 : 1200,
+          height: ogImage === '/images/icon.png' ? 256 : 630,
           alt: ogImageAlt,
         },
       ],

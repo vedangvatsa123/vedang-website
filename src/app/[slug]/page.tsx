@@ -10,12 +10,60 @@ import matter from 'gray-matter';
 import { Metadata } from 'next';
 import { RelatedEssays } from '@/components/related-essays';
 import { Separator } from '@/components/ui/separator';
+import Link from 'next/link';
 
 type Props = {
   params: { slug: string };
 };
 
 const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
+
+// Maps essay slugs to relevant glossary term slugs for internal linking
+const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
+  'ai-superintelligence-timeline': ['agi', 'llm', 'alignment', 'transformer'],
+  'artificial-intuition': ['llm', 'embeddings', 'rlhf', 'agent'],
+  'are-we-in-a-simulation': ['agi', 'llm'],
+  'the-ai-agent-economy': ['agent', 'llm', 'defi', 'dao'],
+  'computational-constitutions': ['smart-contract', 'dao', 'zero-knowledge-proof'],
+  'api-states': ['api', 'smart-contract', 'blockchain', 'dao'],
+  'computational-social-science-at-scale': ['llm', 'agent', 'rag'],
+  'governance-in-the-age-of-agi': ['agi', 'dao', 'alignment', 'constitutional-ai'],
+  'programmable-trust': ['zero-knowledge-proof', 'smart-contract', 'blockchain', 'oracle'],
+  'rationality-in-ai': ['alignment', 'rlhf', 'constitutional-ai', 'llm'],
+  'ambient-intelligence': ['agent', 'multimodal-ai', 'embeddings'],
+  'synthetic-empathy': ['llm', 'rlhf', 'multimodal-ai'],
+  'the-attention-refinery': ['agent', 'llm'],
+  'the-cognitive-load-crisis': ['llm', 'rag'],
+  'digital-monasticism': ['agent', 'llm'],
+  'the-dark-forest-internet': ['zero-knowledge-proof', 'blockchain', 'ipfs'],
+  'an-internet-of-lies': ['zero-knowledge-proof', 'blockchain', 'merkle-tree'],
+  'pseudonymous-agency': ['zero-knowledge-proof', 'wallet', 'blockchain'],
+  'the-god-protocol': ['agi', 'alignment', 'constitutional-ai'],
+  'the-plurality-trap': ['agi', 'multimodal-ai', 'embeddings'],
+  'sacred-algorithms': ['alignment', 'constitutional-ai', 'rlhf'],
+  'the-substrate-shift': ['ipfs', 'webassembly', 'edge-computing'],
+  'the-mesh-economy': ['defi', 'dao', 'ipfs', 'blockchain'],
+  'the-simulation-layer': ['agent', 'llm', 'rag'],
+  'the-singularity-paradox': ['agi', 'llm', 'alignment'],
+  'what-is-the-singularity': ['agi', 'llm', 'transformer'],
+  'the-intuitive-singularity': ['agi', 'llm', 'embeddings'],
+  'tracing-blockchains-journey': ['blockchain', 'smart-contract', 'defi', 'consensus-mechanism'],
+  'the-twilight-economy': ['agent', 'llm', 'dao'],
+  'the-sensory-internet': ['multimodal-ai', 'agent', 'embeddings'],
+  'the-in-between-state': ['agi', 'alignment'],
+  'hustle-culture-is-a-cage': ['agent', 'dao'],
+};
+
+const GLOSSARY_LABELS: Record<string, string> = {
+  'agi': 'AGI', 'llm': 'LLM', 'alignment': 'AI Alignment', 'transformer': 'Transformer',
+  'embeddings': 'Embeddings', 'rlhf': 'RLHF', 'agent': 'AI Agent', 'rag': 'RAG',
+  'constitutional-ai': 'Constitutional AI', 'smart-contract': 'Smart Contract',
+  'dao': 'DAO', 'zero-knowledge-proof': 'Zero-Knowledge Proof', 'api': 'API',
+  'blockchain': 'Blockchain', 'oracle': 'Oracle', 'multimodal-ai': 'Multimodal AI',
+  'defi': 'DeFi', 'ipfs': 'IPFS', 'merkle-tree': 'Merkle Tree', 'wallet': 'Wallet',
+  'webassembly': 'WebAssembly', 'edge-computing': 'Edge Computing',
+  'consensus-mechanism': 'Consensus Mechanism',
+};
 
 export function generateStaticParams() {
   if (!fs.existsSync(essaysDirectory)) {
@@ -68,8 +116,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 630,
+          width: 256,
+          height: 256,
           alt: essay.frontmatter.title,
         },
       ],
@@ -140,6 +188,23 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
         </article>
 
         <div className="mx-auto max-w-4xl px-4 md:px-6 mt-12">
+            <Separator />
+            {ESSAY_GLOSSARY_LINKS[params.slug] && (
+              <section className="py-8">
+                <h2 className="text-lg font-semibold tracking-tight mb-3 text-muted-foreground">Key Terms</h2>
+                <div className="flex flex-wrap gap-2">
+                  {ESSAY_GLOSSARY_LINKS[params.slug].map(slug => (
+                    <Link
+                      key={slug}
+                      href={`/glossary/${slug}`}
+                      className="inline-block rounded-full border px-3 py-1 text-sm text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                    >
+                      {GLOSSARY_LABELS[slug] || slug}
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
             <Separator />
             <RelatedEssays currentSlug={params.slug} />
         </div>
