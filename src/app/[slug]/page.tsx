@@ -92,6 +92,9 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
 
   const datePublished = essay.frontmatter.date ? new Date(essay.frontmatter.date).toISOString() : new Date().toISOString();
 
+  // Calculate word count from content
+  const wordCount = essay.content.split(/\s+/).length;
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -100,6 +103,7 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
       '@type': 'Person',
       name: essay.frontmatter.author || 'Vedang Vatsa',
       url: 'https://veda.ng',
+      image: 'https://veda.ng/images/icon.png',
     },
     description: essay.frontmatter.summary,
     image: 'https://veda.ng/images/icon.png',
@@ -117,6 +121,8 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
     },
     datePublished: datePublished,
     dateModified: datePublished,
+    wordCount: wordCount,
+    ...(essay.frontmatter.keywords && { keywords: essay.frontmatter.keywords }),
   };
 
   return (
