@@ -49,6 +49,18 @@ const faqItems = [
 ];
 
 
+const videoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: 'The Agentic Web — Introduction',
+  description: 'An introduction to the Agentic Web: how autonomous AI agents are transforming the internet from a place to find information into a platform for getting things done.',
+  thumbnailUrl: 'https://img.youtube.com/vi/Gqgk25SOIMM/maxresdefault.jpg',
+  uploadDate: '2025-01-01',
+  embedUrl: 'https://www.youtube.com/embed/Gqgk25SOIMM',
+  url: 'https://www.youtube.com/watch?v=Gqgk25SOIMM',
+  publisher: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
+};
+
 const courseSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
@@ -78,6 +90,7 @@ const faqSchema = {
 export default function AgenticWebCoursePage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Header />

@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/icon.png',
-        width: 1200,
-        height: 630,
+        width: 256,
+        height: 256,
         alt: 'Vedang Vatsa',
       },
     ]
@@ -47,6 +47,22 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/',
+  },
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Vedang Vatsa',
+  url: 'https://veda.ng',
+  description: 'Official website of Vedang Vatsa — AI & Web3 thought leader, founder of Hashtag Web3.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://veda.ng/glossary?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
   },
 };
 
@@ -115,6 +131,10 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="/images/favicon/favicon.ico" sizes="any" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
