@@ -183,7 +183,10 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
       <main className="flex-grow py-8">
         <article className="prose dark:prose-invert mx-auto px-4 md:px-6">
           <h1>{essay.frontmatter.title}</h1>
-          {essay.frontmatter.date && <p className="text-sm text-muted-foreground">{new Date(essay.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>}
+          <p className="text-sm text-muted-foreground">
+            By <a href="/profile" className="hover:underline">Vedang Vatsa</a>
+            {essay.frontmatter.date && <> &middot; {new Date(essay.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</>}
+          </p>
           <MDXRemote source={essay.content} />
         </article>
 
