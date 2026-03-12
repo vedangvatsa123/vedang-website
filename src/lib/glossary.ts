@@ -501,6 +501,321 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "A monorepo is a software development strategy where multiple projects, packages, or services are stored in a single version control repository, rather than separate repositories per project. Companies like Google, Meta, and Microsoft manage essentially all their code in monorepos containing billions of lines. The advantages are significant for large organizations. Atomic commits that span multiple packages are possible without complex cross-repo coordination. Shared tooling, testing infrastructure, and CI/CD pipelines apply uniformly. Refactoring across package boundaries is feasible — you can rename a function used across ten packages in one commit. Dependency management is simplified when all packages share a root. The challenges scale with organization size. Build systems must be selective — rebuilding everything on every change is impractical. Tools like Bazel, Nx, and Turborepo enable incremental builds that only rebuild what changed. Code ownership becomes complex when different teams work in the same repository. IDE performance can suffer with millions of files. The monorepo versus polyrepo debate reflects deeper questions about how teams coordinate: tighter coupling through shared code versus looser coupling through explicit APIs and versioned releases.",
     relatedTerms: ["cicd", "microservices", "docker", "kubernetes"]
   },
+  // Additional AI Terms
+  {
+    term: "Attention Head",
+    slug: "attention-head",
+    definition: "An attention head is one of multiple parallel attention mechanisms within a transformer layer, each learning different types of relationships. In a multi-head attention block, all heads operate simultaneously on the same input, each computing its own Query, Key, and Value transformations. One head might learn to track pronoun references. Another might identify verb-object relationships. A third might focus on long-range semantic connections. The outputs are concatenated and passed through a linear transformation. This parallelism lets the model capture diverse relationship types at different positions and scales within a single forward pass. The number of attention heads scales with model size. GPT-3 has 96 heads. Smaller models have fewer. More heads increase capacity but also training cost.",
+    relatedTerms: ["attention-mechanism", "transformer", "llm"]
+  },
+  {
+    term: "Positional Encoding",
+    slug: "positional-encoding",
+    definition: "Positional encoding is a technique for encoding the position of tokens in a sequence since transformers process all tokens in parallel rather than sequentially. Without positional information, the model loses word order. The sentence 'dog bit man' would be identical to 'man bit dog.' Transformer models add positional encodings to token embeddings, giving each token a unique signal based on its position. The original approach uses sine and cosine functions at different frequencies. Token at position 0 gets a different encoding than position 1. This pattern scales to arbitrarily long sequences. Relative positional encodings, like those used in RoPE (Rotary Position Embedding), encode relative distances between tokens rather than absolute positions. This helps models generalize to longer sequences than seen during training. Positional encoding is fundamental — changing it affects context length capabilities and generalization to new sequence lengths.",
+    relatedTerms: ["transformer", "context-window", "llm"]
+  },
+  {
+    term: "Batch Normalization",
+    slug: "batch-normalization",
+    definition: "Batch normalization is a technique for stabilizing neural network training by normalizing intermediate activations to have zero mean and unit variance across a batch of inputs. During training, each layer's input distribution shifts as earlier layers' parameters change, causing instability. Batch normalization standardizes these distributions. The input distribution remains more stable, enabling faster learning and higher learning rates. Layers downstream see more consistent input distributions. The trade-off is that batch normalization couples the behavior of individual samples. With a batch size of 1, there's no normalization. This is why batch sizes matter. Large batches mean more stable normalization statistics. Small batches mean noisier signals. Layer normalization, used in transformers, normalizes across features for each sample rather than across samples. This removes the batch size dependency.",
+    relatedTerms: ["transformer", "inference"]
+  },
+  {
+    term: "Beam Search",
+    slug: "beam-search",
+    definition: "Beam search is a decoding algorithm for language models that expands multiple partial sequences in parallel rather than greedily selecting the single best next token. At each step, the model generates logits for all possible next tokens, ranks them by probability, and expands the top k sequences, the beam width. A beam width of 1 is greedy decoding. A beam width of 10 explores 10 partial sequences at each step. Beam search often produces higher-quality outputs than greedy decoding because it avoids getting stuck in local maxima. It costs more compute, proportional to the beam width. Sequences are pruned when they become clearly suboptimal relative to the best sequence. The final output is the highest-probability sequence found. Variations like length normalization bias results toward longer sequences. Diverse beam search encourages exploring different narrative directions by penalizing similar sequences. Beam search is used in machine translation and other generative tasks.",
+    relatedTerms: ["llm", "inference", "temperature"]
+  },
+  {
+    term: "Latency",
+    slug: "latency",
+    definition: "Latency is the time delay between when a request is made and when a response is received. In AI systems, it's critical. First-token latency is the time to generate the first token of a response. Tokens-per-second measures throughput after the first token. A chatbot with high first-token latency feels sluggish even if it generates tokens quickly afterward. Streaming partially mitigates this: returning tokens as they're generated rather than waiting for the full response. Network latency is the time for data to travel across the internet. Application latency is the time for the server to process and generate a response. For real-time interactive AI, total latency should be under a few hundred milliseconds for the interaction to feel responsive. Optimizing latency requires profiling: identifying which components contribute most. Common bottlenecks include model inference, database queries, and network requests. Speculative decoding, where smaller models generate multiple tokens that a larger model validates in parallel, reduces effective latency.",
+    relatedTerms: ["inference", "edge-computing", "cdn"]
+  },
+  {
+    term: "Perplexity",
+    slug: "perplexity",
+    definition: "Perplexity is a measure of how well a language model predicts a test set. It's the exponentiated average cross-entropy loss. Lower perplexity means the model assigns higher probability to the correct next word on average. A perplexity of 10 means the model is as confused as if choosing uniformly among 10 equally likely options. A perplexity of 100 means effectively choosing among 100 options. Perplexity on a test set roughly correlates with downstream task performance. Models with lower perplexity are usually better at downstream tasks. But the correlation isn't perfect — a model trained on the right distribution might have higher perplexity than a model trained on the wrong distribution but better performance on actual applications. Benchmarks like WikiText and Penn Treebank use perplexity as a metric. When comparing models, lower perplexity typically indicates better quality, but downstream performance on actual tasks is the true measure.",
+    relatedTerms: ["llm", "inference", "fine-tuning"]
+  },
+  {
+    term: "Activation Function",
+    slug: "activation-function",
+    definition: "An activation function is a mathematical function applied to each neuron's output in a neural network, introducing non-linearity. Without activation functions, stacking linear transformations produces another linear transformation — no matter how deep the network, it has the expressive power of a single layer. Activation functions introduce non-linearity, enabling networks to learn non-linear patterns. ReLU, the Rectified Linear Unit, returns max(0, x). It's simple, efficient, and became dominant in deep learning. Other functions include sigmoid, tanh, and Swish. Modern transformers typically use GELU or SwiGLU. The choice of activation function affects training dynamics. ReLU suffers from dying neurons, where neurons output zero and stop updating. Variants like Leaky ReLU address this. The activation function's shape affects gradient flow during backpropagation. Activations with poor gradient flow cause training to stall. This is why careful activation design matters.",
+    relatedTerms: ["transformer", "neural-network"]
+  },
+  {
+    term: "Softmax",
+    slug: "softmax",
+    definition: "Softmax is a function that converts a vector of scores into a probability distribution summing to 1. Applied to the logits from a neural network's final layer, it transforms raw scores into normalized probabilities. Each probability is the exponential of the score divided by the sum of all exponentials. Softmax preserves the relative ordering: the highest score gets the highest probability. It amplifies differences: a small difference in logits becomes a large difference in probabilities. This is desirable for classification, the model's most confident prediction dominates. The temperature parameter in language models controls softmax sharpness. Temperature 0 makes softmax arbitrarily sharp, effectively choosing the highest logit. High temperature flattens the distribution, making all choices roughly equally likely. Softmax is differentiable, making it suitable for training with gradient descent. Cross-entropy loss, the standard loss for classification, compares predicted softmax probabilities against true labels.",
+    relatedTerms: ["llm", "temperature", "cross-entropy"]
+  },
+  {
+    term: "Cross-Entropy Loss",
+    slug: "cross-entropy-loss",
+    definition: "Cross-entropy loss is a loss function measuring the difference between predicted probability distributions and true labels. It's the standard objective for training classification and language models. For a single example, cross-entropy is negative log of the probability assigned to the true label. Assign probability 0.9 to the correct class and the loss is about 0.1. Assign probability 0.1 and the loss is about 2.3. The function heavily penalizes confident wrong predictions. Averaging over all training examples gives the cross-entropy loss. Minimizing it during training encourages the model to assign high probability to correct labels. The connection to information theory: cross-entropy is the average number of bits needed to encode data from a true distribution using a code optimized for a predicted distribution. When predicted and true distributions match, cross-entropy equals entropy, the theoretical minimum. Cross-entropy is fundamental to neural network training. Nearly all classification and language models use it.",
+    relatedTerms: ["llm", "fine-tuning", "softmax"]
+  },
+  {
+    term: "Perplexity Trap",
+    slug: "perplexity-trap",
+    definition: "The perplexity trap occurs when optimizing language models for lower perplexity on a test distribution doesn't improve performance on downstream tasks because the test distribution doesn't match the actual task. A model trained to minimize perplexity on Wikipedia becomes very good at predicting Wikipedia-style text but may perform poorly on conversational dialogue, code, or technical writing. This happens because the model's objectives don't align. Minimizing perplexity is unsupervised; it uses no labels. Optimizing for task-specific performance is supervised; it directly trains on the actual objective. The solution is fine-tuning or RLHF: after training on perplexity, train further on the actual task. This reweights the model's priorities toward task-relevant patterns. Benchmark perplexity gives an initial signal but shouldn't be blindly trusted as a proxy for real-world performance.",
+    relatedTerms: ["perplexity", "fine-tuning", "rlhf"]
+  },
+  {
+    term: "Throughput",
+    slug: "throughput",
+    definition: "Throughput is the rate at which a system processes requests, measured in outputs per unit time. In AI systems, throughput is often tokens per second. Latency is time per request. Throughput is requests per time. Systems can have low latency but low throughput if they process requests sequentially. Batching improves throughput: grouping multiple requests and processing them together amortizes fixed costs. GPU utilization is often limited by how much computation per token. Higher latency per token might allow more tokens to be generated in parallel, improving throughput even as individual latency increases. A model generating 10 tokens per second for one user has low throughput. A system batching 100 users' requests and generating 1,000 tokens per second has high throughput. The sweet spot in deployed systems is balancing latency for interactive users with throughput for batch processing.",
+    relatedTerms: ["latency", "inference", "edge-computing"]
+  },
+
+  // Extended Tech Terms
+  {
+    term: "Protocol Buffer",
+    slug: "protobuf",
+    definition: "Protocol buffers are a method of serializing structured data, compact and efficient compared to JSON or XML. You define a schema specifying field names and types. Protobuf generates code in your language of choice that serializes and deserializes your data. The binary format is smaller than text formats, reducing bandwidth and storage. Deserialization is faster than parsing JSON. Protobuf schemas support versioning: you can add new fields without breaking old code. Backward and forward compatibility is built in. gRPC, a high-performance RPC framework, uses protobuf for its interface definitions. Protocol buffers are used internally at Google, Facebook, and many other large companies. The tradeoff is that the binary format isn't human-readable. You need the schema to understand serialized data. But for high-performance systems transmitting large volumes of data, protocol buffers are superior.",
+    relatedTerms: ["api", "grpc"]
+  },
+  {
+    term: "gRPC",
+    slug: "grpc",
+    definition: "gRPC is a high-performance remote procedure call framework using protocol buffers for serialization and HTTP/2 for transport. You define RPC methods in proto files, gRPC generates client and server code, and you implement the server logic. Clients call remote functions as if they were local. The differences from REST are substantial. REST is request-response, text-based, and chatty. gRPC is bidirectional streaming, binary, and efficient. A REST API with multiple endpoints becomes a gRPC service with multiple methods. Streaming is native: server-side streaming sends multiple responses. Client-side streaming sends multiple requests. Bidirectional streaming sends multiple requests and responses concurrently. Performance is significantly better than REST. Smaller payloads, faster serialization, HTTP/2's multiplexing. For internal services where you control both ends, gRPC is superior. For public APIs where clients are diverse, REST is more practical because HTTP/2 support is still incomplete in browsers.",
+    relatedTerms: ["api", "protobuf", "microservices"]
+  },
+  {
+    term: "Idempotency",
+    slug: "idempotency",
+    definition: "Idempotency means that performing an operation multiple times produces the same result as performing it once. An idempotent operation is safe to retry without side effects. GET requests are idempotent: fetching data doesn't change it. DELETE with a unique ID is idempotent: deleting an already-deleted resource produces the same state as before. Non-idempotent operations create problems. POST to transfer money isn't idempotent: posting twice transfers twice. Networks fail. If a server confirms the transfer but the response is lost, the client doesn't know if it succeeded. Retrying safely requires idempotency. Solutions include idempotency keys: the client generates a unique ID and sends it with the request. The server records successes by key. Duplicate requests with the same key return the cached response. For important operations, idempotency keys are essential. Payment systems require them. Message queues guarantee exactly-once delivery through idempotency keys. Without idempotency, distributed systems become fragile.",
+    relatedTerms: ["api", "message-queue"]
+  },
+  {
+    term: "Circuit Breaker",
+    slug: "circuit-breaker",
+    definition: "A circuit breaker is a software pattern for gracefully handling failures in distributed systems. When service A calls service B repeatedly and B starts failing, A could keep retrying and waste resources. A circuit breaker tracks failures and stops making requests when failures exceed a threshold. The circuit breaker has three states. Closed is normal operation, requests go through. Open means the threshold was exceeded, requests fail fast without attempting the call. Half-open is a recovery state where a few requests are allowed through to check if the service has recovered. If those requests succeed, the circuit closes and normal operation resumes. If they fail, the circuit opens again. Circuit breakers prevent cascading failures where one failing service brings down others that depend on it. They improve system resilience. Hystrix, Polly, and cloud platforms all implement circuit breakers.",
+    relatedTerms: ["microservices", "api"]
+  },
+  {
+    term: "Database Index",
+    slug: "database-index",
+    definition: "A database index is a data structure that speeds up lookups and queries on a table, similar to an index in a book. Without an index, finding all users with name 'Alice' requires scanning the entire table. With an index on the name column, the database jumps directly to relevant records. The index is sorted and searchable. Creating an index takes space and slows writes, as the index must be updated whenever the table changes. This is a fundamental trade-off: faster reads at the cost of slower writes and storage. Composite indexes span multiple columns. Covering indexes include all columns needed for a query, allowing the database to avoid accessing the main table. Query planners choose indexes intelligently, using indexes only when beneficial. Incorrect indexing is a common performance problem — creating too many indexes slows inserts, too few indexes slows queries.",
+    relatedTerms: ["database", "query-optimization"]
+  },
+  {
+    term: "ACID Properties",
+    slug: "acid-properties",
+    definition: "ACID properties are guarantees for reliable database transactions. Atomicity means a transaction completes entirely or not at all. If it fails midway, all changes roll back. No partial updates. Consistency means the database moves from one valid state to another. Constraints are preserved. Isolation means concurrent transactions don't interfere. Each transaction runs as if no others are executing, even though they run in parallel. Durability means completed transactions persist even if the system crashes. The performance cost is significant. Guaranteeing ACID requires careful coordination. Write-ahead logging ensures durability. Locks ensure isolation. This is why transactional databases are slower than systems that relax guarantees. NoSQL databases often relax consistency and isolation for performance. This is the fundamental trade-off in database design.",
+    relatedTerms: ["database"]
+  },
+  {
+    term: "Consistency Hashing",
+    slug: "consistency-hashing",
+    definition: "Consistency hashing is a technique for distributing keys across a dynamic set of servers, like in caching systems and distributed databases. Standard hashing modulo N assigns key K to server K mod N. When servers are added or removed, most keys are reassigned, causing cache misses and data movement. Consistency hashing solves this. Servers and keys are hashed to a ring. Each key is assigned to the next server clockwise on the ring. When a server is added, only keys between that server and the previous one are reassigned. When a server is removed, only its keys are redistributed. The percentage of keys that move is proportional to the fraction of the ring affected, not the total number of keys. This dramatically reduces churn when cluster membership changes. Virtual nodes, multiple hash values per server, improve load balancing and resilience. Consistent hashing is used in memcached, Cassandra, Redis, and other distributed systems.",
+    relatedTerms: ["database", "distributed-systems"]
+  },
+  {
+    term: "CORS",
+    slug: "cors",
+    definition: "Cross-Origin Resource Sharing is a mechanism that allows web pages to make requests to different domains, subject to security restrictions. Browsers enforce the Same-Origin Policy, preventing a page at example.com from making requests to api.otherdomain.com. This is a security feature preventing malicious sites from making unwanted requests on your behalf. CORS relaxes this selectively. A server can declare which other domains are allowed to make requests by setting HTTP headers. If example.com's server includes 'Access-Control-Allow-Origin: api.otherdomain.com', then api.otherdomain.com can make requests to example.com. For complex requests, the browser makes a preflight OPTIONS request. If the server permits the actual request, it proceeds. CORS is how modern APIs enable cross-domain access safely. Without CORS, all API requests would need to go through the same domain.",
+    relatedTerms: ["api", "oauth"]
+  },
+  {
+    term: "Database Sharding",
+    slug: "database-sharding",
+    definition: "Database sharding partitions data across multiple database instances based on a shard key. User data might be sharded by user ID: users with IDs 0-999999 on shard 1, 1000000-1999999 on shard 2. Queries on a single user go to one shard. Queries across all users require hitting all shards. Sharding enables databases to scale beyond one machine's capacity. Each shard handles a subset of load. The trade-off is complexity. Queries become more complex. Rebalancing when shards become unequal is difficult. Transactions spanning shards are harder. Choosing the shard key is critical. A bad choice creates hotspots where some shards receive far more load. Good shard keys distribute evenly. Sharding at scale, Google's databases are sharded at multiple levels, is sophisticated engineering.",
+    relatedTerms: ["database", "microservices", "consistency-hashing"]
+  },
+  {
+    term: "Caching Strategy",
+    slug: "caching-strategy",
+    definition: "Caching strategies determine what data to evict when the cache is full. LRU (Least Recently Used) evicts the least recently accessed item. Items accessed frequently stay cached. Time-based eviction removes items after a time-to-live expires. This is useful for data that changes, like API responses. Write-through writes to both cache and database, ensuring consistency but slower. Write-behind writes to cache immediately and database asynchronously, faster but risky if the cache crashes. Cache-aside requires application code to check the cache, load from database on miss, and update the cache. Simple but error-prone. Different strategies suit different use cases. Recommendation systems use LRU. API response caching uses TTL. Financial transactions use write-through.",
+    relatedTerms: ["database", "message-queue"]
+  },
+
+  // Extended Web3 Terms
+  {
+    term: "Yield",
+    slug: "yield",
+    definition: "Yield in DeFi refers to the returns earned from deploying capital in protocols, expressed as APY, Annual Percentage Yield. A liquidity pool offering 5% APY returns 5% annually on deposited capital. Yields vary by protocol and market conditions. High yields attract capital. When yields are high, they're usually unsustainable, driven by token emissions that will decline. When yields are low, the protocol has matured. Impermanent loss reduces actual yields for liquidity providers. Slashing risks reduce validator yields if the validator misbehaves. Understanding the source of yield is critical. Yield from trading fees is stable. Yield from token emissions is temporary. Realizing yields often requires active management. Depositing and forgetting doesn't maximize returns.",
+    relatedTerms: ["defi", "liquidity-pool", "yield-farming"]
+  },
+  {
+    term: "Impermanent Loss",
+    slug: "impermanent-loss",
+    definition: "Impermanent loss is the loss liquidity providers suffer when the price ratio of paired assets diverges from when they provided liquidity. Deposit 1 ETH and 1000 USDC at a $1000 ETH price. If ETH rises to $2000, the constant product formula forces the pool to maintain x * y = k. As prices diverge, you end up with more of the cheaper asset and less of the expensive asset. You might have 0.7 ETH and 1400 USDC. If you'd just held your original tokens, you'd have 1 ETH worth $2000 plus $1000 USDC, total $3000. Instead, you have about $2800. The difference is impermanent loss. It's called impermanent because if prices return to the original ratio, the loss disappears. For traders betting on future price convergence, this is acceptable. For long-term holders, impermanent loss is a real drag. More volatile assets have greater impermanent loss. Stablecoin pairs have almost no impermanent loss. Concentrated liquidity strategies reduce impermanent loss by concentrating capital in the expected price range.",
+    relatedTerms: ["liquidity-pool", "amm", "yield-farming"]
+  },
+  {
+    term: "Slashing",
+    slug: "slashing",
+    definition: "Slashing is a penalty mechanism in Proof of Stake blockchains where validators lose staked tokens for misbehavior. In Ethereum, consensus rule violations trigger slashing. Propose two blocks at the same height, get slashed. Attest to conflicting blocks, get slashed. The slashing amount varies but can be a percentage of the total staked ETH. This makes attacks expensive. Validators balance risk against reward. The threat of slashing aligns incentives. Honest validation earns rewards. Dishonest validation risks losing the stake. The slashing conditions must be carefully designed. Too harsh and validators withdraw. Too lenient and attacks become cheap. Slashing is the economic security mechanism underlying Proof of Stake.",
+    relatedTerms: ["proof-of-stake", "validator", "consensus-mechanism"]
+  },
+  {
+    term: "MEV Burn",
+    slug: "mev-burn",
+    definition: "MEV burn is a mechanism where maximum extractable value is sent to a burn address instead of accruing to validators or builders. This removes the profit incentive for MEV extraction, reducing harmful behaviors like sandwich attacks. Builders in Ethereum's current architecture extract and sell MEV. MEV burn would destroy that value rather than let it accumulate to validators. The downside is that MEV burn reduces validator rewards, potentially decreasing security by lowering income relative to attack costs. Proponents argue that preventing harmful extraction is worth the trade-off. MEV burn is one of several proposed solutions to the MEV problem.",
+    relatedTerms: ["mev", "validator", "consensus-mechanism"]
+  },
+  {
+    term: "Composability",
+    slug: "composability",
+    definition: "Composability in DeFi is the ability to combine protocols like building blocks. A smart contract can call another smart contract. If a lending protocol and a trading protocol are composable, you can write a contract that borrows from the lending protocol and immediately trades on the trading protocol, all atomically. Flash loans exemplify composability: borrow, use the capital somewhere, repay, all in one transaction. The result is financial innovation. Complex strategies are possible without a central platform coordinating them. The risk is that composability increases complexity. Complex interactions can have unintended consequences. DeFi exploits often involve complex multi-protocol interactions revealing edge cases. Composability is a double-edged sword: enabling innovation and risk.",
+    relatedTerms: ["smart-contract", "defi", "flash-loan"]
+  },
+  {
+    term: "Governance Token",
+    slug: "governance-token-2",
+    definition: "A governance token represents voting power in a DAO. Token holders vote on proposals. Proposals that pass are executed by smart contracts. This creates decentralized governance without a central authority. Governance tokens often have financial value tied to the protocol's success. If the protocol earns fees, those fees might be distributed to governance token holders or used to buy back and burn tokens, increasing value. This creates incentive alignment: token holders profit when the protocol succeeds. The concentration of voting power is a challenge. Whale holders have disproportionate influence. Solutions include delegation, where token holders delegate votes to representatives, and quadratic voting, where voting power is the square root of tokens held.",
+    relatedTerms: ["dao", "token"]
+  },
+  {
+    term: "Cross-Chain Bridge",
+    slug: "cross-chain-bridge",
+    definition: "A cross-chain bridge enables transferring tokens or messages between blockchains. The basic mechanism is locking tokens on one chain and minting wrapped tokens on another. Returning requires burning wrapped tokens and unlocking the originals. Security depends on the bridge's validator set. Centralized bridges have one operator. Decentralized bridges have a consensus set. Multi-signature bridges require multiple signatories. Each design trades off between decentralization and speed. The largest cross-chain bridges have been major attack targets. Bridges are the weakest link in multi-chain systems because they become concentrated liquidity targets.",
+    relatedTerms: ["blockchain", "layer-2", "wrapped-token"]
+  },
+  {
+    term: "State Channel",
+    slug: "state-channel",
+    definition: "A state channel enables participants to exchange transactions off-chain and settle on-chain only when needed. Two parties lock funds in a smart contract. They exchange signed messages updating a state, like transaction counts or balances. These updates happen instantly and don't require blockchain consensus. If they disagree, either can submit their version to the contract with a timestamp. The contract accepts the most recent valid submission. This enables near-instant transactions with very low fees, at the cost of locking capital. Lightning Network for Bitcoin and Raiden Network for Ethereum are examples. State channels work well for repeated interactions between the same parties. They're less suitable for new, one-time interactions because establishing channels takes time.",
+    relatedTerms: ["smart-contract", "layer-2", "payment-channel"]
+  },
+  {
+    term: "Payment Channel",
+    slug: "payment-channel",
+    definition: "A payment channel is a simplified state channel for frequent payments between two parties. They open a channel by locking funds on-chain. Payment updates happen off-chain. They settle on-chain when closing. The Lightning Network is built on payment channels. Two parties open a channel, exchange payments instantly and for free, and close it by settling the net flow on-chain. Payment channels enable scalability because most transactions never touch the blockchain. Only channel opens and closes do. Thousands of channels can operate on the same blockchain, multiplying throughput.",
+    relatedTerms: ["state-channel", "layer-2", "blockchain"]
+  },
+  {
+    term: "Atomic Swap",
+    slug: "atomic-swap",
+    definition: "An atomic swap is a peer-to-peer exchange of cryptocurrencies across different blockchains without intermediaries. Party A on blockchain X swaps tokens with Party B on blockchain Y. The swap either completes fully or not at all, atomicity. It uses hash time-locked contracts. Party A creates a hash from a secret, locks their tokens with the hash and a timeout. Party B uses the same hash to lock their tokens. Party A reveals the secret to claim B's tokens. B automatically learns the secret and claims A's tokens. If one party doesn't claim within the timeout, the other's tokens are returned. This trustless mechanism enables decentralized trading across chains. DEXes have largely replaced atomic swaps for popular pairs because of friction and execution overhead, but atomic swaps remain useful for direct peer-to-peer trades.",
+    relatedTerms: ["blockchain", "smart-contract", "defi"]
+  },
+  {
+    term: "Rug Pull",
+    slug: "rug-pull",
+    definition: "A rug pull is a scam where a project's creators withdraw liquidity or funds and disappear, leaving investors with worthless tokens. The name comes from the phrase 'pulling the rug out from under.' Common in DeFi, a token launches with hype. Liquidity is added to a DEX. Users buy. Creators then remove all liquidity or transfer all tokens, crashing the price. Investors lose their initial capital. Rug pulls are identifiable in retrospect by rapid price collapse and liquidity removal. Prevention requires checking if liquidity is locked in a time-locked contract that prevents early removal. Rug pulls have cost billions in investor losses.",
+    relatedTerms: ["defi", "scam", "liquidity-pool"]
+  },
+
+  // New AI Specialized Terms
+  {
+    term: "Sparse Expert",
+    slug: "sparse-expert",
+    definition: "A sparse expert is a component in Mixture of Experts models that handles a subset of the input space. Unlike dense layers that process all inputs, sparse experts process only the inputs routed to them. This allows scaling to massive model sizes while keeping inference cost manageable. The router network determines which experts to activate for each token. Different experts learn different patterns. This specialization can improve performance on diverse domains. The challenge is balancing load across experts, preventing a few experts from doing all the work.",
+    relatedTerms: ["mixture-of-experts", "transformer", "llm"]
+  },
+  {
+    term: "Knowledge Distillation",
+    slug: "knowledge-distillation",
+    definition: "Knowledge distillation is training a smaller model to mimic a larger model's behavior. The smaller model, student, learns from the larger model's, teacher, output distributions not just hard labels. This transfers complex patterns the teacher learned. The student becomes faster and smaller but approximates the teacher's capabilities. Used extensively in production systems where the teacher is too large to deploy.",
+    relatedTerms: ["model-distillation", "inference", "fine-tuning"]
+  },
+  {
+    term: "Scaling Law",
+    slug: "scaling-law",
+    definition: "Scaling laws quantify how model performance improves with scale, characterizing the relationship between model size, data size, and compute budget. Chinchilla scaling laws showed that model and data size should scale proportionally. Doubling model size should involve doubling data size. These laws allow predicting how much data and compute are needed to achieve target performance. They've held across multiple scales from small to the largest models. Understanding scaling laws is critical for resource allocation in research.",
+    relatedTerms: ["llm", "transformer", "inference"]
+  },
+  {
+    term: "Reward Model",
+    slug: "reward-model",
+    definition: "A reward model is a neural network trained to predict human preferences or assess output quality. In RLHF, a reward model learns from human comparisons of outputs. Given two model responses, the reward model predicts which humans prefer. This learned preference model then guides fine-tuning. Reward models enable scaling human feedback across large model outputs without the cost of having humans directly label everything. Quality of the reward model directly affects final model quality.",
+    relatedTerms: ["rlhf", "alignment", "llm"]
+  },
+  {
+    term: "Scaffold",
+    slug: "scaffold",
+    definition: "A scaffold in prompting refers to a structure that guides an AI system through a multi-step process. Breaking down complex problems into scaffolded steps often improves performance. The model follows the structure, at each step being more likely to produce high-quality output. Scaffolding is related to chain-of-thought but more prescriptive, providing the specific steps to take.",
+    relatedTerms: ["chain-of-thought", "prompt-engineering", "llm"]
+  },
+  {
+    term: "Few-Shot Prompting",
+    slug: "few-shot-prompting",
+    definition: "Few-shot prompting provides examples before the actual task, improving model performance without fine-tuning. Show the model a few examples of the task, then present the actual input. The model learned the task pattern from the examples. Few-shot often dramatically outperforms zero-shot. The quality of examples matters significantly. Well-chosen examples that cover the task's variance perform best.",
+    relatedTerms: ["zero-shot-learning", "prompt-engineering", "llm"]
+  },
+  {
+    term: "Hyperparameter",
+    slug: "hyperparameter",
+    definition: "A hyperparameter is a value that controls the training process but isn't learned from data. Learning rate determines how quickly weights update. Batch size determines how many examples are processed before updating. Number of layers determines network depth. Hyperparameter tuning, finding the best values, often matters as much as architecture. Grid search tries all combinations. Random search samples randomly. Bayesian optimization uses past results to guide search.",
+    relatedTerms: ["fine-tuning", "llm"]
+  },
+  {
+    term: "Dropout",
+    slug: "dropout",
+    definition: "Dropout is a regularization technique where random neurons are disabled during training, preventing co-adaptation. Neurons learn to rely on too few other neurons. By randomly dropping neurons, neurons learn robust features that work with varied neighboring neurons. At inference, all neurons are active but outputs are scaled by the dropout rate. Dropout reduces overfitting, making models generalize better. The trade-off is more iterations needed for convergence.",
+    relatedTerms: ["overfitting", "fine-tuning"]
+  },
+  {
+    term: "Overfitting",
+    slug: "overfitting",
+    definition: "Overfitting occurs when a model learns training data too specifically, memorizing instead of generalizing. High training accuracy but low test accuracy signals overfitting. The model learned noise and irrelevant patterns that don't transfer. Preventing overfitting involves data augmentation, increasing training data, regularization techniques like dropout, and early stopping. The sweet spot is balancing training and test accuracy.",
+    relatedTerms: ["dropout", "cross-validation", "fine-tuning"]
+  },
+  {
+    term: "Generalization",
+    slug: "generalization",
+    definition: "Generalization is how well a model performs on new, unseen data. High training accuracy with low test accuracy means poor generalization. The model memorized training data. Good generalization means similar performance on training and test sets. Achieving good generalization is the core challenge in machine learning. Larger training datasets improve generalization. Regularization techniques prevent overfitting. The generalization gap between training and test accuracy reveals model health.",
+    relatedTerms: ["overfitting", "cross-validation"]
+  },
+
+  // Additional Web3 Terms
+  {
+    term: "Sybil Attack",
+    slug: "sybil-attack",
+    definition: "A Sybil attack is when an attacker creates multiple fake identities to gain influence in a system. In a voting DAO, creating many accounts and voting many times is a Sybil attack. Proof of Work and Proof of Stake systems are resistant because creating identities requires compute or staked capital, making large-scale attacks expensive. But in systems where identity is cheap, Sybil attacks are trivial. Defenses include token-weighted voting and reputation systems that tie influence to provable identity.",
+    relatedTerms: ["dao", "consensus-mechanism"]
+  },
+  {
+    term: "Double Spend",
+    slug: "double-spend",
+    definition: "Double spending is spending the same digital asset twice, a core problem blockchain solves. Before blockchain, preventing double-spend required a trusted intermediary like a bank. Blockchain uses consensus to create a single, immutable ledger. Once a transaction is confirmed, reversing it requires controlling 51% of the network. This makes double-spending impractical on secure blockchains.",
+    relatedTerms: ["blockchain", "consensus-mechanism"]
+  },
+  {
+    term: "Dust Attack",
+    slug: "dust-attack",
+    definition: "A dust attack sends tiny amounts of tokens to many addresses, cluttering wallets and potentially deanonymizing users. Attackers track which addresses spend the dust, linking previously separate wallets. Privacy-conscious users must consolidate dust to hide it, revealing wallet ownership. Defenses include not spending dust or consolidating privately.",
+    relatedTerms: ["privacy", "wallet"]
+  },
+  {
+    term: "51% Attack",
+    slug: "51-percent-attack",
+    definition: "A 51% attack occurs when one entity controls over 50% of a blockchain's hashing power or staking. With majority consensus, they can rewrite recent history, double-spend, and exclude valid transactions. Ethereum has never been successfully attacked because attacking it would require acquiring billions in ETH. Bitcoin has never been attacked for similar reasons. Small-chain attacks are theoretically possible but rare. The cost of acquiring 51% usually exceeds any benefit.",
+    relatedTerms: ["consensus-mechanism", "proof-of-work", "proof-of-stake"]
+  },
+  {
+    term: "Liquidity Pool Volume",
+    slug: "liquidity-pool-volume",
+    definition: "Liquidity pool volume is the total value of trades executed in a pool, typically measured over 24 hours. High volume indicates an active, liquid pool. Higher volume means lower slippage, tighter spreads, and more stable pricing. Volume attracts more traders. High volume enables larger individual trades with minimal price impact. Low volume pools are illiquid, expensive to trade.",
+    relatedTerms: ["liquidity-pool", "amm", "slippage"]
+  },
+  {
+    term: "Slippage",
+    slug: "slippage",
+    definition: "Slippage is the difference between expected and actual execution price in a trade. Swap 1 ETH expecting 2,000 USDC. Due to price movement from other recent trades, you receive 1,980 USDC. The 20 USDC difference is slippage. Larger trades create more slippage because they move the price more. Setting slippage tolerance in a DEX tells the contract what maximum slippage to accept. Too tight and the transaction fails. Too loose and you lose money.",
+    relatedTerms: ["amm", "defi"]
+  },
+  {
+    term: "Value at Risk",
+    slug: "value-at-risk",
+    definition: "Value at Risk quantifies the potential loss in an investment or portfolio over a specific time period with a given confidence level. A portfolio with 5% one-day VaR of 10,000 means there's a 95% chance of losing less than 10,000 in one day. VaR is widely used in finance to quantify portfolio risk. It's useful for risk management but has limitations: it doesn't capture tail risk beyond the confidence level. Black swan events exceed VaR estimates.",
+    relatedTerms: ["defi", "yield"]
+  },
+  {
+    term: "APY vs APR",
+    slug: "apy-vs-apr",
+    definition: "APR is annual percentage rate, the yearly interest rate without compounding. APY is annual percentage yield, the rate including compounding. With monthly compounding, APY is higher than APR. A 12% APR with monthly compounding yields 12.68% APY. DeFi typically quotes APY because compounding happens on-chain. The difference becomes significant at high rates. Always check whether quoted yields are APR or APY.",
+    relatedTerms: ["yield", "yield-farming"]
+  },
+  {
+    term: "Time-Weighted Average Price",
+    slug: "twap",
+    definition: "TWAP is the average price of an asset over a time period, weighted by the amount of time it spent at each price. Used as an oracle price because it's harder to manipulate than spot prices. An attacker would need to sustain a price move for the entire window, which is expensive. Uniswap v3 and other protocols use TWAP for oracle prices.",
+    relatedTerms: ["oracle", "amm"]
+  },
 ];
 
 export function getTermBySlug(slug: string): GlossaryTerm | undefined {
