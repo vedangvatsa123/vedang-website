@@ -100,6 +100,11 @@ const personSchema = {
     '@type': 'CollegeOrUniversity',
     name: 'Indian Institute of Technology, Kanpur',
   },
+  memberOf: {
+    '@type': 'Organization',
+    name: 'Royal Society of Arts',
+    url: 'https://www.thersa.org',
+  },
   award: 'Fellow of the Royal Society of Arts',
   sameAs: [
     'https://linkedin.com/in/vedangvatsa',

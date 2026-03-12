@@ -50,9 +50,9 @@ export function generateMetadata(params: MetadataParams): Metadata {
 
 export const pageMetadata = {
   home: {
-    title: 'Vedang Vatsa - AI & Web3 Founder',
+    title: 'Vedang Vatsa - AI & Web3 Leader',
     description:
-      'Vedang Vatsa is founder of Hashtag Web3 (100k+ professionals), Fellow of Royal Society of Arts, and thought leader in AI, blockchain, and decentralized systems.',
+      'Founder of Hashtag Web3 (100k+), FRSA, and thought leader in AI, blockchain, and decentralized economies.',
     url: '/',
   },
   writings: {

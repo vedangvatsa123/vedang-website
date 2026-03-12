@@ -73,9 +73,9 @@ export default function Home() {
             />
             
             <h1 className="mt-4 text-5xl font-semibold tracking-tight">Vedang Vatsa</h1>
-            <p className="mx-auto mt-3 max-w-2xl text-base font-medium text-foreground">
-              Founder of Hashtag Web3 · AI & Web3 Thought Leader
-            </p>
+            <h2 className="mx-auto mt-3 max-w-2xl text-base font-medium text-foreground">
+              AI & Web3 Founder · Blockchain Thought Leader
+            </h2>
             <p className="mx-auto mt-2 max-w-2xl text-sm text-muted-foreground">
               BE, Mtech, MBA · IIT Kanpur · Fellow of the Royal Society of Arts
             </p>
