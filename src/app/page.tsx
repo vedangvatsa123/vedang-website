@@ -72,7 +72,7 @@ export default function Home() {
               priority
             />
             
-            <h1 className="mt-4 text-5xl font-semibold tracking-tight">Vedang Vatsa</h1>
+            <h1 className="mt-4 text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
             <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">
               Founder, <Link href="https://hashtagweb3.com" className="underline hover:text-foreground">Hashtag Web3</Link> (120k community of AI & Web3 professionals)
               <br />
