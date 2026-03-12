@@ -80,8 +80,8 @@ export default function GlossaryPage() {
           </div>
         </section>
 
-        <div className="container mx-auto px-4 md:px-6 max-w-3xl py-16">
-          <div className="grid gap-6 md:grid-cols-2">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl py-16">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {terms.map((item) => (
               <Link key={item.slug} href={`/glossary/${item.slug}`}>
                 <Card className="hover:border-primary/50 transition-colors h-full cursor-pointer">

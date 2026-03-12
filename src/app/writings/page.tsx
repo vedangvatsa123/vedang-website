@@ -58,7 +58,6 @@ export default function WritingsPage() {
 
       <main className="flex-grow py-8">
         <div className="container mx-auto px-4 md:px-6">
-          <h1 className="sr-only">Essays &amp; Research by Vedang Vatsa</h1>
           <section id="papers" className="py-12 bg-secondary/50 rounded-lg">
             <div className="container mx-auto px-4 md:px-6">
               <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Recent Papers</h2>

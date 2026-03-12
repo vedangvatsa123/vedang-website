@@ -130,19 +130,6 @@ export default function Home() {
 
         <AsSeenIn />
 
-        <section className="py-12 bg-secondary/30">
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="mb-8 text-3xl font-semibold tracking-tight">Free Courses</h2>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Button variant="outline" asChild><Link href="/agentic-web">Agentic Web</Link></Button>
-              <Button variant="outline" asChild><Link href="/web3-101">Fundamentals of Web3</Link></Button>
-              <Button variant="outline" asChild><Link href="/prompt-engineering-101">Prompt Engineering</Link></Button>
-              <Button variant="outline" asChild><Link href="/vibe-coding">Vibe Coding</Link></Button>
-              <Button variant="outline" asChild><Link href="/glossary">AI & Web3 Glossary</Link></Button>
-            </div>
-          </div>
-        </section>
-
         <section className="pb-12 text-center">
             <div className="flex justify-center">
                 <Button asChild size="lg" className="min-w-64 px-8">
