@@ -65,19 +65,19 @@ export default function Home() {
             
             <Image
               src="/images/icon.png"
-              alt="A professional headshot of Vedang Vatsa."
+              alt="Vedang Vatsa"
               width={96}
               height={96}
               className="mx-auto h-24 w-24 rounded-full object-cover"
-              data-ai-hint="portrait man"
               priority
             />
             
             <h1 className="mt-4 text-5xl font-semibold tracking-tight">Vedang Vatsa</h1>
-            <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">
-              Founder, Hashtag Web3 (100,000+ member community of AI & Web3 professionals)
-              <br />
-              BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
+            <p className="mx-auto mt-3 max-w-2xl text-base font-medium text-foreground">
+              Founder of Hashtag Web3 · AI & Web3 Thought Leader
+            </p>
+            <p className="mx-auto mt-2 max-w-2xl text-sm text-muted-foreground">
+              BE, Mtech, MBA · IIT Kanpur · Fellow of the Royal Society of Arts
             </p>
             <div className="mt-6 flex justify-center">
               <Button asChild className="min-w-64 px-8">

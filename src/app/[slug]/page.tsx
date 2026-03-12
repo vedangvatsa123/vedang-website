@@ -207,23 +207,6 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
 
         <div className="mx-auto max-w-4xl px-4 md:px-6 mt-12">
             <Separator />
-            {ESSAY_GLOSSARY_LINKS[params.slug] && (
-              <section className="py-8">
-                <h2 className="text-lg font-semibold tracking-tight mb-3 text-muted-foreground">Key Terms</h2>
-                <div className="flex flex-wrap gap-2">
-                  {ESSAY_GLOSSARY_LINKS[params.slug].map(slug => (
-                    <Link
-                      key={slug}
-                      href={`/glossary/${slug}`}
-                      className="inline-block rounded-full border px-3 py-1 text-sm text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                    >
-                      {GLOSSARY_LABELS[slug] || slug}
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            )}
-            <Separator />
             <RelatedEssays currentSlug={params.slug} />
         </div>
 
