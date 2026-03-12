@@ -98,6 +98,22 @@ Individual definitions for AI, Web3, and technical terms at `/glossary/[slug]`:
 - [Docker](/glossary/docker): A platform for building, shipping, and running applications in portable containers.
 - [Message Queue](/glossary/message-queue): A communication method where messages are stored until a consumer processes them asynchronously.
 - [Rate Limiting](/glossary/rate-limiting): Controlling how often a user or system can make requests to an API within a given timeframe.
+- [Context Window](/glossary/context-window): The maximum amount of text a language model can process in a single interaction, measured in tokens.
+- [Temperature](/glossary/temperature): A parameter controlling the randomness of a language model's output.
+- [Inference](/glossary/inference): The process of running a trained AI model to generate predictions or outputs.
+- [Chain-of-Thought Prompting](/glossary/chain-of-thought): A technique instructing a language model to reason step by step before giving a final answer.
+- [Reasoning Model](/glossary/reasoning-model): A class of AI model that thinks before responding using an internal chain-of-thought process.
+- [Model Context Protocol (MCP)](/glossary/mcp): An open standard by Anthropic defining how AI models connect to external tools and services.
+- [Vector Database](/glossary/vector-database): A database optimized for storing and searching high-dimensional numerical vectors for semantic search.
+- [Model Distillation](/glossary/model-distillation): A technique for creating a smaller, faster model that approximates the behavior of a larger one.
+- [Tokenization](/glossary/tokenization): Representing ownership of real-world or digital assets as tokens on a blockchain.
+- [Automated Market Maker (AMM)](/glossary/amm): A decentralized exchange protocol using liquidity pools and mathematical formulas to facilitate trades.
+- [Seed Phrase](/glossary/seed-phrase): A sequence of 12 or 24 words serving as the master backup for a cryptocurrency wallet.
+- [Maximal Extractable Value (MEV)](/glossary/mev): Profit extracted by block producers through strategic transaction ordering in a blockchain.
+- [DePIN](/glossary/depin): Decentralized Physical Infrastructure Networks that incentivize individuals to deploy hardware via token rewards.
+- [Restaking](/glossary/restaking): Reusing staked ETH as cryptoeconomic security for additional protocols beyond Ethereum.
+- [Airdrop](/glossary/airdrop): A token distribution method sending free tokens to wallet addresses as rewards for early users.
+- [Tokenomics](/glossary/tokenomics): The economic design of a cryptocurrency system governing how tokens are created, distributed, used, and destroyed.
 
 ## Profile Pages
 

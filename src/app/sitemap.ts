@@ -19,6 +19,9 @@ const GLOSSARY_SLUGS = [
   'api', 'microservices', 'kubernetes', 'serverless', 'cicd', 'edge-computing',
   'zero-knowledge-proof', 'merkle-tree', 'sharding', 'ipfs', 'webassembly',
   'graphql', 'docker', 'message-queue', 'rate-limiting',
+  'context-window', 'temperature', 'inference', 'chain-of-thought', 'reasoning-model',
+  'mcp', 'vector-database', 'model-distillation', 'tokenization', 'amm',
+  'seed-phrase', 'mev', 'depin', 'restaking', 'airdrop', 'tokenomics',
 ];
 
 function getEssayRoutes(): MetadataRoute.Sitemap {

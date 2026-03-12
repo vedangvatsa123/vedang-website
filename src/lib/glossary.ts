@@ -281,9 +281,107 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "Rate limiting is controlling the number of requests a client can make to a service in a time period. Prevents abuse and ensures fair resource allocation. A public API might allow 100 requests per minute per client. Exceed the limit and requests are rejected. This protects against denial-of-service attacks where someone floods your service with requests. It ensures that one client using the API excessively doesn't degrade experience for others. Token bucket is a common rate limiting algorithm. Each client gets a bucket that fills tokens at a fixed rate. Each request consumes a token. If the bucket is empty, requests are rejected. This allows bursts, use multiple tokens at once, but enforces an average rate. Sliding window is another approach. Count requests in a sliding time window. If the count exceeds the limit, reject requests. Rate limiting is essential for public APIs. Without it, abuse is trivial. With it, you protect your service while enabling legitimate use. Different APIs have different rate limits. AWS API Gateway might allow 1000 requests per second. GitHub API allows 60 requests per minute unauthenticated, 5000 authenticated. Rate limits are part of API design.",
     relatedTerms: ["api"]
   },
-];
 
-export function getTermBySlug(slug: string): GlossaryTerm | undefined {
+  // AI Terms — Extended
+  {
+    term: "Context Window",
+    slug: "context-window",
+    definition: "A context window is the maximum amount of text a language model can process in a single interaction, measured in tokens. Everything the model can 'see' at once — your prompt, the conversation history, any documents you've pasted in — must fit inside this window. Early GPT models had context windows of 4,000 tokens, roughly 3,000 words. Modern models like Claude and GPT-4 have windows of 128,000 to 200,000 tokens or more, enough to hold an entire novel. When content exceeds the context window, the model either truncates it or cannot process it at all. The model has no memory of what fell outside the window. This is why very long conversations can cause models to 'forget' earlier messages. Context window size directly determines what tasks a model can perform. A small window can answer questions and write short documents. A large window can analyze entire codebases, summarize lengthy reports, or maintain coherent long-form conversations. The race to extend context windows is one of the central engineering challenges in LLM development.",
+    relatedTerms: ["llm", "token", "rag"]
+  },
+  {
+    term: "Temperature",
+    slug: "temperature",
+    definition: "Temperature is a parameter that controls the randomness of a language model's output, typically set between 0 and 2. At temperature 0, the model always picks the single most probable next token, producing deterministic, predictable output. At high temperatures, the model samples more broadly from possible tokens, producing more varied, creative, and sometimes unpredictable results. Think of it as a creativity dial. Low temperature is ideal for tasks requiring accuracy and consistency: data extraction, code generation, factual Q&A. High temperature is useful for brainstorming, creative writing, and generating diverse options. At very high temperatures, output becomes incoherent because the model starts selecting unlikely tokens too often. Most production applications use temperatures between 0.1 and 0.9. The default temperature varies by model and provider. Understanding temperature is fundamental to prompt engineering because the same prompt at different temperatures produces dramatically different results.",
+    relatedTerms: ["llm", "prompt-engineering", "inference"]
+  },
+  {
+    term: "Inference",
+    slug: "inference",
+    definition: "Inference is the process of running a trained AI model to generate predictions or outputs. It is distinct from training, which is the process of building the model. When you send a message to ChatGPT or Claude, what happens on the server is inference: the model takes your input, passes it through billions of parameters, and generates a response token by token. Training a large model can take weeks and cost millions of dollars in compute. Inference happens in seconds and costs a fraction of a cent per query. The economics of AI products are largely determined by inference costs. A model that is cheap to run at inference can be deployed at massive scale. A model that is expensive requires either high pricing or subsidized access. Inference optimization is its own field. Techniques like quantization, which reduces numerical precision, and batching, which processes multiple requests together, significantly reduce inference costs. Dedicated inference chips from companies like Groq are designed specifically to run models faster and cheaper than general-purpose GPUs.",
+    relatedTerms: ["llm", "fine-tuning", "transformer"]
+  },
+  {
+    term: "Chain-of-Thought Prompting",
+    slug: "chain-of-thought",
+    definition: "Chain-of-thought prompting is a technique where you instruct a language model to reason step by step before giving a final answer. Instead of asking 'What is 17% of 340?' directly, you say 'Think through this step by step.' The model then reasons through intermediate steps before arriving at an answer. The final answer is more accurate because the model caught and corrected its own reasoning mid-process. This technique works because LLMs generate text sequentially. When forced to articulate intermediate reasoning, the model effectively proofreads its own logic before committing to a conclusion. Research shows chain-of-thought prompting dramatically improves performance on math, logic, and multi-step reasoning tasks. Zero-shot chain-of-thought simply adds 'Let's think step by step' to a prompt. Few-shot chain-of-thought provides example reasoning chains before the actual question. Modern reasoning models like o1 and o3 apply chain-of-thought internally before producing output, which is why they are slower but more accurate on complex problems.",
+    relatedTerms: ["prompt-engineering", "llm", "reasoning-model"]
+  },
+  {
+    term: "Reasoning Model",
+    slug: "reasoning-model",
+    definition: "A reasoning model is a class of AI model designed to think before responding, using an internal chain-of-thought process to work through complex problems. OpenAI's o1 and o3 series, DeepSeek-R1, and similar models are the primary examples. Standard LLMs generate responses token by token, essentially improvising. Reasoning models spend time on internal deliberation, exploring multiple approaches, checking their own logic, and backtracking when they hit errors, before producing a final answer. This makes them dramatically better at mathematics, coding, scientific reasoning, and tasks requiring multi-step logic. The trade-off is speed. A reasoning model may take 30 seconds or more to respond where a standard model responds in two seconds. The internal thinking is sometimes visible as a thinking trace, showing the model's scratchpad reasoning. Reasoning models represent a shift in how AI systems handle hard problems, from pattern-matching and next-token prediction toward something closer to deliberate problem-solving. They consistently outperform standard models on benchmarks requiring rigorous logical reasoning.",
+    relatedTerms: ["llm", "chain-of-thought", "agi"]
+  },
+  {
+    term: "Model Context Protocol (MCP)",
+    slug: "mcp",
+    definition: "Model Context Protocol is an open standard developed by Anthropic that defines how AI models connect to external tools, data sources, and services. Before MCP, every AI application required custom integration code for each tool the model needed to use: one integration for a database, another for a file system, another for a web browser. MCP standardizes this interface. Any tool that implements the MCP server specification can be used by any MCP-compatible AI client without custom integration. Think of it as the USB standard for AI. Just as USB lets any device connect to any computer with a standard cable, MCP lets any tool connect to any AI model through a standard protocol. This dramatically reduces the engineering effort required to build agentic applications. A developer building an AI assistant can add MCP-compatible tools without writing new integration code for each one. MCP is gaining adoption across the AI industry, with major development tools, databases, and services releasing MCP servers. It is becoming a foundational infrastructure layer for agentic AI systems.",
+    relatedTerms: ["agent", "llm", "api"]
+  },
+  {
+    term: "Vector Database",
+    slug: "vector-database",
+    definition: "A vector database is a database optimized for storing and searching high-dimensional numerical vectors, which are how AI models represent the meaning of text, images, and other data. When an embedding model processes a piece of text, it converts it into a vector — an array of hundreds or thousands of numbers that encodes its semantic meaning. Similar meanings produce similar vectors. A vector database stores these vectors and allows you to search for the most semantically similar ones. This is the core mechanism behind retrieval-augmented generation. You convert your knowledge base into vectors, store them in a vector database, and when a user asks a question, you convert the question into a vector, find the most similar vectors in the database, and pass those relevant documents to the LLM. Popular vector databases include Pinecone, Weaviate, Chroma, and pgvector for Postgres. Traditional databases search for exact matches or range queries. Vector databases search for approximate nearest neighbors in high-dimensional space, requiring specialized indexing algorithms like HNSW and FAISS to remain fast at scale.",
+    relatedTerms: ["embeddings", "rag", "llm"]
+  },
+  {
+    term: "Model Distillation",
+    slug: "model-distillation",
+    definition: "Model distillation is a technique for creating a smaller, faster model that approximates the behavior of a larger, more capable one. The large model is called the teacher, the smaller model the student. During distillation, the student model is trained not just on labeled data, but on the output probability distributions of the teacher. Instead of learning 'the answer is cat,' the student learns 'the teacher was 85% confident it was cat, 10% dog, 5% fox.' This richer signal transfers more of the teacher's knowledge than hard labels alone. The result is a student model that performs close to the teacher on most tasks but requires far less compute to run. Distilled models are crucial for deployment on mobile devices, edge hardware, and cost-sensitive applications. Many small, fast models available today, including variants of Llama and Mistral, use distillation in their training pipelines. Distillation is also how reasoning capabilities are transferred: DeepSeek-R1 distilled its reasoning behavior into smaller models by training them on the reasoning traces generated by the full R1 model.",
+    relatedTerms: ["llm", "fine-tuning", "inference"]
+  },
+
+  // Web3 Terms — Extended
+  {
+    term: "Tokenization",
+    slug: "tokenization",
+    definition: "Tokenization, in the Web3 context, is the process of representing ownership of a real-world or digital asset as a token on a blockchain. Any asset that has value and can be owned can be tokenized: real estate, equity in a company, fine art, commodities, intellectual property, or carbon credits. Once tokenized, the asset can be traded, fractionalized, and transferred with the speed and transparency of blockchain transactions. Tokenization of real-world assets is one of the most significant trends in blockchain. BlackRock, JPMorgan, and other major financial institutions have launched tokenized funds and bonds on-chain. Settlement that takes days in traditional finance can happen in minutes on-chain. Fractional ownership becomes trivial, enabling retail investors to hold small pieces of assets that were previously inaccessible. The total addressable market for asset tokenization is estimated in the hundreds of trillions of dollars. Blockchain infrastructure is only beginning to capture a fraction of it. This is distinct from the AI/NLP use of tokenization, which refers to breaking text into tokens for language model processing.",
+    relatedTerms: ["blockchain", "nft", "defi", "smart-contract"]
+  },
+  {
+    term: "Automated Market Maker (AMM)",
+    slug: "amm",
+    definition: "An automated market maker is a type of decentralized exchange protocol that uses mathematical formulas and liquidity pools to price and facilitate trades, replacing the traditional order book model. In a traditional exchange, buyers and sellers place orders at specific prices, and a matching engine connects them. In an AMM, a smart contract holds reserves of two or more tokens in a liquidity pool. A formula, typically x multiplied by y equals k, determines the price based on the ratio of tokens in the pool. When you trade, you swap one token for another, changing the ratio in the pool and thus moving the price. Uniswap popularized the AMM model and it became the foundation of DeFi. Anyone can provide liquidity to a pool by depositing equal values of both tokens and earning a share of trading fees. AMMs enable permissionless, 24/7 trading for any token pair without requiring counterparties or market makers. The trade-off is capital inefficiency and impermanent loss, the loss liquidity providers experience when token prices diverge significantly. Subsequent AMM designs like Uniswap v3's concentrated liquidity have improved capital efficiency significantly.",
+    relatedTerms: ["defi", "smart-contract", "dao", "stablecoin"]
+  },
+  {
+    term: "Seed Phrase",
+    slug: "seed-phrase",
+    definition: "A seed phrase, also called a recovery phrase or mnemonic phrase, is a sequence of 12 or 24 randomly generated words that serves as the master backup for a cryptocurrency wallet. The seed phrase encodes the cryptographic root from which all private keys and addresses in a wallet are derived. Anyone who possesses the seed phrase has complete, irrevocable control of all assets in that wallet. There is no 'forgot my password' button in crypto. No company can reset access. The seed phrase is the only path to recovery if a device is lost or destroyed. Storing it securely is the most important security practice in self-custody crypto. Write it on paper, store it in a fireproof safe, and never photograph it or store it digitally. Seed phrases follow the BIP-39 standard, using a defined list of 2,048 English words. The words themselves are not passwords — their specific sequence generates the cryptographic key material that controls the wallet. Losing the seed phrase with no backup means permanent, unrecoverable loss of access to all funds in that wallet.",
+    relatedTerms: ["wallet", "blockchain", "zero-knowledge-proof"]
+  },
+  {
+    term: "Maximal Extractable Value (MEV)",
+    slug: "mev",
+    definition: "Maximal Extractable Value is the profit that block producers — validators or miners — can extract by strategically ordering, inserting, or censoring transactions within the blocks they produce. When you submit a transaction to a blockchain, it enters a public mempool where it waits to be included in a block. Anyone can see pending transactions before they are confirmed, creating opportunities for exploitation. Front-running is the most common form: a searcher sees a large pending trade, submits an identical trade with a higher gas fee to execute first, profits from the price movement, then lets the original trade complete at a worse price. Sandwich attacks bracket a target transaction with buys before and sells after. Liquidation MEV captures profit from liquidating undercollateralized DeFi loans. MEV is extracted by specialized bots called searchers who scan the mempool and compete to execute profitable strategies. The total MEV extracted on Ethereum runs into hundreds of millions of dollars annually. MEV represents an invisible tax on ordinary users. Solutions like Flashbots attempt to make MEV extraction more transparent and less harmful to the network.",
+    relatedTerms: ["blockchain", "defi", "consensus-mechanism", "gas-fees"]
+  },
+  {
+    term: "DePIN",
+    slug: "depin",
+    definition: "Decentralized Physical Infrastructure Networks are blockchain projects that incentivize individuals to deploy and operate real-world physical hardware by rewarding them with tokens. Instead of a centralized company building and owning infrastructure, DePIN projects crowdsource it. Helium is the canonical example: individuals buy hotspots, install them at home or in their businesses, provide wireless network coverage, and earn tokens in return. The result is a decentralized wireless network built and maintained by thousands of independent operators. The same model applies to many infrastructure types. Hivemapper uses dashcams to build a decentralized mapping network. Render Network uses idle consumer GPUs for distributed rendering compute. Akash Network provides decentralized cloud computing. DePIN addresses a fundamental problem: building physical infrastructure is capital-intensive and requires coordination at scale. Tokens solve the coordination problem by aligning incentives. Early contributors get rewarded with tokens that appreciate as the network grows, creating a flywheel where token appreciation attracts more operators, which improves the network, which increases token value.",
+    relatedTerms: ["blockchain", "dao", "token", "consensus-mechanism"]
+  },
+  {
+    term: "Restaking",
+    slug: "restaking",
+    definition: "Restaking is a mechanism that allows ETH stakers to reuse their staked ETH as cryptoeconomic security for additional protocols beyond Ethereum itself. Normally, when you stake ETH, that stake secures the Ethereum network and earns staking rewards. Restaking, pioneered by EigenLayer, allows the same staked ETH to simultaneously secure other services — oracle networks, data availability layers, bridges, or new blockchains — earning additional rewards from each. Think of it as collateral being put to work in multiple places at once. Each additional protocol you opt into pays rewards in exchange for extending your stake's security guarantee to their system. If you misbehave in any of these systems, your stake can be slashed. This is the risk: restaking amplifies both rewards and slashing exposure. The benefit to the broader ecosystem is that new protocols can bootstrap cryptoeconomic security by tapping into Ethereum's existing validator set, rather than needing to attract their own independent validators. EigenLayer has attracted tens of billions in restaked ETH, making it one of the fastest-growing protocols in Ethereum's history.",
+    relatedTerms: ["liquid-staking", "validator", "consensus-mechanism", "defi"]
+  },
+  {
+    term: "Airdrop",
+    slug: "airdrop",
+    definition: "An airdrop is a token distribution method where a project sends free tokens directly to wallet addresses, typically as a reward for early users, community members, or holders of a related token. Airdrops serve multiple purposes. They distribute tokens broadly, advancing a project's goal of decentralization. They reward early adopters who took risk on an unproven protocol. They generate attention and bring new users into the ecosystem. The Uniswap airdrop in 2020 is legendary: every address that had ever used the protocol received 400 UNI tokens, worth thousands of dollars at peak prices. This retroactive airdrop for historical usage became the template others followed. Airdrop farming is a strategy where users interact with protocols specifically to qualify for future airdrops — bridging assets, using applications, providing liquidity, and participating in governance in anticipation of a token distribution. Projects have responded by making eligibility criteria more complex, requiring sustained engagement rather than one-time interactions. Not all airdrops have value. Many are scams where the claim process requires approving malicious contracts. Verifying the legitimacy of any airdrop before interacting is essential.",
+    relatedTerms: ["token", "wallet", "dao", "defi"]
+  },
+  {
+    term: "Tokenomics",
+    slug: "tokenomics",
+    definition: "Tokenomics is the economic design of a cryptocurrency or token system — the rules governing how tokens are created, distributed, used, and destroyed. It determines whether a token has sustainable value or is destined to inflate to zero. The supply side covers total supply, emission schedule, and inflation rate. A token with a fixed maximum supply, like Bitcoin's 21 million, has built-in scarcity. A token with unlimited inflation must have strong demand to maintain value. Vesting schedules determine when early investors and team members can sell their allocations, affecting sell pressure over time. The demand side covers token utility. Governance tokens give holders voting rights over protocol decisions. Fee tokens are required to use a service. Yield-bearing tokens earn a share of protocol revenue. Value accrual mechanisms determine whether token holders benefit when the protocol succeeds. The most robust tokenomics create a flywheel: protocol success generates demand for the token, which rewards early supporters, which attracts more users and capital, which drives more success. Poor tokenomics, like high inflation with low utility, lead to death spirals where price decline reduces participation which reduces price further.",
+    relatedTerms: ["token", "dao", "governance-token", "defi", "stablecoin"]
+  },
+];(slug: string): GlossaryTerm | undefined {
   return glossaryTerms.find(term => term.slug === slug);
 }
 
