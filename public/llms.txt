@@ -114,6 +114,26 @@ Individual definitions for AI, Web3, and technical terms at `/glossary/[slug]`:
 - [Restaking](/glossary/restaking): Reusing staked ETH as cryptoeconomic security for additional protocols beyond Ethereum.
 - [Airdrop](/glossary/airdrop): A token distribution method sending free tokens to wallet addresses as rewards for early users.
 - [Tokenomics](/glossary/tokenomics): The economic design of a cryptocurrency system governing how tokens are created, distributed, used, and destroyed.
+- [Attention Mechanism](/glossary/attention-mechanism): The core transformer innovation that weights token relationships, enabling contextual understanding in LLMs.
+- [Quantization](/glossary/quantization): Model compression technique reducing weight precision to make LLMs smaller and faster for deployment.
+- [Agentic Loop](/glossary/agentic-loop): The perceive-reason-act-observe cycle that AI agents repeat to accomplish complex multi-step tasks.
+- [Synthetic Data](/glossary/synthetic-data): Artificially generated training data used to scale AI development beyond real-world data constraints.
+- [Prompt Injection](/glossary/prompt-injection): Security attack embedding malicious instructions in content processed by AI systems.
+- [Mixture of Experts (MoE)](/glossary/mixture-of-experts): Architecture routing each token to specialized sub-networks, enabling large capacity at lower compute cost.
+- [Grounding](/glossary/grounding): Connecting AI outputs to verifiable external sources to reduce hallucination and enable fact-checking.
+- [Liquidity Pool](/glossary/liquidity-pool): Smart contract holding token reserves enabling decentralized trading through automated market makers.
+- [Yield Farming](/glossary/yield-farming): Strategy of deploying crypto across DeFi protocols to maximize returns through fees and token rewards.
+- [Flash Loan](/glossary/flash-loan): Uncollateralized DeFi loan borrowed and repaid within a single blockchain transaction.
+- [Layer 1](/glossary/layer-1): The base blockchain protocol providing security, consensus, and settlement finality for the ecosystem.
+- [Proof of Work](/glossary/proof-of-work): Bitcoin's consensus mechanism requiring computational energy expenditure to add blocks and secure the chain.
+- [Proof of Stake](/glossary/proof-of-stake): Consensus mechanism selecting validators based on staked collateral rather than computational work.
+- [Cold Wallet](/glossary/cold-wallet): Offline cryptocurrency storage keeping private keys disconnected from the internet for maximum security.
+- [Wrapped Token](/glossary/wrapped-token): A token representing another cryptocurrency on a different blockchain, maintaining a 1:1 peg.
+- [CDN](/glossary/cdn): Geographically distributed server network delivering web content from locations close to users.
+- [WebSocket](/glossary/websocket): Protocol providing persistent bidirectional connections for real-time applications like chat and live data feeds.
+- [OAuth](/glossary/oauth): Authorization framework enabling third-party app access to user resources without sharing passwords.
+- [Load Balancer](/glossary/load-balancer): System distributing network traffic across multiple servers for scalability and fault tolerance.
+- [Monorepo](/glossary/monorepo): Development strategy storing multiple projects in a single repository for shared tooling and atomic changes.
 
 ## Profile Pages
 

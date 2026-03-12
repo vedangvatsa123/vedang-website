@@ -22,6 +22,11 @@ const GLOSSARY_SLUGS = [
   'context-window', 'temperature', 'inference', 'chain-of-thought', 'reasoning-model',
   'mcp', 'vector-database', 'model-distillation', 'tokenization', 'amm',
   'seed-phrase', 'mev', 'depin', 'restaking', 'airdrop', 'tokenomics',
+  'attention-mechanism', 'quantization', 'agentic-loop', 'synthetic-data',
+  'prompt-injection', 'mixture-of-experts', 'grounding', 'liquidity-pool',
+  'yield-farming', 'flash-loan', 'layer-1', 'proof-of-work', 'proof-of-stake',
+  'cold-wallet', 'wrapped-token', 'cdn', 'websocket', 'oauth', 'load-balancer',
+  'monorepo',
 ];
 
 function getEssayRoutes(): MetadataRoute.Sitemap {
