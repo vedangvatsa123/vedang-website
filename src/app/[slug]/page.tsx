@@ -139,6 +139,7 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
   }
 
   const datePublished = essay.frontmatter.date ? new Date(essay.frontmatter.date).toISOString() : new Date().toISOString();
+  const dateModified = essay.frontmatter.updated ? new Date(essay.frontmatter.updated).toISOString() : datePublished;
 
   // Calculate word count from content
   const wordCount = essay.content.split(/\s+/).length;
@@ -168,9 +169,19 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
       '@id': `https://veda.ng/${params.slug}`,
     },
     datePublished: datePublished,
-    dateModified: datePublished,
+    dateModified: dateModified,
     wordCount: wordCount,
     ...(essay.frontmatter.keywords && { keywords: essay.frontmatter.keywords }),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://veda.ng' },
+      { '@type': 'ListItem', position: 2, name: 'Writings', item: 'https://veda.ng/writings' },
+      { '@type': 'ListItem', position: 3, name: essay.frontmatter.title, item: `https://veda.ng/${params.slug}` },
+    ],
   };
 
   return (
@@ -178,6 +189,10 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
        <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Header />
       <main className="flex-grow py-8">
