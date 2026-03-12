@@ -3,8 +3,6 @@ import { Header } from '@/components/header';
 import { Metadata } from 'next';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { BookOpen } from 'lucide-react';
 import Link from 'next/link';
 import { getAllTermsSorted } from '@/lib/glossary';
 
@@ -67,10 +65,6 @@ export default function GlossaryPage() {
       <main className="flex-grow">
         <section className="text-center pt-16 pb-12 border-b border-border/30">
           <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-            <Badge variant="secondary" className="mb-4">
-              <BookOpen className="w-3 h-3 mr-1.5" />
-              Reference Guide
-            </Badge>
             <h1 className="text-5xl font-semibold tracking-tight text-primary mb-2">
               Glossary
             </h1>

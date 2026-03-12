@@ -73,11 +73,10 @@ export default function Home() {
             />
             
             <h1 className="mt-4 text-5xl font-semibold tracking-tight">Vedang Vatsa</h1>
-            <h2 className="mx-auto mt-3 max-w-2xl text-base font-medium text-foreground">
-              AI & Web3 Founder · Blockchain Thought Leader
-            </h2>
-            <p className="mx-auto mt-2 max-w-2xl text-sm text-muted-foreground">
-              BE, Mtech, MBA · IIT Kanpur · Fellow of the Royal Society of Arts
+            <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">
+              Founder, <Link href="https://hashtagweb3.com" className="underline hover:text-foreground">Hashtag Web3</Link> (120k community of AI & Web3 professionals)
+              <br />
+              BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
             </p>
             <div className="mt-6 flex justify-center">
               <Button asChild className="min-w-64 px-8">
