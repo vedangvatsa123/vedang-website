@@ -103,12 +103,6 @@ export const pageMetadata = {
       'Discover the art of vibe coding: combining technical excellence with creative intuition. A guide to engineering with purpose and human-centered design.',
     url: '/vibe-coding',
   },
-  guides: {
-    title: 'Web3 & Crypto Guides - Market Making, Tokenomics, Taxation',
-    description:
-      'Expert guides on market making in cryptocurrency, token economics, taxation of digital assets, influencer outreach, and blockchain ecosystem dynamics.',
-    url: '/guides',
-  },
   seo: {
     title: 'SEO & Growth Marketing Specialist | Vedang Vatsa',
     description:

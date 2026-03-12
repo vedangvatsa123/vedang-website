@@ -58,7 +58,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/`, lastModified: new Date('2025-03-01') },
     { url: `${BASE_URL}/writings`, lastModified: new Date('2025-03-01') },
-    { url: `${BASE_URL}/guides`, lastModified: new Date('2025-03-01') },
     { url: `${BASE_URL}/glossary`, lastModified: new Date('2025-03-01') },
     { url: `${BASE_URL}/profile`, lastModified: new Date('2025-03-01') },
     { url: `${BASE_URL}/media`, lastModified: new Date('2025-03-01') },
