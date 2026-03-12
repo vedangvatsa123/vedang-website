@@ -3,31 +3,12 @@ import { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { glossaryTerms } from '@/lib/glossary';
 
 const BASE_URL = 'https://veda.ng';
 
 // Stable fallback date for content without explicit dates
 const CONTENT_FALLBACK_DATE = new Date('2025-01-01');
-
-// Glossary term slugs (from src/lib/glossary.ts)
-const GLOSSARY_SLUGS = [
-  'agi', 'llm', 'prompt-engineering', 'fine-tuning', 'rag', 'hallucination',
-  'alignment', 'constitutional-ai', 'zero-shot-learning', 'rlhf', 'transformer',
-  'token', 'embeddings', 'agent', 'multimodal-ai', 'blockchain', 'smart-contract',
-  'defi', 'nft', 'dao', 'consensus-mechanism', 'gas-fees', 'layer-2', 'wallet',
-  'governance-token', 'stablecoin', 'bridge', 'oracle', 'validator', 'liquid-staking',
-  'api', 'microservices', 'kubernetes', 'serverless', 'cicd', 'edge-computing',
-  'zero-knowledge-proof', 'merkle-tree', 'sharding', 'ipfs', 'webassembly',
-  'graphql', 'docker', 'message-queue', 'rate-limiting',
-  'context-window', 'temperature', 'inference', 'chain-of-thought', 'reasoning-model',
-  'mcp', 'vector-database', 'model-distillation', 'tokenization', 'amm',
-  'seed-phrase', 'mev', 'depin', 'restaking', 'airdrop', 'tokenomics',
-  'attention-mechanism', 'quantization', 'agentic-loop', 'synthetic-data',
-  'prompt-injection', 'mixture-of-experts', 'grounding', 'liquidity-pool',
-  'yield-farming', 'flash-loan', 'layer-1', 'proof-of-work', 'proof-of-stake',
-  'cold-wallet', 'wrapped-token', 'cdn', 'websocket', 'oauth', 'load-balancer',
-  'monorepo',
-];
 
 function getEssayRoutes(): MetadataRoute.Sitemap {
   const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
@@ -77,8 +58,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/agentic-web`, lastModified: new Date('2025-01-01') },
   ];
 
-  const glossaryRoutes: MetadataRoute.Sitemap = GLOSSARY_SLUGS.map(slug => ({
-    url: `${BASE_URL}/glossary/${slug}`,
+  const glossaryRoutes: MetadataRoute.Sitemap = glossaryTerms.map(term => ({
+    url: `${BASE_URL}/glossary/${term.slug}`,
     lastModified: CONTENT_FALLBACK_DATE,
   }));
 
