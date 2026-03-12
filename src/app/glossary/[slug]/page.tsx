@@ -1,8 +1,7 @@
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Metadata } from 'next';
-import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, BookOpen } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { getTermBySlug, glossaryTerms } from '@/lib/glossary';
 import { notFound } from 'next/navigation';
@@ -121,10 +120,6 @@ export default function GlossaryTermPage({ params }: PageProps) {
             <h1 className="text-5xl font-semibold tracking-tight text-primary mb-4">
               {term.term}
             </h1>
-            <Badge variant="secondary">
-              <BookOpen className="w-3 h-3 mr-1.5" />
-              Definition
-            </Badge>
           </div>
         </section>
 
