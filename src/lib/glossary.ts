@@ -816,6 +816,520 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "TWAP is the average price of an asset over a time period, weighted by the amount of time it spent at each price. Used as an oracle price because it's harder to manipulate than spot prices. An attacker would need to sustain a price move for the entire window, which is expensive. Uniswap v3 and other protocols use TWAP for oracle prices.",
     relatedTerms: ["oracle", "amm"]
   },
+
+  // Additional AI/ML Terms
+  {
+    term: "Backpropagation",
+    slug: "backpropagation",
+    definition: "Backpropagation is the algorithm for computing gradients of a loss function with respect to neural network weights. It propagates error backwards through the network using the chain rule of calculus. At each layer, the gradient of the loss with respect to the layer's inputs is computed from the gradient with respect to its outputs. This enables efficient training of deep networks. Without backpropagation, computing gradients would require evaluating the full network for each parameter, making training intractable.",
+    relatedTerms: ["neural-network", "gradient-descent"]
+  },
+  {
+    term: "Gradient Descent",
+    slug: "gradient-descent",
+    definition: "Gradient descent is an optimization algorithm that iteratively adjusts parameters in the direction that reduces loss. Compute the gradient of the loss function, which points toward steeper increase. Move parameters in the opposite direction by a step size called the learning rate. Repeat until convergence. Stochastic gradient descent uses random subsets of data for each step, introducing noise but enabling training on massive datasets. Adam, AdaGrad, and RMSprop are variants that adapt learning rates per parameter.",
+    relatedTerms: ["backpropagation", "hyperparameter"]
+  },
+  {
+    term: "Neural Network",
+    slug: "neural-network",
+    definition: "A neural network is a computational model composed of layers of interconnected nodes that process information through weighted connections and activation functions. Input data flows through hidden layers, transformed at each step. The network learns by adjusting weights to minimize prediction error on training data. Deep networks have many layers. Convolutional networks excel at images. Recurrent networks handle sequences. Transformers dominate language. Neural networks are universal function approximators given sufficient width and depth.",
+    relatedTerms: ["transformer", "backpropagation", "activation-function"]
+  },
+  {
+    term: "Convolutional Neural Network",
+    slug: "cnn",
+    definition: "A convolutional neural network is a neural architecture designed for grid-structured data like images. Convolutional layers apply learned filters across the input, detecting features regardless of their position. Pooling layers reduce spatial dimensions. The result is translation-invariant feature extraction. CNNs revolutionized computer vision. ImageNet classification, object detection, image segmentation all use CNNs. The architecture exploits the spatial structure of images, using far fewer parameters than fully connected networks would require.",
+    relatedTerms: ["neural-network", "computer-vision"]
+  },
+  {
+    term: "Recurrent Neural Network",
+    slug: "rnn",
+    definition: "A recurrent neural network processes sequences by maintaining hidden state that carries information across time steps. At each step, the network reads the current input and the previous hidden state, producing an output and new hidden state. This enables modeling temporal dependencies. RNNs suffered from vanishing gradients over long sequences. LSTMs and GRUs added gating mechanisms to control information flow. Transformers have largely replaced RNNs for sequence modeling due to parallelization and better long-range handling.",
+    relatedTerms: ["neural-network", "transformer", "lstm"]
+  },
+  {
+    term: "LSTM",
+    slug: "lstm",
+    definition: "Long Short-Term Memory is a recurrent neural network variant designed to capture long-range dependencies. It uses gates to control information flow: an input gate decides what to store, a forget gate decides what to discard, an output gate decides what to emit. The cell state acts as a memory that persists across time steps, protected by gates from gradient degradation. LSTMs enabled practical sequence modeling before transformers. They're still used in some applications where sequential processing is natural.",
+    relatedTerms: ["rnn", "transformer"]
+  },
+  {
+    term: "Autoencoder",
+    slug: "autoencoder",
+    definition: "An autoencoder is a neural network trained to reconstruct its input through a bottleneck. The encoder compresses input to a lower-dimensional latent representation. The decoder reconstructs the original from this representation. The network learns to preserve essential information while discarding noise. Autoencoders are used for dimensionality reduction, denoising, and anomaly detection. Variational autoencoders add probabilistic structure, enabling generative modeling.",
+    relatedTerms: ["neural-network", "vae"]
+  },
+  {
+    term: "Variational Autoencoder",
+    slug: "vae",
+    definition: "A variational autoencoder is a generative model that learns a probabilistic latent space. Instead of encoding to a point, the encoder outputs parameters of a probability distribution. Samples from this distribution are decoded to reconstruct inputs. The loss function balances reconstruction quality and latent space regularity. VAEs can generate new samples by sampling from the latent space. They're used for image generation, drug discovery, and representation learning.",
+    relatedTerms: ["autoencoder", "generative-model"]
+  },
+  {
+    term: "Generative Adversarial Network",
+    slug: "gan",
+    definition: "A generative adversarial network trains two networks against each other: a generator creates fake samples, a discriminator distinguishes real from fake. The generator improves to fool the discriminator. The discriminator improves to catch fakes. This adversarial dynamic produces high-quality generated samples. GANs create photorealistic images, video synthesis, and style transfer. Training is notoriously unstable, requiring careful architecture and hyperparameter choices. Diffusion models have largely superseded GANs for image generation.",
+    relatedTerms: ["generative-model", "diffusion-model"]
+  },
+  {
+    term: "Diffusion Model",
+    slug: "diffusion-model",
+    definition: "A diffusion model generates data by learning to reverse a gradual noising process. Training adds noise to data over many steps until it becomes pure noise. The model learns to predict and remove noise at each step. Generation starts from random noise and iteratively denoises to produce a sample. DALL-E, Midjourney, and Stable Diffusion use diffusion models. They produce higher-quality images than GANs with more stable training. The cost is slow generation requiring many denoising steps.",
+    relatedTerms: ["generative-model", "gan"]
+  },
+  {
+    term: "Generative Model",
+    slug: "generative-model",
+    definition: "A generative model learns the probability distribution of training data and can generate new samples from that distribution. Unlike discriminative models that learn decision boundaries, generative models learn the full data distribution. Examples include VAEs, GANs, diffusion models, and autoregressive language models. Generative AI creates text, images, audio, and video. The quality of generated samples depends on how well the model captures the true data distribution.",
+    relatedTerms: ["vae", "gan", "diffusion-model", "llm"]
+  },
+  {
+    term: "Transfer Learning",
+    slug: "transfer-learning",
+    definition: "Transfer learning uses knowledge from one task to improve performance on a different but related task. A model trained on ImageNet learns general visual features. Fine-tuning this model on medical images requires far less data than training from scratch. The pretrained features transfer. Foundation models like GPT and BERT exemplify transfer learning at scale. They learn general representations from massive pretraining, then transfer to downstream tasks with minimal adaptation.",
+    relatedTerms: ["fine-tuning", "foundation-model"]
+  },
+  {
+    term: "Foundation Model",
+    slug: "foundation-model",
+    definition: "A foundation model is a large model trained on broad data that can be adapted to many downstream tasks. GPT, BERT, and CLIP are foundation models. They learn general representations during pretraining. Users fine-tune or prompt them for specific applications. The foundation model paradigm changed AI: instead of training task-specific models, you adapt general-purpose models. This amortizes the massive cost of pretraining across many applications.",
+    relatedTerms: ["transfer-learning", "llm", "fine-tuning"]
+  },
+  {
+    term: "BERT",
+    slug: "bert",
+    definition: "BERT is a transformer encoder model trained with masked language modeling. It predicts randomly masked words from context on both sides, learning bidirectional representations. BERT revolutionized NLP in 2018. Fine-tuned BERT achieved state-of-the-art on question answering, sentiment analysis, and named entity recognition. Unlike GPT which generates text left-to-right, BERT produces embeddings for classification and extraction tasks. It remains widely used for understanding tasks rather than generation.",
+    relatedTerms: ["transformer", "llm", "foundation-model"]
+  },
+  {
+    term: "Word2Vec",
+    slug: "word2vec",
+    definition: "Word2Vec is an algorithm that learns word embeddings by predicting context words. Skip-gram predicts surrounding words from the center word. CBOW predicts the center word from surrounding context. The resulting embeddings capture semantic relationships. King minus man plus woman equals queen. Similar words cluster together. Word2Vec demonstrated that distributed representations capture meaning. It preceded and influenced transformer embeddings.",
+    relatedTerms: ["embeddings", "llm"]
+  },
+  {
+    term: "Attention Score",
+    slug: "attention-score",
+    definition: "An attention score measures the relevance between two positions in a sequence. Computed as the dot product of query and key vectors, then scaled and softmaxed. Higher scores mean stronger attention. The model attends more to positions with high scores when computing the output. Attention scores are interpretable: they show which input positions influence each output position. Attention visualizations reveal what the model focuses on.",
+    relatedTerms: ["attention-mechanism", "transformer"]
+  },
+  {
+    term: "Self-Attention",
+    slug: "self-attention",
+    definition: "Self-attention is attention where queries, keys, and values all come from the same sequence. Each position attends to all other positions in the same input. This captures relationships within a single sequence. A word attends to other words in the same sentence. Self-attention is the core mechanism in transformers. It replaces recurrence with parallel attention operations, enabling efficient training on long sequences.",
+    relatedTerms: ["attention-mechanism", "transformer"]
+  },
+  {
+    term: "Cross-Attention",
+    slug: "cross-attention",
+    definition: "Cross-attention is attention where queries come from one sequence and keys/values from another. Used in encoder-decoder architectures. The decoder queries attend to encoder outputs. This allows the decoder to look at the input when generating output. Translation models use cross-attention: the decoder attends to the source sentence while generating the target. Multimodal models use cross-attention to connect text and image representations.",
+    relatedTerms: ["attention-mechanism", "transformer"]
+  },
+  {
+    term: "Layer Normalization",
+    slug: "layer-normalization",
+    definition: "Layer normalization normalizes activations across features for each sample independently. Unlike batch normalization which normalizes across the batch, layer normalization doesn't depend on batch size. This makes it suitable for transformers where batch sizes vary and sequences have different lengths. Layer norm stabilizes training by keeping activations in a consistent range. It's applied before or after attention and feedforward blocks in transformers.",
+    relatedTerms: ["batch-normalization", "transformer"]
+  },
+  {
+    term: "Residual Connection",
+    slug: "residual-connection",
+    definition: "A residual connection adds the input of a layer to its output, creating a skip connection. If the layer computes f(x), the output becomes x + f(x). This enables training very deep networks by providing gradient highways. Gradients flow directly through the skip connection, avoiding vanishing. The layer only needs to learn the residual, the difference from input. Transformers use residual connections around attention and feedforward blocks.",
+    relatedTerms: ["transformer", "neural-network"]
+  },
+  {
+    term: "Feedforward Network",
+    slug: "feedforward-network",
+    definition: "A feedforward network in a transformer is a simple two-layer neural network applied independently to each position. It expands the hidden dimension, applies an activation function, then projects back. This adds nonlinearity and increases model capacity. The feedforward block interleaves with attention blocks in transformer layers. Most parameters in a transformer are in feedforward layers, not attention.",
+    relatedTerms: ["transformer", "neural-network"]
+  },
+  {
+    term: "Causal Masking",
+    slug: "causal-masking",
+    definition: "Causal masking prevents attention from looking at future positions during autoregressive generation. Position i can only attend to positions 0 through i-1. This ensures the model generates text left-to-right without cheating by seeing future tokens. Implemented by setting attention scores for future positions to negative infinity before softmax. GPT and other decoder-only models use causal masking throughout.",
+    relatedTerms: ["transformer", "attention-mechanism"]
+  },
+  {
+    term: "Tokenizer",
+    slug: "tokenizer",
+    definition: "A tokenizer converts text into tokens that a model can process. Different tokenizers produce different token sequences for the same text. Byte-pair encoding learns subword units by iteratively merging frequent pairs. SentencePiece and WordPiece are variants. The choice of tokenizer affects model behavior. Languages with complex morphology or non-Latin scripts may tokenize inefficiently, using more tokens per word and consuming more context window.",
+    relatedTerms: ["token", "llm"]
+  },
+  {
+    term: "Byte-Pair Encoding",
+    slug: "bpe",
+    definition: "Byte-pair encoding is a tokenization algorithm that iteratively merges the most frequent adjacent pairs. Start with individual characters. Find the most common pair and merge it into a single token. Repeat until reaching the target vocabulary size. Common words become single tokens. Rare words split into subword pieces. BPE balances vocabulary size against sequence length. It handles out-of-vocabulary words by decomposing them into known subwords.",
+    relatedTerms: ["tokenizer", "token"]
+  },
+  {
+    term: "Vocabulary",
+    slug: "vocabulary",
+    definition: "Vocabulary in language models is the set of all tokens the model recognizes. Each token maps to an embedding vector. Vocabulary size affects model size and behavior. Larger vocabularies mean more parameters but shorter sequences. Smaller vocabularies mean longer sequences but smaller models. GPT-4 has around 100,000 tokens. Multilingual models need larger vocabularies to cover multiple languages efficiently.",
+    relatedTerms: ["tokenizer", "embeddings"]
+  },
+  {
+    term: "Logit",
+    slug: "logit",
+    definition: "Logits are raw, unnormalized scores output by a neural network before applying softmax. For language models, logits are scores for each token in the vocabulary. Higher logits mean higher probability after softmax. The next token is sampled from the softmax distribution over logits. Logit manipulation enables steering model output. Adding to certain logits increases their probability. Subtracting decreases it. This enables constrained generation.",
+    relatedTerms: ["softmax", "llm", "temperature"]
+  },
+  {
+    term: "Top-k Sampling",
+    slug: "top-k-sampling",
+    definition: "Top-k sampling restricts the next token choice to the k most probable tokens. After computing logits, keep only the top k and renormalize. This prevents the model from selecting very unlikely tokens that could derail generation. k=1 is greedy decoding. Larger k allows more diversity. Top-k is often combined with temperature to control creativity while maintaining coherence.",
+    relatedTerms: ["temperature", "llm", "inference"]
+  },
+  {
+    term: "Top-p Sampling",
+    slug: "top-p-sampling",
+    definition: "Top-p sampling, also called nucleus sampling, includes the smallest set of tokens whose cumulative probability exceeds p. If the top token has 90% probability and p=0.9, only that token is considered. If probability is spread across many tokens, more are included. Top-p adapts to the distribution shape. It includes more tokens when the model is uncertain and fewer when confident. Often preferred over top-k because it's more adaptive.",
+    relatedTerms: ["temperature", "llm", "top-k-sampling"]
+  },
+  {
+    term: "Speculative Decoding",
+    slug: "speculative-decoding",
+    definition: "Speculative decoding accelerates inference by using a smaller draft model to generate candidate tokens that a larger model verifies in parallel. The draft model generates several tokens quickly. The target model evaluates all candidates in a single forward pass. Accepted tokens are kept; rejected tokens trigger regeneration from the last accepted point. This reduces latency because the target model processes multiple tokens per forward pass instead of one.",
+    relatedTerms: ["inference", "latency", "llm"]
+  },
+  {
+    term: "KV Cache",
+    slug: "kv-cache",
+    definition: "KV cache stores computed key and value vectors from previous tokens during autoregressive generation. Without caching, generating token n requires recomputing attention for all previous tokens. With KV cache, previous keys and values are stored and reused. Only the new token's query attends to all cached keys/values. This dramatically speeds up generation but requires memory proportional to sequence length times model dimension.",
+    relatedTerms: ["transformer", "inference", "context-window"]
+  },
+  {
+    term: "Prefix Tuning",
+    slug: "prefix-tuning",
+    definition: "Prefix tuning adapts a frozen language model by prepending trainable continuous vectors to the input. The model weights stay fixed. Only the prefix embeddings are learned. This is parameter-efficient, requiring far fewer trainable parameters than full fine-tuning. The prefix acts as soft instructions that steer the model toward task-specific behavior. Similar techniques include prompt tuning and adapter layers.",
+    relatedTerms: ["fine-tuning", "llm"]
+  },
+  {
+    term: "LoRA",
+    slug: "lora",
+    definition: "Low-Rank Adaptation is a parameter-efficient fine-tuning method that adds trainable low-rank matrices to frozen model weights. Instead of updating all parameters, LoRA adds small rank decomposition matrices that modify the frozen weights. This reduces memory and compute requirements dramatically. A 7B model might need 4GB for full fine-tuning but under 100MB for LoRA adapters. Multiple LoRA adapters can be swapped without reloading the base model.",
+    relatedTerms: ["fine-tuning", "llm"]
+  },
+  {
+    term: "Adapter",
+    slug: "adapter",
+    definition: "An adapter is a small trainable module inserted into a frozen pretrained model. The original weights are fixed. Only adapter parameters are trained. This enables task-specific adaptation without the cost of full fine-tuning. Adapters are typically bottleneck layers that project to a lower dimension, apply a nonlinearity, and project back. Multiple adapters can coexist for different tasks, selected at inference time.",
+    relatedTerms: ["fine-tuning", "lora"]
+  },
+  {
+    term: "Prompt Tuning",
+    slug: "prompt-tuning",
+    definition: "Prompt tuning learns continuous prompt embeddings prepended to the input while keeping model weights frozen. Unlike discrete prompts written in natural language, these are soft prompts in embedding space. The model learns what prompt vectors best elicit desired behavior. Prompt tuning is extremely parameter-efficient, often training fewer than 1% of full model parameters. It's effective for adapting large models to specific tasks cheaply.",
+    relatedTerms: ["prefix-tuning", "fine-tuning", "prompt-engineering"]
+  },
+  {
+    term: "Instruction Tuning",
+    slug: "instruction-tuning",
+    definition: "Instruction tuning fine-tunes a model on a dataset of instructions paired with desired outputs. The model learns to follow natural language instructions across diverse tasks. This is how base models become useful assistants. Instruction-tuned models generalize to new instructions not seen during training. FLAN, InstructGPT, and Alpaca are instruction-tuned models. The quality and diversity of instruction data directly affects instruction-following capability.",
+    relatedTerms: ["fine-tuning", "rlhf", "llm"]
+  },
+  {
+    term: "Direct Preference Optimization",
+    slug: "dpo",
+    definition: "Direct Preference Optimization is an alternative to RLHF that optimizes a language model directly on preference data without training a separate reward model. Given pairs of preferred and dispreferred outputs, DPO adjusts the model to increase the probability of preferred outputs relative to dispreferred ones. This is simpler and more stable than RLHF's reinforcement learning loop. DPO has become a popular alignment method.",
+    relatedTerms: ["rlhf", "alignment", "fine-tuning"]
+  },
+  {
+    term: "Contrastive Learning",
+    slug: "contrastive-learning",
+    definition: "Contrastive learning trains representations by pulling similar items together and pushing dissimilar items apart in embedding space. Given an anchor, a positive example, and negative examples, the model learns embeddings where the anchor is closer to the positive than to negatives. CLIP uses contrastive learning to align images and text. SimCLR uses it for self-supervised image representation. Contrastive objectives are effective for learning meaningful embeddings without labels.",
+    relatedTerms: ["embeddings", "clip"]
+  },
+  {
+    term: "CLIP",
+    slug: "clip",
+    definition: "CLIP is a multimodal model trained to align images and text in a shared embedding space. Given image-text pairs, CLIP learns to match them: the embedding of an image should be close to its caption and far from unrelated text. This enables zero-shot image classification. Describe what you're looking for in text; CLIP finds matching images. CLIP embeddings are used in image generation, search, and multimodal understanding.",
+    relatedTerms: ["multimodal-ai", "contrastive-learning", "embeddings"]
+  },
+  {
+    term: "Vision Transformer",
+    slug: "vit",
+    definition: "Vision Transformer applies the transformer architecture to images by splitting images into patches and treating patches as tokens. Each patch is linearly embedded, positional encodings are added, and the sequence is processed by transformer layers. ViT showed that transformers can match or exceed CNNs on image classification given sufficient data. Modern vision models like CLIP and DALL-E use ViT. It enabled unified architectures across vision and language.",
+    relatedTerms: ["transformer", "cnn", "clip"]
+  },
+  {
+    term: "Object Detection",
+    slug: "object-detection",
+    definition: "Object detection locates and classifies objects in images, outputting bounding boxes and labels. YOLO, Faster R-CNN, and DETR are architectures. Two-stage detectors first propose regions, then classify them. Single-stage detectors predict boxes and classes directly. DETR uses transformers to treat detection as set prediction. Object detection enables autonomous vehicles, security systems, and image understanding applications.",
+    relatedTerms: ["cnn", "computer-vision"]
+  },
+  {
+    term: "Image Segmentation",
+    slug: "image-segmentation",
+    definition: "Image segmentation assigns a label to every pixel in an image. Semantic segmentation labels pixels by class: road, car, pedestrian. Instance segmentation distinguishes individual objects: car 1, car 2, car 3. Panoptic segmentation combines both. U-Net, Mask R-CNN, and SAM are architectures. Segmentation is used in medical imaging, autonomous driving, and photo editing.",
+    relatedTerms: ["cnn", "computer-vision"]
+  },
+  {
+    term: "SAM",
+    slug: "sam",
+    definition: "Segment Anything Model is a foundation model for image segmentation. Given a point, box, or text prompt, SAM segments the indicated object. It generalizes to objects not in its training data. SAM was trained on over a billion masks. It enables interactive segmentation where users click to indicate what to segment. SAM represents a shift toward general-purpose vision models that work across domains without task-specific training.",
+    relatedTerms: ["image-segmentation", "foundation-model"]
+  },
+  {
+    term: "Optical Character Recognition",
+    slug: "ocr",
+    definition: "Optical character recognition extracts text from images. Given a photo of a document, OCR outputs the text content. Traditional OCR used feature engineering and template matching. Modern OCR uses deep learning, often combining CNNs for feature extraction with transformers or RNNs for sequence modeling. OCR enables digitizing documents, reading receipts, and extracting text from screenshots. Accuracy varies with image quality, font, and language.",
+    relatedTerms: ["computer-vision", "cnn"]
+  },
+  {
+    term: "Computer Vision",
+    slug: "computer-vision",
+    definition: "Computer vision is the field of AI concerned with extracting information from images and video. Tasks include classification, detection, segmentation, tracking, and generation. CNNs dominated computer vision for a decade. Vision transformers now achieve comparable or better results. Applications span autonomous vehicles, medical imaging, security, manufacturing inspection, and augmented reality. Computer vision converts visual input into structured understanding.",
+    relatedTerms: ["cnn", "vit", "object-detection"]
+  },
+  {
+    term: "Speech Recognition",
+    slug: "speech-recognition",
+    definition: "Speech recognition converts spoken audio into text. Traditional systems used hidden Markov models and acoustic modeling. Modern systems use end-to-end deep learning. Whisper, from OpenAI, achieves human-level transcription across many languages. Speech recognition enables voice assistants, transcription services, and accessibility tools. Performance depends on audio quality, accent, domain vocabulary, and background noise.",
+    relatedTerms: ["transformer", "neural-network"]
+  },
+  {
+    term: "Text-to-Speech",
+    slug: "tts",
+    definition: "Text-to-speech synthesizes spoken audio from text input. Early systems used concatenative synthesis, stitching recorded audio segments. Modern systems like Tacotron and VITS use neural networks to generate natural-sounding speech. Quality has improved dramatically: current systems produce human-like prosody and expressiveness. TTS powers voice assistants, audiobooks, and accessibility tools. Voice cloning enables generating speech in a specific person's voice.",
+    relatedTerms: ["neural-network", "speech-recognition"]
+  },
+  {
+    term: "Named Entity Recognition",
+    slug: "ner",
+    definition: "Named entity recognition identifies and classifies named entities in text: people, organizations, locations, dates, monetary values. Given 'Apple was founded by Steve Jobs in Cupertino,' NER identifies Apple as an organization, Steve Jobs as a person, and Cupertino as a location. NER is used for information extraction, question answering, and knowledge graph construction. Transformer-based models achieve high accuracy.",
+    relatedTerms: ["bert", "llm"]
+  },
+  {
+    term: "Sentiment Analysis",
+    slug: "sentiment-analysis",
+    definition: "Sentiment analysis determines the emotional tone of text: positive, negative, or neutral. Fine-grained sentiment identifies specific emotions like joy, anger, or sadness. Aspect-based sentiment ties sentiment to specific features: 'The food was great but the service was slow.' Sentiment analysis is used for brand monitoring, customer feedback, and social media analysis. Transformer models like BERT achieve high accuracy on sentiment classification.",
+    relatedTerms: ["bert", "llm"]
+  },
+  {
+    term: "Question Answering",
+    slug: "question-answering",
+    definition: "Question answering extracts or generates answers to natural language questions. Extractive QA identifies answer spans in a given context document. Generative QA produces answers in natural language. Open-domain QA retrieves relevant documents before answering. QA systems power search engines, virtual assistants, and customer service bots. RAG combines retrieval with generation for grounded, accurate answers.",
+    relatedTerms: ["rag", "llm", "bert"]
+  },
+  {
+    term: "Machine Translation",
+    slug: "machine-translation",
+    definition: "Machine translation converts text from one language to another. Statistical methods used phrase tables and language models. Neural machine translation uses encoder-decoder architectures. The encoder processes the source language; the decoder generates the target language with cross-attention to the source. Transformer-based systems like those from Google and DeepL achieve near-human quality for common language pairs. Low-resource languages remain challenging.",
+    relatedTerms: ["transformer", "cross-attention"]
+  },
+  {
+    term: "Semantic Similarity",
+    slug: "semantic-similarity",
+    definition: "Semantic similarity measures how closely two pieces of text match in meaning. Computed by comparing their embedding vectors. Cosine similarity is the standard metric. High similarity means the texts discuss the same concepts. Semantic similarity powers search, deduplication, and clustering. It's essential for RAG: retrieving documents semantically similar to the query. Sentence transformers produce embeddings optimized for similarity comparison.",
+    relatedTerms: ["embeddings", "rag"]
+  },
+  {
+    term: "Document Retrieval",
+    slug: "document-retrieval",
+    definition: "Document retrieval finds relevant documents given a query. Keyword-based retrieval matches terms. Semantic retrieval uses embeddings to find conceptually similar documents. Hybrid approaches combine both. BM25 is a standard keyword algorithm. Dense retrieval embeds queries and documents, finding nearest neighbors. Retrieval quality directly determines RAG output quality. The retrieved documents are the context the model reasons over.",
+    relatedTerms: ["rag", "vector-database", "embeddings"]
+  },
+  {
+    term: "Re-ranking",
+    slug: "re-ranking",
+    definition: "Re-ranking improves retrieval by scoring initial results with a more powerful model. First-stage retrieval uses fast approximate methods like BM25 or dense retrieval to get candidate documents. A re-ranker then scores each candidate against the query with a cross-encoder that sees both together. This two-stage approach balances speed and accuracy. Re-ranking significantly improves retrieval quality in RAG pipelines.",
+    relatedTerms: ["document-retrieval", "rag"]
+  },
+  {
+    term: "Chunking",
+    slug: "chunking",
+    definition: "Chunking splits documents into smaller pieces for embedding and retrieval. Embedding entire documents loses detail. Embedding sentences loses context. Chunking finds the middle ground. Common strategies include fixed-size chunks with overlap, sentence-based splitting, and semantic chunking that respects document structure. Chunk size affects retrieval: smaller chunks are more precise but may lack context. Larger chunks provide more context but may contain irrelevant information.",
+    relatedTerms: ["rag", "document-retrieval", "embeddings"]
+  },
+
+  // Extended Web3/Crypto Terms
+  {
+    term: "Market Cap",
+    slug: "market-cap",
+    definition: "Market capitalization is the total value of a cryptocurrency, calculated as price multiplied by circulating supply. A token at $10 with 100 million tokens in circulation has a $1 billion market cap. Market cap ranks cryptocurrencies by size. Bitcoin and Ethereum have the largest market caps. Market cap is imperfect: low-liquidity tokens can have inflated market caps that would collapse if holders tried to sell. Fully diluted market cap uses total supply, not just circulating.",
+    relatedTerms: ["token", "blockchain"]
+  },
+  {
+    term: "Circulating Supply",
+    slug: "circulating-supply",
+    definition: "Circulating supply is the number of tokens currently available in the market. It excludes locked tokens, team allocations that haven't vested, and tokens held in reserve. Circulating supply determines market cap. Total supply includes all existing tokens. Maximum supply is the cap on tokens that will ever exist. Bitcoin has a maximum supply of 21 million. Understanding supply dynamics is essential for valuation.",
+    relatedTerms: ["market-cap", "tokenomics"]
+  },
+  {
+    term: "Vesting Schedule",
+    slug: "vesting-schedule",
+    definition: "A vesting schedule releases tokens to holders gradually over time rather than all at once. Investors, teams, and advisors typically receive tokens with vesting. A 4-year vesting with 1-year cliff releases nothing for a year, then distributes tokens monthly over the remaining three years. Vesting aligns incentives by preventing early dumping. When vesting periods end, sell pressure can increase as holders gain access to previously locked tokens.",
+    relatedTerms: ["tokenomics", "airdrop"]
+  },
+  {
+    term: "Token Burn",
+    slug: "token-burn",
+    definition: "Token burning permanently removes tokens from circulation by sending them to an address with no private key. Burning reduces supply, potentially increasing value of remaining tokens. Ethereum burns a portion of transaction fees since EIP-1559. Some protocols burn tokens as part of buyback programs. Burn mechanisms create deflationary pressure. The effectiveness depends on burn rate relative to emission rate.",
+    relatedTerms: ["tokenomics", "gas-fees"]
+  },
+  {
+    term: "Emission Rate",
+    slug: "emission-rate",
+    definition: "Emission rate is the speed at which new tokens enter circulation. Bitcoin emits new tokens through block rewards that halve every four years. Ethereum emissions depend on staking rewards minus burns. High emission rates create inflation. Emissions fund security: validators and miners earn new tokens for securing the network. Understanding emission schedules is crucial for predicting supply dynamics.",
+    relatedTerms: ["tokenomics", "token-burn"]
+  },
+  {
+    term: "Order Book",
+    slug: "order-book",
+    definition: "An order book is a list of buy and sell orders for an asset on a centralized exchange. Bids are buy orders; asks are sell orders. The spread is the difference between the highest bid and lowest ask. Market orders execute immediately against the best available price. Limit orders sit in the book until their price is reached. Order book depth indicates liquidity: deep books can absorb large trades without moving price significantly.",
+    relatedTerms: ["amm", "defi"]
+  },
+  {
+    term: "Limit Order",
+    slug: "limit-order",
+    definition: "A limit order specifies a price at which you're willing to trade. A buy limit order at $100 executes only if the price drops to $100 or below. A sell limit order at $110 executes only if price rises to $110 or above. Limit orders provide price certainty but no execution guarantee. If the market never reaches your price, the order never fills. DEXs are implementing limit orders through specialized protocols.",
+    relatedTerms: ["order-book", "defi"]
+  },
+  {
+    term: "Market Order",
+    slug: "market-order",
+    definition: "A market order executes immediately at the best available price. You trade now, accepting whatever price the market offers. Market orders guarantee execution but not price. In illiquid markets, market orders can experience significant slippage. Large market orders move the price against you as they consume available liquidity. For large trades, limit orders or algorithmic execution minimize price impact.",
+    relatedTerms: ["order-book", "slippage"]
+  },
+  {
+    term: "Liquidity Provider",
+    slug: "liquidity-provider",
+    definition: "A liquidity provider deposits assets into a pool or order book, enabling others to trade. LPs earn fees from trades executed against their liquidity. In AMMs, LPs deposit token pairs and earn a share of swap fees. The risk is impermanent loss when asset prices diverge. In order books, market makers provide liquidity by placing limit orders on both sides. Liquidity provision is essential for functional markets.",
+    relatedTerms: ["liquidity-pool", "amm", "impermanent-loss"]
+  },
+  {
+    term: "Concentrated Liquidity",
+    slug: "concentrated-liquidity",
+    definition: "Concentrated liquidity allows liquidity providers to specify price ranges for their capital. Instead of spreading liquidity across all prices, LPs concentrate it where trading actually occurs. Uniswap v3 pioneered this. If ETH trades between $1,800 and $2,200, concentrate liquidity there. This improves capital efficiency: the same capital supports more trading volume. The trade-off is more impermanent loss if price moves outside your range.",
+    relatedTerms: ["liquidity-pool", "amm", "impermanent-loss"]
+  },
+  {
+    term: "Total Value Locked",
+    slug: "tvl",
+    definition: "Total value locked is the sum of all assets deposited in a DeFi protocol. TVL indicates protocol adoption and trust. Higher TVL means more capital is deployed, enabling larger trades with less slippage. TVL fluctuates with asset prices: if ETH drops 50%, protocols holding ETH see TVL drop even without withdrawals. Comparing TVL across protocols helps assess relative adoption, though it's not a perfect metric.",
+    relatedTerms: ["defi", "liquidity-pool"]
+  },
+  {
+    term: "Protocol Revenue",
+    slug: "protocol-revenue",
+    definition: "Protocol revenue is income a DeFi protocol generates from fees. Uniswap earns swap fees. Lido earns a share of staking rewards. Aave earns interest rate spreads. Protocol revenue matters because it can accrue to token holders through buybacks, burns, or dividends. Sustainable protocols generate revenue exceeding operational costs. Protocol revenue is a more fundamental metric than TVL for assessing protocol health.",
+    relatedTerms: ["defi", "tvl", "tokenomics"]
+  },
+  {
+    term: "Collateralization Ratio",
+    slug: "collateralization-ratio",
+    definition: "Collateralization ratio is the value of collateral relative to borrowed assets. Borrow $100 with $150 collateral and your ratio is 150%. Lending protocols require minimum ratios. If the ratio falls below the threshold due to price movement, the position is liquidated. Higher ratios are safer but less capital-efficient. Understanding collateralization is essential for using DeFi lending without getting liquidated.",
+    relatedTerms: ["defi", "liquidation"]
+  },
+  {
+    term: "Liquidation",
+    slug: "liquidation",
+    definition: "Liquidation in DeFi is the forced sale of collateral when a loan becomes undercollateralized. You deposit ETH, borrow DAI. ETH price drops. Your collateralization ratio falls below the minimum. A liquidator repays part of your debt and takes your collateral at a discount. Liquidation protects the protocol from bad debt. It's the mechanism that keeps DeFi lending solvent. Monitoring collateral ratios prevents involuntary liquidation.",
+    relatedTerms: ["collateralization-ratio", "defi"]
+  },
+  {
+    term: "Borrow Rate",
+    slug: "borrow-rate",
+    definition: "Borrow rate is the interest rate paid to borrow assets from a lending protocol. Rates adjust based on utilization: high demand for borrowing increases rates, attracting more lenders. Low demand decreases rates. Borrow rates in DeFi are typically variable, changing block by block. Fixed-rate protocols exist but are less common. Borrow rates fund the supply-side yields that attract depositors.",
+    relatedTerms: ["defi", "yield"]
+  },
+  {
+    term: "Supply Rate",
+    slug: "supply-rate",
+    definition: "Supply rate is the interest rate earned by depositing assets into a lending protocol. It comes from borrow rates paid by borrowers, minus a protocol fee. Supply rates fluctuate with utilization. When many borrowers compete for limited deposits, supply rates increase. When few borrow, rates are low. Supply rates are the primary yield source in lending protocols like Aave and Compound.",
+    relatedTerms: ["defi", "yield", "borrow-rate"]
+  },
+  {
+    term: "Utilization Rate",
+    slug: "utilization-rate",
+    definition: "Utilization rate is the percentage of deposited assets currently borrowed. If $80 million is borrowed from $100 million deposited, utilization is 80%. High utilization means strong borrow demand but also withdrawal risk: if too much is borrowed, depositors can't withdraw. Interest rate curves increase rates at high utilization to encourage repayment and attract deposits. Optimal utilization balances yield and liquidity.",
+    relatedTerms: ["defi", "supply-rate", "borrow-rate"]
+  },
+  {
+    term: "Perpetual Futures",
+    slug: "perpetual-futures",
+    definition: "Perpetual futures are derivative contracts that track an asset's price without expiration. Unlike traditional futures with settlement dates, perpetuals roll indefinitely. A funding rate mechanism keeps the perpetual price anchored to the spot price. When perpetual trades above spot, longs pay shorts, incentivizing shorts and pushing price down. When below spot, shorts pay longs. Perpetuals are the most traded crypto derivative.",
+    relatedTerms: ["defi", "funding-rate"]
+  },
+  {
+    term: "Funding Rate",
+    slug: "funding-rate",
+    definition: "Funding rate is a periodic payment between long and short perpetual futures holders that keeps the perpetual price aligned with spot. Positive funding means longs pay shorts because perpetual is above spot. Negative funding means shorts pay longs. Funding rates are typically paid every 8 hours. Extreme funding rates indicate market imbalance: very positive funding suggests over-leveraged longs.",
+    relatedTerms: ["perpetual-futures", "defi"]
+  },
+  {
+    term: "Leverage",
+    slug: "leverage",
+    definition: "Leverage amplifies exposure beyond your capital. 10x leverage means $100 controls $1,000 of exposure. Gains and losses are magnified 10x. A 10% move against you wipes out your position. Leverage is available through margin trading, perpetual futures, and lending protocols. It increases capital efficiency but dramatically increases risk. Most retail traders lose money using leverage due to liquidations and volatility.",
+    relatedTerms: ["perpetual-futures", "liquidation"]
+  },
+  {
+    term: "Margin",
+    slug: "margin",
+    definition: "Margin is collateral deposited to open a leveraged position. Initial margin is required to open. Maintenance margin is the minimum to keep the position open. If the position moves against you and equity falls below maintenance margin, liquidation occurs. Margin requirements vary by asset volatility and exchange. Understanding margin prevents unexpected liquidations.",
+    relatedTerms: ["leverage", "liquidation"]
+  },
+  {
+    term: "Delta Neutral",
+    slug: "delta-neutral",
+    definition: "Delta neutral is a position structured to have no directional exposure to price movement. If you're long spot ETH and short an equivalent perpetual futures, price changes cancel out. You earn funding rate without directional risk. Delta neutral strategies harvest yield from basis trade, funding rates, and options premiums. The risk shifts from direction to execution, funding rate changes, and counterparty risk.",
+    relatedTerms: ["perpetual-futures", "yield-farming"]
+  },
+  {
+    term: "Basis Trade",
+    slug: "basis-trade",
+    definition: "Basis trade profits from the difference between spot and futures prices. In contango, futures trade above spot. Buy spot, sell futures, earn the spread as they converge at expiration. In perpetuals, the basis is captured through funding rates. Basis trades are delta neutral: you don't care if price goes up or down, only that futures and spot converge. It's a low-risk yield strategy when executed correctly.",
+    relatedTerms: ["delta-neutral", "perpetual-futures"]
+  },
+  {
+    term: "Rollup",
+    slug: "rollup",
+    definition: "A rollup is a Layer 2 scaling solution that executes transactions off-chain and posts compressed data or proofs to Layer 1 for security. Optimistic rollups assume transactions are valid unless challenged. ZK rollups use zero-knowledge proofs to prove validity cryptographically. Both inherit Layer 1 security while achieving higher throughput and lower costs. Rollups are the dominant scaling approach for Ethereum.",
+    relatedTerms: ["layer-2", "zk-rollup", "optimistic-rollup"]
+  },
+  {
+    term: "Optimistic Rollup",
+    slug: "optimistic-rollup",
+    definition: "Optimistic rollups assume transactions are valid and post them to Layer 1 without proofs. A challenge period, typically 7 days, allows anyone to submit a fraud proof if they detect invalid transactions. If no challenge occurs, finality is reached. Arbitrum and Optimism are optimistic rollups. The trade-off is the withdrawal delay during the challenge period. Bridges help users exit faster by accepting the fraud risk.",
+    relatedTerms: ["rollup", "layer-2"]
+  },
+  {
+    term: "ZK Rollup",
+    slug: "zk-rollup",
+    definition: "ZK rollups post cryptographic proofs to Layer 1 that mathematically guarantee transaction validity. No challenge period is needed because the proof is verified on-chain. Withdrawals can be immediate. ZK proof generation is computationally expensive, but verification is cheap. zkSync, StarkNet, and Polygon zkEVM are ZK rollups. As proof technology improves, ZK rollups are becoming the preferred scaling solution.",
+    relatedTerms: ["rollup", "layer-2", "zero-knowledge-proof"]
+  },
+  {
+    term: "Data Availability",
+    slug: "data-availability",
+    definition: "Data availability ensures that transaction data is accessible to anyone who needs to verify the chain. Rollups must make transaction data available so validators can reconstruct state and detect fraud. Posting data to Ethereum is expensive. Data availability layers like EigenDA and Celestia provide cheaper alternatives. Validiums post proofs to Ethereum but data elsewhere, trading security for cost.",
+    relatedTerms: ["rollup", "layer-2"]
+  },
+  {
+    term: "Sequencer",
+    slug: "sequencer",
+    definition: "A sequencer orders transactions on a rollup before posting them to Layer 1. Currently most rollups have centralized sequencers run by the team. This creates censorship risk and MEV extraction potential. Decentralizing sequencers is a priority. Shared sequencers would order transactions across multiple rollups. Sequencer decentralization is one of the main criticisms of current rollup implementations.",
+    relatedTerms: ["rollup", "mev"]
+  },
+  {
+    term: "Account Abstraction",
+    slug: "account-abstraction",
+    definition: "Account abstraction allows smart contracts to act as user accounts, enabling flexible authentication and transaction logic. Instead of requiring a specific signature scheme, accounts can define custom validation. This enables social recovery, spending limits, batched transactions, and gas payment in tokens other than ETH. ERC-4337 brings account abstraction to Ethereum without protocol changes. It's essential for mainstream crypto UX.",
+    relatedTerms: ["wallet", "smart-contract"]
+  },
+  {
+    term: "Social Recovery",
+    slug: "social-recovery",
+    definition: "Social recovery is a wallet recovery mechanism using trusted contacts instead of seed phrases. You designate guardians. If you lose access, guardians can collectively approve a recovery transaction. No single guardian can steal funds. This improves on seed phrases, which are easily lost or stolen. Social recovery requires account abstraction or smart contract wallets. It's a major UX improvement for mainstream adoption.",
+    relatedTerms: ["account-abstraction", "wallet", "seed-phrase"]
+  },
+  {
+    term: "Intent",
+    slug: "intent",
+    definition: "An intent is a signed message expressing what a user wants to achieve rather than specifying exact transaction steps. Instead of 'swap 1 ETH for USDC on Uniswap,' an intent says 'get at least 2,000 USDC for my 1 ETH.' Solvers compete to fulfill intents optimally. This abstracts routing complexity from users and enables better execution through aggregation and MEV protection. Intent-based protocols are emerging across DeFi.",
+    relatedTerms: ["mev", "defi"]
+  },
 ];
 
 export function getTermBySlug(slug: string): GlossaryTerm | undefined {
