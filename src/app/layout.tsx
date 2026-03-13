@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   },
   description:
     'Vedang Vatsa: Founder of Hashtag Web3 (100k+ professionals), thought leader in AI, blockchain, and decentralized economies.',
+  keywords: ['Vedang Vatsa', 'AI', 'Blockchain', 'Web3', 'Growth Marketing', 'Founder', 'AI Researcher', 'DeFi'],
   openGraph: {
     title: 'Vedang Vatsa - AI & Web3 Founder',
     description: 'Founder of Hashtag Web3 (100k+ professionals), thought leader in AI and blockchain.',

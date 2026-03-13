@@ -4,24 +4,118 @@ interface MetadataParams {
   title: string;
   description: string;
   url: string;
+  keywords?: string[];
   ogImage?: string;
   ogImageAlt?: string;
   type?: 'website' | 'article';
 }
+
+export const pageMetadata = {
+  home: {
+    title: 'Vedang Vatsa - AI & Web3 Leader',
+    description:
+      'Founder of Hashtag Web3 (100k+), FRSA, and thought leader in AI, blockchain, and decentralized economies.',
+    url: '/',
+    keywords: ['AI Thought Leader', 'Web3 Expert', 'Blockchain Technology', 'Generative AI', 'Future of AI', 'Decentralized Finance', 'DeFi', 'Digital Assets', 'Web3 Ecosystem'],
+  },
+  writings: {
+    title: 'Essays on AI & Web3',
+    description:
+      'Essays and research papers on AI agents, blockchain systems, stablecoins, and decentralized economies by Vedang Vatsa.',
+    url: '/writings',
+    keywords: ['Essays', 'Research Papers', 'AI Agents', 'Stablecoins', 'Blockchain', 'Decentralized Economies', 'Vedang Vatsa'],
+  },
+  web3101: {
+    title: 'Web3 101 - Blockchain Fundamentals Course',
+    description:
+      'Free course on blockchain, cryptocurrencies, smart contracts, dApps, NFTs, DAOs, and decentralized systems.',
+    url: '/web3-101',
+    keywords: ['Web3 Course', 'Blockchain Fundamentals', 'Learn Crypto', 'Smart Contracts', 'dApps', 'NFTs', 'DAOs'],
+  },
+  promptEngineering: {
+    title: 'Prompt Engineering 101 - AI Course',
+    description:
+      'Master prompt engineering fundamentals. Learn to craft effective prompts for LLMs and AI assistants.',
+    url: '/prompt-engineering-101',
+    keywords: ['Prompt Engineering Course', 'Learn AI Prompts', 'LLM Tutorial', 'AI Assistants', 'Generative AI', 'Prompt Design'],
+  },
+  community: {
+    title: 'Community Building Guide',
+    description:
+      'Strategies for building engaged communities. Lessons from scaling Hashtag Web3 to 100k+ members.',
+    url: '/community',
+    keywords: ['Community Building', 'Scaling Communities', 'Hashtag Web3', 'Web3 Community', 'Member Engagement', 'Growth Strategy'],
+  },
+  profile: {
+    title: 'Vedang Vatsa - Founder & AI Researcher',
+    description:
+      'Profile of Vedang Vatsa: founder of Hashtag Web3, speaker, researcher, and thought leader in AI and Web3.',
+    url: '/profile',
+    keywords: ['AI Thought Leaders', 'Top Web3 Speakers', 'Artificial Intelligence Expert', 'Web3 Keynote Speaker', 'Blockchain Thought Leaders', 'AI in Business', 'AI Innovation'],
+  },
+  media: {
+    title: 'Speaking Engagements & Media',
+    description:
+      'Speaking engagements, interviews, and media mentions. Featured in TechCrunch, Forbes, Crypto Briefing.',
+    url: '/media',
+    keywords: ['AI Keynote Speaker', 'Web3 Keynote Speaker', 'Innovation Speaker', 'Top AI Speakers', 'Futurist Speaker', 'Industry Expert Keynote', 'Conference Speaker'],
+  },
+  agenticWeb: {
+    title: 'The Agentic Web - AI Agents Course',
+    description:
+      'Learn about autonomous AI agents and agentic systems transforming the web and digital economy.',
+    url: '/agentic-web',
+    keywords: ['Agentic Web', 'AI Agents Course', 'Autonomous AI', 'Agentic Systems', 'Digital Economy', 'Future of Web'],
+  },
+  vibeCoding: {
+    title: 'Vibe Coding - Intuitive Engineering',
+    description:
+      'The art of combining technical excellence with creative intuition in software engineering and design.',
+    url: '/vibe-coding',
+    keywords: ['Vibe Coding', 'Intuitive Engineering', 'Creative Software Design', 'Technical Excellence', 'Design Engineering'],
+  },
+  seo: {
+    title: 'Growth Marketing & SEO Expertise',
+    description:
+      'Data-driven growth strategies for Web3, FinTech, and mobile. Expert in SEO, ASO, and community-led growth.',
+    url: '/seo',
+    keywords: ['Growth Marketing', 'SEO Expert', 'Web3 Marketing', 'FinTech Marketing', 'ASO Specialist', 'Community-Led Growth'],
+  },
+  glossary: {
+    title: 'AI & Web3 Glossary',
+    description:
+      'Comprehensive glossary of AI and Web3 terms: blockchain, smart contracts, LLMs, AGI, DeFi, and more.',
+    url: '/glossary',
+    keywords: ['AI Glossary', 'Web3 Glossary', 'Artificial Intelligence Definitions', 'Blockchain Terms', 'Generative AI Terms', 'Crypto Glossary', 'Large Language Model (LLM)', 'DeFi Terms'],
+  },
+};
 
 export function generateMetadata(params: MetadataParams): Metadata {
   const {
     title,
     description,
     url,
+    keywords,
     ogImage = '/images/icon.png',
     ogImageAlt = 'Vedang Vatsa',
     type = 'website',
   } = params;
 
+  // Auto-resolve keywords from pageMetadata if missing
+  let resolvedKeywords = keywords;
+  if (!resolvedKeywords) {
+    const pageKey = Object.keys(pageMetadata).find(
+      key => pageMetadata[key as keyof typeof pageMetadata].url === url
+    );
+    if (pageKey) {
+      resolvedKeywords = pageMetadata[pageKey as keyof typeof pageMetadata].keywords;
+    }
+  }
+
   return {
     title,
     description,
+    keywords: resolvedKeywords,
     alternates: {
       canonical: url,
     },
@@ -47,72 +141,3 @@ export function generateMetadata(params: MetadataParams): Metadata {
     },
   };
 }
-
-export const pageMetadata = {
-  home: {
-    title: 'Vedang Vatsa - AI & Web3 Leader',
-    description:
-      'Founder of Hashtag Web3 (100k+), FRSA, and thought leader in AI, blockchain, and decentralized economies.',
-    url: '/',
-  },
-  writings: {
-    title: 'Essays on AI & Web3',
-    description:
-      'Essays and research papers on AI agents, blockchain systems, stablecoins, and decentralized economies by Vedang Vatsa.',
-    url: '/writings',
-  },
-  web3101: {
-    title: 'Web3 101 - Blockchain Fundamentals Course',
-    description:
-      'Free course on blockchain, cryptocurrencies, smart contracts, dApps, NFTs, DAOs, and decentralized systems.',
-    url: '/web3-101',
-  },
-  promptEngineering: {
-    title: 'Prompt Engineering 101 - AI Course',
-    description:
-      'Master prompt engineering fundamentals. Learn to craft effective prompts for LLMs and AI assistants.',
-    url: '/prompt-engineering-101',
-  },
-  community: {
-    title: 'Community Building Guide',
-    description:
-      'Strategies for building engaged communities. Lessons from scaling Hashtag Web3 to 100k+ members.',
-    url: '/community',
-  },
-  profile: {
-    title: 'Vedang Vatsa - Founder & AI Researcher',
-    description:
-      'Profile of Vedang Vatsa: founder of Hashtag Web3, speaker, researcher, and thought leader in AI and Web3.',
-    url: '/profile',
-  },
-  media: {
-    title: 'Speaking Engagements & Media',
-    description:
-      'Speaking engagements, interviews, and media mentions. Featured in TechCrunch, Forbes, Crypto Briefing.',
-    url: '/media',
-  },
-  agenticWeb: {
-    title: 'The Agentic Web - AI Agents Course',
-    description:
-      'Learn about autonomous AI agents and agentic systems transforming the web and digital economy.',
-    url: '/agentic-web',
-  },
-  vibeCoding: {
-    title: 'Vibe Coding - Intuitive Engineering',
-    description:
-      'The art of combining technical excellence with creative intuition in software engineering and design.',
-    url: '/vibe-coding',
-  },
-  seo: {
-    title: 'Growth Marketing & SEO Expertise',
-    description:
-      'Data-driven growth strategies for Web3, FinTech, and mobile. Expert in SEO, ASO, and community-led growth.',
-    url: '/seo',
-  },
-  glossary: {
-    title: 'AI & Web3 Glossary',
-    description:
-      'Comprehensive glossary of AI and Web3 terms: blockchain, smart contracts, LLMs, AGI, DeFi, and more.',
-    url: '/glossary',
-  },
-};

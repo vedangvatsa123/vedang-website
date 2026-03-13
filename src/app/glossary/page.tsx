@@ -2,7 +2,7 @@ import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Metadata } from 'next';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Link from 'next/link';
 import { getAllTermsSorted } from '@/lib/glossary';
 
@@ -14,22 +14,20 @@ export const metadata: Metadata = generateMetadata({
 
 export default function GlossaryPage() {
   const terms = getAllTermsSorted();
-  
+
   const glossarySchema = {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
+    "@type": "DefinedTermSet",
+    "@id": "https://veda.ng/glossary",
     "name": "Glossary - AI, Web3 & Tech Terms",
-    "description": "Definitions of AI, Web3, and technical terms. Clear explanations without jargon.",
+    "description": "Definitions of AI, Web3, and technical terms.",
     "url": "https://veda.ng/glossary",
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": terms.map((term, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "url": `https://veda.ng/glossary/${term.slug}`,
-        "name": term.term,
-      }))
-    }
+    "hasDefinedTerm": terms.map((term) => ({
+      "@type": "DefinedTerm",
+      "name": term.term,
+      "description": term.definition,
+      "url": `https://veda.ng/glossary/${term.slug}`
+    }))
   };
 
   const breadcrumbSchema = {
@@ -50,7 +48,7 @@ export default function GlossaryPage() {
       }
     ]
   };
-  
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <script
@@ -69,28 +67,31 @@ export default function GlossaryPage() {
               Glossary
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              Definitions of AI, Web3, and technical terms. Clear explanations without jargon.
+              Definitions of AI, Web3, and technical terms.
             </p>
           </div>
         </section>
 
         <div className="container mx-auto px-4 md:px-6 max-w-7xl py-16">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {terms.map((item) => (
-              <Link key={item.slug} href={`/glossary/${item.slug}`}>
-                <Card className="hover:border-primary/50 transition-colors h-full cursor-pointer">
+              <div key={item.slug} className="relative group">
+                <Link href={`/glossary/${item.slug}`} className="absolute inset-0 z-10" aria-label={`Read definition for ${item.term}`}>
+                  <span className="sr-only">Read definition for {item.term}</span>
+                </Link>
+                <Card className="hover:border-primary/50 transition-colors h-full flex flex-col group-hover:border-primary/50">
                   <CardHeader>
-                    <CardTitle className="text-lg">{item.term}</CardTitle>
+                    <dt className="text-lg font-semibold leading-none tracking-tight">{item.term}</dt>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                  <CardContent className="flex-grow">
+                    <dd className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
                       {item.definition}
-                    </p>
+                    </dd>
                   </CardContent>
                 </Card>
-              </Link>
+              </div>
             ))}
-          </div>
+          </dl>
         </div>
       </main>
       <Footer />
