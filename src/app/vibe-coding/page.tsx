@@ -6,8 +6,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Footer } from '@/components/footer';
-import { Header } from '@/components/header';
+import { PageLayout } from '@/components/page-layout';
+
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
 import { Bot, BrainCircuit, Code, DraftingCompass, ExternalLink, Hand, Lightbulb, MonitorPlay, Palette, ShieldCheck, Star, BookOpen } from 'lucide-react';
@@ -147,7 +147,6 @@ const faqItems = [
   },
 ];
 
-
 const courseSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
@@ -176,11 +175,9 @@ const faqSchema = {
 
 export default function VibeCodingCoursePage() {
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
+    <PageLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Header />
-      <main className="flex-grow">
 
         <section className="text-center pt-16 pb-12 bg-gradient-to-b from-background to-secondary/30">
              <div className="container mx-auto px-4 md:px-6 max-w-4xl">
@@ -757,15 +754,7 @@ export default function VibeCodingCoursePage() {
                 </div>
             </section>
         </div>
-      </main>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }
-
-
-
-
-
-
 

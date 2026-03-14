@@ -1,9 +1,9 @@
-import { Footer } from '@/components/footer';
-import { Header } from '@/components/header';
 import { Metadata } from 'next';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 import { getAllTermsSorted } from '@/lib/glossary';
 import { GlossaryFilter } from '@/components/glossary-filter';
+import { PageLayout } from '@/components/page-layout';
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.glossary.title,
@@ -25,7 +25,6 @@ export default function GlossaryPage() {
     (a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b)
   );
 
-  // Truncate definitions for the client-side filter component (cards only show 3 lines)
   const lightTerms = terms.map((t) => ({
     term: t.term,
     slug: t.slug,
@@ -48,53 +47,28 @@ export default function GlossaryPage() {
     }))
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://veda.ng"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Glossary",
-        "item": "https://veda.ng/glossary"
-      }
-    ]
-  };
-
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
+    <PageLayout>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(glossarySchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <Header />
-      <main className="flex-grow">
-        <section className="text-center pt-16 pb-12 border-b border-border/30">
-          <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-            <h1 className="text-5xl font-semibold tracking-tight text-primary mb-2">
-              Glossary
-            </h1>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Deep dives into the terminology shaping AI, Web3, and deep tech.
-            </p>
-          </div>
-        </section>
+      <BreadcrumbSchema items={[{ name: "Glossary", url: "https://veda.ng/glossary" }]} />
 
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl py-16">
-          <GlossaryFilter terms={lightTerms} categories={categories} />
+      <section className="text-center pt-16 pb-12 border-b border-border/30">
+        <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+          <h1 className="text-5xl font-semibold tracking-tight text-primary mb-2">
+            Glossary
+          </h1>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Deep dives into the terminology shaping AI, Web3, and deep tech.
+          </p>
         </div>
-      </main>
-      <Footer />
-    </div>
+      </section>
+
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl py-16">
+        <GlossaryFilter terms={lightTerms} categories={categories} />
+      </div>
+    </PageLayout>
   );
 }

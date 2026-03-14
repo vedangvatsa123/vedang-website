@@ -1,7 +1,7 @@
 
 
-import { Footer } from '@/components/footer';
-import { Header } from '@/components/header';
+import { PageLayout } from '@/components/page-layout';
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Award,
@@ -36,21 +36,11 @@ export default function CommunityProfilePage() {
 
   const recentEssays = essays.slice(0, 4);
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://veda.ng" },
-      { "@type": "ListItem", "position": 2, "name": "Content & Community", "item": "https://veda.ng/community" }
-    ]
-  };
-
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Header />
+    <PageLayout>
+      <BreadcrumbSchema items={[{ name: "Content & Community", url: "https://veda.ng/community" }]} />
 
-      <main className="flex-grow py-8">
+      <div className="py-8">
         <div className="container mx-auto max-w-7xl px-4 md:px-6">
           <section className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
               <Image
@@ -278,8 +268,7 @@ export default function CommunityProfilePage() {
 
           </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </PageLayout>
   );
 }

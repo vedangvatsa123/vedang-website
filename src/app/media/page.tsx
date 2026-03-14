@@ -1,7 +1,7 @@
 
 
-import { Footer } from '@/components/footer';
-import { Header } from '@/components/header';
+import { PageLayout } from '@/components/page-layout';
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { Card, CardContent } from '@/components/ui/card';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -119,20 +119,10 @@ const speakingEngagementImages = [
 
 
 export default function MediaPage() {
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://veda.ng" },
-      { "@type": "ListItem", "position": 2, "name": "Media & Speaking", "item": "https://veda.ng/media" }
-    ]
-  };
-
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Header />
-      <main className="flex-grow py-8">
+    <PageLayout>
+      <BreadcrumbSchema items={[{ name: "Media & Speaking", url: "https://veda.ng/media" }]} />
+      <div className="py-8">
         <div className="container mx-auto px-4 md:px-6">
           <section className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl font-semibold tracking-tight">Speaker on Emerging Technologies</h1>
@@ -211,8 +201,7 @@ export default function MediaPage() {
               </div>
           </section>
         </div>
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </PageLayout>
   );
 }

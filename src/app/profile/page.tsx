@@ -1,7 +1,7 @@
 
 
-import { Footer } from '@/components/footer';
-import { Header } from '@/components/header';
+import { PageLayout } from '@/components/page-layout';
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -60,14 +60,12 @@ const personSchema = {
 export default function ProfilePage() {
   
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
+    <PageLayout>
       <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-      <Header />
-
-      <main className="flex-grow py-8">
+      <div className="py-8">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <section className="text-center">
             
@@ -405,9 +403,8 @@ export default function ProfilePage() {
 
           </div>
         </div>
-      </main>
+      </div>
 
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }

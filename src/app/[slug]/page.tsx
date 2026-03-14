@@ -2,8 +2,8 @@
 import { essays } from '@/lib/essays';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import { Footer } from '@/components/footer';
-import { Header } from '@/components/header';
+import { PageLayout } from '@/components/page-layout';
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -185,17 +185,17 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
+    <PageLayout>
        <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <Header />
-      <main className="flex-grow py-8">
+      <BreadcrumbSchema items={[
+        { name: "Writings", url: "https://veda.ng/writings" },
+        { name: essay.frontmatter.title, url: `https://veda.ng/${params.slug}` },
+      ]} />
+
+      <div className="py-8">
         <article className="prose dark:prose-invert mx-auto px-4 md:px-6">
           <h1>{essay.frontmatter.title}</h1>
           <p className="text-sm text-muted-foreground">
@@ -210,9 +210,7 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
             <Separator />
             <RelatedEssays currentSlug={params.slug} />
         </div>
-
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </PageLayout>
   );
 }
