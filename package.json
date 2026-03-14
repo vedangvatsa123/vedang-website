@@ -11,7 +11,8 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "x:authorize": "npx tsx scripts/x-authorize.ts",
-    "x:post-essays": "npx tsx scripts/x-auto-post.ts"
+    "x:post-essays": "npx tsx scripts/x-auto-post.ts",
+    "postbuild": "bash scripts/submit-indexnow.sh"
   },
   "dependencies": {
     "@genkit-ai/google-genai": "^1.20.0",

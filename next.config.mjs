@@ -64,6 +64,14 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://platform.twitter.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; frame-src https://www.youtube.com; connect-src 'self' https://www.google-analytics.com;",
           },
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+          },
+          {
+            key: 'Last-Modified',
+            value: new Date().toUTCString(),
+          },
         ],
       },
       {
