@@ -30,7 +30,7 @@ export default function GlossaryPage() {
     term: t.term,
     slug: t.slug,
     category: t.category,
-    definition: truncate(t.definition.replace(/\\n/g, ' '), 200),
+    definition: truncate(t.definition.replace(/\n/g, ' '), 150),
   }));
 
   const glossarySchema = {
@@ -43,7 +43,7 @@ export default function GlossaryPage() {
     "hasDefinedTerm": terms.map((term) => ({
       "@type": "DefinedTerm",
       "name": term.term,
-      "description": truncate(term.definition.replace(/\\n/g, ' '), 300),
+      "description": truncate(term.definition.replace(/\n/g, ' '), 200),
       "url": `https://veda.ng/glossary/${term.slug}`
     }))
   };

@@ -3,7 +3,8 @@ import createMDX from '@next/mdx';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  compress: true,
+  poweredByHeader: false,
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -31,6 +32,7 @@ const nextConfig = {
         pathname: '/**',
       }
     ],
+    formats: ['image/avif', 'image/webp'],
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   async headers() {
@@ -61,6 +63,33 @@ const nextConfig = {
           {
             key: 'Content-Security-Policy',
             value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://platform.twitter.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; frame-src https://www.youtube.com; connect-src 'self' https://www.google-analytics.com;",
+          },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/fonts/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
