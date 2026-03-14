@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect, useCallback, useMemo } from "react";
+import { useRef, useState, useEffect, useCallback, useMemo, memo, useTransition } from "react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { GlossaryTerm } from "@/lib/glossary";
@@ -10,11 +10,41 @@ interface GlossaryFilterProps {
   categories: string[];
 }
 
+const GlossaryCard = memo(function GlossaryCard({ item }: { item: GlossaryTerm }) {
+  return (
+    <div className="relative group">
+      <Link
+        href={`/glossary/${item.slug}`}
+        className="absolute inset-0 z-10"
+        aria-label={`Read definition for ${item.term}`}
+      >
+        <span className="sr-only">Read definition for {item.term}</span>
+      </Link>
+      <Card className="hover:border-primary/50 transition-colors h-full flex flex-col group-hover:border-primary/50">
+        <CardHeader className="pb-3">
+          <dt className="text-lg font-semibold leading-none tracking-tight">
+            {item.term}
+          </dt>
+          <span className="text-xs text-muted-foreground/60 mt-1.5">
+            {item.category}
+          </span>
+        </CardHeader>
+        <CardContent className="flex-grow">
+          <dd className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+            {item.definition}
+          </dd>
+        </CardContent>
+      </Card>
+    </div>
+  );
+});
+
 export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [sliderStyle, setSliderStyle] = useState<React.CSSProperties>({});
   const tabsRef = useRef<HTMLDivElement>(null);
   const buttonRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
+  const [isPending, startTransition] = useTransition();
 
   const allCategories = useMemo(() => ["All", ...categories], [categories]);
 
@@ -53,7 +83,9 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
   }, [updateSlider]);
 
   const handleCategoryClick = useCallback((category: string) => {
-    setActiveCategory(category);
+    startTransition(() => {
+      setActiveCategory(category);
+    });
   }, []);
 
   return (
@@ -64,7 +96,7 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
           ref={tabsRef}
           className="relative inline-flex items-center rounded-lg border border-border/60 bg-secondary/20 p-1"
         >
-          {/* Sliding highlight - z-0 so buttons stay clickable */}
+          {/* Sliding highlight */}
           <div
             className="absolute top-1 bottom-1 rounded-md bg-primary shadow-sm transition-all duration-300 ease-out z-0 pointer-events-none"
             style={sliderStyle}
@@ -102,32 +134,9 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
       </div>
 
       {/* Terms Grid */}
-      <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <dl className={`grid gap-4 sm:grid-cols-2 lg:grid-cols-4 transition-opacity duration-150 ${isPending ? 'opacity-60' : 'opacity-100'}`}>
         {filteredTerms.map((item) => (
-          <div key={item.slug} className="relative group">
-            <Link
-              href={`/glossary/${item.slug}`}
-              className="absolute inset-0 z-10"
-              aria-label={`Read definition for ${item.term}`}
-            >
-              <span className="sr-only">Read definition for {item.term}</span>
-            </Link>
-            <Card className="hover:border-primary/50 transition-colors h-full flex flex-col group-hover:border-primary/50">
-              <CardHeader className="pb-3">
-                <dt className="text-lg font-semibold leading-none tracking-tight">
-                  {item.term}
-                </dt>
-                <span className="text-xs text-muted-foreground/60 mt-1.5">
-                  {item.category}
-                </span>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <dd className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
-                  {item.definition}
-                </dd>
-              </CardContent>
-            </Card>
-          </div>
+          <GlossaryCard key={item.slug} item={item} />
         ))}
       </dl>
 

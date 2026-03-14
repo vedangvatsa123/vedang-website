@@ -11,6 +11,11 @@ export const metadata: Metadata = generateMetadata({
   url: pageMetadata.glossary.url,
 });
 
+function truncate(text: string, maxLen: number): string {
+  if (text.length <= maxLen) return text;
+  return text.slice(0, maxLen).replace(/\s+\S*$/, '') + '...';
+}
+
 export default function GlossaryPage() {
   const terms = getAllTermsSorted();
 
@@ -19,6 +24,14 @@ export default function GlossaryPage() {
   const categories = [...new Set(terms.map((t) => t.category || "Other"))].sort(
     (a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b)
   );
+
+  // Truncate definitions for the client-side filter component (cards only show 3 lines)
+  const lightTerms = terms.map((t) => ({
+    term: t.term,
+    slug: t.slug,
+    category: t.category,
+    definition: truncate(t.definition.replace(/\\n/g, ' '), 200),
+  }));
 
   const glossarySchema = {
     "@context": "https://schema.org",
@@ -30,7 +43,7 @@ export default function GlossaryPage() {
     "hasDefinedTerm": terms.map((term) => ({
       "@type": "DefinedTerm",
       "name": term.term,
-      "description": term.definition,
+      "description": truncate(term.definition.replace(/\\n/g, ' '), 300),
       "url": `https://veda.ng/glossary/${term.slug}`
     }))
   };
@@ -78,7 +91,7 @@ export default function GlossaryPage() {
         </section>
 
         <div className="container mx-auto px-4 md:px-6 max-w-7xl py-16">
-          <GlossaryFilter terms={terms} categories={categories} />
+          <GlossaryFilter terms={lightTerms} categories={categories} />
         </div>
       </main>
       <Footer />
