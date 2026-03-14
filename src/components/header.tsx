@@ -25,10 +25,10 @@ export function Header() {
             <Link href="/writings" className="text-foreground transition-colors hover:text-primary px-2 py-1">
               Writings
             </Link>
-            
+
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1 text-foreground transition-colors hover:text-primary px-2 py-1 text-sm font-medium outline-none">
-                Courses <ChevronDown className="h-4 w-4" />
+                Learn <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
@@ -40,7 +40,7 @@ export function Header() {
                 <DropdownMenuItem asChild>
                   <Link href="/prompt-engineering-101">Prompt Engineering</Link>
                 </DropdownMenuItem>
-                 <DropdownMenuItem asChild>
+                <DropdownMenuItem asChild>
                   <Link href="/web3-101">Fundamentals of Web3</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -77,4 +77,3 @@ export function Header() {
   );
 }
 
-    

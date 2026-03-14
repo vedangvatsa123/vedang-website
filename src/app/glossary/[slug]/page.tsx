@@ -1,8 +1,7 @@
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Metadata } from 'next';
-import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, BookOpen } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { getTermBySlug, glossaryTerms } from '@/lib/glossary';
 import { notFound } from 'next/navigation';
@@ -68,8 +67,8 @@ export default function GlossaryTermPage({ params }: PageProps) {
     "@type": "DefinedTerm",
     "name": term.term,
     "description": term.definition,
-    "inDefinedTermSet": "https://vedangvatsa.com/glossary",
-    "url": `https://vedangvatsa.com/glossary/${term.slug}`,
+    "inDefinedTermSet": "https://veda.ng/glossary",
+    "url": `https://veda.ng/glossary/${term.slug}`,
   };
 
   const breadcrumbSchema = {
@@ -80,19 +79,19 @@ export default function GlossaryTermPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://vedangvatsa.com"
+        "item": "https://veda.ng"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Glossary",
-        "item": "https://vedangvatsa.com/glossary"
+        "item": "https://veda.ng/glossary"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": term.term,
-        "item": `https://vedangvatsa.com/glossary/${term.slug}`
+        "item": `https://veda.ng/glossary/${term.slug}`
       }
     ]
   };
@@ -121,17 +120,25 @@ export default function GlossaryTermPage({ params }: PageProps) {
             <h1 className="text-5xl font-semibold tracking-tight text-primary mb-4">
               {term.term}
             </h1>
-            <Badge variant="secondary">
-              <BookOpen className="w-3 h-3 mr-1.5" />
-              Definition
-            </Badge>
           </div>
         </section>
 
         <article className="container mx-auto px-4 md:px-6 max-w-3xl py-16">
-          <p className="text-lg text-foreground leading-relaxed mb-12">
-            {term.definition}
-          </p>
+          <div className="space-y-4 mb-12">
+            {term.definition
+              .split(/(?<=[.!?])\s+(?=[A-Z])/)
+              .reduce<string[][]>((acc, sentence, i) => {
+                const groupIndex = Math.floor(i / 3);
+                if (!acc[groupIndex]) acc[groupIndex] = [];
+                acc[groupIndex].push(sentence);
+                return acc;
+              }, [])
+              .map((group, i) => (
+                <p key={i} className="text-lg text-foreground leading-relaxed">
+                  {group.join(' ')}
+                </p>
+              ))}
+          </div>
 
           {relatedTermObjects.length > 0 && (
             <div className="border-t border-border/50 pt-12">

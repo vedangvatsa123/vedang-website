@@ -49,9 +49,50 @@ const faqItems = [
 ];
 
 
+const videoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: 'The Agentic Web — Introduction',
+  description: 'An introduction to the Agentic Web: how autonomous AI agents are transforming the internet from a place to find information into a platform for getting things done.',
+  thumbnailUrl: 'https://img.youtube.com/vi/Gqgk25SOIMM/maxresdefault.jpg',
+  uploadDate: '2025-01-01',
+  embedUrl: 'https://www.youtube.com/embed/Gqgk25SOIMM',
+  url: 'https://www.youtube.com/watch?v=Gqgk25SOIMM',
+  publisher: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
+};
+
+const courseSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name: 'The Agentic Web',
+  description: 'A free, self-paced course on autonomous AI agents, multi-agent systems, and the emerging agentic internet economy.',
+  url: 'https://veda.ng/agentic-web',
+  provider: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
+  isAccessibleForFree: true,
+  educationalLevel: 'Beginner',
+  hasCourseInstance: {
+    '@type': 'CourseInstance',
+    courseMode: 'online',
+    instructor: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(({ question, answer }) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer },
+  })),
+};
+
 export default function AgenticWebCoursePage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Header />
       <main className="flex-grow">
 
@@ -74,13 +115,14 @@ export default function AgenticWebCoursePage() {
                 </div>
                 
                 <div className="mt-8 aspect-video rounded-lg overflow-hidden shadow-2xl border max-w-3xl mx-auto">
-                  <iframe 
-                    width="100%" 
-                    height="100%" 
-                    src="https://www.youtube.com/embed/Gqgk25SOIMM" 
-                    title="YouTube video player" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/Gqgk25SOIMM"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen>
                   </iframe>
                 </div>

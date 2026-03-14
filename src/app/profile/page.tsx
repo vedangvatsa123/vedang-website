@@ -37,18 +37,16 @@ const personSchema = {
   name: 'Vedang Vatsa',
   url: 'https://veda.ng/profile',
   image: 'https://veda.ng/images/icon.png',
-  jobTitle: 'Founder',
+  jobTitle: ['Founder', 'AI Researcher', 'Web3 Innovator', 'Entrepreneur'],
   worksFor: {
     '@type': 'Organization',
     name: 'Hashtag Web3',
   },
-  alumniOf: [
-    {
-      '@type': 'CollegeOrUniversity',
-      name: 'Indian Institute of Technology, Kanpur',
-    },
-    
-  ],
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Indian Institute of Technology, Kanpur',
+  },
+  award: 'Fellow of the Royal Society of Arts',
   sameAs: [
     'https://linkedin.com/in/vedangvatsa',
     'https://www.youtube.com/@vedangvatsa',
@@ -56,8 +54,7 @@ const personSchema = {
     'https://x.com/vedangvatsa',
     'https://www.t.me/vedangvatsa',
   ],
-  knowsAbout: ['Artificial Intelligence', 'Web3', 'Community Building', 'Growth Marketing', 'Decentralized Finance'],
-   award: 'Fellow of the Royal Society of Arts'
+  knowsAbout: ['Artificial Intelligence', 'Web3', 'Blockchain', 'Cryptocurrency', 'Community Building'],
 };
 
 export default function ProfilePage() {

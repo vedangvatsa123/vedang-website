@@ -2,11 +2,10 @@ import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Metadata } from 'next';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { BookOpen } from 'lucide-react';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Link from 'next/link';
-import { getAllTermsSorted } from '@/lib/glossary';
+import { getAllTermsSorted, GlossaryTerm } from '@/lib/glossary';
+import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.glossary.title,
@@ -16,22 +15,33 @@ export const metadata: Metadata = generateMetadata({
 
 export default function GlossaryPage() {
   const terms = getAllTermsSorted();
-  
+
+  const categoryOrder = ["AI", "Web3", "Tech", "Other"];
+
+  const termsByCategory = terms.reduce((acc, term) => {
+    const category = term.category || "Other";
+    if (!acc[category]) acc[category] = [];
+    acc[category].push(term);
+    return acc;
+  }, {} as Record<string, GlossaryTerm[]>);
+
+  const categories = Object.keys(termsByCategory).sort((a, b) => {
+    return categoryOrder.indexOf(a) - categoryOrder.indexOf(b);
+  });
+
   const glossarySchema = {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
+    "@type": "DefinedTermSet",
+    "@id": "https://veda.ng/glossary",
     "name": "Glossary - AI, Web3 & Tech Terms",
-    "description": "Definitions of AI, Web3, and technical terms. Clear explanations without jargon.",
-    "url": "https://vedangvatsa.com/glossary",
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": terms.map((term, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "url": `https://vedangvatsa.com/glossary/${term.slug}`,
-        "name": term.term,
-      }))
-    }
+    "description": "Definitions of AI, Web3, and technical terms.",
+    "url": "https://veda.ng/glossary",
+    "hasDefinedTerm": terms.map((term) => ({
+      "@type": "DefinedTerm",
+      "name": term.term,
+      "description": term.definition,
+      "url": `https://veda.ng/glossary/${term.slug}`
+    }))
   };
 
   const breadcrumbSchema = {
@@ -42,17 +52,17 @@ export default function GlossaryPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://vedangvatsa.com"
+        "item": "https://veda.ng"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Glossary",
-        "item": "https://vedangvatsa.com/glossary"
+        "item": "https://veda.ng/glossary"
       }
     ]
   };
-  
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <script
@@ -67,36 +77,42 @@ export default function GlossaryPage() {
       <main className="flex-grow">
         <section className="text-center pt-16 pb-12 border-b border-border/30">
           <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-            <Badge variant="secondary" className="mb-4">
-              <BookOpen className="w-3 h-3 mr-1.5" />
-              Reference Guide
-            </Badge>
             <h1 className="text-5xl font-semibold tracking-tight text-primary mb-2">
               Glossary
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              Definitions of AI, Web3, and technical terms. Clear explanations without jargon.
+              Deep dives into the terminology shaping AI, Web3, and deep tech.
             </p>
           </div>
         </section>
 
-        <div className="container mx-auto px-4 md:px-6 max-w-3xl py-16">
-          <div className="grid gap-6 md:grid-cols-2">
-            {terms.map((item) => (
-              <Link key={item.slug} href={`/glossary/${item.slug}`}>
-                <Card className="hover:border-primary/50 transition-colors h-full cursor-pointer">
-                  <CardHeader>
-                    <CardTitle className="text-lg">{item.term}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
-                      {item.definition}
-                    </p>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl py-16 space-y-16">
+          {categories.map((category) => (
+            <div key={category} className="space-y-6">
+              <h2 className="text-3xl font-semibold tracking-tight text-primary/80 border-b pb-2">
+                {category} Terms
+              </h2>
+              <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {termsByCategory[category].map((item) => (
+                  <div key={item.slug} className="relative group">
+                    <Link href={`/glossary/${item.slug}`} className="absolute inset-0 z-10" aria-label={`Read definition for ${item.term}`}>
+                      <span className="sr-only">Read definition for {item.term}</span>
+                    </Link>
+                    <Card className="hover:border-primary/50 transition-colors h-full flex flex-col group-hover:border-primary/50">
+                      <CardHeader className="pb-3">
+                        <dt className="text-lg font-semibold leading-none tracking-tight">{item.term}</dt>
+                      </CardHeader>
+                      <CardContent className="flex-grow">
+                        <dd className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                          {item.definition}
+                        </dd>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          ))}
         </div>
       </main>
       <Footer />

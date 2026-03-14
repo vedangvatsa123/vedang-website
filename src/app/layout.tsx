@@ -8,14 +8,15 @@ import Script from 'next/script';
 export const metadata: Metadata = {
   metadataBase: new URL('https://veda.ng'),
   title: {
-    default: 'Vedang Vatsa',
+    default: 'Vedang Vatsa - AI & Web3 Founder',
     template: '%s | Vedang Vatsa',
   },
   description:
-    "Official website of Vedang Vatsa, a thought leader in AI and Web3, and the founder of Hashtag Web3, a global community of over 100,000 professionals.",
+    'Vedang Vatsa: Founder of Hashtag Web3 (100k+ professionals), thought leader in AI, blockchain, and decentralized economies.',
+  keywords: ['Vedang Vatsa', 'AI', 'Blockchain', 'Web3', 'Growth Marketing', 'Founder', 'AI Researcher', 'DeFi'],
   openGraph: {
-    title: 'Vedang Vatsa',
-    description: 'Personal website of Vedang Vatsa, Founder of Hashtag Web3, a 100,000+ member community of AI & Web3 professionals.',
+    title: 'Vedang Vatsa - AI & Web3 Founder',
+    description: 'Founder of Hashtag Web3 (100k+ professionals), thought leader in AI and blockchain.',
     url: '/',
     siteName: 'Vedang Vatsa',
     locale: 'en_US',
@@ -23,8 +24,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/icon.png',
-        width: 1200,
-        height: 630,
+        width: 256,
+        height: 256,
         alt: 'Vedang Vatsa',
       },
     ]
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: 'Vedang Vatsa',
+    title: 'Vedang Vatsa - AI & Web3 Founder',
     card: 'summary_large_image',
     images: ['/images/icon.png'],
   },
@@ -50,18 +51,38 @@ export const metadata: Metadata = {
   },
 };
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Vedang Vatsa',
+  url: 'https://veda.ng',
+  description: 'Official website of Vedang Vatsa — AI & Web3 thought leader, founder of Hashtag Web3.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://veda.ng/glossary?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Vedang Vatsa',
-  url: 'https://veda.ng',
+  name: 'Hashtag Web3',
+  url: 'https://hashtag.web3',
   logo: 'https://veda.ng/images/icon.png',
+  description: 'A global community of 100,000+ professionals in AI and Web3.',
   sameAs: [
-    'https://linkedin.com/in/vedangvatsa',
-    'https://www.youtube.com/@vedangvatsa',
-    'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
-    'https://x.com/vedangvatsa',
+    'https://linkedin.com/company/hashtag-web3',
+    'https://x.com/hashtagweb3',
   ],
+  founder: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng',
+  },
 };
 
 const personSchema = {
@@ -76,6 +97,16 @@ const personSchema = {
     '@type': 'Organization',
     name: 'Hashtag Web3',
   },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Indian Institute of Technology, Kanpur',
+  },
+  memberOf: {
+    '@type': 'Organization',
+    name: 'Royal Society of Arts',
+    url: 'https://www.thersa.org',
+  },
+  award: 'Fellow of the Royal Society of Arts',
   sameAs: [
     'https://linkedin.com/in/vedangvatsa',
     'https://www.youtube.com/@vedangvatsa',
@@ -115,6 +146,10 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="/images/favicon/favicon.ico" sizes="any" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
