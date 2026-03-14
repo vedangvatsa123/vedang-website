@@ -1559,16 +1559,51 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Mixture of Experts (MoE)",
     slug: "mixture-of-experts",
-    category: "Web3",
+    category: "AI",
     definition: "Mixture of Experts is the architectural breakthrough that allows modern language models to scale their parameter counts massively without causing computational costs to explode during inference. In a standard dense neural network, every single parameter activates for every single input token. If a model has 100 billion parameters, generating the word 'the' requires computing through all 100 billion parameters. MoE shatters this monolith. Instead of one massive network, the model contains multiple specialized sub-networks, or 'experts,' alongside a gating mechanism called a router. When a token enters the layer, the router evaluates it and sends it only to the most relevant experts. A model might contain 8 experts but route each token to only 2 of them. This means a model like Mixtral 8x7B boasts 47 billion total parameters for holding knowledge, but only activates about 13 billion parameters per token generated. The result is sparse activation: you get the brain capacity of a massive model with the execution speed and cost profile of a much smaller one. This decoupling of knowledge capacity from compute cost is the fundamental mechanism driving the current generation of highly efficient, frontier-class open weights models.",
     relatedTerms: ["llm", "foundation-model", "parameter"]
   },
   {
     term: "Agentic Workflow",
     slug: "agentic-workflow",
-    category: "Web3",
+    category: "AI",
     definition: "An agentic workflow shifts AI interactions from a paradigm of single-shot prompts to iterative, autonomous problem-solving loops. When you ask a standard large language model to write a complex software application, it attempts to generate the entire codebase in one linear output, inevitably failing as context windows overflow and logic breaks. An agentic workflow fundamentally changes the architecture. The AI operates as a continuous loop: it parses the goal, breaks it down into a plan, writes a small piece of code, uses a terminal tool to execute it, reads the error logs, reflects on its mistakes, researches a fix via a web search tool, and iterates. It replaces the 'chat assistant' model with a 'digital worker' model. Common design patterns for agentic systems include multi-agent collaboration—where specialized AI models act as coders, reviewers, and testers debating each other—and structured reflection where the model is explicitly prompted to critique its own intermediate outputs before finalizing them. This workflow wrings dramatic performance improvements out of existing models, proving that surrounding an average LLM with a highly structured, tool-equipped cognitive loop yields significantly better results than simply prompting a massive model and hoping for the best.",
     relatedTerms: ["agent", "prompt-engineering", "llm"]
+  },
+  {
+    term: "Real World Assets (RWA)",
+    slug: "real-world-assets",
+    category: "Web3",
+    definition: "Real World Assets (RWAs) represent the tokenization of off-chain, tangible, or traditional financial assets—like real estate, treasury bills, private credit, or physical art—bringing them onto a blockchain. For the first decade of crypto, Decentralized Finance (DeFi) existed mostly in a vacuum, generating yields exclusively from highly reflexive, circular economic activities like yield farming and speculation on other crypto tokens. RWA tokenization is the bridge connecting this isolated digital economy with the massive, multi-trillion-dollar traditional financial system. By representing physical assets as digital tokens on a ledger, RWAs inherit blockchain properties: instant 24/7 global settlement, fractionalization, programmable compliance, and total transparency. A user on the other side of the world can now lend standard stablecoins to a tokenized private credit pool that finances emerging-market small businesses, earning structured, real-world yields completely independently of crypto market volatility. While the technological challenge of minting an ERC-20 token is trivial, the true complexity of RWAs lies in legal structuring. It requires bulletproof legal wrappers, licensed counterparties, and real-world custodians to ensure that the on-chain token maintains an ironclad, enforceable claim to the off-chain physical asset if a default occurs.",
+    relatedTerms: ["defi", "smart-contract", "tokenomics"]
+  },
+  {
+    term: "Ethereum Virtual Machine (EVM)",
+    slug: "ethereum-virtual-machine",
+    category: "Web3",
+    definition: "The Ethereum Virtual Machine (EVM) is the fundamental computation engine at the heart of the Ethereum network, acting as a global, decentralized computer. Unlike Bitcoin, which primarily runs a simple scripting language designed only to process value transfers, the EVM is Turing-complete, meaning it can execute any arbitrary mathematical computation if given enough time and memory. It is the environment where all Ethereum 'smart contracts' live, run, and maintain their state. When a developer writes code in a language like Solidity, that code is compiled down into low-level EVM bytecode, which the thousands of nodes globally then execute in perfectly deterministic consensus. The EVM has become far more than just Ethereum's engine; it has evolved into the de facto standard operating system of Web3. To attract developers without forcing them to learn new languages, competitor Layer-1 blockchains (like Avalanche or Binance Smart Chain) and Layer-2 scaling solutions (like Arbitrum) are intentionally built to be 'EVM-compatible.' This means a developer can write a decentralized application once and instantly deploy it across an entire ecosystem of disparate chains. Consequently, the EVM defines the boundaries of what is possible in modern smart contract development.",
+    relatedTerms: ["smart-contract", "layer-2", "layer-1"]
+  },
+  {
+    term: "Decentralized Identity (DID)",
+    slug: "decentralized-identity",
+    category: "Web3",
+    definition: "Decentralized Identity (DID) is a profound architectural shift in how human identity, credentials, and reputation are managed, moving control away from centralized tech monopolies and back into the hands of the individual user. In Web2, identity is heavily fractionalized and rented; you sign into services using Google, Facebook, or Apple credentials, and these mega-corporations retain absolute power to monitor, restrict, or entirely revoke your digital existence at their sole discretion. A DID flips this dynamic. It assigns an individual a unique, cryptographically verifiable identifier stored on a blockchain or distributed ledger, securely anchored by their own private key. Users then collect Verifiable Credentials (VCs)—such as a university degree, a government ID, or credit history—issued to their DID. Because this system utilizes Zero-Knowledge Proofs, users gain the unprecedented ability to selectively disclose information. For instance, you can cryptographically prove to a smart contract that you are over 18 years old or reside in a specific jurisdiction without ever revealing your actual date of birth, name, or address. DIDs form the fundamental base layer required to enable undercollateralized DeFi lending, decentralized social media, and sybil-resistant democratic governance.",
+    relatedTerms: ["zero-knowledge-proof", "wallet"]
+  },
+  {
+    term: "Soulbound Token (SBT)",
+    slug: "soulbound-token",
+    category: "Web3",
+    definition: "Soulbound Tokens (SBTs) are non-transferable, identity-centric digital tokens that uniquely represent the traits, credentials, and affiliations of a person or entity on a blockchain. Proposed by Vitalik Buterin in 2022, the concept is explicitly inspired by the 'soulbound' items in the video game World of Warcraft, which cannot be sold or traded to other players once acquired. While standard Non-Fungible Tokens (NFTs) are perfect for representing tradable digital property like art or real estate, they fail completely at representing reputation—if a university issues a degree as a standard NFT, the graduate could simply sell it to someone else, completely destroying its validity. SBTs solve this by locking permanently to a specific wallet address (the 'Soul'). This enables a rich, verifiable on-chain reputation system. A user's wallet can accumulate SBTs representing conference attendances, work history, skill certifications, DAO voting participation, and credit scores. By building a non-financialized web of trust, SBTs are theoretically required to move Web3 beyond hyper-financialized trading use cases and toward decentralized societies, enabling use cases like localized community governance, reputation-based uncollateralized lending, and provenance tracking for artists.",
+    relatedTerms: ["nft", "decentralized-identity", "dao"]
+  },
+  {
+    term: "Zero-Knowledge EVM (zkEVM)",
+    slug: "zkevm",
+    category: "Web3",
+    definition: "A Zero-Knowledge Ethereum Virtual Machine (zkEVM) represents the holy grail of blockchain scaling: generating cryptographically secure mathematical proofs for standard Ethereum smart contract execution. A ZK-Rollup batches thousands of transactions off-chain and submits a tiny 'validity proof' to the Ethereum mainnet, guaranteeing execution was flawless without the base layer needing to recompute anything. However, historically, generating these proofs was so computationally demanding that it only worked for simple transfers or custom-built, application-specific circuits. Developers couldn't easily port their standard Ethereum code (written for the EVM) into a ZK-Rollup. A zkEVM bridges this colossal gap. It meticulously recreates the entire complex EVM environment—including all opcodes, memory, and stack operations—inside a zero-knowledge circuit. This allows developers to take existing, battle-tested Solidity smart contracts and deploy them verbatim onto a massively scalable, cryptographically secure ZK-Rollup with zero modifications. Building a functional, production-ready zkEVM was initially considered a decade-long endeavor due to the EVM's highly non-ZK-friendly original design, but spectacular cryptographic engineering breakthroughs by teams at Polygon, Scroll, and zkSync have pushed this technology to mainnet years ahead of schedule, setting the trajectory for the future of Ethereum scaling.",
+    relatedTerms: ["zero-knowledge-proof", "rollup", "ethereum-virtual-machine"]
   }
 ];
 
