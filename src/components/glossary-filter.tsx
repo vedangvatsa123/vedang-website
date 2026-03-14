@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { GlossaryTerm } from "@/lib/glossary";
@@ -16,19 +16,26 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
   const tabsRef = useRef<HTMLDivElement>(null);
   const buttonRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
 
-  const allCategories = ["All", ...categories];
+  const allCategories = useMemo(() => ["All", ...categories], [categories]);
 
-  const filteredTerms =
-    activeCategory === "All"
-      ? terms
-      : terms.filter((t) => t.category === activeCategory);
+  const filteredTerms = useMemo(
+    () =>
+      activeCategory === "All"
+        ? terms
+        : terms.filter((t) => t.category === activeCategory),
+    [activeCategory, terms]
+  );
 
-  const getCategoryCount = (cat: string) => {
-    if (cat === "All") return terms.length;
-    return terms.filter((t) => t.category === cat).length;
-  };
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = { All: terms.length };
+    for (const t of terms) {
+      const cat = t.category || "Other";
+      counts[cat] = (counts[cat] || 0) + 1;
+    }
+    return counts;
+  }, [terms]);
 
-  useEffect(() => {
+  const updateSlider = useCallback(() => {
     const activeButton = buttonRefs.current.get(activeCategory);
     const container = tabsRef.current;
     if (activeButton && container) {
@@ -41,6 +48,14 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
     }
   }, [activeCategory]);
 
+  useEffect(() => {
+    updateSlider();
+  }, [updateSlider]);
+
+  const handleCategoryClick = useCallback((category: string) => {
+    setActiveCategory(category);
+  }, []);
+
   return (
     <>
       {/* Segmented Filter Tabs */}
@@ -49,9 +64,9 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
           ref={tabsRef}
           className="relative inline-flex items-center rounded-lg border border-border/60 bg-secondary/20 p-1"
         >
-          {/* Sliding highlight */}
+          {/* Sliding highlight - z-0 so buttons stay clickable */}
           <div
-            className="absolute top-1 bottom-1 rounded-md bg-primary shadow-sm transition-all duration-300 ease-out"
+            className="absolute top-1 bottom-1 rounded-md bg-primary shadow-sm transition-all duration-300 ease-out z-0 pointer-events-none"
             style={sliderStyle}
           />
 
@@ -61,9 +76,9 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
               ref={(el) => {
                 if (el) buttonRefs.current.set(category, el);
               }}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => handleCategoryClick(category)}
               className={`
-                relative z-10 px-5 py-2 rounded-md text-sm font-medium transition-colors duration-200
+                relative z-10 px-5 py-2 rounded-md text-sm font-medium transition-colors duration-200 cursor-pointer
                 ${
                   activeCategory === category
                     ? "text-primary-foreground"
@@ -79,7 +94,7 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
                     : "text-muted-foreground/50"
                 }`}
               >
-                {getCategoryCount(category)}
+                {categoryCounts[category] || 0}
               </span>
             </button>
           ))}
