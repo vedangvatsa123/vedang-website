@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const INDEXNOW_KEY = '2e65d83a0a6949bcb0577f956e1f4ff2';
+const INDEXNOW_KEY = '8e98e43851d7462c9c210ecd4321a7fc';
 const SITE_HOST = 'veda.ng';
 
 /**
