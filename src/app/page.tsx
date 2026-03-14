@@ -56,10 +56,11 @@ const recentPapers = [
 export default function Home() {
 
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
+    <div className="flex min-h-screen flex-col text-foreground selection:bg-primary/30 relative overflow-hidden">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
       <Header />
 
-      <main className="flex-grow">
+      <main className="flex-grow z-10">
         <section className="py-12 text-center">
           <div className="container mx-auto px-4 md:px-6">
             

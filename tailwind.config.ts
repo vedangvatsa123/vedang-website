@@ -56,6 +56,7 @@ export default {
       }),
       fontFamily: {
         sans: [
+          'var(--font-sans)',
           '-apple-system',
           'BlinkMacSystemFont',
           '"Segoe UI"',

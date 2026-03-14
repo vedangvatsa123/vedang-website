@@ -3,6 +3,12 @@ import { Header } from '@/components/header';
 import { Metadata } from 'next';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import Link from 'next/link';
 import { getAllTermsSorted, GlossaryTerm } from '@/lib/glossary';
 import { Badge } from '@/components/ui/badge';
@@ -87,32 +93,36 @@ export default function GlossaryPage() {
         </section>
 
         <div className="container mx-auto px-4 md:px-6 max-w-7xl py-16 space-y-16">
-          {categories.map((category) => (
-            <div key={category} className="space-y-6">
-              <h2 className="text-3xl font-semibold tracking-tight text-primary/80 border-b pb-2">
-                {category} Terms
-              </h2>
-              <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {termsByCategory[category].map((item) => (
-                  <div key={item.slug} className="relative group">
-                    <Link href={`/glossary/${item.slug}`} className="absolute inset-0 z-10" aria-label={`Read definition for ${item.term}`}>
-                      <span className="sr-only">Read definition for {item.term}</span>
-                    </Link>
-                    <Card className="hover:border-primary/50 transition-colors h-full flex flex-col group-hover:border-primary/50">
-                      <CardHeader className="pb-3">
-                        <dt className="text-lg font-semibold leading-none tracking-tight">{item.term}</dt>
-                      </CardHeader>
-                      <CardContent className="flex-grow">
-                        <dd className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
-                          {item.definition}
-                        </dd>
-                      </CardContent>
-                    </Card>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          ))}
+          <Accordion type="multiple" className="w-full space-y-6" defaultValue={categories}>
+            {categories.map((category) => (
+              <AccordionItem key={category} value={category} className="border-b-0 rounded-lg px-6 bg-secondary/10 shadow-sm border border-border/50">
+                <AccordionTrigger className="text-3xl font-semibold tracking-tight text-primary/80 hover:no-underline py-6">
+                  {category} Terms
+                </AccordionTrigger>
+                <AccordionContent className="pt-2 pb-6">
+                  <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    {termsByCategory[category].map((item) => (
+                      <div key={item.slug} className="relative group">
+                        <Link href={`/glossary/${item.slug}`} className="absolute inset-0 z-10" aria-label={`Read definition for ${item.term}`}>
+                          <span className="sr-only">Read definition for {item.term}</span>
+                        </Link>
+                        <Card className="hover:border-primary/50 transition-colors h-full flex flex-col group-hover:border-primary/50">
+                          <CardHeader className="pb-3">
+                            <dt className="text-lg font-semibold leading-none tracking-tight">{item.term}</dt>
+                          </CardHeader>
+                          <CardContent className="flex-grow">
+                            <dd className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                              {item.definition}
+                            </dd>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    ))}
+                  </dl>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </main>
       <Footer />

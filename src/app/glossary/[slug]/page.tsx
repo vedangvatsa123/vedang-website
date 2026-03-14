@@ -124,20 +124,12 @@ export default function GlossaryTermPage({ params }: PageProps) {
         </section>
 
         <article className="container mx-auto px-4 md:px-6 max-w-3xl py-16">
-          <div className="space-y-4 mb-12">
-            {term.definition
-              .split(/(?<=[.!?])\s+(?=[A-Z])/)
-              .reduce<string[][]>((acc, sentence, i) => {
-                const groupIndex = Math.floor(i / 3);
-                if (!acc[groupIndex]) acc[groupIndex] = [];
-                acc[groupIndex].push(sentence);
-                return acc;
-              }, [])
-              .map((group, i) => (
-                <p key={i} className="text-lg text-foreground leading-relaxed">
-                  {group.join(' ')}
-                </p>
-              ))}
+          <div className="space-y-6 mb-12">
+            {term.definition.split('\n\n').filter(Boolean).map((paragraph, i) => (
+              <p key={i} className="text-lg text-foreground leading-relaxed">
+                {paragraph.trim()}
+              </p>
+            ))}
           </div>
 
           {relatedTermObjects.length > 0 && (
