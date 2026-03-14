@@ -165,6 +165,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
         <link rel="alternate" type="application/json" href="/deeprank.json" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly content index" />
       </head>
       <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

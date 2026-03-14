@@ -52,12 +52,23 @@ const recentPapers = [
 
 
 export default function WritingsPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://veda.ng" },
+      { "@type": "ListItem", "position": 2, "name": "Writings", "item": "https://veda.ng/writings" }
+    ]
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Header />
 
       <main className="flex-grow py-8">
         <div className="container mx-auto px-4 md:px-6">
+          <h1 className="text-5xl font-semibold tracking-tight text-center mb-12 text-primary">Writings</h1>
           <section id="papers" className="py-12 bg-secondary/50 rounded-lg">
             <div className="container mx-auto px-4 md:px-6">
               <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Recent Papers</h2>

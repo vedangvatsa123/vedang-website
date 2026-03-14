@@ -119,8 +119,18 @@ const speakingEngagementImages = [
 
 
 export default function MediaPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://veda.ng" },
+      { "@type": "ListItem", "position": 2, "name": "Media & Speaking", "item": "https://veda.ng/media" }
+    ]
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Header />
       <main className="flex-grow py-8">
         <div className="container mx-auto px-4 md:px-6">

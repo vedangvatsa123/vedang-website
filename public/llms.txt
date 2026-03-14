@@ -15,6 +15,7 @@ This file provides a structured overview of the site's content for Large Languag
 
 ## Essays
 
+- [The Revision Gap](/the-revision-gap): Why the journey from first draft to final version reveals the real difference between how humans and machines write.
 - [Bureaucracy is the Friction Tax We All Pay](/bureaucracy-and-the-technology-escape): Why traditional institutions fail and why technology, not more rules, is the escape from institutional sclerosis.
 - [Computational Constitutions](/computational-constitutions): Encoding rights, freedoms, and governance principles into verifiable, executable code that AI systems must respect.
 - [What is the Singularity?](/what-is-the-singularity): Exploring the technological singularity, when AI surpasses human intelligence, and implications for humanity.
