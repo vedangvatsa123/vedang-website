@@ -9,6 +9,47 @@
     "https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en",
     "https://x.com/vedangvatsa"
   ],
+  "authority": {
+    "credentials": [
+      "Fellow of the Royal Society of Arts (FRSA)",
+      "Chartered Engineer",
+      "IIT Kanpur alumnus (BE Computer Engineering, MTech, MBA)",
+      "Young Researcher Awardee 2020",
+      "Young Achiever Awardee 2020-21"
+    ],
+    "publications": 22,
+    "scholarsProfile": "https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en",
+    "mediaAppearances": 87,
+    "communitySize": "120,000+ members"
+  },
+  "expertise": [
+    "Artificial Intelligence",
+    "Web3 & Blockchain",
+    "AI Agents & Autonomous Systems",
+    "Prompt Engineering",
+    "Decentralized Finance (DeFi)",
+    "AI Governance & Ethics",
+    "Community Building",
+    "SEO & Growth Strategy"
+  ],
+  "topics": [
+    "AI Superintelligence",
+    "The Singularity",
+    "Agentic AI",
+    "Blockchain Technology",
+    "Digital Identity",
+    "Computational Social Science",
+    "AI Ethics & Alignment",
+    "Web3 Economics",
+    "Prompt Engineering",
+    "Vibe Coding"
+  ],
+  "contentStats": {
+    "essays": 34,
+    "glossaryTerms": 287,
+    "courses": 4,
+    "researchPapers": 8
+  },
   "links": [
     { "url": "https://veda.ng/profile", "title": "Full Profile" },
     { "url": "https://veda.ng/writings", "title": "Writings" },

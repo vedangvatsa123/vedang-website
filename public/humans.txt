@@ -1,0 +1,14 @@
+/* TEAM */
+Name: Vedang Vatsa
+Role: Founder, Author
+Site: https://veda.ng
+Contact: vedangvatsa.2019@iitkalumni.org
+Twitter: @vedangvatsa
+LinkedIn: vedangvatsa
+Location: Global
+
+/* SITE */
+Last update: 2026-03-15
+Standards: HTML5, CSS3
+Components: Next.js, React, TailwindCSS
+Software: VS Code

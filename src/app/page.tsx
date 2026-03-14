@@ -105,9 +105,15 @@ export default function Home() {
       </section>
 
       <section className="py-12 text-center">
-        <div className="flex justify-center">
+        <div className="flex flex-wrap justify-center gap-4">
           <Button asChild size="lg" className="min-w-64 px-8">
             <Link href="/media">Speaking Engagements & Media Mentions</Link>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="min-w-48 px-8">
+            <Link href="/community">Content & Community</Link>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="min-w-48 px-8">
+            <Link href="/seo">SEO & Growth</Link>
           </Button>
         </div>
       </section>

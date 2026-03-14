@@ -1,0 +1,7 @@
+# Security Policy for veda.ng
+# https://securitytxt.org/
+
+Contact: mailto:vedangvatsa.2019@iitkalumni.org
+Expires: 2027-03-15T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://veda.ng/.well-known/security.txt
