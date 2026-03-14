@@ -5,9 +5,6 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { GlossaryTerm } from "@/lib/glossary";
 
-const INITIAL_BATCH = 40;
-const LOAD_MORE_BATCH = 40;
-
 interface GlossaryFilterProps {
   terms: GlossaryTerm[];
   categories: string[];
@@ -44,7 +41,6 @@ const GlossaryCard = memo(function GlossaryCard({ item }: { item: GlossaryTerm }
 
 export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
   const [activeCategory, setActiveCategory] = useState<string>("All");
-  const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH);
   const [sliderStyle, setSliderStyle] = useState<React.CSSProperties>({});
   const tabsRef = useRef<HTMLDivElement>(null);
   const buttonRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
@@ -59,14 +55,6 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
         : terms.filter((t) => t.category === activeCategory),
     [activeCategory, terms]
   );
-
-  // Visible slice
-  const visibleTerms = useMemo(
-    () => filteredTerms.slice(0, visibleCount),
-    [filteredTerms, visibleCount]
-  );
-
-  const hasMore = visibleCount < filteredTerms.length;
 
   const categoryCounts = useMemo(() => {
     const counts: Record<string, number> = { All: terms.length };
@@ -97,13 +85,10 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
   const handleCategoryClick = useCallback((category: string) => {
     startTransition(() => {
       setActiveCategory(category);
-      setVisibleCount(INITIAL_BATCH); // Reset pagination on filter change
     });
   }, []);
 
-  const handleLoadMore = useCallback(() => {
-    setVisibleCount((prev) => prev + LOAD_MORE_BATCH);
-  }, []);
+
 
   return (
     <>
@@ -150,28 +135,17 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
         </div>
       </div>
 
-      {/* Terms Grid — only render visible batch */}
+      {/* Terms Grid */}
       <dl className={`grid gap-4 sm:grid-cols-2 lg:grid-cols-4 transition-opacity duration-150 ${isPending ? 'opacity-60' : 'opacity-100'}`}>
-        {visibleTerms.map((item) => (
+        {filteredTerms.map((item) => (
           <GlossaryCard key={item.slug} item={item} />
         ))}
       </dl>
 
-      {/* Load More / Count indicator */}
-      <div className="text-center mt-8">
-        {hasMore ? (
-          <button
-            onClick={handleLoadMore}
-            className="px-8 py-3 rounded-lg border border-border/60 text-sm font-medium text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
-          >
-            Show More ({filteredTerms.length - visibleCount} remaining)
-          </button>
-        ) : (
-          <p className="text-sm text-muted-foreground/50">
-            Showing all {filteredTerms.length} of {terms.length} terms
-          </p>
-        )}
-      </div>
+      {/* Count indicator */}
+      <p className="text-center text-sm text-muted-foreground/50 mt-8">
+        Showing {filteredTerms.length} of {terms.length} terms
+      </p>
     </>
   );
 }
