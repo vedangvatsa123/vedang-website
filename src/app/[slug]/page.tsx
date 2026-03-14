@@ -200,7 +200,8 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
           <h1>{essay.frontmatter.title}</h1>
           <p className="text-sm text-muted-foreground">
             By <a href="/profile" className="hover:underline">Vedang Vatsa</a>
-            {essay.frontmatter.date && <> &middot; {new Date(essay.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</>}
+            {essay.frontmatter.date && <> &middot; Published: {new Date(essay.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</>}
+            {essay.frontmatter.updated && <> &middot; Updated: {new Date(essay.frontmatter.updated).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</>}
           </p>
           <MDXRemote source={essay.content} />
         </article>
