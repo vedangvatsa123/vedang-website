@@ -94,7 +94,7 @@ const personSchema = {
   name: 'Vedang Vatsa',
   url: 'https://veda.ng',
   image: 'https://veda.ng/images/icon.png',
-  jobTitle: ['Founder', 'AI Researcher', 'Web3 Innovator', 'Entrepreneur'],
+  jobTitle: 'Founder & AI Researcher',
   description: 'Founder of Hashtag Web3, a 100,000+ member community of AI & Web3 professionals. Fellow of the Royal Society of Arts.',
   affiliation: {
     '@type': 'Organization',

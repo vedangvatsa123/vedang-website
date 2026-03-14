@@ -78,8 +78,8 @@ export default function SeoProfilePage() {
                 priority
               />
             <div className="text-center md:text-left">
-              <h1 className="text-4xl font-semibold tracking-tight">Vedang Vatsa</h1>
-              <p className="mt-1 text-lg font-medium text-muted-foreground">Growth Marketing Specialist | Web3 & FinTech</p>
+              <h1 className="text-4xl font-semibold tracking-tight">SEO & Growth Marketing Specialist</h1>
+              <p className="mt-1 text-lg font-medium text-muted-foreground">Vedang Vatsa | Web3 & FinTech</p>
               <p className="mx-auto mt-2 max-w-xl text-base text-muted-foreground">
                 Data-driven growth leader with 8+ years of experience scaling organic and paid acquisition channels for high-growth mobile and Web3 products. Proven track record in SEO, ASO, community building, and cross-functional leadership.
               </p>

@@ -52,8 +52,8 @@ export default function CommunityProfilePage() {
                 priority
               />
             <div className="text-center md:text-left">
-              <h1 className="text-4xl font-semibold tracking-tight">Vedang Vatsa</h1>
-              <p className="mt-1 text-lg font-medium text-muted-foreground">Content & Community Strategist | Web3 & Tech</p>
+              <h1 className="text-4xl font-semibold tracking-tight">Community Building & Content Strategy</h1>
+              <p className="mt-1 text-lg font-medium text-muted-foreground">Vedang Vatsa | Web3 & Tech</p>
               <p className="mx-auto mt-2 max-w-xl text-base text-muted-foreground">
                 Community architect and content creator with a proven record of building engaged professional networks from the ground up, driving conversations, and achieving tens of millions in content reach.
               </p>

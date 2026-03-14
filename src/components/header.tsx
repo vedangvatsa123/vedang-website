@@ -74,6 +74,12 @@ export function Header() {
                     Fundamentals of Web3
                   </Link>
                   <Link
+                    href="/guides"
+                    className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                  >
+                    Guides
+                  </Link>
+                  <Link
                     href="/glossary"
                     className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                   >
