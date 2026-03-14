@@ -5,6 +5,7 @@ import { getTermBySlug, glossaryTerms } from '@/lib/glossary';
 import { notFound } from 'next/navigation';
 import { PageLayout } from '@/components/page-layout';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
+import { RelatedEssaysForTerm } from '@/lib/cross-links';
 
 interface PageProps {
   params: {
@@ -118,6 +119,8 @@ export default function GlossaryTermPage({ params }: PageProps) {
             </div>
           </div>
         )}
+
+        <RelatedEssaysForTerm termSlug={params.slug} />
       </article>
     </PageLayout>
   );

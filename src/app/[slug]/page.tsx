@@ -11,6 +11,8 @@ import { Metadata } from 'next';
 import { RelatedEssays } from '@/components/related-essays';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
+import { RelatedGlossaryTerms } from '@/lib/cross-links';
+import { glossaryTerms } from '@/lib/glossary';
 
 type Props = {
   params: { slug: string };
@@ -207,7 +209,11 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
         </article>
 
         <div className="mx-auto max-w-4xl px-4 md:px-6 mt-12">
-            <Separator />
+            <RelatedGlossaryTerms
+              essaySlug={params.slug}
+              terms={glossaryTerms.map(t => ({ slug: t.slug, term: t.term }))}
+            />
+            <Separator className="my-8" />
             <RelatedEssays currentSlug={params.slug} />
         </div>
       </div>
