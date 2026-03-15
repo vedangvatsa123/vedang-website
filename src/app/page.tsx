@@ -33,10 +33,10 @@ export default function Home() {
           />
           <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
           <p className="mx-auto mt-4 max-w-3xl text-base md:text-lg text-muted-foreground leading-relaxed">
-            Founder, <Link href="https://hashtagweb3.com" className="underline hover:text-foreground">Hashtag Web3</Link> — a 120k-member community of AI & Web3 professionals.
+            Founder, <Link href="https://hashtagweb3.com" className="underline hover:text-foreground">Hashtag Web3</Link> (120k community of AI & Web3 professionals)
           </p>
           <p className="mx-auto mt-1 max-w-3xl text-sm text-muted-foreground">
-            IIT Kanpur · Chartered Engineer · Fellow of the Royal Society of Arts
+            BE, MTech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
           </p>
           <div className="mt-8 flex justify-center">
             <Button asChild className="min-w-64 px-8">
