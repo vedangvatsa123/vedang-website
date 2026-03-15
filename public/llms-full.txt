@@ -910,6 +910,134 @@ The honest answer is nobody knows. We can't predict technological discontinuitie
 
 ---
 
+## From Cheap to Competitive
+URL: https://veda.ng/from-cheap-to-competitive
+Summary: How national product quality perception follows income growth with a predictable lag, and where India sits on that arc today.
+
+Walk into any American store in 1965 and pick up a product labeled "Made in Japan." The customer next to you would likely make a face. Japan at that point carried a stubborn reputation for cheap toys, imitation goods, and flimsy electronics. By 1985, those same American consumers were lining up to buy Japanese cars for their reliability. By 2000, "Made in Japan" had become one of the most powerful quality signals in global consumer markets (Nagashima, 1970). That rehabilitation did not happen through advertising. It followed, with a lag of roughly fifteen to twenty years, a genuine improvement in Japanese industrial capacity and per capita income.
+
+The same arc has repeated with South Korea and, more recently, with China. What the academic literature on country-of-origin effects has not always emphasized is how predictably the direction of country image shifts as national income rises. This essay brings together COO research, development economics, and cross-country data to argue that the perception lag is structurally determined and measurable against income levels. India today sits at the front end of this cycle.
+
+## What the Research Actually Established
+
+The formal study of how national origin shapes product evaluation began with Schooler's 1965 experiment, in which Central American consumers rated identical products differently based solely on their labeled country of origin. Bilkey and Nes (1982) synthesized 48 published studies and confirmed that the phenomenon was robust across product categories, demographics, and national contexts.
+
+Two explanations dominate. The halo model holds that when consumers lack direct experience with a country's products, their general image of that country colors all product evaluations. Han (1989) found clear evidence for this among American consumers evaluating Korean and Japanese goods. The summary construct model holds that over time, as consumers accumulate product experience, the country label becomes shorthand for those accumulated experiences rather than a reflection of general national impressions.
+
+Verlegh and Steenkamp's 1999 meta-analysis of 41 studies found a weighted effect size of d = 0.60, placing COO influence in the medium-to-large range. They found this effect significantly moderated by national income, suggesting that wealthier consumers use national origin as a quality cue more readily. Pappu, Quester, and Cooksey (2007) extended the analysis to show that country image affects not just individual products but entire brand portfolios, functioning like a parent brand over every firm operating under a national
+
+[... 8950 more characters at https://veda.ng/from-cheap-to-competitive]
+
+---
+
+## Lessons from Singapore's Arc
+URL: https://veda.ng/lessons-from-singapores-arc
+Summary: How a fishing village became one of the richest countries on earth, and what the development economics literature says about why.
+
+In August 1965, Singapore was expelled from the Federation of Malaysia. The island had no natural resources, no hinterland, no military to speak of, and a population of roughly 2 million drawn from Chinese, Malay, Indian, and other ethnic communities with no shared national identity. Per capita GDP sat at approximately $500 in current dollars. The country's founding prime minister, Lee Kuan Yew, reportedly wept on national television when announcing the separation. Sixty years later, Singapore's per capita GDP stands at approximately $90,674, making it one of the richest nations on earth by that measure. Life expectancy is 83.9 years. Its port handled a record 40.9 million container units in 2024. It ranks 3rd globally on the Corruption Perceptions Index. Its students topped all three domains of the 2022 PISA assessment.
+
+These numbers represent the most compressed national development trajectory in recorded economic history. The question of how it happened has occupied development economists for decades.
+
+## Running a Country Like a Going Concern
+
+Lee Kuan Yew governed Singapore with a disposition that borrowing from business language would describe as operational. He treated the country as an entity that needed to earn its survival every year. The Economic Development Board, established in 1961, became the institutional embodiment of this philosophy. The EDB functioned as a targeted investment promotion agency, actively courting multinational corporations and offering them not cheap labor but a reliable, well-governed environment with transparent rules. Total foreign direct investment into Singapore reached US$192 billion in 2024.
+
+## Corruption and State Capacity
+
+One of Lee's earliest and most consequential decisions was to build an aggressively anti-corruption state. The complementary move was paying government officials at rates competitive with the private sector. Singapore now ranks 3rd globally on Transparency International's 2024 Corruption Perceptions Index, scoring 84 out of 100, and topped the Chandler Good Government Index for governance effectiveness.
+
+## Meritocracy and Social Engineering
+
+Singapore built its civil service and military on a principle of meritocratic selection. The housing policy was arguably the single most important social intervention. The Housing and Development Board built public housing at scale, resulting in a home ownership rate of 90.8% as of 2024.
+
+[... 7800 more characters at https://veda.ng/lessons-from-singapores-arc]
+
+---
+
+## The AI Economy
+URL: https://veda.ng/the-ai-economy
+Summary: Job displacement, market concentration, and what a balanced AI transition actually requires.
+
+## The Numbers on Disruption
+
+The IMF's January 2024 staff note estimated that nearly 40% of global employment is exposed to AI, rising to 60% in advanced economies. Goldman Sachs projected that up to 300 million full-time jobs across the United States and Europe may be affected by generative AI. The World Economic Forum's 2025 Future of Jobs Report projected 170 million new jobs created by 2030 against 92 million displaced, a net gain of 78 million.
+
+## What the Payroll Data Actually Shows
+
+Stanford's Digital Economy Lab used high-frequency payroll data from ADP covering millions of American workers and found that since generative AI went mainstream in late 2022, early-career workers aged 22 to 25 in the most AI-exposed occupations experienced a 13% relative decline in employment. After controlling for firm-level hiring patterns, the figure rose to 16%.
+
+## The Productivity Puzzle
+
+A March 2026 Goldman Sachs note found no meaningful relationship between AI adoption and economy-wide productivity at the aggregate level. But firms that measured AI impact on specific tasks reported a median gain of around 30%. This gap recalls the Solow Paradox of the late 1980s.
+
+## The Concentration Problem
+
+The AI supply chain is already highly concentrated. Nvidia manufactures most of the chips. Amazon, Google, and Microsoft dominate the cloud infrastructure. The same companies are among the leading developers of frontier AI systems.
+
+## Policy Responses and Their Limits
+
+Universal basic income has moved from thought experiment to active testing. The Stanford Basic Income Lab counts over 160 UBI pilots across four decades. OpenResearch found only a 2% reduction in work, about 15 minutes less per day. Reskilling is the other policy pillar, but 63% of employers cite skills gaps as their primary barrier.
+
+[... 5500 more characters at https://veda.ng/the-ai-economy]
+
+---
+
+## The Infinity Economy
+URL: https://veda.ng/the-infinity-economy
+Summary: Can AI and decentralized systems make scarcity obsolete, or does the physical world have something to say about that?
+
+Every generation of economists has worked inside a single foundational assumption. Resources are limited, wants are not, and the job of economics is to figure out how to allocate the gap. A recent preprint by Pitshou Moleka, published through Preprints.org in June 2025, argues that this assumption is reaching obsolescence. The convergence of artificial intelligence, autonomous production, decentralized energy, and near-zero-cost information replication signals the emergence of what he calls the Infinity Economy.
+
+## Where Scarcity Has Already Weakened
+
+Digital information is the clearest example. Once a piece of software, a song, or a document is created, the cost of replicating it one more time is effectively zero. Cognitive labor is following a similar trajectory. Large language models now perform legal research, medical triage, financial analysis, and software debugging at costs that fall with each generation of hardware.
+
+## Where the Argument Overreaches
+
+Information can be copied at zero marginal cost. Lithium cannot. Fresh water cannot. Arable land cannot. The IEA reported that global data center electricity consumption reached approximately 415 terawatt-hours in 2024, roughly 1.5% of total global electricity use, and projects this to more than double to 945 TWh by 2030. Nicholas Georgescu-Roegen's foundational work on entropy in economics established that economic processes transform low-entropy resources into high-entropy waste. No amount of algorithmic optimization changes the second law of thermodynamics.
+
+## The Empirical Reality Check
+
+In 2024, 673 million people were undernourished according to the FAO. Approximately 2.2 billion people lacked access to safely managed drinking water. An economics that theorizes abundance while 8.2% of the world's population cannot feed itself has skipped a step. The step it has skipped is the most important one.
+
+[... 5800 more characters at https://veda.ng/the-infinity-economy]
+
+---
+
+## Towards the Agentic Web
+URL: https://veda.ng/towards-the-agentic-web
+Summary: How the internet is shifting from a place where humans find information to a platform where autonomous AI agents get things done on your behalf.
+
+The internet has gone through two major phases. The first was about reading. Static pages, hyperlinks, directories. The second was about participating. Social platforms, user-generated content, real-time interaction. We are now entering a third phase that adds a fundamentally new verb to the mix. You will go online to delegate.
+
+## From Attention to Intention
+
+The business model of the current internet runs on attention. The Agentic Web inverts that model. Agents do not scroll. They do not get distracted by clickbait. They have objectives, and they pursue them efficiently. Model Context Protocol (MCP), introduced by Anthropic in late 2024 and donated to the Linux Foundation in December 2025, gave agents a standard way to connect to tools. As of early 2026, there are over 6,400 registered MCP servers. Google released its Agent-to-Agent (A2A) protocol in April 2025, with over 150 organizations adopting it by mid-2025.
+
+## What Makes an Agent Different from a Chatbot
+
+A chatbot waits for a prompt and answers it. An agent receives a goal and pursues it across multiple steps. It can call APIs, browse websites, run code, query databases, and communicate with other agents. OpenAI's Operator, Google's Project Mariner, and startups like Genspark's Super Agent are all shipping products that operate this way.
+
+## Agents and Crypto
+
+AI agents cannot open bank accounts or hold credit cards. But they can hold crypto wallets. Coinbase launched Agentic Wallets in February 2026, the first wallet infrastructure built specifically for AI agents. The x402 protocol allows AI agents to pay for web services automatically using stablecoins. It has already processed over 50 million machine-to-machine transactions.
+
+## The Adoption Arc
+
+Gartner predicts that by end of 2026, 40% of enterprise applications will embed task-specific AI agents, up from less than 5% in 2025. The global AI agents market is estimated at around $8 billion in 2025, projected to reach over $50 billion by 2030., 79% of organizations are already deploying AI agents in some capacity.
+
+## The Infrastructure Layer
+
+Agent development frameworks include LangChain, AutoGen by Microsoft, CrewAI, Vertex AI by Google, and ElizaOS. Identity and trust systems include Worldcoin, Civic, and KILT Protocol. Settlement networks include Solana, Ethereum, and Fetch.ai.
+
+## What Needs to Go Right
+
+Trust, security, concentration risk, and governance are the key challenges. When an agent causes harm, who is responsible? The user, the developer, or the company that trained the model? These questions do not have clear answers yet.
+
+[... 3500 more characters at https://veda.ng/towards-the-agentic-web]
+
+---
+
 ## Glossary
 URL: https://veda.ng/glossary
 

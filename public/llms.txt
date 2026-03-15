@@ -49,6 +49,11 @@ This file provides a structured overview of the site's content for Large Languag
 - [Hustle Culture is a Cage](https://veda.ng/hustle-culture-is-a-cage): Rethinking productivity culture and the human cost of constant optimization.
 - [Artificial Intuition](https://veda.ng/artificial-intuition): Exploring how AI systems develop pattern recognition that resembles human intuition and what this means for decision-making.
 - [The AI Agent Economy](https://veda.ng/the-ai-agent-economy): How autonomous AI agents are creating new economic structures, marketplaces, and value exchange systems without human intermediaries.
+- [The AI Economy](https://veda.ng/the-ai-economy): Job displacement, market concentration, and what a balanced AI transition actually requires.
+- [From Cheap to Competitive](https://veda.ng/from-cheap-to-competitive): How national product quality perception follows income growth with a predictable lag, and where India sits on that arc today.
+- [Lessons from Singapore's Arc](https://veda.ng/lessons-from-singapores-arc): How a fishing village became one of the richest countries on earth, and what the development economics literature says about why.
+- [The Infinity Economy](https://veda.ng/the-infinity-economy): Can AI and decentralized systems make scarcity obsolete, or does the physical world have something to say about that?
+- [Towards the Agentic Web](https://veda.ng/towards-the-agentic-web): How the internet is shifting from a place where humans find information to a platform where autonomous AI agents get things done on your behalf.
 
 ## Research Papers
 

@@ -45,7 +45,7 @@
     "Vibe Coding"
   ],
   "contentStats": {
-    "essays": 34,
+    "essays": 39,
     "glossaryTerms": 287,
     "courses": 4,
     "researchPapers": 8
@@ -93,6 +93,11 @@
     { "url": "https://veda.ng/the-cognitive-load-crisis", "title": "The Cognitive Load Crisis" },
     { "url": "https://veda.ng/the-intuitive-singularity", "title": "The Intuitive Singularity" },
     { "url": "https://veda.ng/hustle-culture-is-a-cage", "title": "Hustle Culture is a Cage" },
-    { "url": "https://veda.ng/bureaucracy-and-the-technology-escape", "title": "Bureaucracy and the Technology Escape" }
+    { "url": "https://veda.ng/bureaucracy-and-the-technology-escape", "title": "Bureaucracy and the Technology Escape" },
+    { "url": "https://veda.ng/the-ai-economy", "title": "The AI Economy" },
+    { "url": "https://veda.ng/from-cheap-to-competitive", "title": "From Cheap to Competitive" },
+    { "url": "https://veda.ng/lessons-from-singapores-arc", "title": "Lessons from Singapore's Arc" },
+    { "url": "https://veda.ng/the-infinity-economy", "title": "The Infinity Economy" },
+    { "url": "https://veda.ng/towards-the-agentic-web", "title": "Towards the Agentic Web" }
   ]
 }
