@@ -78,51 +78,25 @@ export default function ProfilePage() {
                 priority
               />
             
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
-            <p className="mx-auto mt-2 max-w-3xl text-sm text-muted-foreground">
+            <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
+            <p className="mx-auto mt-2 max-w-3xl text-base md:text-lg text-muted-foreground">
              Computer Engineer, MBA, Chartered Engineer | Young Researcher 2020 Awardee (22 publications) & Young Achiever 2020-21 Awardee
             </p>
-            <div className="mt-4 flex justify-center items-center space-x-4 flex-wrap gap-y-2">
-              <Link
-                href="mailto:vedangvatsa.2019@iitkalumni.org"
-                className="text-muted-foreground hover:text-primary flex items-center gap-2"
-                aria-label="Email"
-              >
-                <Mail className="h-4 w-4" />
-                <span className="text-sm">Email</span>
+            <div className="mt-4 flex justify-center items-center space-x-4">
+              <Link href="mailto:vedangvatsa.2019@iitkalumni.org" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
+                <Mail className="h-5 w-5" />
               </Link>
-              <Link
-                href="https://linkedin.com/in/vedangvatsa"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary flex items-center gap-2"
-                 aria-label="LinkedIn"
-              >
-                <Linkedin className="h-4 w-4" />
-                 <span className="text-sm">LinkedIn</span>
+              <Link href="https://linkedin.com/in/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
+                <Linkedin className="h-5 w-5" />
               </Link>
-               <Link href="https://x.com/vedangvatsa" aria-label="Twitter" className="text-muted-foreground hover:text-primary" target="_blank" rel="noopener noreferrer">
-                <Twitter className="h-4 w-4" />
+              <Link href="https://x.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter">
+                <Twitter className="h-5 w-5" />
               </Link>
-              <Link
-                href="https://t.me/vedangvatsa"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary flex items-center gap-2"
-                 aria-label="Telegram"
-              >
-                <Send className="h-4 w-4" />
-                 <span className="text-sm">Telegram</span>
+              <Link href="https://t.me/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Telegram">
+                <Send className="h-5 w-5" />
               </Link>
-              <Link
-                href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary flex items-center gap-2"
-                 aria-label="Google Scholar"
-              >
-                <BookOpen className="h-4 w-4" />
-                 <span className="text-sm">Google Scholar</span>
+              <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Google Scholar">
+                <BookOpen className="h-5 w-5" />
               </Link>
             </div>
           </section>
@@ -131,7 +105,7 @@ export default function ProfilePage() {
 
           <div className="space-y-6">
             <section id="experience">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                 <Briefcase className="w-6 h-6" /> Professional Experience
               </h2>
               <div className="space-y-4">
@@ -232,7 +206,7 @@ export default function ProfilePage() {
 
              <div className="grid md:grid-cols-2 gap-6">
                 <section id="education">
-                  <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                  <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <GraduationCap className="w-6 h-6" /> Education
                   </h2>
                   <Card>
@@ -251,7 +225,7 @@ export default function ProfilePage() {
                 </section>
 
                 <section id="achievements">
-                  <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                  <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <Award className="w-6 h-6" /> Key Achievements
                   </h2>
                   <Card>
@@ -270,7 +244,7 @@ export default function ProfilePage() {
             </div>
 
             <section id="publications">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <BookOpen className="w-6 h-6" /> Publications
                 </h2>
                  <Card>
@@ -307,7 +281,7 @@ export default function ProfilePage() {
             </section>
             
             <section id="projects">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <Lightbulb className="w-6 h-6" /> Other Projects
                 </h2>
                  <Card>
@@ -337,7 +311,7 @@ export default function ProfilePage() {
             </section>
 
              <section id="interests">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <Heart className="w-6 h-6" /> Interests
                 </h2>
                  <Card>
@@ -359,7 +333,7 @@ export default function ProfilePage() {
             </section>
 
             <section id="testimonials">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <MessageSquare className="w-6 h-6" /> Testimonials
                 </h2>
                  <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">

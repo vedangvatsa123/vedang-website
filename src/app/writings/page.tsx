@@ -19,12 +19,12 @@ export default function WritingsPage() {
       <BreadcrumbSchema items={[{ name: "Writings", url: "https://veda.ng/writings" }]} />
 
       <div className="container mx-auto px-4 md:px-6 py-8">
-        <h1 className="text-5xl font-semibold tracking-tight text-center mb-12 text-primary">Writings</h1>
+        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-center mb-12">Writings</h1>
 
         <RecentPapers />
 
         <section id="essays" className="py-12 mt-8">
-          <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Essays</h2>
+          <h2 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">Essays</h2>
           <EssaysList />
         </section>
       </div>

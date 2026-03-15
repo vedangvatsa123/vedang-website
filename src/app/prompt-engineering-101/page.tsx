@@ -81,14 +81,14 @@ export default function PromptEngineeringCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <section className="text-center pt-16 pb-12 bg-gradient-to-b from-background to-secondary/30">
              <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-                <Badge variant="secondary" className="animate-pulse">
+                <Badge variant="secondary">
                     <Star className="w-3 h-3 mr-1.5" />
                     A Free, Self-Paced Course
                 </Badge>
-                <h1 className="mt-4 text-5xl font-semibold tracking-tight text-primary">
+                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     Prompt Engineering 101
                 </h1>
-                <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
                 Learn the art and science of communicating with Large Language Models. This course will teach you how to craft prompts that guide AI to generate accurate, creative, and useful results, turning you into an expert communicator for the new age of technology.
                 </p>
 
@@ -311,8 +311,8 @@ export default function PromptEngineeringCoursePage() {
 
             <section id="faq" className="py-16">
                 <div className="text-center">
-                    <h2 className="text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
-                    <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
+                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                         Your common questions about prompt engineering, answered.
                     </p>
                 </div>
@@ -332,8 +332,8 @@ export default function PromptEngineeringCoursePage() {
 
              <section id="learn-more" className="pb-16">
                 <div className="text-center">
-                    <h2 className="text-3xl font-semibold tracking-tight">Learn More</h2>
-                    <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">
+                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
+                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
                         Here’s a curated list of sources to learn about prompt engineering. It covers everything from beginner guides to academic-level surveys and is useful for casual users, developers, and researchers.
                     </p>
                 </div>

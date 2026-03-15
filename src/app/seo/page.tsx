@@ -78,8 +78,8 @@ export default function SeoProfilePage() {
                 priority
               />
             <div className="text-center md:text-left">
-              <h1 className="text-4xl font-semibold tracking-tight">SEO & Growth Marketing Specialist</h1>
-              <p className="mt-1 text-lg font-medium text-muted-foreground">Vedang Vatsa | Web3 & FinTech</p>
+              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">SEO & Growth Marketing Specialist</h1>
+              <p className="mt-1 text-base md:text-lg font-medium text-muted-foreground">Vedang Vatsa | Web3 & FinTech</p>
               <p className="mx-auto mt-2 max-w-xl text-base text-muted-foreground">
                 Data-driven growth leader with 8+ years of experience scaling organic and paid acquisition channels for high-growth mobile and Web3 products. Proven track record in SEO, ASO, community building, and cross-functional leadership.
               </p>
@@ -117,7 +117,7 @@ export default function SeoProfilePage() {
 
           <div className="space-y-8">
             <section id="competencies">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <Star className="w-6 h-6 text-primary" /> Core Competencies & Experience
                 </h2>
                 <div className="grid md:grid-cols-2 gap-x-6 gap-y-4">
@@ -149,7 +149,7 @@ export default function SeoProfilePage() {
             </section>
             
             <section id="toolkit">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                 <Wrench className="w-6 h-6 text-primary" /> Technical & Creative Toolkit
               </h2>
               <div className="grid md:grid-cols-2 gap-x-6 gap-y-3 text-muted-foreground text-sm">
@@ -167,13 +167,13 @@ export default function SeoProfilePage() {
             </section>
 
             <section id="experience">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                 <Briefcase className="w-6 h-6 text-primary" /> Professional Experience
               </h2>
               <div className="space-y-4">
                 <Card>
                   <CardHeader className="p-4">
-                    <CardTitle className="text-xl">Growth Advisory | Hashtag Web3</CardTitle>
+                    <CardTitle className="text-lg">Growth Advisory | Hashtag Web3</CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
@@ -188,7 +188,7 @@ export default function SeoProfilePage() {
                 </Card>
                 <Card>
                   <CardHeader className="p-4">
-                    <CardTitle className="text-xl">Marketing Lead | Routespring</CardTitle>
+                    <CardTitle className="text-lg">Marketing Lead | Routespring</CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
@@ -202,7 +202,7 @@ export default function SeoProfilePage() {
                 </Card>
                 <Card>
                   <CardHeader className="p-4">
-                    <CardTitle className="text-xl">Country Head (Growth) | Prosple</CardTitle>
+                    <CardTitle className="text-lg">Country Head (Growth) | Prosple</CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
@@ -213,7 +213,7 @@ export default function SeoProfilePage() {
                 </Card>
                 <Card>
                   <CardHeader className="p-4">
-                    <CardTitle className="text-xl">Consultant | KPMG & EY</CardTitle>
+                    <CardTitle className="text-lg">Consultant | KPMG & EY</CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
@@ -225,7 +225,7 @@ export default function SeoProfilePage() {
                 </Card>
                  <Card>
                   <CardHeader className="p-4">
-                      <CardTitle className="text-xl">Project Manager | Studio Tesseract</CardTitle>
+                      <CardTitle className="text-lg">Project Manager | Studio Tesseract</CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
@@ -238,7 +238,7 @@ export default function SeoProfilePage() {
             </section>
             
             <section id="qualifications">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <Award className="w-6 h-6 text-primary" /> Qualifications & Recognition
                 </h2>
                 <Card>
@@ -256,7 +256,7 @@ export default function SeoProfilePage() {
             </section>
 
             <section className="py-8">
-                <h2 className="text-2xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 items-center">
                 {asSeenInLogos.map((media, index) => (
                     <div key={index} className="flex justify-center">
@@ -273,7 +273,7 @@ export default function SeoProfilePage() {
             </section>
 
             <section id="testimonials">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <MessageSquare className="w-6 h-6 text-primary" /> Testimonials
                 </h2>
                  <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">
@@ -308,7 +308,7 @@ export default function SeoProfilePage() {
             </section>
 
              <section id="papers-essays">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <BookOpen className="w-6 h-6 text-primary" /> Recent Papers & Essays
                 </h2>
                 <div className="grid md:grid-cols-2 gap-6">

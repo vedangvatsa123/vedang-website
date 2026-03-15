@@ -21,7 +21,7 @@ export const metadata: Metadata = generateMetadata({
 export default function Home() {
   return (
     <PageLayout>
-      <section className="py-12 text-center">
+      <section className="py-16 md:py-24 text-center">
         <div className="container mx-auto px-4 md:px-6">
           <Image
             src="/images/icon.png"
@@ -31,13 +31,14 @@ export default function Home() {
             className="mx-auto h-24 w-24 rounded-full object-cover"
             priority
           />
-          <h1 className="mt-4 text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
-          <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">
-            Founder, <Link href="https://hashtagweb3.com" className="underline hover:text-foreground">Hashtag Web3</Link> (120k community of AI & Web3 professionals)
-            <br />
-            BE, Mtech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
+          <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
+          <p className="mx-auto mt-4 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
+            Founder, <Link href="https://hashtagweb3.com" className="underline hover:text-foreground">Hashtag Web3</Link> — a 120k-member community of AI & Web3 professionals.
           </p>
-          <div className="mt-6 flex justify-center">
+          <p className="mx-auto mt-1 max-w-2xl text-sm text-muted-foreground">
+            IIT Kanpur · Chartered Engineer · Fellow of the Royal Society of Arts
+          </p>
+          <div className="mt-8 flex justify-center">
             <Button asChild className="min-w-64 px-8">
               <Link href="/profile">View Full Profile</Link>
             </Button>
@@ -49,7 +50,7 @@ export default function Home() {
 
       <section id="essays" className="py-12">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Recent Essays</h2>
+          <h2 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">Recent Essays</h2>
           <EssaysList limit={10} />
           <div className="mt-8 flex justify-center">
             <Button variant="outline" asChild className="min-w-64 px-8">
@@ -63,7 +64,7 @@ export default function Home() {
 
       <section id="learn" className="py-12 bg-secondary/30">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Courses & Resources</h2>
+          <h2 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">Courses & Resources</h2>
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             <Link href="/web3-101" className="group">
               <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">

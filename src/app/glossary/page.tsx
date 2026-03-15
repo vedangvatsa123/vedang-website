@@ -56,10 +56,10 @@ export default function GlossaryPage() {
 
       <section className="text-center pt-16 pb-12 border-b border-border/30">
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-          <h1 className="text-5xl font-semibold tracking-tight text-primary mb-2">
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
             Glossary
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-base md:text-lg text-muted-foreground">
             Deep dives into the terminology shaping AI, Web3, and deep tech.
           </p>
         </div>

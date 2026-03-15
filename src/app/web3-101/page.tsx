@@ -82,14 +82,14 @@ export default function Web3CoursePage() {
 
         <section className="text-center pt-16 pb-12 bg-gradient-to-b from-background to-secondary/30">
              <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-                <Badge variant="secondary" className="animate-pulse">
+                <Badge variant="secondary">
                     <Star className="w-3 h-3 mr-1.5" />
                     A Free, Self-Paced Course
                 </Badge>
-                <h1 className="mt-4 text-5xl font-semibold tracking-tight text-primary">
+                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     Fundamentals of Web3
                 </h1>
-                <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
                 Go beyond the buzzwords and discover the next evolution of the internet. This course demystifies Web3, breaking down blockchain, decentralization, and digital ownership into clear, understandable concepts. Learn what it means to build and participate in a user-owned web.
                 </p>
 
@@ -403,8 +403,8 @@ export default function Web3CoursePage() {
 
             <section id="faq" className="py-16">
                 <div className="text-center">
-                    <h2 className="text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
-                    <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
+                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                         Some common questions about Web3, answered.
                     </p>
                 </div>

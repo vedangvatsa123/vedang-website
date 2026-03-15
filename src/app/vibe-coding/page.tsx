@@ -181,14 +181,14 @@ export default function VibeCodingCoursePage() {
 
         <section className="text-center pt-16 pb-12 bg-gradient-to-b from-background to-secondary/30">
              <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-                <Badge variant="secondary" className="animate-pulse">
+                <Badge variant="secondary">
                     <Star className="w-3 h-3 mr-1.5" />
                     A Free, Self-Paced Course
                 </Badge>
-                <h1 className="mt-4 text-5xl font-semibold tracking-tight text-primary">
+                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     Vibe Coding 101
                 </h1>
-                <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
                 Build real apps without writing code. Describe what you want in plain English and let AI handle the implementation. For founders, designers, marketers, and anyone with an idea.
                 </p>
 
@@ -708,8 +708,8 @@ export default function VibeCodingCoursePage() {
             <section id="references" className="py-16">
                 <div className="text-center">
                     <BookOpen className="mx-auto h-12 w-12 text-muted-foreground" />
-                    <h2 className="mt-4 text-3xl font-semibold tracking-tight">Learn More</h2>
-                    <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+                    <h2 className="mt-4 text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
+                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                         Resources for tools and platforms. Documentation and guides to build deeper knowledge.
                     </p>
                 </div>
@@ -735,8 +735,8 @@ export default function VibeCodingCoursePage() {
 
             <section id="faq" className="py-16">
                 <div className="text-center">
-                    <h2 className="text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
-                    <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
+                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                         Common questions about Vibe Coding answered directly.
                     </p>
                 </div>

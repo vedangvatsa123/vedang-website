@@ -94,14 +94,14 @@ export default function AgenticWebCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <section className="text-center pt-16 pb-12 bg-gradient-to-b from-background to-secondary/30">
              <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-                <Badge variant="secondary" className="animate-pulse">
+                <Badge variant="secondary">
                     <Star className="w-3 h-3 mr-1.5" />
                     A Free, Self-Paced Course
                 </Badge>
-                <h1 className="mt-4 text-5xl font-semibold tracking-tight text-primary">
+                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     The Agentic Web
                 </h1>
-                <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
                     The internet is evolving. It's no longer just a place to find information-it's becoming a platform for autonomous AI agents to get things done. This course demystifies the Agentic Web, where you delegate goals, and AI handles the execution.
                 </p>
 
@@ -457,8 +457,8 @@ export default function AgenticWebCoursePage() {
 
             <section id="faq" className="py-16">
                 <div className="text-center">
-                    <h2 className="text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
-                    <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
+                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                         Your common questions about the Agentic Web, answered.
                     </p>
                 </div>

@@ -39,9 +39,9 @@ export const recentPapers = [
 
 export function RecentPapers() {
   return (
-    <section id="papers" className="py-12 bg-secondary/50 rounded-lg">
+    <section id="papers" className="py-12 bg-secondary/30">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight">Recent Papers</h2>
+        <h2 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">Recent Papers</h2>
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {recentPapers.map((paper, index) => (
             <Link

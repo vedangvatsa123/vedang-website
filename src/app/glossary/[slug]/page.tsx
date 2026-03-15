@@ -100,7 +100,7 @@ export default function GlossaryTermPage({ params }: PageProps) {
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Glossary
           </Link>
-          <h1 className="text-5xl font-semibold tracking-tight text-primary mb-4">
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
             {term.term}
           </h1>
         </div>

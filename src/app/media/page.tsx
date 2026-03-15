@@ -125,8 +125,8 @@ export default function MediaPage() {
       <div className="py-8">
         <div className="container mx-auto px-4 md:px-6">
           <section className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl font-semibold tracking-tight">Speaker on Emerging Technologies</h1>
-            <p className="mt-3 text-base text-muted-foreground">
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">Speaker on Emerging Technologies</h1>
+            <p className="mt-3 text-base md:text-lg text-muted-foreground">
               As a recognized voice in AI, Web3, and the future of technology, Vedang is a frequent speaker at
               international conferences, academic institutions, and corporate events. His talks demystify complex
               topics, including decentralized economies and agentic AI, providing audiences with actionable insights
@@ -150,7 +150,7 @@ export default function MediaPage() {
           </section>
           
           <section className="py-8">
-            <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Invited at the Parliament of India to discuss about Virtual Digital Assets</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-6">Invited at the Parliament of India to discuss about Virtual Digital Assets</h2>
             <Card className="max-w-xl mx-auto">
                 <CardContent className="p-2 sm:p-4">
                     <TwitterEmbed tweetId="1996239975906676795" />
@@ -161,7 +161,7 @@ export default function MediaPage() {
           <AsSeenIn />
 
           <section className="py-8">
-            <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Speaking Engagements</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-6">Speaking Engagements</h2>
             <div className="columns-2 sm:columns-3 md:columns-4 gap-4">
               {speakingEngagementImages.map((src, index) => (
                 <div key={index} className="mb-4 break-inside-avoid">
@@ -179,7 +179,7 @@ export default function MediaPage() {
           </section>
 
           <section className="py-8">
-            <h2 className="text-3xl font-semibold tracking-tight text-center mb-6">Media Mentions</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-6">Media Mentions</h2>
             <div className="grid md:grid-cols-2 gap-4">
                 {mediaMentions.map((mention, index) => (
                   <Link

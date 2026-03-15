@@ -52,8 +52,8 @@ export default function CommunityProfilePage() {
                 priority
               />
             <div className="text-center md:text-left">
-              <h1 className="text-4xl font-semibold tracking-tight">Community Building & Content Strategy</h1>
-              <p className="mt-1 text-lg font-medium text-muted-foreground">Vedang Vatsa | Web3 & Tech</p>
+              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">Community Building & Content Strategy</h1>
+              <p className="mt-1 text-base md:text-lg font-medium text-muted-foreground">Vedang Vatsa | Web3 & Tech</p>
               <p className="mx-auto mt-2 max-w-xl text-base text-muted-foreground">
                 Community architect and content creator with a proven record of building engaged professional networks from the ground up, driving conversations, and achieving tens of millions in content reach.
               </p>
@@ -91,7 +91,7 @@ export default function CommunityProfilePage() {
 
           <div className="space-y-8">
             <section id="competencies">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <Star className="w-6 h-6 text-primary" /> Core Competencies
                 </h2>
                 <div className="grid md:grid-cols-2 gap-x-6 gap-y-4">
@@ -123,7 +123,7 @@ export default function CommunityProfilePage() {
             </section>
             
             <section id="toolkit">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                 <Wrench className="w-6 h-6 text-primary" /> Platforms & Tools
               </h2>
               <div className="grid md:grid-cols-2 gap-x-6 gap-y-3 text-muted-foreground text-sm">
@@ -139,13 +139,13 @@ export default function CommunityProfilePage() {
             </section>
 
             <section id="experience">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                 <Briefcase className="w-6 h-6 text-primary" /> Community & Content Experience
               </h2>
               <div className="space-y-4">
                 <Card>
                   <CardHeader className="p-4">
-                    <CardTitle className="text-xl">Founder & Community Architect | Hashtag Web3</CardTitle>
+                    <CardTitle className="text-lg">Founder & Community Architect | Hashtag Web3</CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
@@ -161,7 +161,7 @@ export default function CommunityProfilePage() {
                 </Card>
                 <Card>
                   <CardHeader className="p-4">
-                    <CardTitle className="text-xl">Country Head (Content & User Growth) | Prosple</CardTitle>
+                    <CardTitle className="text-lg">Country Head (Content & User Growth) | Prosple</CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
@@ -173,7 +173,7 @@ export default function CommunityProfilePage() {
                 </Card>
                 <Card>
                   <CardHeader className="p-4">
-                    <CardTitle className="text-xl">Program & Social Media Management | KPMG (for Ministry of IT, India)</CardTitle>
+                    <CardTitle className="text-lg">Program & Social Media Management | KPMG (for Ministry of IT, India)</CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
@@ -187,7 +187,7 @@ export default function CommunityProfilePage() {
             </section>
             
             <section id="qualifications">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <Award className="w-6 h-6 text-primary" /> Recognition & Thought Leadership
                 </h2>
                 <Card>
@@ -206,7 +206,7 @@ export default function CommunityProfilePage() {
             <AsSeenIn />
 
             <section id="testimonials">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <MessageSquare className="w-6 h-6 text-primary" /> Testimonials
                 </h2>
                  <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">
@@ -241,7 +241,7 @@ export default function CommunityProfilePage() {
             </section>
 
              <section id="writings">
-                <h2 className="text-2xl font-semibold tracking-tight mb-4 flex items-center gap-3">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <PenSquare className="w-6 h-6 text-primary" /> Writings
                 </h2>
                 <div className="grid md:grid-cols-2 gap-6">
