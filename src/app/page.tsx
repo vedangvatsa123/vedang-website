@@ -36,7 +36,7 @@ export default function Home() {
             Founder, <Link href="https://hashtagweb3.com" className="underline hover:text-foreground">Hashtag Web3</Link> (120k community of AI & Web3 professionals)
           </p>
           <p className="mx-auto mt-1 max-w-3xl text-sm text-muted-foreground">
-            BE, MTech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
+            MTech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
           </p>
           <div className="mt-8 flex justify-center">
             <Button asChild className="min-w-64 px-8">
