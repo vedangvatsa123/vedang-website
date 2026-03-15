@@ -79,7 +79,7 @@ export default function PromptEngineeringCoursePage() {
     <PageLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <section className="text-center pt-16 pb-12 bg-gradient-to-b from-background to-secondary/30">
+        <section className="text-center pt-16 pb-12">
              <div className="container mx-auto px-4 md:px-6 max-w-4xl">
                 <Badge variant="secondary">
                     <Star className="w-3 h-3 mr-1.5" />

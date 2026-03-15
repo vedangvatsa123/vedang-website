@@ -48,7 +48,7 @@ export function RelatedEssays({ currentSlug }: { currentSlug: string }) {
           <Link
             key={essay.slug}
             href={essay.url}
-            className="group block rounded-lg border bg-card p-4 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
+            className="group block rounded-lg border bg-card p-4 transition-colors duration-200 hover:border-primary/50"
           >
             <h3 className="text-lg font-medium text-foreground transition-colors group-hover:text-primary">
               {essay.title}

@@ -194,7 +194,7 @@ export default function MediaPage() {
                             <h3 className="text-lg font-semibold leading-snug group-hover:text-primary">{mention.title}</h3>
                             <p className="text-sm text-muted-foreground mt-1">{mention.source}</p>
                         </div>
-                        <MoveUpRight className="h-5 w-5 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                        <MoveUpRight className="h-4 w-4 text-muted-foreground" />
                     </div>
                   </Link>
                 ))}
