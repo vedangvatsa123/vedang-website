@@ -30,19 +30,31 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? term.definition.substring(0, 157) + '...' 
     : term.definition;
 
+  // Shorten title if it would exceed 70 chars (template adds " | Vedang Vatsa")
+  // Max: 70 - " | Glossary | Vedang Vatsa".length(26) = 44 chars for name
+  let titleName = term.term;
+  if (`${titleName} | Glossary | Vedang Vatsa`.length > 70) {
+    const abbrevMatch = titleName.match(/\(([A-Za-z0-9/\-]+)\)/);
+    if (abbrevMatch) {
+      titleName = abbrevMatch[1]; // Just use "RLHF", "DePIN", "CI/CD"
+    } else {
+      titleName = titleName.substring(0, 44); // Truncate as last resort
+    }
+  }
+
   return {
-    title: `${term.term} - Glossary | Vedang Vatsa`,
+    title: `${titleName} | Glossary`,
     description: truncatedDescription,
     alternates: { canonical: `/glossary/${term.slug}` },
     openGraph: {
-      title: `${term.term} - Glossary`,
+      title: `${term.term} | Glossary`,
       description: truncatedDescription,
       url: `/glossary/${term.slug}`,
       type: 'article',
     },
     twitter: {
       card: 'summary',
-      title: `${term.term} - Glossary`,
+      title: `${term.term} | Glossary`,
       description: truncatedDescription,
     },
   };
