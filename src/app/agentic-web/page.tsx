@@ -130,8 +130,8 @@ export default function AgenticWebCoursePage() {
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <BrainCircuit className="w-8 h-8 text-primary"/>
+                        <div>
+                           <BrainCircuit className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 1</CardDescription>
@@ -193,8 +193,8 @@ export default function AgenticWebCoursePage() {
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <Zap className="w-8 h-8 text-primary"/>
+                        <div>
+                           <Zap className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 2</CardDescription>
@@ -269,8 +269,8 @@ export default function AgenticWebCoursePage() {
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <Users className="w-8 h-8 text-primary"/>
+                        <div>
+                           <Users className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 3</CardDescription>
@@ -327,8 +327,8 @@ export default function AgenticWebCoursePage() {
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <Hand className="w-8 h-8 text-primary"/>
+                        <div>
+                           <Hand className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 4</CardDescription>
@@ -399,8 +399,8 @@ export default function AgenticWebCoursePage() {
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                      <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <ShieldCheck className="w-8 h-8 text-primary"/>
+                        <div>
+                           <ShieldCheck className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 5</CardDescription>

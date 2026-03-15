@@ -105,8 +105,8 @@ export default function Web3CoursePage() {
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <Globe className="w-8 h-8 text-primary"/>
+                        <div>
+                           <Globe className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 1</CardDescription>
@@ -154,8 +154,8 @@ export default function Web3CoursePage() {
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <Layers className="w-8 h-8 text-primary"/>
+                        <div>
+                           <Layers className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 2</CardDescription>
@@ -196,8 +196,8 @@ export default function Web3CoursePage() {
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <BrainCircuit className="w-8 h-8 text-primary"/>
+                        <div>
+                           <BrainCircuit className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 3</CardDescription>
@@ -236,8 +236,8 @@ export default function Web3CoursePage() {
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <Puzzle className="w-8 h-8 text-primary"/>
+                        <div>
+                           <Puzzle className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 4</CardDescription>
@@ -299,8 +299,8 @@ export default function Web3CoursePage() {
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <Wallet className="w-8 h-8 text-primary"/>
+                        <div>
+                           <Wallet className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 5</CardDescription>
@@ -360,8 +360,8 @@ export default function Web3CoursePage() {
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                      <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <ShieldCheck className="w-8 h-8 text-primary"/>
+                        <div>
+                           <ShieldCheck className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 6</CardDescription>

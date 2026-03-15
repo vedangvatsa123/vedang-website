@@ -214,11 +214,11 @@ export default function VibeCodingCoursePage() {
 
         <div className="container mx-auto px-4 md:px-6 max-w-5xl py-16 space-y-12">
             
-            <Card className="overflow-hidden border-primary/20">
+            <Card className="overflow-hidden">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <BrainCircuit className="w-8 h-8 text-primary"/>
+                        <div>
+                           <BrainCircuit className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 1</CardDescription>
@@ -267,28 +267,28 @@ export default function VibeCodingCoursePage() {
                                 <p>The quality of what the AI creates depends on how good your instructions are. The GCES framework helps you write clear prompts so the AI knows exactly what you want. This helps you get it right the first time.</p>
                                 <div className="space-y-4 my-6">
                                     <div className="flex items-start gap-4">
-                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><Star className="w-5 h-5 text-primary flex-shrink-0" /></div>
+                                        <div className="mt-1"><Star className="w-4 h-4 text-muted-foreground flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">1. Goal: What do you want the AI to do?</h4>
                                             <p className="text-muted-foreground">Be specific and use action words. Start with a verb. This tells the AI its main task. Example: "Create a contact form with name, email, and message fields."</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><BrainCircuit className="w-5 h-5 text-primary flex-shrink-0" /></div>
+                                        <div className="mt-1"><BrainCircuit className="w-4 h-4 text-muted-foreground flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">2. Context: What does the AI need to know?</h4>
                                             <p className="text-muted-foreground">Who will use this? Why are you building it? This helps the AI make better choices about the style. Example: "This is for a local bakery's website. The feeling should be warm and friendly."</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><DraftingCompass className="w-5 h-5 text-primary flex-shrink-0" /></div>
+                                        <div className="mt-1"><DraftingCompass className="w-4 h-4 text-muted-foreground flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">3. Expectations: What should the final result look like?</h4>
                                             <p className="text-muted-foreground">Define the rules. Be specific about design and how it should work. Example: "Use the 'Card' and 'Button' components. The main color should be a light pink. The form must work on mobile phones."</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><MonitorPlay className="w-5 h-5 text-primary flex-shrink-0" /></div>
+                                        <div className="mt-1"><MonitorPlay className="w-4 h-4 text-muted-foreground flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">4. Source: Can you provide an example?</h4>
                                             <p className="text-muted-foreground">AI learns patterns from examples. Show a reference. Example: "For the design, reference Stripe.com's homepage. Use it as a visual guide for spacing and fonts."</p>
@@ -302,11 +302,11 @@ export default function VibeCodingCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20">
+            <Card className="overflow-hidden">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <Palette className="w-8 h-8 text-primary"/>
+                        <div>
+                           <Palette className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 2</CardDescription>
@@ -411,11 +411,11 @@ export default function VibeCodingCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20">
+            <Card className="overflow-hidden">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <Hand className="w-8 h-8 text-primary"/>
+                        <div>
+                           <Hand className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 3</CardDescription>
@@ -480,7 +480,7 @@ export default function VibeCodingCoursePage() {
                                 <p>After you learn the basics, you can use advanced methods to get even better results. These techniques give you more control and create higher-quality code.</p>
                                 <div className="space-y-4 my-6">
                                     <div className="flex items-start gap-4">
-                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><Bot className="w-5 h-5 text-primary flex-shrink-0" /></div>
+                                        <div className="mt-1"><Bot className="w-4 h-4 text-muted-foreground flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">Persona Prompting: Get Expert Advice</h4>
                                             <p className="text-muted-foreground">Start your prompt by telling the AI what its job is. This helps it give you expert-level advice instead of a general answer.</p>
@@ -488,7 +488,7 @@ export default function VibeCodingCoursePage() {
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><BrainCircuit className="w-5 h-5 text-primary flex-shrink-0" /></div>
+                                        <div className="mt-1"><BrainCircuit className="w-4 h-4 text-muted-foreground flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">Chain of Thought: See the AI's Reasoning</h4>
                                             <p className="text-muted-foreground">For a difficult task, ask the AI to "think step-by-step." This makes the AI break down the problem and show its work. This often leads to a better answer and makes it easier for you to see and fix its logic.</p>
@@ -496,7 +496,7 @@ export default function VibeCodingCoursePage() {
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <div className="bg-primary/10 p-2 rounded-md mt-1"><Hand className="w-5 h-5 text-primary flex-shrink-0" /></div>
+                                        <div className="mt-1"><Hand className="w-4 h-4 text-muted-foreground flex-shrink-0" /></div>
                                         <div>
                                             <h4 className="font-semibold text-foreground">Negative Prompts: State What to Avoid</h4>
                                             <p className="text-muted-foreground">Specify what you *don't* want. Tell the AI what to avoid.</p>
@@ -511,11 +511,11 @@ export default function VibeCodingCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20">
+            <Card className="overflow-hidden">
                 <CardHeader className="bg-secondary/30 p-6">
                      <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <Code className="w-8 h-8 text-primary"/>
+                        <div>
+                           <Code className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 4</CardDescription>
@@ -611,11 +611,11 @@ export default function VibeCodingCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20">
+            <Card className="overflow-hidden">
                 <CardHeader className="bg-secondary/30 p-6">
                      <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                           <ShieldCheck className="w-8 h-8 text-primary"/>
+                        <div>
+                           <ShieldCheck className="w-6 h-6 text-muted-foreground"/>
                         </div>
                         <div>
                             <CardDescription>Module 5</CardDescription>
